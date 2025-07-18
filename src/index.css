@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Anansi AI Logo-Inspired Color System
+   * Teal and Blue gradients matching the connected rings logo
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 8%;
+
+    --primary: 174 100% 42%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 20% 8%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 200 100% 85%;
+    --accent-foreground: 210 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 100% 42%;
+
+    --radius: 0.75rem;
+
+    /* Anansi AI Logo Colors - Teal & Blue */
+    --logo-teal: 174 100% 42%;
+    --logo-blue: 214 100% 50%;
+    --gradient-start: 174 100% 42%;
+    --gradient-end: 214 100% 50%;
+    --neural-blue: 214 100% 50%;
+    --electric-teal: 174 100% 42%;
+    --cyber-blue: 207 90% 54%;
+    --ai-accent: 184 100% 38%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 100% 27%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 240 100% 27%;
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 20% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 174 100% 50%;
+    --primary-foreground: 210 20% 8%;
+
+    --secondary: 210 15% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 15% 15%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 210 15% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 15% 15%;
+    --input: 210 15% 15%;
+    --ring: 174 100% 50%;
+
+    /* Dark mode logo colors */
+    --logo-teal: 174 100% 50%;
+    --logo-blue: 214 100% 60%;
+    --gradient-start: 174 100% 50%;
+    --gradient-end: 214 100% 60%;
+    --neural-blue: 214 100% 60%;
+    --electric-teal: 174 100% 50%;
+    --cyber-blue: 207 90% 64%;
+    --ai-accent: 184 100% 48%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 268 100% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 268 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer utilities {
+  /* Gradient text utilities */
+  .gradient-text {
+    @apply bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(
+          45deg,
+          hsl(var(--gradient-start)),
+          hsl(var(--gradient-end))
+        )
+        border-box;
+    border: 2px solid transparent;
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

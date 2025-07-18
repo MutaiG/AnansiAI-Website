@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Anansi AI Logo-Inspired Color System
+   * Teal and Blue gradients matching the connected rings logo
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 8%;
+
+    --primary: 174 100% 42%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 20% 8%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 15% 45%;
+
+    --accent: 200 100% 85%;
+    --accent-foreground: 210 20% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 100% 42%;
+
+    --radius: 0.75rem;
+
+    /* Anansi AI Logo Colors - Teal & Blue */
+    --logo-teal: 174 100% 42%;
+    --logo-blue: 214 100% 50%;
+    --gradient-start: 174 100% 42%;
+    --gradient-end: 214 100% 50%;
+    --neural-blue: 214 100% 50%;
+    --electric-teal: 174 100% 42%;
+    --cyber-blue: 207 90% 54%;
+    --ai-accent: 184 100% 38%;
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 20% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 20% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 174 100% 42%;
+    --primary-foreground: 210 20% 8%;
+
+    --secondary: 210 32% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 32% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 210 32% 18%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 32% 18%;
+    --input: 210 32% 18%;
+    --ring: 174 100% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply outline-2 outline-offset-2 outline-ring;
+}

@@ -57,15 +57,28 @@ const AdultTwin = () => {
               you, not scraped data or generic models.
             </p>
 
-            <WaitlistCTA productType="adult">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
+                asChild
                 size="lg"
                 className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
-                Train Your Adult Twin
-                <ArrowRight className="ml-3 h-6 w-6" />
+                <Link to="/login">
+                  Train Your Adult Twin
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
               </Button>
-            </WaitlistCTA>
+
+              <WaitlistCTA productType="adult">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-ai-accent text-ai-accent hover:bg-ai-accent/10 px-8 py-7 text-lg font-semibold"
+                >
+                  Join Waitlist
+                </Button>
+              </WaitlistCTA>
+            </div>
           </div>
         </div>
       </section>

@@ -55,68 +55,87 @@ const Index = () => {
             </h2>
 
             {/* Flow Steps */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              {/* Step 1: You Start */}
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 relative">
-                  <div className="w-full h-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center">
-                    <Users className="h-10 w-10 text-logo-teal" />
+            <div className="relative">
+              <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                {/* Step 1: You Start */}
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 relative">
+                    <div className="w-full h-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center">
+                      <Users className="h-10 w-10 text-logo-teal" />
+                    </div>
                   </div>
+                  <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-teal/80 text-white text-sm font-bold">
+                      1
+                    </span>
+                    You Share
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Tell your story through daily tasks
+                  </p>
                 </div>
-                <h3 className="font-semibold mb-2">1. You Share</h3>
-                <p className="text-sm text-muted-foreground">
-                  Tell your story through daily tasks
-                </p>
-              </div>
 
-              {/* Arrow */}
-              <div className="hidden md:flex justify-center">
-                <ArrowRight className="h-6 w-6 text-logo-teal" />
-              </div>
-              <div className="md:hidden flex justify-center my-4">
-                <div className="h-6 w-0.5 bg-logo-teal"></div>
-              </div>
-
-              {/* Step 2: Twin Learns */}
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
-                    alt="Twin synchronization"
-                    className="w-full h-full object-contain"
-                  />
+                {/* Arrow between step 1 and 2 */}
+                <div className="hidden md:flex justify-center">
+                  <ArrowRight className="h-6 w-6 text-logo-teal" />
                 </div>
-                <h3 className="font-semibold mb-2">2. Twin Learns</h3>
-                <p className="text-sm text-muted-foreground">
-                  AI captures your unique style
-                </p>
-              </div>
+                <div className="md:hidden flex justify-center my-4">
+                  <div className="h-6 w-0.5 bg-logo-teal"></div>
+                </div>
 
-              {/* Arrow */}
-              <div className="hidden md:flex justify-center">
-                <ArrowRight className="h-6 w-6 text-logo-blue" />
-              </div>
-              <div className="md:hidden flex justify-center my-4">
-                <div className="h-6 w-0.5 bg-logo-blue"></div>
-              </div>
-
-              {/* Step 3: You Deliver */}
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-4 relative">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
-                    alt="Your twin delivers output"
-                    className="w-full h-full object-contain"
-                  />
-                  {/* Small italic text overlay */}
-                  <div className="absolute bottom-1 left-0 right-0">
-                    <p className="text-xs italic text-logo-teal">your twin</p>
+                {/* Step 2: Twin Learns */}
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
+                      alt="Twin synchronization"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
+                  <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-blue to-logo-blue/80 text-white text-sm font-bold">
+                      2
+                    </span>
+                    Twin Learns
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    AI captures your unique style
+                  </p>
                 </div>
-                <h3 className="font-semibold mb-2">3. You Deliver</h3>
-                <p className="text-sm text-muted-foreground">
-                  1,000,000x faster, in your voice
-                </p>
+
+                {/* Arrow pointing to third image */}
+                <div className="hidden md:flex items-center justify-center">
+                  <ArrowRight className="h-6 w-6 text-logo-blue" />
+                </div>
+                <div className="md:hidden flex justify-center my-4">
+                  <div className="h-6 w-0.5 bg-cyber-blue"></div>
+                </div>
+
+                {/* Step 3: You Deliver */}
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 relative">
+                    <img
+                      src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
+                      alt="Your twin delivers output"
+                      className="w-full h-full object-contain"
+                    />
+                    {/* Conspicuous "your twin" text overlay */}
+                    <div className="absolute bottom-1 left-0 right-0 flex justify-center">
+                      <p className="text-xs font-bold text-white bg-gradient-to-r from-logo-teal to-cyber-blue px-2 py-1 rounded-full shadow-lg border border-white/20 backdrop-blur-sm">
+                        your twin
+                      </p>
+                    </div>
+                  </div>
+                  <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-cyber-blue to-cyber-blue/80 text-white text-sm font-bold">
+                      3
+                    </span>
+                    You Deliver
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    1,000,000x faster, in your voice
+                  </p>
+                </div>
               </div>
             </div>
           </div>

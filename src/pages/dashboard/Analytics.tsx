@@ -1,275 +1,219 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Badge } from "@/components/ui/badge";
 import {
-  BarChart3,
   TrendingUp,
-  Clock,
-  Target,
-  Brain,
   Calendar,
+  Target,
   Award,
-  Activity,
-  Zap,
-  Users,
+  Brain,
+  BarChart3,
+  Clock,
+  CheckCircle,
 } from "lucide-react";
 
 const Analytics = () => {
-  // Mock analytics data
   const stats = {
-    totalInteractions: 1247,
-    hoursSpent: 89,
-    tasksCompleted: 156,
-    coursesStarted: 3,
-    twinMaturity: 73,
-    learningStreak: 12,
+    totalEntries: 78,
+    weeklyStreak: 7,
+    totalPoints: 1240,
+    averageDaily: 3.2,
+    completionRate: 85,
+    twinProgress: 68,
   };
 
-  const skillProgress = [
-    { skill: "Communication", progress: 85, color: "bg-blue-500" },
-    { skill: "Creativity", progress: 72, color: "bg-purple-500" },
-    { skill: "Analysis", progress: 68, color: "bg-green-500" },
-    { skill: "Problem Solving", progress: 61, color: "bg-orange-500" },
-    { skill: "Emotional Intelligence", progress: 78, color: "bg-pink-500" },
+  const weeklyData = [
+    { day: "Mon", entries: 4, points: 150 },
+    { day: "Tue", entries: 3, points: 120 },
+    { day: "Wed", entries: 5, points: 200 },
+    { day: "Thu", entries: 2, points: 80 },
+    { day: "Fri", entries: 4, points: 160 },
+    { day: "Sat", entries: 3, points: 100 },
+    { day: "Sun", entries: 2, points: 90 },
   ];
 
-  const activityData = [
-    { month: "Jan", interactions: 85, hours: 12 },
-    { month: "Feb", interactions: 120, hours: 18 },
-    { month: "Mar", interactions: 165, hours: 24 },
-    { month: "Apr", interactions: 145, hours: 21 },
-    { month: "May", interactions: 180, hours: 28 },
-    { month: "Jun", interactions: 210, hours: 32 },
+  const categories = [
+    { name: "Memory", entries: 25, percentage: 32 },
+    { name: "Reflection", entries: 20, percentage: 26 },
+    { name: "Goals", entries: 18, percentage: 23 },
+    { name: "Growth", entries: 15, percentage: 19 },
   ];
 
   const achievements = [
     {
-      id: 1,
-      title: "First Steps",
-      description: "Completed your first week of training",
-      icon: "🏆",
+      title: "First Week",
+      description: "Completed your first 7 days",
       earned: true,
-      date: "2024-01-07",
+      date: "Jan 8, 2024",
     },
     {
-      id: 2,
-      title: "Consistent Learner",
-      description: "Maintained a 7-day learning streak",
-      icon: "🔥",
+      title: "Memory Master",
+      description: "Shared 25 childhood memories",
       earned: true,
-      date: "2024-01-15",
+      date: "Jan 12, 2024",
     },
     {
-      id: 3,
-      title: "Course Pioneer",
-      description: "Started your first Twin Course",
-      icon: "🎓",
-      earned: true,
-      date: "2024-01-22",
-    },
-    {
-      id: 4,
-      title: "Reflection Master",
-      description: "Completed 50 reflection tasks",
-      icon: "💭",
+      title: "Reflection Guru",
+      description: "Complete 50 reflection tasks",
       earned: false,
-      progress: 34,
+      progress: 40,
     },
     {
-      id: 5,
-      title: "Creative Spark",
-      description: "Shared 25 creative ideas",
-      icon: "💡",
+      title: "Twin Builder",
+      description: "Reach 100 total entries",
       earned: false,
-      progress: 18,
-    },
-  ];
-
-  const personalityInsights = [
-    {
-      trait: "Openness to Experience",
-      score: 82,
-      description: "You show high curiosity and creativity",
-    },
-    {
-      trait: "Conscientiousness",
-      score: 75,
-      description: "You're organized and goal-oriented",
-    },
-    {
-      trait: "Extraversion",
-      score: 63,
-      description: "You balance social energy well",
-    },
-    {
-      trait: "Agreeableness",
-      score: 78,
-      description: "You're cooperative and trusting",
-    },
-    {
-      trait: "Emotional Stability",
-      score: 71,
-      description: "You handle stress reasonably well",
+      progress: 78,
     },
   ];
 
   return (
-    <div className="p-6 space-y-6">
-      {/* Header */}
-      <div>
-        <h1 className="text-2xl font-bold">Analytics</h1>
+    <div className="p-6 max-w-6xl mx-auto">
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold mb-2">Analytics</h1>
         <p className="text-muted-foreground">
-          Track your AI Twin's learning progress and development
+          Track your Twin training progress and insights
         </p>
       </div>
 
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Key Stats */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 flex items-center justify-center">
-                <Brain className="h-6 w-6 text-logo-teal" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">{stats.twinMaturity}%</div>
-                <div className="text-sm text-muted-foreground">
-                  Twin Maturity
-                </div>
-              </div>
+          <CardContent className="p-4 text-center">
+            <div className="text-2xl font-bold text-logo-teal">
+              {stats.totalEntries}
             </div>
+            <div className="text-xs text-muted-foreground">Total Entries</div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 flex items-center justify-center">
-                <Activity className="h-6 w-6 text-logo-blue" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">
-                  {stats.totalInteractions.toLocaleString()}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  Total Interactions
-                </div>
-              </div>
+          <CardContent className="p-4 text-center">
+            <div className="text-2xl font-bold text-logo-blue">
+              {stats.weeklyStreak}
             </div>
+            <div className="text-xs text-muted-foreground">Day Streak</div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 flex items-center justify-center">
-                <Zap className="h-6 w-6 text-cyber-blue" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">{stats.learningStreak}</div>
-                <div className="text-sm text-muted-foreground">Day Streak</div>
-              </div>
+          <CardContent className="p-4 text-center">
+            <div className="text-2xl font-bold text-green-600">
+              {stats.totalPoints}
             </div>
+            <div className="text-xs text-muted-foreground">Total Points</div>
           </CardContent>
         </Card>
 
         <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 flex items-center justify-center">
-                <Clock className="h-6 w-6 text-ai-accent" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">{stats.hoursSpent}</div>
-                <div className="text-sm text-muted-foreground">Hours Spent</div>
-              </div>
+          <CardContent className="p-4 text-center">
+            <div className="text-2xl font-bold text-purple-600">
+              {stats.averageDaily}
             </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500/20 to-green-600/40 flex items-center justify-center">
-                <Target className="h-6 w-6 text-green-600" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">{stats.tasksCompleted}</div>
-                <div className="text-sm text-muted-foreground">
-                  Tasks Completed
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card>
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500/20 to-purple-600/40 flex items-center justify-center">
-                <Award className="h-6 w-6 text-purple-600" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold">{stats.coursesStarted}</div>
-                <div className="text-sm text-muted-foreground">
-                  Courses Started
-                </div>
-              </div>
-            </div>
+            <div className="text-xs text-muted-foreground">Daily Average</div>
           </CardContent>
         </Card>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Skill Development */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <TrendingUp className="h-5 w-5 mr-2 text-logo-teal" />
-              Skill Development
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            {skillProgress.map((skill) => (
-              <div key={skill.skill}>
-                <div className="flex justify-between mb-2">
-                  <span className="text-sm font-medium">{skill.skill}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {skill.progress}%
-                  </span>
+      {/* Twin Progress */}
+      <Card className="mb-6">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Brain className="h-5 w-5 text-logo-teal" />
+            Twin Training Progress
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-muted-foreground">
+                Overall Progress
+              </span>
+              <span className="text-sm font-medium">{stats.twinProgress}%</span>
+            </div>
+            <Progress value={stats.twinProgress} className="h-3" />
+            <div className="grid grid-cols-3 gap-4 pt-4">
+              <div className="text-center">
+                <div className="text-lg font-semibold text-green-600">
+                  {stats.completionRate}%
                 </div>
-                <Progress value={skill.progress} className="h-2" />
+                <div className="text-xs text-muted-foreground">
+                  Completion Rate
+                </div>
               </div>
-            ))}
-          </CardContent>
-        </Card>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-blue-600">
+                  Active
+                </div>
+                <div className="text-xs text-muted-foreground">Twin Status</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-semibold text-purple-600">
+                  Learning
+                </div>
+                <div className="text-xs text-muted-foreground">Phase</div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
-        {/* Activity Chart */}
+      {/* Weekly Activity */}
+      <div className="grid md:grid-cols-2 gap-6 mb-6">
         <Card>
           <CardHeader>
-            <CardTitle className="flex items-center">
-              <BarChart3 className="h-5 w-5 mr-2 text-logo-blue" />
-              Monthly Activity
+            <CardTitle className="flex items-center gap-2">
+              <BarChart3 className="h-5 w-5 text-logo-blue" />
+              This Week
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              {activityData.map((month) => (
-                <div key={month.month} className="flex items-center space-x-4">
-                  <div className="w-8 text-sm font-medium">{month.month}</div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs">Interactions</span>
-                      <span className="text-xs">{month.interactions}</span>
+            <div className="space-y-3">
+              {weeklyData.map((day, index) => (
+                <div key={index} className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm font-medium w-8">{day.day}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-16 h-2 bg-muted rounded">
+                        <div
+                          className="h-full bg-logo-teal rounded"
+                          style={{ width: `${(day.entries / 5) * 100}%` }}
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground">
+                        {day.entries} entries
+                      </span>
                     </div>
-                    <div className="w-full bg-muted rounded-full h-2">
-                      <div
-                        className="bg-logo-teal h-2 rounded-full"
-                        style={{
-                          width: `${(month.interactions / 250) * 100}%`,
-                        }}
-                      />
-                    </div>
+                  </div>
+                  <span className="text-xs text-logo-teal">+{day.points}</span>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Category Breakdown */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Target className="h-5 w-5 text-green-600" />
+              Categories
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {categories.map((category, index) => (
+                <div key={index} className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium">{category.name}</span>
+                    <span className="text-xs text-muted-foreground">
+                      {category.entries} entries
+                    </span>
+                  </div>
+                  <div className="w-full h-2 bg-muted rounded">
+                    <div
+                      className="h-full bg-gradient-to-r from-logo-teal to-logo-blue rounded"
+                      style={{ width: `${category.percentage}%` }}
+                    />
                   </div>
                 </div>
               ))}
@@ -278,98 +222,64 @@ const Analytics = () => {
         </Card>
       </div>
 
-      {/* Personality Insights */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <Users className="h-5 w-5 mr-2 text-cyber-blue" />
-            Personality Insights
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {personalityInsights.map((insight) => (
-              <div key={insight.trait} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-3 relative">
-                  <svg className="w-16 h-16 transform -rotate-90">
-                    <circle
-                      cx="32"
-                      cy="32"
-                      r="28"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="none"
-                      className="text-muted"
-                    />
-                    <circle
-                      cx="32"
-                      cy="32"
-                      r="28"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="none"
-                      strokeDasharray={175.92}
-                      strokeDashoffset={175.92 - (175.92 * insight.score) / 100}
-                      className="text-logo-teal"
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-sm font-bold">{insight.score}</span>
-                  </div>
-                </div>
-                <h4 className="font-medium text-sm mb-1">{insight.trait}</h4>
-                <p className="text-xs text-muted-foreground">
-                  {insight.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Achievements */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center">
-            <Award className="h-5 w-5 mr-2 text-ai-accent" />
+          <CardTitle className="flex items-center gap-2">
+            <Award className="h-5 w-5 text-yellow-600" />
             Achievements
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {achievements.map((achievement) => (
+          <div className="grid md:grid-cols-2 gap-4">
+            {achievements.map((achievement, index) => (
               <div
-                key={achievement.id}
-                className={`p-4 rounded-lg border-2 ${
+                key={index}
+                className={`p-4 rounded-lg border ${
                   achievement.earned
-                    ? "border-green-200 bg-green-50"
-                    : "border-muted"
+                    ? "bg-green-50 border-green-200"
+                    : "bg-muted/30 border-border"
                 }`}
               >
-                <div className="flex items-start space-x-3">
-                  <div className="text-2xl">{achievement.icon}</div>
+                <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
-                    <h4 className="font-semibold">{achievement.title}</h4>
-                    <p className="text-sm text-muted-foreground mb-2">
+                    <h4 className="font-medium">{achievement.title}</h4>
+                    <p className="text-sm text-muted-foreground">
                       {achievement.description}
                     </p>
+                  </div>
+                  <div>
                     {achievement.earned ? (
-                      <Badge variant="secondary" className="text-xs">
-                        Earned {achievement.date}
-                      </Badge>
+                      <CheckCircle className="h-5 w-5 text-green-600" />
                     ) : (
-                      <div className="space-y-2">
-                        <Progress
-                          value={achievement.progress || 0}
-                          className="h-2"
-                        />
-                        <span className="text-xs text-muted-foreground">
-                          {achievement.progress}% complete
-                        </span>
-                      </div>
+                      <div className="w-5 h-5 rounded-full border-2 border-muted-foreground/30" />
                     )}
                   </div>
                 </div>
+                {achievement.earned ? (
+                  <Badge variant="outline" className="text-xs">
+                    Earned {achievement.date}
+                  </Badge>
+                ) : (
+                  <div className="space-y-1">
+                    <div className="text-xs text-muted-foreground">
+                      Progress: {achievement.progress}/
+                      {achievement.title === "Reflection Guru" ? "50" : "100"}
+                    </div>
+                    <div className="w-full h-1 bg-muted rounded">
+                      <div
+                        className="h-full bg-logo-teal rounded"
+                        style={{
+                          width: `${
+                            achievement.title === "Reflection Guru"
+                              ? (achievement.progress! / 50) * 100
+                              : (achievement.progress! / 100) * 100
+                          }%`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -9,6 +10,7 @@ import { Brain, Sparkles, ArrowRight, Users, Target, Zap } from "lucide-react";
 
 const LandingPage = () => {
   const { login, signup, isLoading } = useAuth();
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState({ email: "", password: "" });
   const [signupData, setSignupData] = useState({
     name: "",
@@ -18,12 +20,22 @@ const LandingPage = () => {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    await login(loginData.email, loginData.password);
+    const success = await login(loginData.email, loginData.password);
+    if (success) {
+      navigate("/train-your-twin-app");
+    }
   };
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    await signup(signupData.name, signupData.email, signupData.password);
+    const success = await signup(
+      signupData.name,
+      signupData.email,
+      signupData.password,
+    );
+    if (success) {
+      navigate("/train-your-twin-app");
+    }
   };
 
   return (
@@ -66,27 +78,9 @@ const LandingPage = () => {
                 <span className="text-foreground">Deliver superhumanly.</span>
               </h1>
 
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-                Create an AI that truly understands you. Train your personal AI
-                Twin through daily interactions, building a digital extension of
-                your personality, knowledge, and skills.
+              <p className="text-lg text-muted-foreground mb-8">
+                Train your personal AI Twin through daily interactions.
               </p>
-
-              {/* Features preview */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                <div className="flex items-center space-x-2 text-sm">
-                  <Brain className="h-4 w-4 text-logo-teal" />
-                  <span>Personal AI Assistant</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <Users className="h-4 w-4 text-logo-blue" />
-                  <span>Human-Trained</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm">
-                  <Target className="h-4 w-4 text-cyber-blue" />
-                  <span>Skill Development</span>
-                </div>
-              </div>
             </div>
 
             {/* Right side - Auth forms */}

@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   User,
@@ -14,502 +14,417 @@ import {
   Shield,
   Download,
   Trash2,
-  Palette,
-  Save,
-  RefreshCw,
-  AlertTriangle,
+  Moon,
+  Sun,
+  Volume2,
+  Mail,
+  Smartphone,
 } from "lucide-react";
 
 const Settings = () => {
   const { user, logout } = useAuth();
-  const [isSaving, setIsSaving] = useState(false);
-
-  // Profile settings state
-  const [profileData, setProfileData] = useState({
-    name: user?.name || "",
-    email: user?.email || "",
-    bio: "I'm exploring AI and personal development through my Twin journey.",
+  const [notifications, setNotifications] = useState({
+    email: true,
+    push: true,
+    dailyReminders: true,
+    weeklyReport: false,
   });
 
-  // Twin settings state
+  const [privacy, setPrivacy] = useState({
+    shareProgress: true,
+    allowAnalytics: true,
+    publicProfile: false,
+  });
+
   const [twinSettings, setTwinSettings] = useState({
-    name: user?.twinName || "",
-    personality: "curious",
+    personality: "friendly",
     responseStyle: "detailed",
     learningMode: "active",
   });
 
-  // Notification settings state
-  const [notifications, setNotifications] = useState({
-    dailyTasks: true,
-    weeklyProgress: true,
-    coursesUpdates: false,
-    newFeatures: true,
-    marketing: false,
-  });
-
-  // Privacy settings state
-  const [privacy, setPrivacy] = useState({
-    dataCollection: true,
-    analytics: true,
-    publicProfile: false,
-    shareProgress: false,
-  });
-
-  // Theme settings state
-  const [theme, setTheme] = useState("system");
-
-  const handleSaveProfile = async () => {
-    setIsSaving(true);
-    // Simulate save
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSaving(false);
-  };
-
-  const handleExportData = () => {
-    // Simulate data export
-    const data = {
-      profile: profileData,
-      twin: twinSettings,
-      exportDate: new Date().toISOString(),
-    };
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "my-twin-data.json";
-    a.click();
-  };
-
-  const handleRestartTraining = () => {
-    // Show confirmation dialog in real implementation
-    if (
-      confirm(
-        "Are you sure you want to restart your Twin training? This will reset all progress.",
-      )
-    ) {
-      console.log("Restarting training...");
-    }
-  };
-
-  const handleDeleteAccount = () => {
-    // Show confirmation dialog in real implementation
-    if (
-      confirm(
-        "Are you sure you want to delete your account? This action cannot be undone.",
-      )
-    ) {
-      console.log("Deleting account...");
-      logout();
-    }
-  };
-
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">Settings</h1>
+        <h1 className="text-2xl font-bold mb-2">Settings</h1>
         <p className="text-muted-foreground">
-          Manage your account, Twin preferences, and privacy settings
+          Manage your account, Twin behavior, and preferences
         </p>
       </div>
 
-      <Tabs defaultValue="profile" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-5">
-          <TabsTrigger value="profile">Profile</TabsTrigger>
-          <TabsTrigger value="twin">Twin</TabsTrigger>
-          <TabsTrigger value="notifications">Notifications</TabsTrigger>
-          <TabsTrigger value="privacy">Privacy</TabsTrigger>
-          <TabsTrigger value="account">Account</TabsTrigger>
-        </TabsList>
-
+      <div className="grid gap-6">
         {/* Profile Settings */}
-        <TabsContent value="profile">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <User className="h-5 w-5 mr-2 text-logo-teal" />
-                Profile Settings
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name</Label>
-                  <Input
-                    id="name"
-                    value={profileData.name}
-                    onChange={(e) =>
-                      setProfileData({ ...profileData, name: e.target.value })
-                    }
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={profileData.email}
-                    onChange={(e) =>
-                      setProfileData({ ...profileData, email: e.target.value })
-                    }
-                  />
-                </div>
-              </div>
-
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <User className="h-5 w-5" />
+              Profile
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="bio">Bio</Label>
-                <Textarea
-                  id="bio"
-                  rows={3}
-                  value={profileData.bio}
-                  onChange={(e) =>
-                    setProfileData({ ...profileData, bio: e.target.value })
-                  }
-                  placeholder="Tell us a bit about yourself..."
-                />
+                <Label htmlFor="name">Full Name</Label>
+                <Input id="name" defaultValue={user?.name} />
               </div>
-
               <div className="space-y-2">
-                <Label>Theme</Label>
-                <div className="flex space-x-2">
-                  {["light", "dark", "system"].map((themeOption) => (
-                    <Button
-                      key={themeOption}
-                      variant={theme === themeOption ? "default" : "outline"}
-                      size="sm"
-                      onClick={() => setTheme(themeOption)}
-                      className={
-                        theme === themeOption ? "bg-logo-teal text-white" : ""
-                      }
-                    >
-                      {themeOption.charAt(0).toUpperCase() +
-                        themeOption.slice(1)}
-                    </Button>
-                  ))}
-                </div>
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" defaultValue={user?.email} disabled />
               </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="twin-name">Twin Name</Label>
+              <Input id="twin-name" defaultValue={user?.twinName} />
+            </div>
+            <Button size="sm">Save Changes</Button>
+          </CardContent>
+        </Card>
 
-              <Button
-                onClick={handleSaveProfile}
-                disabled={isSaving}
-                className="bg-gradient-to-r from-logo-teal to-logo-blue text-white"
-              >
-                {isSaving ? (
-                  <>
-                    <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
-                    Saving...
-                  </>
-                ) : (
-                  <>
-                    <Save className="h-4 w-4 mr-2" />
-                    Save Changes
-                  </>
-                )}
-              </Button>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        {/* Twin Settings */}
-        <TabsContent value="twin">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Brain className="h-5 w-5 mr-2 text-logo-blue" />
-                Twin Behavior Settings
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <Label htmlFor="twinName">Twin Name</Label>
-                <Input
-                  id="twinName"
-                  value={twinSettings.name}
-                  onChange={(e) =>
-                    setTwinSettings({ ...twinSettings, name: e.target.value })
-                  }
-                />
-              </div>
-
+        {/* Twin Behavior */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Brain className="h-5 w-5 text-logo-teal" />
+              Twin Behavior
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-3 gap-4">
               <div className="space-y-2">
                 <Label>Personality Style</Label>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                  {["curious", "analytical", "creative", "supportive"].map(
-                    (personality) => (
-                      <Button
-                        key={personality}
-                        variant={
-                          twinSettings.personality === personality
-                            ? "default"
-                            : "outline"
-                        }
-                        size="sm"
-                        onClick={() =>
-                          setTwinSettings({
-                            ...twinSettings,
-                            personality,
-                          })
-                        }
-                        className={
-                          twinSettings.personality === personality
-                            ? "bg-logo-blue text-white"
-                            : ""
-                        }
-                      >
-                        {personality.charAt(0).toUpperCase() +
-                          personality.slice(1)}
-                      </Button>
-                    ),
-                  )}
+                <div className="flex gap-2">
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.personality === "friendly"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        personality: "friendly",
+                      })
+                    }
+                  >
+                    Friendly
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.personality === "professional"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        personality: "professional",
+                      })
+                    }
+                  >
+                    Professional
+                  </Button>
                 </div>
               </div>
 
               <div className="space-y-2">
                 <Label>Response Style</Label>
-                <div className="grid grid-cols-3 gap-2">
-                  {["brief", "detailed", "conversational"].map((style) => (
-                    <Button
-                      key={style}
-                      variant={
-                        twinSettings.responseStyle === style
-                          ? "default"
-                          : "outline"
-                      }
-                      size="sm"
-                      onClick={() =>
-                        setTwinSettings({
-                          ...twinSettings,
-                          responseStyle: style,
-                        })
-                      }
-                      className={
-                        twinSettings.responseStyle === style
-                          ? "bg-cyber-blue text-white"
-                          : ""
-                      }
-                    >
-                      {style.charAt(0).toUpperCase() + style.slice(1)}
-                    </Button>
-                  ))}
+                <div className="flex gap-2">
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.responseStyle === "brief"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        responseStyle: "brief",
+                      })
+                    }
+                  >
+                    Brief
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.responseStyle === "detailed"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        responseStyle: "detailed",
+                      })
+                    }
+                  >
+                    Detailed
+                  </Button>
                 </div>
               </div>
 
               <div className="space-y-2">
                 <Label>Learning Mode</Label>
-                <div className="grid grid-cols-3 gap-2">
-                  {["passive", "active", "intensive"].map((mode) => (
-                    <Button
-                      key={mode}
-                      variant={
-                        twinSettings.learningMode === mode
-                          ? "default"
-                          : "outline"
-                      }
-                      size="sm"
-                      onClick={() =>
-                        setTwinSettings({
-                          ...twinSettings,
-                          learningMode: mode,
-                        })
-                      }
-                      className={
-                        twinSettings.learningMode === mode
-                          ? "bg-ai-accent text-white"
-                          : ""
-                      }
-                    >
-                      {mode.charAt(0).toUpperCase() + mode.slice(1)}
-                    </Button>
-                  ))}
+                <div className="flex gap-2">
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.learningMode === "active"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        learningMode: "active",
+                      })
+                    }
+                  >
+                    Active
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant={
+                      twinSettings.learningMode === "passive"
+                        ? "default"
+                        : "outline"
+                    }
+                    onClick={() =>
+                      setTwinSettings({
+                        ...twinSettings,
+                        learningMode: "passive",
+                      })
+                    }
+                  >
+                    Passive
+                  </Button>
                 </div>
               </div>
+            </div>
 
-              <Button className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white">
-                <Save className="h-4 w-4 mr-2" />
-                Update Twin Settings
-              </Button>
-            </CardContent>
-          </Card>
-        </TabsContent>
+            <div className="pt-4">
+              <div className="text-sm text-muted-foreground">
+                <p>
+                  <strong>Current Status:</strong>{" "}
+                  {user?.completedAutobiography
+                    ? "Ready for advanced training"
+                    : "Learning your basics"}
+                </p>
+                <p>
+                  <strong>Training Progress:</strong> 68% complete
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
-        {/* Notification Settings */}
-        <TabsContent value="notifications">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Bell className="h-5 w-5 mr-2 text-cyber-blue" />
-                Notification Preferences
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {Object.entries(notifications).map(([key, value]) => (
-                <div key={key} className="flex items-center justify-between">
+        {/* Notifications */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Bell className="h-5 w-5" />
+              Notifications
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Mail className="h-4 w-4 text-muted-foreground" />
                   <div>
-                    <Label className="text-base">
-                      {key
-                        .replace(/([A-Z])/g, " $1")
-                        .replace(/^./, (str) => str.toUpperCase())}
-                    </Label>
-                    <p className="text-sm text-muted-foreground">
-                      {key === "dailyTasks" &&
-                        "Reminders for your daily Twin training tasks"}
-                      {key === "weeklyProgress" &&
-                        "Weekly summaries of your progress"}
-                      {key === "coursesUpdates" &&
-                        "Updates about your enrolled courses"}
-                      {key === "newFeatures" &&
-                        "Notifications about new features and improvements"}
-                      {key === "marketing" && "Promotional content and tips"}
+                    <Label>Email Notifications</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Receive updates via email
                     </p>
                   </div>
-                  <Switch
-                    checked={value}
-                    onCheckedChange={(checked) =>
-                      setNotifications({ ...notifications, [key]: checked })
-                    }
-                  />
                 </div>
-              ))}
+                <Switch
+                  checked={notifications.email}
+                  onCheckedChange={(checked) =>
+                    setNotifications({ ...notifications, email: checked })
+                  }
+                />
+              </div>
 
-              <Button className="bg-gradient-to-r from-cyber-blue to-ai-accent text-white">
-                <Save className="h-4 w-4 mr-2" />
-                Save Preferences
-              </Button>
-            </CardContent>
-          </Card>
-        </TabsContent>
-
-        {/* Privacy Settings */}
-        <TabsContent value="privacy">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center">
-                <Shield className="h-5 w-5 mr-2 text-ai-accent" />
-                Privacy & Data Control
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              {Object.entries(privacy).map(([key, value]) => (
-                <div key={key} className="flex items-center justify-between">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Smartphone className="h-4 w-4 text-muted-foreground" />
                   <div>
-                    <Label className="text-base">
-                      {key
-                        .replace(/([A-Z])/g, " $1")
-                        .replace(/^./, (str) => str.toUpperCase())}
-                    </Label>
-                    <p className="text-sm text-muted-foreground">
-                      {key === "dataCollection" &&
-                        "Allow collection of usage data to improve your experience"}
-                      {key === "analytics" &&
-                        "Enable analytics to track your learning progress"}
-                      {key === "publicProfile" &&
-                        "Make your profile visible to other users"}
-                      {key === "shareProgress" &&
-                        "Allow sharing of anonymized progress data for research"}
+                    <Label>Push Notifications</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Browser notifications
                     </p>
                   </div>
-                  <Switch
-                    checked={value}
-                    onCheckedChange={(checked) =>
-                      setPrivacy({ ...privacy, [key]: checked })
-                    }
-                  />
                 </div>
-              ))}
+                <Switch
+                  checked={notifications.push}
+                  onCheckedChange={(checked) =>
+                    setNotifications({ ...notifications, push: checked })
+                  }
+                />
+              </div>
 
-              <div className="pt-4 border-t">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Bell className="h-4 w-4 text-muted-foreground" />
+                  <div>
+                    <Label>Daily Task Reminders</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Get reminded to complete daily tasks
+                    </p>
+                  </div>
+                </div>
+                <Switch
+                  checked={notifications.dailyReminders}
+                  onCheckedChange={(checked) =>
+                    setNotifications({
+                      ...notifications,
+                      dailyReminders: checked,
+                    })
+                  }
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Volume2 className="h-4 w-4 text-muted-foreground" />
+                  <div>
+                    <Label>Weekly Progress Report</Label>
+                    <p className="text-xs text-muted-foreground">
+                      Summary of your week
+                    </p>
+                  </div>
+                </div>
+                <Switch
+                  checked={notifications.weeklyReport}
+                  onCheckedChange={(checked) =>
+                    setNotifications({
+                      ...notifications,
+                      weeklyReport: checked,
+                    })
+                  }
+                />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Privacy & Data */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Shield className="h-5 w-5" />
+              Privacy & Data
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div>
+                  <Label>Share Progress with Community</Label>
+                  <p className="text-xs text-muted-foreground">
+                    Allow others to see your achievements
+                  </p>
+                </div>
+                <Switch
+                  checked={privacy.shareProgress}
+                  onCheckedChange={(checked) =>
+                    setPrivacy({ ...privacy, shareProgress: checked })
+                  }
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div>
+                  <Label>Analytics & Insights</Label>
+                  <p className="text-xs text-muted-foreground">
+                    Help improve the platform
+                  </p>
+                </div>
+                <Switch
+                  checked={privacy.allowAnalytics}
+                  onCheckedChange={(checked) =>
+                    setPrivacy({ ...privacy, allowAnalytics: checked })
+                  }
+                />
+              </div>
+            </div>
+
+            <Separator />
+
+            <div className="space-y-3">
+              <Label className="text-sm font-medium">Data Management</Label>
+              <div className="flex gap-3">
                 <Button
-                  onClick={handleExportData}
+                  size="sm"
                   variant="outline"
-                  className="mr-4"
+                  className="flex items-center gap-2"
                 >
-                  <Download className="h-4 w-4 mr-2" />
-                  Export My Data
+                  <Download className="h-4 w-4" />
+                  Export Data
                 </Button>
-                <Button className="bg-gradient-to-r from-ai-accent to-logo-teal text-white">
-                  <Save className="h-4 w-4 mr-2" />
-                  Save Privacy Settings
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="flex items-center gap-2 text-red-600 hover:text-red-700"
+                >
+                  <Trash2 className="h-4 w-4" />
+                  Delete Account
                 </Button>
               </div>
-            </CardContent>
-          </Card>
-        </TabsContent>
+            </div>
+          </CardContent>
+        </Card>
 
-        {/* Account Management */}
-        <TabsContent value="account">
-          <div className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center">
-                  <RefreshCw className="h-5 w-5 mr-2 text-logo-teal" />
-                  Training Management
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
-                  <div className="flex items-start space-x-3">
-                    <AlertTriangle className="h-5 w-5 text-yellow-600 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-yellow-800">
-                        Restart Training
-                      </h4>
-                      <p className="text-sm text-yellow-700 mb-3">
-                        This will reset all your Twin's learning progress and
-                        start fresh. This action cannot be undone.
-                      </p>
-                      <Button
-                        onClick={handleRestartTraining}
-                        variant="outline"
-                        size="sm"
-                        className="border-yellow-600 text-yellow-700 hover:bg-yellow-100"
-                      >
-                        <RefreshCw className="h-4 w-4 mr-2" />
-                        Restart Training
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Training Program Controls */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Training Program</CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              <Button variant="outline" className="flex items-center gap-2">
+                Pause Training
+              </Button>
+              <Button
+                variant="outline"
+                className="flex items-center gap-2 text-orange-600"
+              >
+                Restart Program
+              </Button>
+            </div>
+            <div className="text-xs text-muted-foreground">
+              <p>
+                <strong>Note:</strong> Pausing training will stop daily task
+                generation. Restarting will reset your Twin's learning progress.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center text-red-600">
-                  <Trash2 className="h-5 w-5 mr-2" />
-                  Danger Zone
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="p-4 border border-red-200 bg-red-50 rounded-lg">
-                  <div className="flex items-start space-x-3">
-                    <AlertTriangle className="h-5 w-5 text-red-600 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-red-800">
-                        Delete Account
-                      </h4>
-                      <p className="text-sm text-red-700 mb-3">
-                        Permanently delete your account and all associated data.
-                        This action cannot be undone.
-                      </p>
-                      <Button
-                        onClick={handleDeleteAccount}
-                        variant="outline"
-                        size="sm"
-                        className="border-red-600 text-red-700 hover:bg-red-100"
-                      >
-                        <Trash2 className="h-4 w-4 mr-2" />
-                        Delete Account
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-      </Tabs>
+        {/* Account Actions */}
+        <Card>
+          <CardContent className="p-4">
+            <div className="flex justify-between items-center">
+              <div>
+                <Label className="text-sm font-medium">Account</Label>
+                <p className="text-xs text-muted-foreground">
+                  Manage your account status
+                </p>
+              </div>
+              <Button
+                variant="outline"
+                onClick={logout}
+                className="text-red-600 hover:text-red-700 hover:bg-red-50"
+              >
+                Sign Out
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
@@ -141,6 +140,9 @@ const AppRoutes = () => {
       {/* Marketing homepage at root for authenticated users too */}
       <Route path="/" element={<Index />} />
 
+      {/* Login/signup page - also accessible to authenticated users */}
+      <Route path="/login" element={<LandingPage />} />
+
       <Route
         path="/train-your-twin-app/*"
         element={
@@ -233,15 +235,13 @@ const AppRoutes = () => {
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <AuthProvider>
-          <AppRoutes />
-        </AuthProvider>
-      </BrowserRouter>
-    </TooltipProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <Toaster />
+        <Sonner />
+        <AppRoutes />
+      </AuthProvider>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 

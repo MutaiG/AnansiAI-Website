@@ -61,18 +61,29 @@ const EnterpriseTwin = () => {
               truly understands your organization.
             </p>
 
-            <Button
-              onClick={() =>
-                window.open(
-                  "mailto:contact@anansiai.com?subject=Enterprise Twin Inquiry&body=Hi,%0D%0A%0D%0AI am interested in Enterprise Twin for my organization. Please provide more information about pricing and implementation.%0D%0A%0D%0AThanks!",
-                )
-              }
-              size="lg"
-              className="bg-gradient-to-r from-cyber-blue to-logo-blue hover:from-cyber-blue/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
-            >
-              Deploy Your Enterprise Twin
-              <ArrowRight className="ml-3 h-6 w-6" />
-            </Button>
+            <div className="flex flex-col items-center gap-4">
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-cyber-blue to-logo-blue hover:from-cyber-blue/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/login">
+                  🔐 Enterprise Biometric Portal
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
+
+              <div className="bg-gradient-to-r from-cyber-blue/10 to-logo-blue/10 border border-cyber-blue/20 rounded-lg p-4">
+                <p className="text-sm text-muted-foreground text-center mb-2">
+                  Military-grade security for enterprise deployment
+                </p>
+                <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
+                  <span>🛡️ SOC 2 Compliant</span>
+                  <span>👆 Multi-Factor Auth</span>
+                  <span>🔒 Zero Trust</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

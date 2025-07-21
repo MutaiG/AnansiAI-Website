@@ -70,12 +70,14 @@ const StudentTwin = () => {
             </p>
 
             <Button
-              onClick={() => setShowEnrollmentForm(true)}
+              asChild
               size="lg"
               className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
             >
-              Train Your Student Twin
-              <ArrowRight className="ml-3 h-6 w-6" />
+              <Link to="/login">
+                🔐 Secure Biometric Access
+                <ArrowRight className="ml-3 h-6 w-6" />
+              </Link>
             </Button>
           </div>
         </div>

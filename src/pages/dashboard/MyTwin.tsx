@@ -1,293 +1,458 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
 import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   Brain,
-  BookOpen,
-  Clock,
-  Trophy,
-  ArrowRight,
   MessageCircle,
-  Upload,
-  Mic,
   Send,
   Sparkles,
   Camera,
   FileText,
-  Plus,
-  Star,
-  Target,
+  Mic,
+  Heart,
   Zap,
-  Lightbulb,
+  Clock,
+  Star,
+  Share2,
+  Image,
+  Music,
+  Video,
+  Link,
+  Smile,
+  MoreHorizontal,
 } from "lucide-react";
 
 const MyTwin = () => {
   const { user } = useAuth();
   const [inputText, setInputText] = useState("");
-  const [showFloatingChat, setShowFloatingChat] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
-  const completedTasks = 12;
-  const totalTasks = 20;
-  const progressPercentage = (completedTasks / totalTasks) * 100;
+  const twinPersonality = {
+    mood: "Energetic",
+    learningFocus: "Creative Problem Solving",
+    lastActive: "Active now",
+    conversationTopics: [
+      "Technology & Innovation",
+      "Creative Projects",
+      "Personal Growth",
+      "Future Planning",
+    ],
+    twinInsights: [
+      "You're most creative in the mornings",
+      "You love collaborative brainstorming",
+      "Innovation excites you the most",
+    ],
+  };
 
-  const dailyTasks = [
-    "Describe your happiest childhood memory",
-    "Write a note to your younger self",
-    "Share a recent challenge you overcame",
-    "What's your biggest dream for the future?",
+  const sharingOptions = [
+    { icon: Camera, label: "Photo", color: "text-blue-500" },
+    { icon: FileText, label: "Document", color: "text-green-500" },
+    { icon: Mic, label: "Voice Note", color: "text-purple-500" },
+    { icon: Video, label: "Video", color: "text-red-500" },
+    { icon: Music, label: "Audio", color: "text-orange-500" },
+    { icon: Link, label: "Link", color: "text-cyan-500" },
   ];
 
-  const recentActivities = [
-    {
-      type: "task",
-      title: "Described childhood memory",
-      time: "2 hours ago",
-      points: 50,
-    },
-    {
-      type: "reflection",
-      title: "Reflected on career goals",
-      time: "1 day ago",
-      points: 75,
-    },
-    {
-      type: "interaction",
-      title: "Chat with Twin Assistant",
-      time: "2 days ago",
-      points: 25,
-    },
-  ];
-
-  const handleSubmitEntry = () => {
-    if (inputText.trim()) {
-      // Handle submission logic here
+  const handleSendMessage = () => {
+    if (inputText.trim() || selectedFiles.length > 0) {
+      // Handle message sending logic here
+      console.log("Sending:", { text: inputText, files: selectedFiles });
       setInputText("");
+      setSelectedFiles([]);
     }
   };
 
+  const handleMediaUpload = (type: string) => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.multiple = true;
+
+    switch (type) {
+      case "photo":
+        input.accept = "image/*";
+        break;
+      case "video":
+        input.accept = "video/*";
+        break;
+      case "audio":
+        input.accept = "audio/*";
+        break;
+      case "document":
+        input.accept = ".pdf,.doc,.docx,.txt,.rtf";
+        break;
+      case "voice note":
+        input.accept = "audio/*";
+        break;
+      case "link":
+        // Handle link sharing differently
+        const url = prompt("Enter a URL to share:");
+        if (url) {
+          setInputText((prev) => prev + (prev ? "\n" : "") + url);
+        }
+        return;
+      default:
+        input.accept = "*/*";
+    }
+
+    input.onchange = (e) => {
+      const files = Array.from((e.target as HTMLInputElement).files || []);
+      if (files.length > 0) {
+        setSelectedFiles((prev) => [...prev, ...files]);
+        // Show file names in textarea
+        const fileNames = files.map((f) => f.name).join(", ");
+        setInputText((prev) => prev + (prev ? "\n" : "") + `📎 ${fileNames}`);
+      }
+    };
+
+    input.click();
+  };
+
+  const handleShareMemory = () => {
+    const memoryPrompts = [
+      "What's your most cherished childhood memory?",
+      "Tell me about a time you felt truly proud of yourself.",
+      "What's a funny memory that always makes you smile?",
+      "Describe a moment when you felt completely at peace.",
+      "What's a memory that taught you something important?",
+      "Share a memory involving someone you love.",
+      "What's an adventure or trip you'll never forget?",
+      "Tell me about a moment that changed your perspective.",
+    ];
+    const randomPrompt =
+      memoryPrompts[Math.floor(Math.random() * memoryPrompts.length)];
+    setInputText(
+      (prev) =>
+        prev + (prev ? "\n\n" : "") + `💭 Memory prompt: ${randomPrompt}\n\n`,
+    );
+
+    // Focus the textarea after adding the prompt
+    setTimeout(() => {
+      const textarea = document.querySelector("textarea");
+      if (textarea) {
+        textarea.focus();
+        textarea.setSelectionRange(
+          textarea.value.length,
+          textarea.value.length,
+        );
+      }
+    }, 100);
+  };
+
+  const handleRandomQuestion = () => {
+    const questions = [
+      "If you could have dinner with anyone, living or dead, who would it be and why?",
+      "What's something you've always wanted to learn but haven't had the chance to?",
+      "If you could change one thing about the world, what would it be?",
+      "What's the best advice you've ever received?",
+      "If you could relive one day of your life, which would it be?",
+      "What's something that never fails to make you happy?",
+      "If you had unlimited resources, what project would you start?",
+      "What's a skill you wish you were naturally good at?",
+      "What does success mean to you personally?",
+      "If you could send a message to your future self, what would it say?",
+    ];
+    const randomQuestion =
+      questions[Math.floor(Math.random() * questions.length)];
+    setInputText(
+      (prev) => prev + (prev ? "\n\n" : "") + `❓ ${randomQuestion}\n\n`,
+    );
+
+    // Focus the textarea after adding the question
+    setTimeout(() => {
+      const textarea = document.querySelector("textarea");
+      if (textarea) {
+        textarea.focus();
+        textarea.setSelectionRange(
+          textarea.value.length,
+          textarea.value.length,
+        );
+      }
+    }, 100);
+  };
+
+  const handleFeelingsCheck = () => {
+    const feelingsPrompts = [
+      "How are you feeling right now, and what's contributing to that feeling?",
+      "What emotions have you experienced most today?",
+      "Is there anything weighing on your mind that you'd like to share?",
+      "What's bringing you joy or excitement lately?",
+      "How has your energy level been today?",
+      "What's one thing that would improve your mood right now?",
+      "Are you feeling stressed about anything specific?",
+      "What's something you're grateful for today?",
+    ];
+    const randomPrompt =
+      feelingsPrompts[Math.floor(Math.random() * feelingsPrompts.length)];
+    setInputText(
+      (prev) =>
+        prev +
+        (prev ? "\n\n" : "") +
+        `💚 Feelings check-in: ${randomPrompt}\n\n`,
+    );
+
+    // Focus the textarea after adding the prompt
+    setTimeout(() => {
+      const textarea = document.querySelector("textarea");
+      if (textarea) {
+        textarea.focus();
+        textarea.setSelectionRange(
+          textarea.value.length,
+          textarea.value.length,
+        );
+      }
+    }, 100);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-logo-teal/5 relative">
-      <div className="container mx-auto p-6 space-y-6 pb-24">
-        {/* Simple Header */}
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-bold text-foreground">
-            Welcome back, {user?.name}
-          </h1>
-          <div className="text-right">
-            <div className="text-lg font-semibold text-logo-teal">
-              {completedTasks}/{totalTasks}
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-logo-teal/5">
+      <div className="container mx-auto p-4 sm:p-6 space-y-4 sm:space-y-6 max-w-6xl">
+        {/* Twin Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-4">
+            <div className="relative">
+              <Avatar className="w-16 h-16 border-4 border-logo-teal/20">
+                <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-2xl font-bold">
+                  🤖
+                </AvatarFallback>
+              </Avatar>
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-background flex items-center justify-center">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              </div>
             </div>
-            <div className="text-xs text-muted-foreground">completed</div>
+            <div>
+              <h1 className="text-2xl font-bold text-foreground">
+                {user?.twinName || `${user?.name}'s Twin`}
+              </h1>
+              <div className="flex items-center gap-2 mt-1">
+                <Badge className="bg-green-100 text-green-800 text-xs">
+                  {twinPersonality.lastActive}
+                </Badge>
+                <span className="text-sm text-muted-foreground">
+                  Mood: {twinPersonality.mood}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm">
+              <Share2 className="h-4 w-4 mr-2" />
+              Share Twin
+            </Button>
+            <Button variant="ghost" size="sm">
+              <MoreHorizontal className="h-4 w-4" />
+            </Button>
           </div>
         </div>
 
-        {/* Today's Tasks */}
-        <Card className="bg-gradient-to-r from-logo-teal/5 to-logo-blue/5">
-          <CardContent className="p-6">
-            <h2 className="font-semibold mb-4">Today's Tasks</h2>
-            <div className="space-y-3">
-              {dailyTasks.slice(0, 2).map((task, index) => (
-                <div
-                  key={index}
-                  className="p-3 bg-background rounded-lg hover:shadow-sm transition-shadow cursor-pointer group"
-                >
-                  <div className="flex items-center justify-between">
-                    <p className="text-sm flex-1">{task}</p>
+        <div className="grid lg:grid-cols-3 gap-6">
+          {/* Main Content */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Unified Share Interface with Quick Actions */}
+            <Card>
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-xl mb-4 flex items-center gap-2">
+                  <Share2 className="h-5 w-5 text-logo-teal" />
+                  Share with Your Twin
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Share anything with your Twin to help it learn about you and
+                  your preferences.
+                </p>
+
+                {/* Quick Action Buttons */}
+                <div className="mb-6">
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Quick prompts to get you started:
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     <Button
-                      size="sm"
-                      variant="ghost"
-                      className="text-logo-teal"
+                      variant="outline"
+                      className="justify-start hover:bg-red-50 hover:border-red-200 transition-all duration-200 active:scale-95"
+                      onClick={handleShareMemory}
                     >
-                      <ArrowRight className="h-4 w-4" />
+                      <Heart className="h-4 w-4 mr-2 text-red-500" />
+                      Share a Memory
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="justify-start hover:bg-yellow-50 hover:border-yellow-200 transition-all duration-200 active:scale-95"
+                      onClick={handleRandomQuestion}
+                    >
+                      <Zap className="h-4 w-4 mr-2 text-yellow-500" />
+                      Random Question
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="justify-start hover:bg-green-50 hover:border-green-200 transition-all duration-200 active:scale-95"
+                      onClick={handleFeelingsCheck}
+                    >
+                      <Smile className="h-4 w-4 mr-2 text-green-500" />
+                      How I'm Feeling
                     </Button>
                   </div>
                 </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* Progress Overview */}
-        <div className="grid md:grid-cols-3 gap-4">
-          <Card>
-            <CardContent className="p-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-muted-foreground">Progress</span>
-                <span className="text-sm font-medium">
-                  {Math.round(progressPercentage)}%
-                </span>
-              </div>
-              <Progress value={progressPercentage} className="h-2" />
-            </CardContent>
-          </Card>
+                <div className="space-y-4">
+                  <Textarea
+                    placeholder="Tell your Twin anything... thoughts, experiences, ideas, feelings..."
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    className="min-h-[120px] resize-none"
+                  />
 
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-xl font-bold text-logo-teal">5</div>
-              <div className="text-xs text-muted-foreground">Day Streak</div>
-            </CardContent>
-          </Card>
+                  {/* Selected Files Preview */}
+                  {selectedFiles.length > 0 && (
+                    <div className="flex flex-wrap gap-2 p-3 bg-muted/30 rounded-lg">
+                      {selectedFiles.map((file, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-2 bg-background px-3 py-2 rounded-md text-sm"
+                        >
+                          <FileText className="h-4 w-4 text-logo-teal" />
+                          <span className="truncate max-w-[150px]">
+                            {file.name}
+                          </span>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="h-4 w-4 p-0 hover:bg-destructive hover:text-destructive-foreground"
+                            onClick={() => {
+                              setSelectedFiles((prev) =>
+                                prev.filter((_, i) => i !== index),
+                              );
+                              // Remove file name from text
+                              setInputText((prev) =>
+                                prev
+                                  .replace(
+                                    new RegExp(`📎 ${file.name}[,\\s]*`, "g"),
+                                    "",
+                                  )
+                                  .trim(),
+                              );
+                            }}
+                          >
+                            ×
+                          </Button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
 
-          <Card>
-            <CardContent className="p-4 text-center">
-              <div className="text-xl font-bold text-logo-blue">78</div>
-              <div className="text-xs text-muted-foreground">Entries</div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Quick Entry */}
-        <Card>
-          <CardContent className="p-4">
-            <Textarea
-              placeholder="Share something with your Twin..."
-              value={inputText}
-              onChange={(e) => setInputText(e.target.value)}
-              className="min-h-[80px] resize-none border-0 bg-muted/30"
-            />
-            <div className="flex items-center justify-between mt-3">
-              <div className="flex gap-2">
-                <Button variant="ghost" size="sm">
-                  <Camera className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="sm">
-                  <FileText className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="sm">
-                  <Mic className="h-4 w-4" />
-                </Button>
-              </div>
-              <Button
-                onClick={handleSubmitEntry}
-                disabled={!inputText.trim()}
-                size="sm"
-              >
-                Share
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Quick Actions */}
-        <div className="grid grid-cols-4 gap-3">
-          <Card className="hover:shadow-sm transition-shadow cursor-pointer">
-            <CardContent className="p-3 text-center">
-              <Target className="h-5 w-5 text-logo-teal mx-auto mb-2" />
-              <div className="text-xs font-medium">Goals</div>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-sm transition-shadow cursor-pointer">
-            <CardContent className="p-3 text-center">
-              <Clock className="h-5 w-5 text-logo-blue mx-auto mb-2" />
-              <div className="text-xs font-medium">Check-in</div>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-sm transition-shadow cursor-pointer">
-            <CardContent className="p-3 text-center">
-              <Star className="h-5 w-5 text-cyber-blue mx-auto mb-2" />
-              <div className="text-xs font-medium">Reflect</div>
-            </CardContent>
-          </Card>
-
-          <Card className="hover:shadow-sm transition-shadow cursor-pointer">
-            <CardContent className="p-3 text-center">
-              <Zap className="h-5 w-5 text-neural-blue mx-auto mb-2" />
-              <div className="text-xs font-medium">Quick</div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Recent Activity */}
-        <Card>
-          <CardContent className="p-4">
-            <h3 className="font-medium mb-3">Recent</h3>
-            <div className="space-y-2">
-              {recentActivities.slice(0, 3).map((activity, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between p-2 rounded hover:bg-muted/50"
-                >
-                  <div className="flex-1">
-                    <p className="text-sm">{activity.title}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {activity.time}
-                    </p>
+                  <div className="flex justify-between items-center">
+                    <div className="flex gap-2">
+                      {sharingOptions.map((option) => (
+                        <Button
+                          key={option.label}
+                          variant="ghost"
+                          size="sm"
+                          className="flex-shrink-0"
+                          onClick={() =>
+                            handleMediaUpload(option.label.toLowerCase())
+                          }
+                        >
+                          <option.icon className={`h-4 w-4 ${option.color}`} />
+                        </Button>
+                      ))}
+                    </div>
+                    <Button
+                      onClick={handleSendMessage}
+                      disabled={!inputText.trim() && selectedFiles.length === 0}
+                      className="bg-gradient-to-r from-logo-teal to-logo-blue"
+                    >
+                      <Send className="h-4 w-4 mr-2" />
+                      Share with Twin
+                      {selectedFiles.length > 0 && (
+                        <Badge className="ml-2 bg-white/20 text-white">
+                          {selectedFiles.length}
+                        </Badge>
+                      )}
+                    </Button>
                   </div>
-                  <span className="text-xs text-logo-teal">
-                    +{activity.points}
-                  </span>
                 </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Floating Twin Avatar */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <div className="relative">
-          <Button
-            onClick={() => setShowFloatingChat(!showFloatingChat)}
-            className="w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            <Avatar className="w-12 h-12">
-              <AvatarFallback className="bg-transparent text-white text-lg font-bold">
-                🤖
-              </AvatarFallback>
-            </Avatar>
-          </Button>
-
-          {showFloatingChat && (
-            <div className="absolute bottom-20 right-0 w-80 bg-background border border-border rounded-lg shadow-2xl p-4 animate-in slide-in-from-bottom-5">
-              <div className="flex items-center gap-2 mb-3">
-                <Avatar className="w-8 h-8">
-                  <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-sm">
-                    🤖
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <p className="font-semibold text-sm">Your Twin</p>
-                  <p className="text-xs text-muted-foreground">
-                    Always here to help
-                  </p>
-                </div>
-              </div>
-              <div className="bg-muted/50 rounded-lg p-3 mb-3">
-                <p className="text-sm">Ready for today's tasks? 🌟</p>
-              </div>
-              <div className="flex gap-2">
-                <Button size="sm" variant="outline" className="flex-1">
-                  Maybe Later
-                </Button>
-                <Button
-                  size="sm"
-                  className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue"
-                >
-                  Let's Go!
-                </Button>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Task Progress Bar at Bottom */}
-      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border p-4">
-        <div className="container mx-auto">
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium">Today's Progress</span>
-            <span className="text-sm text-muted-foreground">
-              {Math.round(progressPercentage)}% Complete
-            </span>
+              </CardContent>
+            </Card>
           </div>
-          <Progress value={progressPercentage} className="h-2" />
+
+          {/* Twin Insights Sidebar */}
+          <div className="space-y-4">
+            {/* Twin Status */}
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="font-medium mb-3 flex items-center gap-2">
+                  <Brain className="h-4 w-4 text-logo-teal" />
+                  Twin Status
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">
+                      Learning Focus
+                    </span>
+                    <Badge variant="secondary" className="text-xs">
+                      {twinPersonality.learningFocus}
+                    </Badge>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">
+                      Conversations
+                    </span>
+                    <span className="text-sm font-medium">47 this week</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-muted-foreground">
+                      Shared Items
+                    </span>
+                    <span className="text-sm font-medium">23 items</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Conversation Topics */}
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="font-medium mb-3 flex items-center gap-2">
+                  <Sparkles className="h-4 w-4 text-logo-blue" />
+                  Topics We Explore
+                </h3>
+                <div className="space-y-2">
+                  {twinPersonality.conversationTopics.map((topic, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center gap-2 p-2 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                    >
+                      <div className="w-2 h-2 rounded-full bg-logo-teal"></div>
+                      <span className="text-sm">{topic}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Twin Insights */}
+            <Card>
+              <CardContent className="p-4">
+                <h3 className="font-medium mb-3 flex items-center gap-2">
+                  <Star className="h-4 w-4 text-cyber-blue" />
+                  What I Know About You
+                </h3>
+                <div className="space-y-3">
+                  {twinPersonality.twinInsights.map((insight, index) => (
+                    <div
+                      key={index}
+                      className="p-3 rounded-lg bg-gradient-to-r from-logo-teal/5 to-logo-blue/5 border-l-2 border-logo-teal"
+                    >
+                      <p className="text-sm">{insight}</p>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import MyTwin from "./pages/dashboard/MyTwin";
 import Volumes from "./pages/dashboard/Volumes";
 import TwinCourses from "./pages/dashboard/TwinCourses";
 import DailyTasks from "./pages/dashboard/DailyTasks";
+import Milestones from "./pages/dashboard/Milestones";
 import Analytics from "./pages/dashboard/Analytics";
 import Settings from "./pages/dashboard/Settings";
 
@@ -152,6 +153,7 @@ const AppRoutes = () => {
               <Route path="/volumes" element={<Volumes />} />
               <Route path="/courses" element={<TwinCourses />} />
               <Route path="/tasks" element={<DailyTasks />} />
+              <Route path="/milestones" element={<Milestones />} />
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/settings" element={<Settings />} />
             </Routes>

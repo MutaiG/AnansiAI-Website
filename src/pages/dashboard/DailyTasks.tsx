@@ -75,6 +75,7 @@ const DailyTasks = () => {
       ],
       response: "",
       twinFeedback: "",
+      skipped: false,
     },
     {
       id: 2,
@@ -95,6 +96,7 @@ const DailyTasks = () => {
         "Dear 16-year-old me, trust yourself more. Those doubts you have are normal, but don't let them stop you from trying new things. The failures will teach you more than the successes.",
       twinFeedback:
         "I can see you value growth through experience and self-trust. This reflects a resilient mindset that I'm learning to incorporate into my understanding of you.",
+      skipped: false,
     },
     {
       id: 3,
@@ -113,6 +115,7 @@ const DailyTasks = () => {
       ],
       response: "",
       twinFeedback: "",
+      skipped: false,
     },
     {
       id: 4,
@@ -131,6 +134,7 @@ const DailyTasks = () => {
       ],
       response: "",
       twinFeedback: "",
+      skipped: false,
     },
   ]);
 
@@ -142,73 +146,270 @@ const DailyTasks = () => {
     );
   };
 
+  const skipTask = (taskId: number) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId
+          ? {
+              ...task,
+              completed: true,
+              skipped: true,
+              response: "Skipped",
+              twinFeedback:
+                "No problem! Your Twin understands that some tasks might not feel relevant right now. Feel free to explore other activities that interest you more.",
+            }
+          : task,
+      ),
+    );
+  };
+
+  const undoSkipTask = (taskId: number) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === taskId
+          ? {
+              ...task,
+              completed: false,
+              skipped: false,
+              response: "",
+              twinFeedback: "",
+            }
+          : task,
+      ),
+    );
+  };
+
   const addNewTask = () => {
-    const newTaskTemplates = [
-      {
-        title: "What motivates you in the morning?",
-        category: "Motivation",
-        timeEstimate: "6 min",
-        points: 55,
-        description:
-          "Help your Twin understand what drives you to start each day with purpose and energy.",
-        prompts: [
-          "What gets you out of bed?",
-          "What are you looking forward to?",
-          "What gives you energy?",
-        ],
-      },
-      {
-        title: "Describe your ideal day",
-        category: "Goals",
-        timeEstimate: "12 min",
-        points: 80,
-        description:
-          "Paint a picture of your perfect day so your Twin can understand your values and priorities.",
-        prompts: [
-          "How would you spend your time?",
-          "Who would you be with?",
-          "What activities would you do?",
-        ],
-      },
-      {
-        title: "What skill would you like to learn?",
-        category: "Growth",
-        timeEstimate: "4 min",
-        points: 45,
-        description:
-          "Share your learning aspirations to help your Twin understand your growth mindset.",
-        prompts: [
-          "What skill interests you?",
-          "Why do you want to learn it?",
-          "How would it benefit you?",
-        ],
-      },
-      {
-        title: "Share a moment when you felt proud",
-        category: "Memory",
-        timeEstimate: "8 min",
-        points: 70,
-        description:
-          "Tell your Twin about an achievement or moment that filled you with pride.",
-        prompts: [
-          "What did you accomplish?",
-          "What made it special?",
-          "How did it change you?",
-        ],
-      },
+    // Multiple sets of question collections
+    const questionSets = [
+      // Set 1: Personal Values & Philosophy
+      [
+        {
+          title: "What are your core life principles?",
+          category: "Values",
+          timeEstimate: "8 min",
+          points: 65,
+          description: "Help your Twin understand the fundamental beliefs that guide your decisions.",
+          prompts: [
+            "What principles do you never compromise on?",
+            "How did you develop these values?",
+            "How do they influence your daily choices?",
+          ],
+        },
+        {
+          title: "Describe your biggest fear and how you face it",
+          category: "Growth",
+          timeEstimate: "10 min",
+          points: 75,
+          description: "Share your vulnerabilities so your Twin can understand your courage and resilience.",
+          prompts: [
+            "What scares you the most?",
+            "How do you manage this fear?",
+            "What have you learned from facing it?",
+          ],
+        },
+        {
+          title: "What legacy do you want to leave behind?",
+          category: "Purpose",
+          timeEstimate: "12 min",
+          points: 85,
+          description: "Express your vision for long-term impact so your Twin understands your purpose.",
+          prompts: [
+            "How do you want to be remembered?",
+            "What impact do you want to make?",
+            "What would make your life meaningful?",
+          ],
+        },
+        {
+          title: "Share a time when you changed your mind about something important",
+          category: "Reflection",
+          timeEstimate: "9 min",
+          points: 70,
+          description: "Show your Twin how you evolve your thinking and adapt your beliefs.",
+          prompts: [
+            "What belief did you change?",
+            "What caused this shift?",
+            "How has this change affected you?",
+          ],
+        },
+      ],
+      // Set 2: Relationships & Social Dynamics
+      [
+        {
+          title: "How do you show love and appreciation?",
+          category: "Relationships",
+          timeEstimate: "7 min",
+          points: 60,
+          description: "Help your Twin understand your emotional expression and relationship patterns.",
+          prompts: [
+            "How do you express care for others?",
+            "What gestures mean the most to you?",
+            "How do you like to receive appreciation?",
+          ],
+        },
+        {
+          title: "Describe a mentor or role model who influenced you",
+          category: "Inspiration",
+          timeEstimate: "11 min",
+          points: 80,
+          description: "Share the people who shaped you so your Twin understands your aspirations.",
+          prompts: [
+            "Who has been most influential in your life?",
+            "What did they teach you?",
+            "How do you apply their lessons?",
+          ],
+        },
+        {
+          title: "How do you handle conflict and disagreements?",
+          category: "Communication",
+          timeEstimate: "8 min",
+          points: 65,
+          description: "Show your Twin your conflict resolution style and communication approach.",
+          prompts: [
+            "How do you approach difficult conversations?",
+            "What's your strategy for resolving conflicts?",
+            "How do you maintain relationships through disagreements?",
+          ],
+        },
+        {
+          title: "What qualities do you value most in friendships?",
+          category: "Relationships",
+          timeEstimate: "6 min",
+          points: 55,
+          description: "Help your Twin understand what you seek and offer in close relationships.",
+          prompts: [
+            "What makes a great friend?",
+            "What do you bring to friendships?",
+            "How do you maintain long-term relationships?",
+          ],
+        },
+      ],
+      // Set 3: Creativity & Problem-Solving
+      [
+        {
+          title: "Describe your creative process and inspiration sources",
+          category: "Creativity",
+          timeEstimate: "10 min",
+          points: 75,
+          description: "Share how your mind works creatively so your Twin can mirror your innovative thinking.",
+          prompts: [
+            "Where do you find inspiration?",
+            "How do you develop ideas?",
+            "What environments spark your creativity?",
+          ],
+        },
+        {
+          title: "How do you approach complex problems?",
+          category: "Problem-Solving",
+          timeEstimate: "9 min",
+          points: 70,
+          description: "Reveal your analytical thinking patterns so your Twin can assist with future challenges.",
+          prompts: [
+            "What's your process for tackling difficult problems?",
+            "How do you break down complex issues?",
+            "What tools or methods do you use?",
+          ],
+        },
+        {
+          title: "Share a project you're most proud of",
+          category: "Achievement",
+          timeEstimate: "12 min",
+          points: 85,
+          description: "Demonstrate your capabilities and passion so your Twin understands your potential.",
+          prompts: [
+            "What project means the most to you?",
+            "What challenges did you overcome?",
+            "What would you do differently?",
+          ],
+        },
+        {
+          title: "How do you stay motivated during difficult times?",
+          category: "Resilience",
+          timeEstimate: "8 min",
+          points: 65,
+          description: "Show your Twin your coping mechanisms and sources of strength.",
+          prompts: [
+            "What keeps you going when things get tough?",
+            "What practices help you stay resilient?",
+            "Who or what do you turn to for support?",
+          ],
+        },
+      ],
+      // Set 4: Future & Ambitions
+      [
+        {
+          title: "Describe your vision for your life in 10 years",
+          category: "Future",
+          timeEstimate: "11 min",
+          points: 80,
+          description: "Paint a picture of your future so your Twin can help you work toward your goals.",
+          prompts: [
+            "Where do you see yourself in 10 years?",
+            "What will you have accomplished?",
+            "How will you have grown as a person?",
+          ],
+        },
+        {
+          title: "What would you do if you had unlimited resources?",
+          category: "Dreams",
+          timeEstimate: "9 min",
+          points: 70,
+          description: "Explore your deepest aspirations so your Twin understands your true desires.",
+          prompts: [
+            "What problems would you solve?",
+            "What experiences would you pursue?",
+            "How would you use your influence?",
+          ],
+        },
+        {
+          title: "How do you define success for yourself?",
+          category: "Values",
+          timeEstimate: "8 min",
+          points: 65,
+          description: "Share your personal definition of achievement so your Twin can support your goals.",
+          prompts: [
+            "What does success look like to you?",
+            "How do you measure your progress?",
+            "What would make you feel truly fulfilled?",
+          ],
+        },
+        {
+          title: "What habits are you trying to build or break?",
+          category: "Self-Improvement",
+          timeEstimate: "7 min",
+          points: 60,
+          description: "Show your Twin your growth areas so it can help you develop positive patterns.",
+          prompts: [
+            "What habits do you want to develop?",
+            "What patterns do you want to change?",
+            "What strategies are you using?",
+          ],
+        },
+      ],
     ];
 
-    const randomTemplate =
-      newTaskTemplates[Math.floor(Math.random() * newTaskTemplates.length)];
-    const newTask = {
-      id: tasks.length + 1,
-      ...randomTemplate,
+    // Select a random question set
+    const selectedSet = questionSets[Math.floor(Math.random() * questionSets.length)];
+
+    // Generate new tasks with unique IDs
+    const newTasks = selectedSet.map((template, index) => ({
+      id: Date.now() + index, // Ensure unique IDs
+      ...template,
       completed: false,
       response: "",
       twinFeedback: "",
-    };
+      skipped: false,
+    }));
 
-    setTasks((prevTasks) => [...prevTasks, newTask]);
+    // Replace current tasks with the new set
+    setTasks(newTasks);
+
+    // Scroll to the tasks section
+    setTimeout(() => {
+      document
+        .getElementById("todays-tasks")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   const createSpecificTask = (type: string) => {
@@ -316,6 +517,7 @@ const DailyTasks = () => {
       completed: false,
       response: "",
       twinFeedback: "",
+      skipped: false,
     };
 
     setTasks((prevTasks) => [...prevTasks, newTask]);
@@ -582,7 +784,7 @@ const DailyTasks = () => {
             onClick={addNewTask}
           >
             <Plus className="h-4 w-4 mr-2" />
-            Request More
+            New Question Set
           </Button>
         </div>
 
@@ -664,135 +866,159 @@ const DailyTasks = () => {
                             </span>
                           </div>
                         </div>
-                        {!task.completed && (
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button
-                                size="sm"
-                                className="bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:shadow-md"
-                                onClick={() => setSelectedTask(task)}
-                              >
-                                Start
-                                <ArrowRight className="h-4 w-4 ml-2" />
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                              <DialogHeader>
-                                <DialogTitle className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center">
-                                    <Brain className="h-4 w-4 text-white" />
-                                  </div>
-                                  {task.title}
-                                </DialogTitle>
-                              </DialogHeader>
-
-                              <div className="space-y-6">
-                                {/* Task Description */}
-                                <div className="bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 p-4 rounded-lg border border-logo-teal/20">
-                                  <p className="text-sm text-muted-foreground mb-2">
-                                    Your Twin is asking:
-                                  </p>
-                                  <p className="font-medium">
-                                    {task.description}
-                                  </p>
-                                </div>
-
-                                {/* Guiding Prompts */}
-                                <div>
-                                  <h4 className="font-medium mb-3 flex items-center gap-2">
-                                    <Lightbulb className="h-4 w-4 text-yellow-500" />
-                                    Consider these questions:
-                                  </h4>
-                                  <ul className="space-y-2">
-                                    {task.prompts?.map(
-                                      (prompt: string, index: number) => (
-                                        <li
-                                          key={index}
-                                          className="flex items-start gap-2 text-sm text-muted-foreground"
-                                        >
-                                          <span className="w-1.5 h-1.5 rounded-full bg-logo-teal mt-2 flex-shrink-0" />
-                                          {prompt}
-                                        </li>
-                                      ),
-                                    )}
-                                  </ul>
-                                </div>
-
-                                {/* Response Area */}
-                                <div>
-                                  <label className="block text-sm font-medium mb-2">
-                                    Your Response:
-                                  </label>
-                                  <Textarea
-                                    placeholder="Share your thoughts with your Twin..."
-                                    value={taskResponse}
-                                    onChange={(e) =>
-                                      setTaskResponse(e.target.value)
-                                    }
-                                    className="min-h-[120px] resize-none"
-                                  />
-                                  <p className="text-xs text-muted-foreground mt-2">
-                                    Be as detailed as you'd like. Your Twin
-                                    learns from every word.
-                                  </p>
-                                </div>
-
-                                {/* Submit Button */}
-                                <div className="flex gap-3">
-                                  <Button
-                                    onClick={submitTaskResponse}
-                                    disabled={
-                                      !taskResponse.trim() || isSubmitting
-                                    }
-                                    className="bg-gradient-to-r from-logo-teal to-logo-blue text-white flex-1"
-                                  >
-                                    {isSubmitting ? (
-                                      <>
-                                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                                        Processing...
-                                      </>
-                                    ) : (
-                                      <>
-                                        <Send className="h-4 w-4 mr-2" />
-                                        Submit to Twin
-                                      </>
-                                    )}
-                                  </Button>
-                                </div>
-
-                                {/* Previous Response (if completed) */}
-                                {task.response && (
-                                  <div className="border-t pt-6">
-                                    <h4 className="font-medium mb-3 flex items-center gap-2">
-                                      <MessageCircle className="h-4 w-4 text-logo-teal" />
-                                      Your Previous Response:
-                                    </h4>
-                                    <div className="bg-muted p-4 rounded-lg mb-4">
-                                      <p className="text-sm">{task.response}</p>
+                        {!task.completed && !task.skipped && (
+                          <div className="flex gap-2">
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="border-orange-300 text-orange-600 hover:bg-orange-50"
+                              onClick={() => skipTask(task.id)}
+                            >
+                              Skip
+                            </Button>
+                            <Dialog>
+                              <DialogTrigger asChild>
+                                <Button
+                                  size="sm"
+                                  className="bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:shadow-md"
+                                  onClick={() => setSelectedTask(task)}
+                                >
+                                  Start
+                                  <ArrowRight className="h-4 w-4 ml-2" />
+                                </Button>
+                              </DialogTrigger>
+                              <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                                <DialogHeader>
+                                  <DialogTitle className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center">
+                                      <Brain className="h-4 w-4 text-white" />
                                     </div>
+                                    {task.title}
+                                  </DialogTitle>
+                                </DialogHeader>
 
-                                    {task.twinFeedback && (
-                                      <div>
-                                        <h4 className="font-medium mb-3 flex items-center gap-2">
-                                          <Avatar className="w-5 h-5">
-                                            <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-xs">
-                                              AI
-                                            </AvatarFallback>
-                                          </Avatar>
-                                          Your Twin's Response:
-                                        </h4>
-                                        <div className="bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 p-4 rounded-lg border border-logo-teal/20">
-                                          <p className="text-sm text-foreground">
-                                            {task.twinFeedback}
-                                          </p>
-                                        </div>
-                                      </div>
-                                    )}
+                                <div className="space-y-6">
+                                  {/* Task Description */}
+                                  <div className="bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 p-4 rounded-lg border border-logo-teal/20">
+                                    <p className="text-sm text-muted-foreground mb-2">
+                                      Your Twin is asking:
+                                    </p>
+                                    <p className="font-medium">
+                                      {task.description}
+                                    </p>
                                   </div>
-                                )}
-                              </div>
-                            </DialogContent>
-                          </Dialog>
+
+                                  {/* Guiding Prompts */}
+                                  <div>
+                                    <h4 className="font-medium mb-3 flex items-center gap-2">
+                                      <Lightbulb className="h-4 w-4 text-yellow-500" />
+                                      Consider these questions:
+                                    </h4>
+                                    <ul className="space-y-2">
+                                      {task.prompts?.map(
+                                        (prompt: string, index: number) => (
+                                          <li
+                                            key={index}
+                                            className="flex items-start gap-2 text-sm text-muted-foreground"
+                                          >
+                                            <span className="w-1.5 h-1.5 rounded-full bg-logo-teal mt-2 flex-shrink-0" />
+                                            {prompt}
+                                          </li>
+                                        ),
+                                      )}
+                                    </ul>
+                                  </div>
+
+                                  {/* Response Area */}
+                                  <div>
+                                    <label className="block text-sm font-medium mb-2">
+                                      Your Response:
+                                    </label>
+                                    <Textarea
+                                      placeholder="Share your thoughts with your Twin..."
+                                      value={taskResponse}
+                                      onChange={(e) =>
+                                        setTaskResponse(e.target.value)
+                                      }
+                                      className="min-h-[120px] resize-none"
+                                    />
+                                    <p className="text-xs text-muted-foreground mt-2">
+                                      Be as detailed as you'd like. Your Twin
+                                      learns from every word.
+                                    </p>
+                                  </div>
+
+                                  {/* Submit Button */}
+                                  <div className="flex gap-3">
+                                    <Button
+                                      onClick={submitTaskResponse}
+                                      disabled={
+                                        !taskResponse.trim() || isSubmitting
+                                      }
+                                      className="bg-gradient-to-r from-logo-teal to-logo-blue text-white flex-1"
+                                    >
+                                      {isSubmitting ? (
+                                        <>
+                                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                                          Processing...
+                                        </>
+                                      ) : (
+                                        <>
+                                          <Send className="h-4 w-4 mr-2" />
+                                          Submit to Twin
+                                        </>
+                                      )}
+                                    </Button>
+                                  </div>
+
+                                  {/* Previous Response (if completed) */}
+                                  {task.response && (
+                                    <div className="border-t pt-6">
+                                      <h4 className="font-medium mb-3 flex items-center gap-2">
+                                        <MessageCircle className="h-4 w-4 text-logo-teal" />
+                                        Your Previous Response:
+                                      </h4>
+                                      <div className="bg-muted p-4 rounded-lg mb-4">
+                                        <p className="text-sm">
+                                          {task.response}
+                                        </p>
+                                      </div>
+
+                                      {task.twinFeedback && (
+                                        <div>
+                                          <h4 className="font-medium mb-3 flex items-center gap-2">
+                                            <Avatar className="w-5 h-5">
+                                              <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-xs">
+                                                AI
+                                              </AvatarFallback>
+                                            </Avatar>
+                                            Your Twin's Response:
+                                          </h4>
+                                          <div className="bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 p-4 rounded-lg border border-logo-teal/20">
+                                            <p className="text-sm text-foreground">
+                                              {task.twinFeedback}
+                                            </p>
+                                          </div>
+                                        </div>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              </DialogContent>
+                            </Dialog>
+                          </div>
+                        )}
+                        {task.completed && task.skipped && (
+                          <div className="flex gap-2">
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="border-blue-300 text-blue-600 hover:bg-blue-50"
+                              onClick={() => undoSkipTask(task.id)}
+                            >
+                              Undo
+                            </Button>
+                          </div>
                         )}
                       </div>
                     </div>

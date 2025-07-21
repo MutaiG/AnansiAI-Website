@@ -64,20 +64,22 @@ const AdultTwin = () => {
                 className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
                 <Link to="/login">
-                  Train Your Adult Twin
+                  🔐 Secure Biometric Access
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
 
-              <WaitlistCTA productType="adult">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-ai-accent text-ai-accent hover:bg-ai-accent/10 px-8 py-7 text-lg font-semibold"
-                >
-                  Join Waitlist
-                </Button>
-              </WaitlistCTA>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-ai-accent text-ai-accent hover:bg-ai-accent/10 px-8 py-7 text-lg font-semibold"
+              >
+                <Link to="/login">
+                  Start Training Now
+                  <ArrowRight className="ml-3 h-6 w-6" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -402,15 +404,27 @@ const AdultTwin = () => {
             </div>
 
             <div id="signup" className="mt-8">
-              <WaitlistCTA productType="adult">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-logo-teal to-logo-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
-                >
-                  Join Our Waitlist
+              <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold text-center mb-2">Enterprise-Grade Security</h3>
+                <p className="text-sm text-muted-foreground text-center mb-4">
+                  Access your AI Twin with military-grade biometric authentication
+                </p>
+                <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                  <span>🔒 256-bit Encryption</span>
+                  <span>👆 Fingerprint Only</span>
+                  <span>🛡️ Zero Trust</span>
+                </div>
+              </div>
+              <Button
+                asChild
+                size="lg"
+                className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
+              >
+                <Link to="/login">
+                  Access with Biometric Login
                   <ArrowRight className="ml-3 h-6 w-6" />
-                </Button>
-              </WaitlistCTA>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

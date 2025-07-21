@@ -47,15 +47,103 @@ const Index = () => {
       </section>
 
       {/* Twin Growth Flow */}
-      <section className="py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
+      <section className="py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-center text-foreground mb-12">
               How Your Twin Grows With You
             </h2>
 
-            {/* Flow Steps */}
-            <div className="relative">
+            {/* Marquee Container */}
+            <div className="relative overflow-hidden">
+              <div className="animate-marquee whitespace-nowrap inline-block">
+                <div className="inline-flex gap-16 items-center">
+                  {/* Create duplicate content for seamless loop */}
+                  {[1, 2].map((iteration) => (
+                    <div
+                      key={iteration}
+                      className="inline-flex gap-12 items-center"
+                    >
+                      {/* Step 1: You Start */}
+                      <div className="text-center flex-shrink-0 w-64">
+                        <div className="w-24 h-24 mx-auto mb-4 relative">
+                          <div className="w-full h-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center">
+                            <Users className="h-10 w-10 text-logo-teal" />
+                          </div>
+                        </div>
+                        <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-teal/80 text-white text-sm font-bold">
+                            1
+                          </span>
+                          You Share
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          Tell your story through daily tasks
+                        </p>
+                      </div>
+
+                      {/* Arrow */}
+                      <div className="flex justify-center flex-shrink-0">
+                        <ArrowRight className="h-6 w-6 text-logo-teal" />
+                      </div>
+
+                      {/* Step 2: Twin Learns */}
+                      <div className="text-center flex-shrink-0 w-64">
+                        <div className="w-24 h-24 mx-auto mb-4">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
+                            alt="Twin synchronization"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-blue to-logo-blue/80 text-white text-sm font-bold">
+                            2
+                          </span>
+                          Twin Learns
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          AI captures your unique style
+                        </p>
+                      </div>
+
+                      {/* Arrow */}
+                      <div className="flex justify-center flex-shrink-0">
+                        <ArrowRight className="h-6 w-6 text-logo-blue" />
+                      </div>
+
+                      {/* Step 3: Twin Grows */}
+                      <div className="text-center flex-shrink-0 w-64">
+                        <div className="w-24 h-24 mx-auto mb-4 relative">
+                          <img
+                            src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
+                            alt="Your twin delivers output"
+                            className="w-full h-full object-contain"
+                          />
+                          <div className="absolute bottom-1 left-0 right-0 flex justify-center">
+                            <p className="text-xs font-bold text-white bg-gradient-to-r from-logo-teal to-cyber-blue px-2 py-1 rounded-full shadow-lg border border-white/20 backdrop-blur-sm">
+                              your twin
+                            </p>
+                          </div>
+                        </div>
+                        <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-cyber-blue to-cyber-blue/80 text-white text-sm font-bold">
+                            3
+                          </span>
+                          You Deliver
+                        </h3>
+                        <p className="text-sm text-muted-foreground">
+                          1,000,000x faster, in your voice
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Static version for fallback */}
+            <div className="hidden lg:block relative mt-12">
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
                 {/* Step 1: You Start */}
                 <div className="text-center">
@@ -150,26 +238,21 @@ const Index = () => {
               Own Your AI. Stay Competitive.
             </h3>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col items-center gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-8 py-3 font-semibold"
+                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-10 py-4 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
-                <Link to="/train-your-twin-app" className="flex items-center">
-                  Skill Print and Skill Cast
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Link to="/login" className="flex items-center">
+                  Your Twin, Your Future
+                  <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>
 
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-logo-teal/50 hover:bg-logo-teal/10 px-8 py-3 font-semibold"
-              >
-                <Link to="/login">Sign In</Link>
-              </Button>
+              <p className="text-sm text-muted-foreground text-center max-w-md">
+                Join thousands who've already secured their competitive edge with personalized AI
+              </p>
             </div>
           </div>
         </div>

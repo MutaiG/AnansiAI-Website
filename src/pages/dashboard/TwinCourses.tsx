@@ -37,25 +37,67 @@ const TwinCourses = () => {
     null,
   );
 
+  // Pricing data for each discipline
+  const disciplinePricing: Record<string, string> = {
+    "Programming Logic": "$129",
+    "Data Structures": "$149",
+    Algorithms: "$159",
+    "Software Design": "$139",
+    HTML5: "$79",
+    CSS3: "$89",
+    "JavaScript ES6+": "$119",
+    "Responsive Design": "$99",
+    "API Integration": "$109",
+    "Machine Learning": "$199",
+    "Deep Learning": "$249",
+    TensorFlow: "$179",
+    PyTorch: "$179",
+    "Computer Vision": "$219",
+    "Natural Language Processing": "$229",
+    "Statistical Analysis": "$139",
+    "Data Visualization": "$109",
+    "Big Data": "$189",
+    "Predictive Modeling": "$169",
+    "Sensor Integration": "$129",
+    "Motor Control": "$119",
+    "Automation Systems": "$159",
+    ROS: "$199",
+    "IoT Architecture": "$149",
+    "Sensor Networks": "$139",
+    "MQTT Protocol": "$89",
+    "Edge Computing": "$169",
+    "Smart Home Systems": "$129",
+    "Network Security": "$179",
+    "Ethical Hacking": "$219",
+    Encryption: "$149",
+    "Security Auditing": "$189",
+    "Incident Response": "$199",
+    "AWS Fundamentals": "$149",
+    Docker: "$119",
+    Kubernetes: "$159",
+    "CI/CD": "$139",
+    "Infrastructure as Code": "$149",
+  };
+
   // Discipline definitions
   const disciplineDefinitions: Record<string, string> = {
     "Programming Logic":
-      "Fundamental concepts of how to structure and organize code to solve problems systematically.",
+      "🧠 Master the art of logical thinking! Learn to break down complex problems into simple, elegant solutions that computers can understand and execute.",
     "Data Structures":
-      "Ways to organize and store data efficiently, including arrays, lists, trees, and graphs.",
+      "🏗️ Build the foundation of all software! Discover how to organize and store data efficiently using powerful structures like arrays, trees, and graphs.",
     Algorithms:
-      "Step-by-step procedures for solving computational problems and analyzing their efficiency.",
+      "⚡ Unlock the power of efficient problem-solving! Learn time-tested procedures and cutting-edge techniques that make software blazingly fast.",
     "Software Design":
-      "Principles and patterns for creating maintainable, scalable, and robust software applications.",
+      "🎨 Craft beautiful, maintainable code! Master the principles and patterns that transform chaotic code into elegant, scalable masterpieces.",
     HTML5:
-      "The latest version of HyperText Markup Language for structuring web content and applications.",
-    CSS3: "Advanced styling language for designing responsive and visually appealing web interfaces.",
+      "🌐 Build the skeleton of the web! Master the latest HTML5 features to create semantic, accessible, and interactive web experiences.",
+    CSS3: "🎨 Paint the web beautiful! Learn advanced styling techniques to create stunning, responsive designs that captivate users.",
     "JavaScript ES6+":
-      "Modern JavaScript features including arrow functions, modules, async/await, and more.",
+      "⚡ Supercharge your web development! Harness modern JavaScript features like arrow functions, modules, and async/await for powerful applications.",
     "Responsive Design":
-      "Techniques for creating websites that work seamlessly across all device sizes.",
+      "📱 Design for every screen! Create websites that look amazing and work perfectly on phones, tablets, laptops, and everything in between.",
     "DOM Manipulation":
-      "Programming techniques for dynamically modifying web page content and structure.",
+      "🔧 Control the web page! Learn to dynamically modify content, create interactive experiences, and bring static pages to life.",
     "Android Studio":
       "Official IDE for developing Android applications using Java and Kotlin.",
     "iOS Swift":
@@ -551,20 +593,23 @@ const TwinCourses = () => {
                 </div>
 
                 {/* Hover Tooltip */}
-                <div className="absolute inset-0 bg-black/90 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-4 flex flex-col justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-logo-teal/95 to-logo-blue/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-4 flex flex-col justify-center backdrop-blur-sm">
                   <h4 className="font-semibold text-white mb-2 text-sm">
                     Disciplines:
                   </h4>
-                  <ul className="text-xs text-white/90 space-y-1 max-h-32 overflow-y-auto">
+                  <ul className="text-xs text-white/95 space-y-2 max-h-32 overflow-y-auto">
                     {course.disciplines.map((discipline, index) => (
-                      <li key={index} className="flex items-center">
-                        <span className="w-1 h-1 bg-white/60 rounded-full mr-2"></span>
+                      <li
+                        key={index}
+                        className="flex items-center group/discipline"
+                      >
+                        <div className="w-2 h-2 bg-gradient-to-br from-white to-white/60 rounded-full mr-3 flex-shrink-0 group-hover/discipline:scale-125 transition-transform"></div>
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedDiscipline(discipline);
                           }}
-                          className="text-left hover:underline hover:text-white transition-colors"
+                          className="text-left hover:underline transition-all duration-200 hover:text-white hover:translate-x-1 text-white/90 font-medium"
                         >
                           {discipline}
                         </button>
@@ -575,7 +620,7 @@ const TwinCourses = () => {
                     {course.status === "available" ? (
                       <Button
                         size="sm"
-                        className="w-full bg-white text-black hover:bg-white/90"
+                        className="w-full bg-white text-logo-teal hover:bg-white/90 font-semibold"
                       >
                         Enroll Now
                       </Button>
@@ -584,7 +629,7 @@ const TwinCourses = () => {
                         size="sm"
                         variant="outline"
                         disabled
-                        className="w-full border-white/30 text-white/60"
+                        className="w-full border-white/50 text-white/80 bg-white/10"
                       >
                         Coming Soon
                       </Button>
@@ -651,13 +696,43 @@ const TwinCourses = () => {
               </Button>
             </DialogTitle>
           </DialogHeader>
-          <div className="mt-4">
+          <div className="mt-4 space-y-4">
             <p className="text-sm text-muted-foreground leading-relaxed">
               {selectedDiscipline
                 ? disciplineDefinitions[selectedDiscipline] ||
                   "Definition not available."
                 : ""}
             </p>
+
+            {/* Pricing Section */}
+            {selectedDiscipline && (
+              <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-4">
+                <div className="flex items-center justify-between mb-3">
+                  <h4 className="font-semibold text-logo-teal">Course Pricing</h4>
+                  <span className="text-2xl font-bold text-logo-blue">
+                    {disciplinePricing[selectedDiscipline] || "$99"}
+                  </span>
+                </div>
+                <p className="text-xs text-muted-foreground mb-3">
+                  One-time payment • Lifetime access • Twin integration included
+                </p>
+                <div className="flex gap-2">
+                  <Button
+                    size="sm"
+                    className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue text-white"
+                  >
+                    Enroll Now
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="border-logo-teal text-logo-teal hover:bg-logo-teal/10"
+                  >
+                    Preview
+                  </Button>
+                </div>
+              </div>
+            )}
           </div>
         </DialogContent>
       </Dialog>

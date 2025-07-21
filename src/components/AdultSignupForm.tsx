@@ -491,6 +491,29 @@ const AdultSignupForm = () => {
           </TabsContent>
 
           <TabsContent value="login" className="space-y-6">
+            <Button
+              className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:from-logo-teal/90 hover:to-logo-blue/90 mb-4"
+              onClick={() => {
+                const emailInput = document.getElementById(
+                  "loginEmail",
+                ) as HTMLInputElement;
+                if (emailInput) emailInput.focus();
+              }}
+            >
+              Continue with Email
+            </Button>
+
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center">
+                <span className="w-full border-t" />
+              </div>
+              <div className="relative flex justify-center text-xs uppercase">
+                <span className="bg-background px-2 text-muted-foreground">
+                  or enter credentials below
+                </span>
+              </div>
+            </div>
+
             <form onSubmit={handleLogin} className="space-y-6">
               <div className="space-y-4">
                 <div className="space-y-2">

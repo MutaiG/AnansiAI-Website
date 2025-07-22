@@ -17,7 +17,19 @@ import {
   User,
   ArrowRight,
   Trophy,
+  ChevronDown,
+  UserCircle,
+  CreditCard,
+  Bell,
 } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -196,7 +208,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">
-                    {user?.twinName}
+                    My Twin
                   </p>
                   <p className="text-xs text-muted-foreground">
                     {user?.completedAutobiography ? "Ready" : "Learning"}
@@ -205,22 +217,56 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               </div>
 
               {/* User Menu */}
-              <div className="flex items-center space-x-2">
-                <div className="hidden sm:block text-sm text-foreground">
-                  {user?.name}
-                </div>
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center text-white font-semibold text-sm">
-                  {user?.name?.charAt(0) || "U"}
-                </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={logout}
-                  className="text-muted-foreground hover:text-foreground"
-                >
-                  <LogOut className="h-4 w-4" />
-                </Button>
-              </div>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="flex items-center space-x-2 p-2 hover:bg-muted/50 rounded-lg">
+                    <div className="hidden sm:block text-sm text-foreground font-medium">
+                      {user?.name}
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center text-white font-semibold text-sm">
+                      {user?.name?.charAt(0) || "U"}
+                    </div>
+                    <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuLabel className="flex items-center space-x-2">
+                    <div className="w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center text-white font-semibold text-xs">
+                      {user?.name?.charAt(0) || "U"}
+                    </div>
+                    <div>
+                      <p className="font-medium">{user?.name}</p>
+                      <p className="text-xs text-muted-foreground">{user?.email}</p>
+                    </div>
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link to="/train-your-twin-app/settings" className="flex items-center space-x-2 cursor-pointer">
+                      <UserCircle className="h-4 w-4" />
+                      <span>Profile</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link to="/train-your-twin-app/settings" className="flex items-center space-x-2 cursor-pointer">
+                      <Settings className="h-4 w-4" />
+                      <span>Settings</span>
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="flex items-center space-x-2 cursor-pointer">
+                    <Bell className="h-4 w-4" />
+                    <span>Notifications</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="flex items-center space-x-2 cursor-pointer">
+                    <CreditCard className="h-4 w-4" />
+                    <span>Billing</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={logout} className="flex items-center space-x-2 cursor-pointer text-red-600 focus:text-red-600">
+                    <LogOut className="h-4 w-4" />
+                    <span>Sign out</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
 
               {/* Mobile menu button */}
               <Button

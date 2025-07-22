@@ -239,16 +239,21 @@ const Index = () => {
             </h3>
 
             <div className="flex flex-col items-center gap-4">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-10 py-4 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
-              >
-                <Link to="/login" className="flex items-center">
-                  Your Twin, Your Future
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
-              </Button>
+              <div className="flex items-center gap-6">
+                <h3 className="text-2xl font-bold text-foreground">
+                  Your twin, your future
+                </h3>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-8 py-3 text-lg font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/login" className="flex items-center">
+                    Sign Up / Sign In
+                    <ArrowRight className="ml-3 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
 
               <p className="text-sm text-muted-foreground text-center max-w-md">
                 Join thousands who've already secured their competitive edge with personalized AI

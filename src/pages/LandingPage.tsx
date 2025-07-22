@@ -8,17 +8,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { useAuth } from "@/contexts/AuthContext";
-import { 
-  Brain, 
-  Sparkles, 
-  ArrowRight, 
-  Users, 
-  Target, 
-  Zap, 
-  Fingerprint, 
-  Shield, 
-  Lock, 
-  CheckCircle, 
+import {
+  Brain,
+  Sparkles,
+  ArrowRight,
+  Users,
+  User,
+  Target,
+  Zap,
+  Fingerprint,
+  Shield,
+  Lock,
+  CheckCircle,
   AlertCircle,
   Scan
 } from "lucide-react";
@@ -38,6 +39,7 @@ const LandingPage = () => {
   
   // Signup fingerprint registration states
   const [signupStep, setSignupStep] = useState<'details' | 'fingerprint1' | 'fingerprint2' | 'complete'>('details');
+  const [loginStep, setLoginStep] = useState<'details' | 'biometric'>('details');
   const [firstFingerprintRegistered, setFirstFingerprintRegistered] = useState(false);
   const [secondFingerprintRegistered, setSecondFingerprintRegistered] = useState(false);
   const [fingerprintRegistrationProgress, setFingerprintRegistrationProgress] = useState(0);
@@ -80,7 +82,7 @@ const LandingPage = () => {
         setSecondFingerprintRegistered(true);
         setSignupStep('complete');
         
-        // Complete signup
+        // Complete signup with user's actual name and email
         const success = await signup(signupData.name, signupData.email, "biometric_auth");
         if (success) {
           setTimeout(() => {
@@ -132,52 +134,86 @@ const LandingPage = () => {
     switch (signupStep) {
       case 'details':
         return (
-          <>
-            <form onSubmit={handleSignup} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input
-                  id="name"
-                  type="text"
-                  placeholder="John Doe"
-                  value={signupData.name}
-                  onChange={(e) =>
-                    setSignupData({ ...signupData, name: e.target.value })
-                  }
-                  required
-                />
+          <div className="space-y-6">
+            <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <User className="h-8 w-8 text-logo-teal" />
+                <span className="text-lg font-semibold text-logo-teal">Twin Registration</span>
               </div>
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="john@company.com"
-                  value={signupData.email}
-                  onChange={(e) =>
-                    setSignupData({ ...signupData, email: e.target.value })
-                  }
-                  required
-                />
-              </div>
-              <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-4 mb-4">
-                <p className="text-sm text-center text-muted-foreground mb-2">
-                  🔒 Your data, encrypted and yours alone
-                </p>
-                <p className="text-xs text-center text-muted-foreground">
-                  We use military-grade encryption because your personal AI deserves nothing less
-                </p>
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white"
-                disabled={isLoading}
-              >
-                Secure My Future
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
-          </>
+              <p className="text-sm text-muted-foreground mb-6">
+                Help us name your AI Twin by providing your details, then secure it with biometric authentication.
+              </p>
+
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                if (signupData.name && signupData.email) {
+                  setSignupStep('fingerprint1');
+                }
+              }} className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Label htmlFor="firstName">First Name *</Label>
+                    <Input
+                      id="firstName"
+                      type="text"
+                      placeholder="Your first name"
+                      value={signupData.name.split(' ')[0] || ''}
+                      onChange={(e) => {
+                        const lastName = signupData.name.split(' ').slice(1).join(' ');
+                        setSignupData({
+                          ...signupData,
+                          name: e.target.value + (lastName ? ' ' + lastName : '')
+                        });
+                      }}
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="lastName">Last Name *</Label>
+                    <Input
+                      id="lastName"
+                      type="text"
+                      placeholder="Your last name"
+                      value={signupData.name.split(' ').slice(1).join(' ') || ''}
+                      onChange={(e) => {
+                        const firstName = signupData.name.split(' ')[0] || '';
+                        setSignupData({
+                          ...signupData,
+                          name: firstName + (e.target.value ? ' ' + e.target.value : '')
+                        });
+                      }}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email Address *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="your.email@example.com"
+                    value={signupData.email}
+                    onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
+                    required
+                  />
+                </div>
+
+                <div className="bg-logo-teal/5 p-4 rounded-lg border border-logo-teal/20">
+
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={!signupData.name.trim() || !signupData.email.trim() || !fingerprintSupported}
+                  className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white"
+                  size="lg"
+                >
+                  <Fingerprint className="mr-2 h-5 w-5" />
+                  Continue to Biometric Setup
+                </Button>
+              </form>
+            </div>
+          </div>
         );
 
       case 'fingerprint1':
@@ -331,21 +367,16 @@ const LandingPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Hero content */}
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80 backdrop-blur-sm mb-8">
-                <Sparkles className="mr-2 h-4 w-4 text-logo-teal" />
-                Enterprise Biometric Security
-              </div>
-
               <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
                 <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
-                  Your Twin,
+                  Your twin,
                 </span>
                 <br />
-                <span className="text-foreground">Your Future</span>
+                <span className="text-foreground">your future</span>
               </h1>
 
               <p className="text-lg text-muted-foreground mb-8">
-                We value your data as much as you do. That's why we've built the most secure AI training platform on Earth.
+                Start your AI Twin journey today.
               </p>
             </div>
 
@@ -360,10 +391,10 @@ const LandingPage = () => {
                     </Badge>
                   </div>
                   <CardTitle className="text-2xl font-bold">
-                    We Value Your Data
+                    Secure Access
                   </CardTitle>
                   <p className="text-sm text-muted-foreground">
-                    Your most personal information deserves the highest protection
+                    Your fingerprint is your key to the twin dashboard
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -374,48 +405,138 @@ const LandingPage = () => {
                     </TabsList>
 
                     <TabsContent value="login" className="space-y-6">
-                      {/* Biometric Login Only */}
-                      <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6">
-                        <div className="text-center">
-                          <div className="flex items-center justify-center gap-2 mb-4">
-                            <Fingerprint className="h-8 w-8 text-logo-teal" />
-                            <span className="text-lg font-semibold text-logo-teal">Biometric Login</span>
-                          </div>
-                          <p className="text-sm text-muted-foreground mb-6">
-                            Your fingerprint is the key to your digital future. Touch to unlock unlimited potential.
-                          </p>
-                          
-                          {!fingerprintSupported && (
-                            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
-                              <div className="flex items-center gap-2 justify-center">
-                                <AlertCircle className="h-4 w-4 text-orange-500" />
-                                <span className="text-sm text-orange-700">
-                                  Biometric authentication not supported on this device
-                                </span>
-                              </div>
+                      {loginStep === 'details' ? (
+                        <div className="space-y-4">
+                          <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6">
+                            <div className="flex items-center justify-center gap-2 mb-4">
+                              <User className="h-8 w-8 text-logo-teal" />
+                              <span className="text-lg font-semibold text-logo-teal">Welcome Back</span>
                             </div>
-                          )}
-                          
-                          <Button
-                            onClick={handleFingerprintLogin}
-                            disabled={fingerprintScanning || isLoading || !fingerprintSupported}
-                            className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:shadow-lg transition-all duration-200"
-                            size="lg"
-                          >
-                            {fingerprintScanning ? (
-                              <>
-                                <Scan className="mr-2 h-5 w-5 animate-pulse" />
-                                Authenticating...
-                              </>
-                            ) : (
-                              <>
+                            <p className="text-sm text-muted-foreground mb-6 text-center">
+                              Enter your details to access your AI Twin
+                            </p>
+
+                            <form onSubmit={(e) => {
+                              e.preventDefault();
+                              if (signupData.name && signupData.email) {
+                                setLoginStep('biometric');
+                              }
+                            }} className="space-y-4">
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div className="space-y-2">
+                                  <Label htmlFor="loginFirstName">First Name *</Label>
+                                  <Input
+                                    id="loginFirstName"
+                                    type="text"
+                                    placeholder="Your first name"
+                                    value={signupData.name.split(' ')[0] || ''}
+                                    onChange={(e) => {
+                                      const lastName = signupData.name.split(' ').slice(1).join(' ');
+                                      setSignupData({
+                                        ...signupData,
+                                        name: e.target.value + (lastName ? ' ' + lastName : '')
+                                      });
+                                    }}
+                                    required
+                                  />
+                                </div>
+                                <div className="space-y-2">
+                                  <Label htmlFor="loginLastName">Last Name *</Label>
+                                  <Input
+                                    id="loginLastName"
+                                    type="text"
+                                    placeholder="Your last name"
+                                    value={signupData.name.split(' ').slice(1).join(' ') || ''}
+                                    onChange={(e) => {
+                                      const firstName = signupData.name.split(' ')[0] || '';
+                                      setSignupData({
+                                        ...signupData,
+                                        name: firstName + (e.target.value ? ' ' + e.target.value : '')
+                                      });
+                                    }}
+                                    required
+                                  />
+                                </div>
+                              </div>
+                              <div className="space-y-2">
+                                <Label htmlFor="loginEmail">Email Address *</Label>
+                                <Input
+                                  id="loginEmail"
+                                  type="email"
+                                  placeholder="your.email@example.com"
+                                  value={signupData.email}
+                                  onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
+                                  required
+                                />
+                              </div>
+
+                              <Button
+                                type="submit"
+                                disabled={!signupData.name.trim() || !signupData.email.trim()}
+                                className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white"
+                                size="lg"
+                              >
                                 <Fingerprint className="mr-2 h-5 w-5" />
-                                Login with Fingerprint
-                              </>
-                            )}
-                          </Button>
+                                Continue to Biometric Login
+                              </Button>
+                            </form>
+                          </div>
                         </div>
-                      </div>
+                      ) : (
+                        <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6">
+                          <div className="text-center">
+                            <div className="flex items-center justify-center gap-2 mb-4">
+                              <Fingerprint className="h-8 w-8 text-logo-teal" />
+                              <span className="text-lg font-semibold text-logo-teal">Biometric Access</span>
+                            </div>
+                            <p className="text-sm text-muted-foreground mb-2">
+                              Welcome back, {signupData.name}!
+                            </p>
+                            <p className="text-sm text-muted-foreground mb-6">
+                              Touch to access your AI Twin dashboard
+                            </p>
+
+                            {!fingerprintSupported && (
+                              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-4">
+                                <div className="flex items-center gap-2 justify-center">
+                                  <AlertCircle className="h-4 w-4 text-orange-500" />
+                                  <span className="text-sm text-orange-700">
+                                    Biometric authentication not supported on this device
+                                  </span>
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="flex flex-col gap-2">
+                              <Button
+                                onClick={handleFingerprintLogin}
+                                disabled={fingerprintScanning || isLoading || !fingerprintSupported}
+                                className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:shadow-lg transition-all duration-200"
+                                size="lg"
+                              >
+                                {fingerprintScanning ? (
+                                  <>
+                                    <Scan className="mr-2 h-5 w-5 animate-pulse" />
+                                    Authenticating...
+                                  </>
+                                ) : (
+                                  <>
+                                    <Fingerprint className="mr-2 h-5 w-5" />
+                                    Sign In with Fingerprint
+                                  </>
+                                )}
+                              </Button>
+                              <Button
+                                variant="outline"
+                                onClick={() => setLoginStep('details')}
+                                size="sm"
+                              >
+                                ← Back to Details
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      )}
 
                       {/* Security Indicators */}
                       <div className="pt-4 border-t border-border">
@@ -439,7 +560,7 @@ const LandingPage = () => {
                     <TabsContent value="signup" className="space-y-4">
                       {renderSignupStep()}
                       
-                      {signupStep === 'details' && !fingerprintSupported && (
+                      {!fingerprintSupported && (
                         <div className="bg-orange-50 border border-orange-200 rounded-lg p-4">
                           <div className="flex items-center gap-2 justify-center">
                             <AlertCircle className="h-4 w-4 text-orange-500" />
@@ -449,21 +570,19 @@ const LandingPage = () => {
                           </div>
                         </div>
                       )}
-                      
-                      {signupStep === 'details' && (
-                        <div className="pt-4 border-t border-border">
-                          <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
-                            <div className="flex items-center gap-1">
-                              <Fingerprint className="h-3 w-3 text-logo-teal" />
-                              <span>2 Fingerprints Required</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <Shield className="h-3 w-3 text-blue-500" />
-                              <span>Military Grade</span>
-                            </div>
+
+                      <div className="pt-4 border-t border-border">
+                        <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
+                          <div className="flex items-center gap-1">
+                            <Fingerprint className="h-3 w-3 text-logo-teal" />
+                            <span>2 Fingerprints Required</span>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            <Shield className="h-3 w-3 text-blue-500" />
+                            <span>Military Grade</span>
                           </div>
                         </div>
-                      )}
+                      </div>
                     </TabsContent>
                   </Tabs>
                 </CardContent>
@@ -473,57 +592,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Why Biometric Security?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Your AI Twin contains your most personal data. We protect it with enterprise-grade biometric security.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <Card className="border-0 bg-background shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4">
-                  <Fingerprint className="h-8 w-8 text-logo-teal" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Passwordless</h3>
-                <p className="text-muted-foreground">
-                  No passwords to remember or steal. Your fingerprint is your key.
-                </p>
-              </CardContent>
-            </Card>
 
-            <Card className="border-0 bg-background shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4">
-                  <Shield className="h-8 w-8 text-logo-blue" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Military Grade</h3>
-                <p className="text-muted-foreground">
-                  256-bit encryption with FIDO2 compliance for maximum security.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 bg-background shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-6 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-4">
-                  <Zap className="h-8 w-8 text-cyber-blue" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Instant Access</h3>
-                <p className="text-muted-foreground">
-                  Access your AI Twin in seconds with just a touch.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

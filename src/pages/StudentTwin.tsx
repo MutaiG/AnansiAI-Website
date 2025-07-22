@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BackButton from "@/components/BackButton";
+import PageNavigation from "@/components/PageNavigation";
 import StudentEnrollmentForm from "@/components/StudentEnrollmentForm";
 import {
   GraduationCap,
@@ -37,9 +37,14 @@ const StudentTwin = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Back Button */}
+      {/* Page Navigation */}
       <div className="container mx-auto px-4 pt-6">
-        <BackButton fallbackPath="/" />
+        <PageNavigation
+          fallbackPath="/"
+          showNext={true}
+          nextPath="/products/adult-twin"
+          nextLabel="Adult Twin"
+        />
       </div>
 
       {/* Hero Section */}
@@ -59,7 +64,7 @@ const StudentTwin = () => {
                 Learn humanly.
               </span>
               <br />
-              <span className="text-foreground">Deliver at AI speed.</span>
+              <span className="text-foreground">Deliver super humanly.</span>
             </h1>
 
             <p className="mx-auto max-w-3xl text-lg text-muted-foreground mb-8">
@@ -70,14 +75,12 @@ const StudentTwin = () => {
             </p>
 
             <Button
-              asChild
+              onClick={() => setShowEnrollmentForm(true)}
               size="lg"
               className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
             >
-              <Link to="/login">
-                🔐 Secure Biometric Access
-                <ArrowRight className="ml-3 h-6 w-6" />
-              </Link>
+              Enroll Student
+              <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </div>
         </div>
@@ -284,7 +287,7 @@ const StudentTwin = () => {
                   size="lg"
                   className="bg-gradient-to-r from-ai-accent to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
                 >
-                  Train Your Student Twin
+                  Enroll Student
                 </Button>
               </CardContent>
             </Card>
@@ -356,7 +359,7 @@ const StudentTwin = () => {
                 size="lg"
                 className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-12 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
-                Train Your Twin Now
+                Enroll Student
                 <ArrowRight className="ml-4 h-7 w-7" />
               </Button>
             </div>
@@ -395,14 +398,14 @@ const StudentTwin = () => {
 
       {/* Student Enrollment Form Dialog */}
       <Dialog open={showEnrollmentForm} onOpenChange={setShowEnrollmentForm}>
-        <DialogContent className="sm:max-w-2xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
+        <DialogContent className="sm:max-w-6xl max-h-[95vh] overflow-y-auto p-0">
+          <DialogHeader className="sr-only">
             <DialogTitle>Student Twin Enrollment</DialogTitle>
             <DialogDescription>
               Start your AI Twin training journey today
             </DialogDescription>
           </DialogHeader>
-          <div className="mt-6">
+          <div className="p-6">
             <StudentEnrollmentForm />
           </div>
         </DialogContent>

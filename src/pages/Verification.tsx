@@ -470,11 +470,11 @@ const Verification = () => {
               </Label>
               <p className="text-sm text-muted-foreground">
                 I have read and agree to the{" "}
-                <Link to="/legal/terms" className="text-logo-teal underline">
+                <Link to="/terms" className="text-logo-teal underline">
                   Terms of Service
                 </Link>{" "}
                 and{" "}
-                <Link to="/legal/privacy" className="text-logo-teal underline">
+                <Link to="/privacy" className="text-logo-teal underline">
                   Privacy Policy
                 </Link>
                 .

@@ -44,7 +44,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     // Check for existing session on mount
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
-      setUser(JSON.parse(storedUser));
+      const userData = JSON.parse(storedUser);
+      // Update existing user data to use correct naming convention
+      if (userData.twinName !== "My Twin") {
+        userData.twinName = "My Twin";
+        localStorage.setItem("user", JSON.stringify(userData));
+      }
+      // Ensure we have the user's actual name (for demo, default to James Mbithi)
+      if (!userData.name || userData.name.includes("@")) {
+        userData.name = "James Mbithi";
+        localStorage.setItem("user", JSON.stringify(userData));
+      }
+      setUser(userData);
     }
     setIsLoading(false);
   }, []);
@@ -55,14 +66,24 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     // Simulate API call with dummy data
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // For demo - accept any email/password combination
-    const userData: User = {
-      id: "1",
-      email,
-      name: email.split("@")[0],
-      twinName: `${email.split("@")[0]}'s Twin`,
-      completedAutobiography: Math.random() > 0.5, // Random for demo
-    };
+    // Check if user already exists in localStorage from previous signup
+    const existingUsers = JSON.parse(localStorage.getItem("allUsers") || "[]");
+    const existingUser = existingUsers.find((u: User) => u.email === email);
+
+    let userData: User;
+    if (existingUser) {
+      // Use existing user data
+      userData = existingUser;
+    } else {
+      // Create new user for demo - accept any email/password combination
+      userData = {
+        id: "1",
+        email,
+        name: "James Mbithi", // Default to James Mbithi for demo
+        twinName: "My Twin",
+        completedAutobiography: Math.random() > 0.5, // Random for demo
+      };
+    }
 
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
@@ -84,12 +105,19 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       id: Date.now().toString(),
       email,
       name,
-      twinName: `${name}'s Twin`,
+      twinName: "My Twin", // Keep twin name as "My Twin"
       completedAutobiography: false,
     };
 
+    // Store user data
     setUser(userData);
     localStorage.setItem("user", JSON.stringify(userData));
+
+    // Also store in a list of all users for login lookup
+    const existingUsers = JSON.parse(localStorage.getItem("allUsers") || "[]");
+    const updatedUsers = [...existingUsers.filter((u: User) => u.email !== email), userData];
+    localStorage.setItem("allUsers", JSON.stringify(updatedUsers));
+
     setIsLoading(false);
     return true;
   };

@@ -117,7 +117,7 @@ const Navigation = () => {
                     About Us
                   </Link>
                   <Link
-                    to="/company/vision-mission"
+                    to="/company/vision"
                     className="block px-3 py-2 rounded-md hover:bg-muted transition-colors"
                   >
                     Vision & Mission

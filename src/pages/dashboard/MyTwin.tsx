@@ -24,12 +24,18 @@ import {
   Link,
   Smile,
   MoreHorizontal,
+  RotateCcw,
+  X,
+  ArrowRight,
 } from "lucide-react";
 
 const MyTwin = () => {
   const { user } = useAuth();
   const [inputText, setInputText] = useState("");
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
+  const [currentPrompt, setCurrentPrompt] = useState<string | null>(null);
+  const [skippedPrompts, setSkippedPrompts] = useState<string[]>([]);
+  const [promptType, setPromptType] = useState<'memory' | 'question' | 'feelings' | null>(null);
 
   const twinPersonality = {
     mood: "Energetic",
@@ -111,6 +117,53 @@ const MyTwin = () => {
     input.click();
   };
 
+  const handleSkipPrompt = () => {
+    if (currentPrompt) {
+      setSkippedPrompts(prev => [...prev, currentPrompt]);
+
+      // Clear current prompt from textarea
+      setInputText(prev => {
+        const promptText = `💭 Memory prompt: ${currentPrompt}`;
+        return prev.replace(promptText, '').replace(/\n\n\n+/g, '\n\n').trim();
+      });
+
+      // Generate a new prompt automatically
+      if (promptType === 'memory') {
+        handleShareMemory();
+      } else if (promptType === 'question') {
+        handleRandomQuestion();
+      } else if (promptType === 'feelings') {
+        handleFeelingsCheck();
+      }
+    }
+  };
+
+  const handleUndoSkip = () => {
+    if (skippedPrompts.length > 0) {
+      const lastSkipped = skippedPrompts[skippedPrompts.length - 1];
+      setSkippedPrompts(prev => prev.slice(0, -1));
+      setCurrentPrompt(lastSkipped);
+
+      // Add the prompt back to textarea
+      setInputText(
+        (prev) =>
+          prev + (prev ? "\n\n" : "") + `💭 Memory prompt: ${lastSkipped}\n\n`,
+      );
+
+      // Focus the textarea
+      setTimeout(() => {
+        const textarea = document.querySelector("textarea");
+        if (textarea) {
+          textarea.focus();
+          textarea.setSelectionRange(
+            textarea.value.length,
+            textarea.value.length,
+          );
+        }
+      }, 100);
+    }
+  };
+
   const handleShareMemory = () => {
     const memoryPrompts = [
       "What's your most cherished childhood memory?",
@@ -122,11 +175,25 @@ const MyTwin = () => {
       "What's an adventure or trip you'll never forget?",
       "Tell me about a moment that changed your perspective.",
     ];
-    const randomPrompt =
-      memoryPrompts[Math.floor(Math.random() * memoryPrompts.length)];
+
+    // Filter out skipped prompts
+    const availablePrompts = memoryPrompts.filter(prompt => !skippedPrompts.includes(prompt));
+
+    let selectedPrompt: string;
+    if (availablePrompts.length === 0) {
+      // All prompts have been skipped, reset the list
+      setSkippedPrompts([]);
+      selectedPrompt = memoryPrompts[Math.floor(Math.random() * memoryPrompts.length)];
+    } else {
+      selectedPrompt = availablePrompts[Math.floor(Math.random() * availablePrompts.length)];
+    }
+
+    setCurrentPrompt(selectedPrompt);
+    setPromptType('memory');
+
     setInputText(
       (prev) =>
-        prev + (prev ? "\n\n" : "") + `💭 Memory prompt: ${randomPrompt}\n\n`,
+        prev + (prev ? "\n\n" : "") + `💭 Memory prompt: ${selectedPrompt}\n\n`,
     );
 
     // Focus the textarea after adding the prompt
@@ -155,10 +222,22 @@ const MyTwin = () => {
       "What does success mean to you personally?",
       "If you could send a message to your future self, what would it say?",
     ];
-    const randomQuestion =
-      questions[Math.floor(Math.random() * questions.length)];
+
+    const availableQuestions = questions.filter(q => !skippedPrompts.includes(q));
+
+    let selectedQuestion: string;
+    if (availableQuestions.length === 0) {
+      setSkippedPrompts([]);
+      selectedQuestion = questions[Math.floor(Math.random() * questions.length)];
+    } else {
+      selectedQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+    }
+
+    setCurrentPrompt(selectedQuestion);
+    setPromptType('question');
+
     setInputText(
-      (prev) => prev + (prev ? "\n\n" : "") + `❓ ${randomQuestion}\n\n`,
+      (prev) => prev + (prev ? "\n\n" : "") + `❓ ${selectedQuestion}\n\n`,
     );
 
     // Focus the textarea after adding the question
@@ -185,13 +264,25 @@ const MyTwin = () => {
       "Are you feeling stressed about anything specific?",
       "What's something you're grateful for today?",
     ];
-    const randomPrompt =
-      feelingsPrompts[Math.floor(Math.random() * feelingsPrompts.length)];
+
+    const availablePrompts = feelingsPrompts.filter(p => !skippedPrompts.includes(p));
+
+    let selectedPrompt: string;
+    if (availablePrompts.length === 0) {
+      setSkippedPrompts([]);
+      selectedPrompt = feelingsPrompts[Math.floor(Math.random() * feelingsPrompts.length)];
+    } else {
+      selectedPrompt = availablePrompts[Math.floor(Math.random() * availablePrompts.length)];
+    }
+
+    setCurrentPrompt(selectedPrompt);
+    setPromptType('feelings');
+
     setInputText(
       (prev) =>
         prev +
         (prev ? "\n\n" : "") +
-        `💚 Feelings check-in: ${randomPrompt}\n\n`,
+        `💚 Feelings check-in: ${selectedPrompt}\n\n`,
     );
 
     // Focus the textarea after adding the prompt
@@ -295,6 +386,40 @@ const MyTwin = () => {
                       How I'm Feeling
                     </Button>
                   </div>
+
+                  {/* Skip/Undo Controls */}
+                  {currentPrompt && (
+                    <div className="mt-4 p-4 bg-muted/30 rounded-lg border border-dashed border-muted-foreground/30">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-logo-teal rounded-full animate-pulse"></div>
+                          <span className="text-sm font-medium">Current prompt active</span>
+                        </div>
+                        <div className="flex gap-2">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="border-orange-300 text-orange-600 hover:bg-orange-50"
+                            onClick={handleSkipPrompt}
+                          >
+                            <ArrowRight className="h-4 w-4 mr-1" />
+                            Skip & Get New
+                          </Button>
+                          {skippedPrompts.length > 0 && (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="border-blue-300 text-blue-600 hover:bg-blue-50"
+                              onClick={handleUndoSkip}
+                            >
+                              <RotateCcw className="h-4 w-4 mr-1" />
+                              Undo Last Skip ({skippedPrompts.length})
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-4">

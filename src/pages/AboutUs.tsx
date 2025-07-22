@@ -59,7 +59,7 @@ const AboutUs = () => {
                 Our mission is simple:
               </span>
               <span className="ml-2 text-lg font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
-                Learn humanly. Deliver at AI speed.
+                Learn humanly. Deliver super humanly.
               </span>
             </div>
 

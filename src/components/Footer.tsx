@@ -105,7 +105,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  to="/legal/terms"
+                  to="/terms"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Terms of Service
@@ -113,7 +113,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/legal/privacy"
+                  to="/privacy"
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Privacy Policy

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import BackButton from "@/components/BackButton";
+import PageNavigation from "@/components/PageNavigation";
 import WaitlistCTA from "@/components/WaitlistCTA";
 import {
   Briefcase,
@@ -25,9 +25,14 @@ const AdultTwin = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      {/* Back Button */}
+      {/* Page Navigation */}
       <div className="container mx-auto px-4 pt-6">
-        <BackButton fallbackPath="/" />
+        <PageNavigation
+          fallbackPath="/"
+          showNext={true}
+          nextPath="/products/enterprise-twin"
+          nextLabel="Enterprise Twin"
+        />
       </div>
 
       {/* Hero Section */}
@@ -57,29 +62,20 @@ const AdultTwin = () => {
               you, not scraped data or generic models.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
-              >
-                <Link to="/login">
-                  🔐 Secure Biometric Access
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
-              </Button>
-
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="border-ai-accent text-ai-accent hover:bg-ai-accent/10 px-8 py-7 text-lg font-semibold"
-              >
-                <Link to="/login">
-                  Start Training Now
-                  <ArrowRight className="ml-3 h-6 w-6" />
-                </Link>
-              </Button>
+            <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold text-center mb-4">Your twin, your future</h3>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/login">
+                    Sign In
+                    <ArrowRight className="ml-3 h-6 w-6" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -244,131 +240,88 @@ const AdultTwin = () => {
         </div>
       </section>
 
-      {/* Tiers & Pricing */}
+      {/* Course Disciplines */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Tiers & Pricing
+              Course Disciplines Available
             </h2>
             <p className="text-xl text-muted-foreground">
-              Installment plans available. The earlier you start, the more
-              affordable the journey.
+              Access specialized training modules once logged in to your Twin dashboard.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Starter */}
+            {/* Programming & Development */}
             <Card className="border-2 border-logo-blue/20 shadow-xl">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-logo-teal mb-2">
-                  $29
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
+                  <Cpu className="h-10 w-10 text-logo-blue" />
                 </div>
-                <p className="text-muted-foreground mb-6">
-                  Basic tone & personality training
-                </p>
-
+                <h3 className="text-2xl font-bold mb-4">Programming & Development</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-logo-blue mr-2" />
-                    <span className="text-sm">Personality layer training</span>
+                    <span className="text-sm">Programming Logic</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-logo-blue mr-2" />
-                    <span className="text-sm">Basic communication style</span>
+                    <span className="text-sm">Data Structures & Algorithms</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-logo-blue mr-2" />
-                    <span className="text-sm">Email integration</span>
+                    <span className="text-sm">Web Development</span>
                   </div>
                 </div>
-
-                <WaitlistCTA productType="adult">
-                  <Button
-                    variant="outline"
-                    className="w-full border-logo-blue text-logo-blue hover:bg-logo-blue/10"
-                  >
-                    Get Started
-                  </Button>
-                </WaitlistCTA>
               </CardContent>
             </Card>
 
-            {/* Pro */}
-            <Card className="border-2 border-cyber-blue shadow-2xl scale-105">
+            {/* AI & Machine Learning */}
+            <Card className="border-2 border-cyber-blue shadow-2xl">
               <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center px-3 py-1 rounded-full bg-cyber-blue text-white text-sm font-medium mb-4">
-                  Most Popular
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
+                  <Brain className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Pro</h3>
-                <div className="text-4xl font-bold text-logo-teal mb-2">
-                  $79
-                </div>
-                <p className="text-muted-foreground mb-6">
-                  Expert-labeled for specific tasks & fields
-                </p>
-
+                <h3 className="text-2xl font-bold mb-4">AI & Machine Learning</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
-                    <span className="text-sm">Everything in Starter</span>
+                    <span className="text-sm">Machine Learning Fundamentals</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
-                    <span className="text-sm">Expert data labeling</span>
+                    <span className="text-sm">Deep Learning & Neural Networks</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
-                    <span className="text-sm">Task-specific training</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
-                    <span className="text-sm">Priority support</span>
+                    <span className="text-sm">Computer Vision & NLP</span>
                   </div>
                 </div>
-
-                <WaitlistCTA productType="adult">
-                  <Button className="w-full bg-gradient-to-r from-cyber-blue to-ai-accent text-white">
-                    Choose Pro
-                  </Button>
-                </WaitlistCTA>
               </CardContent>
             </Card>
 
-            {/* Custom Enterprise */}
+            {/* Security & Cloud */}
             <Card className="border-2 border-ai-accent/20 shadow-xl">
               <CardContent className="p-8 text-center">
-                <h3 className="text-2xl font-bold mb-4">Custom Enterprise</h3>
-                <div className="text-4xl font-bold text-logo-teal mb-2">
-                  Custom
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
+                  <Zap className="h-10 w-10 text-ai-accent" />
                 </div>
-                <p className="text-muted-foreground mb-6">
-                  For companies & teams
-                </p>
-
+                <h3 className="text-2xl font-bold mb-4">Security & Cloud</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-ai-accent mr-2" />
-                    <span className="text-sm">Team collaboration</span>
+                    <span className="text-sm">Cybersecurity Essentials</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-ai-accent mr-2" />
-                    <span className="text-sm">Enterprise security</span>
+                    <span className="text-sm">Cloud Infrastructure</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-ai-accent mr-2" />
-                    <span className="text-sm">Custom integrations</span>
+                    <span className="text-sm">IoT & Edge Computing</span>
                   </div>
                 </div>
-
-                <Button
-                  asChild
-                  variant="outline"
-                  className="w-full border-ai-accent text-ai-accent hover:bg-ai-accent/10"
-                >
-                  <Link to="/products/enterprise-twin">Contact Sales</Link>
-                </Button>
               </CardContent>
             </Card>
           </div>
@@ -405,15 +358,10 @@ const AdultTwin = () => {
 
             <div id="signup" className="mt-8">
               <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-center mb-2">Enterprise-Grade Security</h3>
+                <h3 className="text-lg font-semibold text-center mb-2">Your twin, your future</h3>
                 <p className="text-sm text-muted-foreground text-center mb-4">
-                  Access your AI Twin with military-grade biometric authentication
+                  Start your AI Twin training journey today
                 </p>
-                <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
-                  <span>🔒 256-bit Encryption</span>
-                  <span>👆 Fingerprint Only</span>
-                  <span>🛡️ Zero Trust</span>
-                </div>
               </div>
               <Button
                 asChild
@@ -421,7 +369,7 @@ const AdultTwin = () => {
                 className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
               >
                 <Link to="/login">
-                  Access with Biometric Login
+                  Sign In
                   <ArrowRight className="ml-3 h-6 w-6" />
                 </Link>
               </Button>

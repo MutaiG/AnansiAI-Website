@@ -29,6 +29,7 @@ import {
   Target,
   Plus,
   ArrowRight,
+  ArrowLeft,
   Camera,
   Lightbulb,
   FileText,
@@ -76,6 +77,7 @@ const DailyTasks = () => {
       response: "",
       twinFeedback: "",
       skipped: false,
+      newlyAdded: false,
     },
     {
       id: 2,
@@ -97,6 +99,7 @@ const DailyTasks = () => {
       twinFeedback:
         "I can see you value growth through experience and self-trust. This reflects a resilient mindset that I'm learning to incorporate into my understanding of you.",
       skipped: false,
+      newlyAdded: false,
     },
     {
       id: 3,
@@ -116,6 +119,7 @@ const DailyTasks = () => {
       response: "",
       twinFeedback: "",
       skipped: false,
+      newlyAdded: false,
     },
     {
       id: 4,
@@ -135,6 +139,7 @@ const DailyTasks = () => {
       response: "",
       twinFeedback: "",
       skipped: false,
+      newlyAdded: false,
     },
   ]);
 
@@ -156,7 +161,7 @@ const DailyTasks = () => {
               skipped: true,
               response: "Skipped",
               twinFeedback:
-                "No problem! Your Twin understands that some tasks might not feel relevant right now. Feel free to explore other activities that interest you more.",
+                "No problem! Your Twin understands that some tasks might not feel relevant right now.",
             }
           : task,
       ),
@@ -180,235 +185,347 @@ const DailyTasks = () => {
   };
 
   const addNewTask = () => {
-    // Multiple sets of question collections
-    const questionSets = [
-      // Set 1: Personal Values & Philosophy
-      [
-        {
-          title: "What are your core life principles?",
-          category: "Values",
-          timeEstimate: "8 min",
-          points: 65,
-          description: "Help your Twin understand the fundamental beliefs that guide your decisions.",
-          prompts: [
-            "What principles do you never compromise on?",
-            "How did you develop these values?",
-            "How do they influence your daily choices?",
-          ],
-        },
-        {
-          title: "Describe your biggest fear and how you face it",
-          category: "Growth",
-          timeEstimate: "10 min",
-          points: 75,
-          description: "Share your vulnerabilities so your Twin can understand your courage and resilience.",
-          prompts: [
-            "What scares you the most?",
-            "How do you manage this fear?",
-            "What have you learned from facing it?",
-          ],
-        },
-        {
-          title: "What legacy do you want to leave behind?",
-          category: "Purpose",
-          timeEstimate: "12 min",
-          points: 85,
-          description: "Express your vision for long-term impact so your Twin understands your purpose.",
-          prompts: [
-            "How do you want to be remembered?",
-            "What impact do you want to make?",
-            "What would make your life meaningful?",
-          ],
-        },
-        {
-          title: "Share a time when you changed your mind about something important",
-          category: "Reflection",
-          timeEstimate: "9 min",
-          points: 70,
-          description: "Show your Twin how you evolve your thinking and adapt your beliefs.",
-          prompts: [
-            "What belief did you change?",
-            "What caused this shift?",
-            "How has this change affected you?",
-          ],
-        },
-      ],
-      // Set 2: Relationships & Social Dynamics
-      [
-        {
-          title: "How do you show love and appreciation?",
-          category: "Relationships",
-          timeEstimate: "7 min",
-          points: 60,
-          description: "Help your Twin understand your emotional expression and relationship patterns.",
-          prompts: [
-            "How do you express care for others?",
-            "What gestures mean the most to you?",
-            "How do you like to receive appreciation?",
-          ],
-        },
-        {
-          title: "Describe a mentor or role model who influenced you",
-          category: "Inspiration",
-          timeEstimate: "11 min",
-          points: 80,
-          description: "Share the people who shaped you so your Twin understands your aspirations.",
-          prompts: [
-            "Who has been most influential in your life?",
-            "What did they teach you?",
-            "How do you apply their lessons?",
-          ],
-        },
-        {
-          title: "How do you handle conflict and disagreements?",
-          category: "Communication",
-          timeEstimate: "8 min",
-          points: 65,
-          description: "Show your Twin your conflict resolution style and communication approach.",
-          prompts: [
-            "How do you approach difficult conversations?",
-            "What's your strategy for resolving conflicts?",
-            "How do you maintain relationships through disagreements?",
-          ],
-        },
-        {
-          title: "What qualities do you value most in friendships?",
-          category: "Relationships",
-          timeEstimate: "6 min",
-          points: 55,
-          description: "Help your Twin understand what you seek and offer in close relationships.",
-          prompts: [
-            "What makes a great friend?",
-            "What do you bring to friendships?",
-            "How do you maintain long-term relationships?",
-          ],
-        },
-      ],
-      // Set 3: Creativity & Problem-Solving
-      [
-        {
-          title: "Describe your creative process and inspiration sources",
-          category: "Creativity",
-          timeEstimate: "10 min",
-          points: 75,
-          description: "Share how your mind works creatively so your Twin can mirror your innovative thinking.",
-          prompts: [
-            "Where do you find inspiration?",
-            "How do you develop ideas?",
-            "What environments spark your creativity?",
-          ],
-        },
-        {
-          title: "How do you approach complex problems?",
-          category: "Problem-Solving",
-          timeEstimate: "9 min",
-          points: 70,
-          description: "Reveal your analytical thinking patterns so your Twin can assist with future challenges.",
-          prompts: [
-            "What's your process for tackling difficult problems?",
-            "How do you break down complex issues?",
-            "What tools or methods do you use?",
-          ],
-        },
-        {
-          title: "Share a project you're most proud of",
-          category: "Achievement",
-          timeEstimate: "12 min",
-          points: 85,
-          description: "Demonstrate your capabilities and passion so your Twin understands your potential.",
-          prompts: [
-            "What project means the most to you?",
-            "What challenges did you overcome?",
-            "What would you do differently?",
-          ],
-        },
-        {
-          title: "How do you stay motivated during difficult times?",
-          category: "Resilience",
-          timeEstimate: "8 min",
-          points: 65,
-          description: "Show your Twin your coping mechanisms and sources of strength.",
-          prompts: [
-            "What keeps you going when things get tough?",
-            "What practices help you stay resilient?",
-            "Who or what do you turn to for support?",
-          ],
-        },
-      ],
-      // Set 4: Future & Ambitions
-      [
-        {
-          title: "Describe your vision for your life in 10 years",
-          category: "Future",
-          timeEstimate: "11 min",
-          points: 80,
-          description: "Paint a picture of your future so your Twin can help you work toward your goals.",
-          prompts: [
-            "Where do you see yourself in 10 years?",
-            "What will you have accomplished?",
-            "How will you have grown as a person?",
-          ],
-        },
-        {
-          title: "What would you do if you had unlimited resources?",
-          category: "Dreams",
-          timeEstimate: "9 min",
-          points: 70,
-          description: "Explore your deepest aspirations so your Twin understands your true desires.",
-          prompts: [
-            "What problems would you solve?",
-            "What experiences would you pursue?",
-            "How would you use your influence?",
-          ],
-        },
-        {
-          title: "How do you define success for yourself?",
-          category: "Values",
-          timeEstimate: "8 min",
-          points: 65,
-          description: "Share your personal definition of achievement so your Twin can support your goals.",
-          prompts: [
-            "What does success look like to you?",
-            "How do you measure your progress?",
-            "What would make you feel truly fulfilled?",
-          ],
-        },
-        {
-          title: "What habits are you trying to build or break?",
-          category: "Self-Improvement",
-          timeEstimate: "7 min",
-          points: 60,
-          description: "Show your Twin your growth areas so it can help you develop positive patterns.",
-          prompts: [
-            "What habits do you want to develop?",
-            "What patterns do you want to change?",
-            "What strategies are you using?",
-          ],
-        },
-      ],
+    // All available questions pool
+    const allQuestions = [
+      {
+        title: "What are your core life principles?",
+        category: "Values",
+        timeEstimate: "8 min",
+        points: 65,
+        description: "Help your Twin understand the fundamental beliefs that guide your decisions.",
+        prompts: [
+          "What principles do you never compromise on?",
+          "How did you develop these values?",
+          "How do they influence your daily choices?",
+        ],
+      },
+      {
+        title: "Describe your biggest fear and how you face it",
+        category: "Growth",
+        timeEstimate: "10 min",
+        points: 75,
+        description: "Share your vulnerabilities so your Twin can understand your courage and resilience.",
+        prompts: [
+          "What scares you the most?",
+          "How do you manage this fear?",
+          "What have you learned from facing it?",
+        ],
+      },
+      {
+        title: "How do you show love and appreciation?",
+        category: "Relationships",
+        timeEstimate: "7 min",
+        points: 60,
+        description: "Help your Twin understand your emotional expression and relationship patterns.",
+        prompts: [
+          "How do you express care for others?",
+          "What gestures mean the most to you?",
+          "How do you like to receive appreciation?",
+        ],
+      },
+      {
+        title: "Describe your creative process and inspiration sources",
+        category: "Creativity",
+        timeEstimate: "10 min",
+        points: 75,
+        description: "Share how your mind works creatively so your Twin can mirror your innovative thinking.",
+        prompts: [
+          "Where do you find inspiration?",
+          "How do you develop ideas?",
+          "What environments spark your creativity?",
+        ],
+      },
+      {
+        title: "What legacy do you want to leave behind?",
+        category: "Purpose",
+        timeEstimate: "12 min",
+        points: 85,
+        description: "Express your vision for long-term impact so your Twin understands your purpose.",
+        prompts: [
+          "How do you want to be remembered?",
+          "What impact do you want to make?",
+          "What would make your life meaningful?",
+        ],
+      },
+      {
+        title: "How do you handle conflict and disagreements?",
+        category: "Communication",
+        timeEstimate: "8 min",
+        points: 65,
+        description: "Show your Twin your conflict resolution style and communication approach.",
+        prompts: [
+          "How do you approach difficult conversations?",
+          "What's your strategy for resolving conflicts?",
+          "How do you maintain relationships through disagreements?",
+        ],
+      },
+      {
+        title: "Tell me about your favorite childhood book or story",
+        category: "Memory",
+        timeEstimate: "6 min",
+        points: 55,
+        description: "Share stories that shaped your imagination and values during childhood.",
+        prompts: [
+          "What was the story about?",
+          "Why did it captivate you?",
+          "How did it influence you?",
+          "Do you still think about it today?",
+        ],
+      },
+      {
+        title: "Describe your ideal work environment",
+        category: "Goals",
+        timeEstimate: "9 min",
+        points: 70,
+        description: "Help your Twin understand what conditions help you thrive professionally.",
+        prompts: [
+          "What environment helps you focus?",
+          "What kind of colleagues inspire you?",
+          "How do you prefer to receive feedback?",
+          "What motivates you at work?",
+        ],
+      }
     ];
 
-    // Select a random question set
-    const selectedSet = questionSets[Math.floor(Math.random() * questionSets.length)];
+    // Get existing task titles to avoid duplicates
+    const existingTitles = tasks.map(task => task.title);
+    const availableQuestions = allQuestions.filter(q => !existingTitles.includes(q.title));
 
-    // Generate new tasks with unique IDs
-    const newTasks = selectedSet.map((template, index) => ({
-      id: Date.now() + index, // Ensure unique IDs
-      ...template,
+    if (availableQuestions.length > 0) {
+      // Select a random question from available ones
+      const randomQuestion = availableQuestions[Math.floor(Math.random() * availableQuestions.length)];
+
+      // Create new task with unique ID and newlyAdded flag
+      const newTask = {
+        id: Date.now(),
+        ...randomQuestion,
+        completed: false,
+        response: "",
+        twinFeedback: "",
+        skipped: false,
+        newlyAdded: true, // Flag to show visual indicator
+      };
+
+      // Add to tasks list
+      setTasks(prevTasks => [...prevTasks, newTask]);
+
+      // Remove the newlyAdded flag after 3 seconds
+      setTimeout(() => {
+        setTasks(prevTasks =>
+          prevTasks.map(task =>
+            task.id === newTask.id
+              ? { ...task, newlyAdded: false }
+              : task
+          )
+        );
+      }, 3000);
+
+      // Scroll to the tasks section
+      setTimeout(() => {
+        document.getElementById("todays-tasks")?.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
+  const addNewTaskSet = () => {
+    // Add multiple tasks from the available pool
+    const allQuestions = [
+      {
+        title: "What are your core life principles?",
+        category: "Values",
+        timeEstimate: "8 min",
+        points: 65,
+        description: "Help your Twin understand the fundamental beliefs that guide your decisions.",
+        prompts: [
+          "What principles do you never compromise on?",
+          "How did you develop these values?",
+          "How do they influence your daily choices?",
+        ],
+      },
+      {
+        title: "Describe your biggest fear and how you face it",
+        category: "Growth",
+        timeEstimate: "10 min",
+        points: 75,
+        description: "Share your vulnerabilities so your Twin can understand your courage and resilience.",
+        prompts: [
+          "What scares you the most?",
+          "How do you manage this fear?",
+          "What have you learned from facing it?",
+        ],
+      },
+      {
+        title: "How do you show love and appreciation?",
+        category: "Relationships",
+        timeEstimate: "7 min",
+        points: 60,
+        description: "Help your Twin understand your emotional expression and relationship patterns.",
+        prompts: [
+          "How do you express care for others?",
+          "What gestures mean the most to you?",
+          "How do you like to receive appreciation?",
+        ],
+      },
+      {
+        title: "Describe your creative process and inspiration sources",
+        category: "Creativity",
+        timeEstimate: "10 min",
+        points: 75,
+        description: "Share how your mind works creatively so your Twin can mirror your innovative thinking.",
+        prompts: [
+          "Where do you find inspiration?",
+          "How do you develop ideas?",
+          "What environments spark your creativity?",
+        ],
+      },
+      {
+        title: "What legacy do you want to leave behind?",
+        category: "Purpose",
+        timeEstimate: "12 min",
+        points: 85,
+        description: "Express your vision for long-term impact so your Twin understands your purpose.",
+        prompts: [
+          "How do you want to be remembered?",
+          "What impact do you want to make?",
+          "What would make your life meaningful?",
+        ],
+      },
+      {
+        title: "How do you handle conflict and disagreements?",
+        category: "Communication",
+        timeEstimate: "8 min",
+        points: 65,
+        description: "Show your Twin your conflict resolution style and communication approach.",
+        prompts: [
+          "How do you approach difficult conversations?",
+          "What's your strategy for resolving conflicts?",
+          "How do you maintain relationships through disagreements?",
+        ],
+      },
+      {
+        title: "Tell me about your favorite childhood book or story",
+        category: "Memory",
+        timeEstimate: "6 min",
+        points: 55,
+        description: "Share stories that shaped your imagination and values during childhood.",
+        prompts: [
+          "What was the story about?",
+          "Why did it captivate you?",
+          "How did it influence you?",
+          "Do you still think about it today?",
+        ],
+      },
+      {
+        title: "Describe your ideal work environment",
+        category: "Goals",
+        timeEstimate: "9 min",
+        points: 70,
+        description: "Help your Twin understand what conditions help you thrive professionally.",
+        prompts: [
+          "What environment helps you focus?",
+          "What kind of colleagues inspire you?",
+          "How do you prefer to receive feedback?",
+          "What motivates you at work?",
+        ],
+      },
+      {
+        title: "What motivates you to get up each morning?",
+        category: "Motivation",
+        timeEstimate: "7 min",
+        points: 60,
+        description: "Share what drives you daily so your Twin understands your inner motivation.",
+        prompts: [
+          "What gets you excited about the day?",
+          "What keeps you going during tough times?",
+          "How do you maintain your energy?",
+          "What would you do even if you weren't paid?",
+        ],
+      },
+      {
+        title: "Describe your learning journey and favorite subjects",
+        category: "Learning",
+        timeEstimate: "8 min",
+        points: 65,
+        description: "Help your Twin understand how you learn and what knowledge areas interest you most.",
+        prompts: [
+          "What subjects fascinate you?",
+          "How do you prefer to learn new things?",
+          "What was your favorite educational experience?",
+          "What would you love to master?",
+        ],
+      },
+      {
+        title: "Share your proudest achievement",
+        category: "Achievement",
+        timeEstimate: "10 min",
+        points: 75,
+        description: "Tell your Twin about a moment that made you feel truly proud of yourself.",
+        prompts: [
+          "What achievement are you most proud of?",
+          "What challenges did you overcome?",
+          "How did it change you?",
+          "What did you learn about yourself?",
+        ],
+      },
+      {
+        title: "Describe your ideal day from start to finish",
+        category: "Lifestyle",
+        timeEstimate: "12 min",
+        points: 80,
+        description: "Paint a picture of your perfect day so your Twin understands your preferences and rhythms.",
+        prompts: [
+          "How would you start your morning?",
+          "What activities would fill your day?",
+          "Who would you spend time with?",
+          "How would you end your evening?",
+        ],
+      }
+    ];
+
+    // Get existing task titles to avoid duplicates
+    const existingTitles = tasks.map(task => task.title);
+    const availableQuestions = allQuestions.filter(q => !existingTitles.includes(q.title));
+
+    // Add 3-4 new tasks at once
+    const tasksToAdd = Math.min(4, availableQuestions.length);
+    const selectedQuestions = [];
+
+    for (let i = 0; i < tasksToAdd; i++) {
+      if (availableQuestions.length > 0) {
+        const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+        const selectedQuestion = availableQuestions.splice(randomIndex, 1)[0];
+        selectedQuestions.push(selectedQuestion);
+      }
+    }
+
+    // Create new tasks
+    const newTasks = selectedQuestions.map((question, index) => ({
+      id: Date.now() + index,
+      ...question,
       completed: false,
       response: "",
       twinFeedback: "",
       skipped: false,
+      newlyAdded: true,
     }));
 
-    // Replace current tasks with the new set
-    setTasks(newTasks);
+    // Add all new tasks
+    setTasks(prevTasks => [...prevTasks, ...newTasks]);
+
+    // Remove the newlyAdded flag after 3 seconds
+    setTimeout(() => {
+      setTasks(prevTasks =>
+        prevTasks.map(task =>
+          newTasks.some(newTask => newTask.id === task.id)
+            ? { ...task, newlyAdded: false }
+            : task
+        )
+      );
+    }, 3000);
 
     // Scroll to the tasks section
     setTimeout(() => {
-      document
-        .getElementById("todays-tasks")
-        ?.scrollIntoView({ behavior: "smooth" });
+      document.getElementById("todays-tasks")?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
 
@@ -504,6 +621,64 @@ const DailyTasks = () => {
           ],
         },
       ],
+      reflection: [
+        {
+          title: "What values guide your daily decisions?",
+          category: "Values",
+          timeEstimate: "8 min",
+          points: 65,
+          description:
+            "Help your Twin understand the core principles that shape how you make choices and live your life.",
+          prompts: [
+            "What principles do you never compromise on?",
+            "How do these values show up in your daily life?",
+            "Where did these values come from?",
+            "How do they influence your relationships?",
+          ],
+        },
+        {
+          title: "Reflect on your greatest life lesson",
+          category: "Values",
+          timeEstimate: "10 min",
+          points: 75,
+          description:
+            "Share a profound learning experience that changed how you see yourself or the world.",
+          prompts: [
+            "What was the situation that taught you this lesson?",
+            "How did it change your perspective?",
+            "How do you apply this lesson today?",
+            "What would you tell someone facing a similar situation?",
+          ],
+        },
+        {
+          title: "What does success mean to you personally?",
+          category: "Purpose",
+          timeEstimate: "9 min",
+          points: 70,
+          description:
+            "Define success in your own terms so your Twin understands what truly matters to you.",
+          prompts: [
+            "How do you measure a successful life?",
+            "What achievements matter most to you?",
+            "How has your definition of success evolved?",
+            "What would make you feel proud at the end of your life?",
+          ],
+        },
+        {
+          title: "Describe a moment when you felt most authentic",
+          category: "Values",
+          timeEstimate: "8 min",
+          points: 65,
+          description:
+            "Share a time when you felt completely true to yourself, helping your Twin understand your authentic self.",
+          prompts: [
+            "What was happening in this moment?",
+            "Why did you feel so authentically yourself?",
+            "What does being authentic mean to you?",
+            "How do you stay true to yourself in daily life?",
+          ],
+        },
+      ],
     };
 
     const templates = taskTemplates[type as keyof typeof taskTemplates] || [];
@@ -512,15 +687,27 @@ const DailyTasks = () => {
     const randomTemplate =
       templates[Math.floor(Math.random() * templates.length)];
     const newTask = {
-      id: tasks.length + 1,
+      id: Date.now(),
       ...randomTemplate,
       completed: false,
       response: "",
       twinFeedback: "",
       skipped: false,
+      newlyAdded: true,
     };
 
     setTasks((prevTasks) => [...prevTasks, newTask]);
+
+    // Remove the newlyAdded flag after 3 seconds
+    setTimeout(() => {
+      setTasks(prevTasks =>
+        prevTasks.map(task =>
+          task.id === newTask.id
+            ? { ...task, newlyAdded: false }
+            : task
+        )
+      );
+    }, 3000);
 
     // Scroll to the tasks section after creating
     setTimeout(() => {
@@ -529,6 +716,10 @@ const DailyTasks = () => {
         ?.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
+
+
+
+
 
   const filterTasks = (category: string | null) => {
     setActiveFilter(category);
@@ -543,6 +734,8 @@ const DailyTasks = () => {
             return task.category === "Goals";
           case "summary":
             return task.category === "Reflection" || task.category === "Growth";
+          case "reflection":
+            return task.category === "Values" || task.category === "Purpose" || task.category === "Motivation" || task.category === "Achievement" || task.category === "Lifestyle";
           default:
             return true;
         }
@@ -664,7 +857,7 @@ const DailyTasks = () => {
           </p>
 
           {/* Action Buttons Grid */}
-          <div className="grid grid-cols-2 gap-4 max-w-lg mx-auto">
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
             <Button
               className={`h-16 flex items-center justify-center gap-3 rounded-xl group transition-all duration-200 ${
                 activeFilter === "memory"
@@ -726,13 +919,26 @@ const DailyTasks = () => {
             </Button>
 
             <Button
-              className="bg-ai-accent/10 hover:bg-ai-accent/20 border border-ai-accent/30 text-ai-accent h-16 flex items-center justify-center gap-3 rounded-xl group transition-all duration-200"
+              className={`h-16 flex items-center justify-center gap-3 rounded-xl group transition-all duration-200 ${
+                activeFilter === "reflection"
+                  ? "bg-purple-500 text-white border-purple-500 shadow-lg"
+                  : "bg-purple-100 hover:bg-purple-200 border border-purple-300 text-purple-700"
+              }`}
               variant="outline"
-              onClick={addNewTask}
+              onClick={() => {
+                if (activeFilter === "reflection") {
+                  filterTasks(null);
+                } else {
+                  filterTasks("reflection");
+                  createSpecificTask("reflection");
+                }
+              }}
             >
-              <Plus className="h-6 w-6 group-hover:scale-110 transition-transform" />
-              <span className="font-medium">More tasks</span>
+              <Brain className="h-6 w-6 group-hover:scale-110 transition-transform" />
+              <span className="font-medium">Self-reflect</span>
             </Button>
+
+
           </div>
 
           {/* Active Filter Indicator */}
@@ -770,6 +976,9 @@ const DailyTasks = () => {
                 {activeFilter === "summary" && (
                   <FileText className="h-5 w-5 text-cyber-blue" />
                 )}
+                {activeFilter === "reflection" && (
+                  <Brain className="h-5 w-5 text-purple-500" />
+                )}
                 {activeFilter.charAt(0).toUpperCase() + activeFilter.slice(1)}{" "}
                 Tasks
               </span>
@@ -781,10 +990,10 @@ const DailyTasks = () => {
             size="sm"
             variant="outline"
             className="border-logo-teal text-logo-teal hover:bg-logo-teal/10"
-            onClick={addNewTask}
+            onClick={addNewTaskSet}
           >
             <Plus className="h-4 w-4 mr-2" />
-            New Question Set
+            Request for more tasks
           </Button>
         </div>
 
@@ -802,7 +1011,9 @@ const DailyTasks = () => {
                           ? "Create memory"
                           : activeFilter === "planning"
                             ? "Make a plan"
-                            : "Summarize text"}
+                            : activeFilter === "summary"
+                              ? "Summarize text"
+                              : "Self-reflect"}
                         " button above to create one!
                       </p>
                     </div>
@@ -848,6 +1059,11 @@ const DailyTasks = () => {
                             }`}
                           >
                             {task.title}
+                            {task.newlyAdded && (
+                              <Badge className="ml-2 bg-logo-teal text-white text-xs animate-bounce">
+                                NEW
+                              </Badge>
+                            )}
                           </h3>
                           <div className="flex items-center gap-4 text-sm text-muted-foreground">
                             <Badge
@@ -874,6 +1090,7 @@ const DailyTasks = () => {
                               className="border-orange-300 text-orange-600 hover:bg-orange-50"
                               onClick={() => skipTask(task.id)}
                             >
+                              <ArrowRight className="h-4 w-4 mr-1" />
                               Skip
                             </Button>
                             <Dialog>
@@ -948,8 +1165,19 @@ const DailyTasks = () => {
                                     </p>
                                   </div>
 
-                                  {/* Submit Button */}
+                                  {/* Submit and Skip Buttons */}
                                   <div className="flex gap-3">
+                                    <Button
+                                      onClick={() => {
+                                        skipTask(task.id);
+                                        setSelectedTask(null);
+                                      }}
+                                      variant="outline"
+                                      className="border-orange-300 text-orange-600 hover:bg-orange-50"
+                                    >
+                                      <X className="h-4 w-4 mr-2" />
+                                      Skip
+                                    </Button>
                                     <Button
                                       onClick={submitTaskResponse}
                                       disabled={
@@ -1016,7 +1244,20 @@ const DailyTasks = () => {
                               className="border-blue-300 text-blue-600 hover:bg-blue-50"
                               onClick={() => undoSkipTask(task.id)}
                             >
-                              Undo
+                              <ArrowLeft className="h-4 w-4 mr-1" />
+                              Undo Skip
+                            </Button>
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="border-gray-300 text-gray-600 hover:bg-gray-50"
+                              onClick={() => {
+                                const updatedTasks = tasks.filter(t => t.id !== task.id);
+                                setTasks(updatedTasks);
+                              }}
+                            >
+                              <X className="h-4 w-4 mr-1" />
+                              Remove
                             </Button>
                           </div>
                         )}

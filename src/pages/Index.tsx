@@ -54,77 +54,182 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Twin Growth Flow - Lean Marquee */}
-      <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/3 to-logo-blue/3 overflow-hidden">
-        <div className="container mx-auto px-4">
-          <h2 className="text-base sm:text-lg font-semibold text-center text-foreground mb-6 sm:mb-8">
-            How Your Twin Grows With You
-          </h2>
+      {/* Twin Growth Flow */}
+      <section className="py-12 sm:py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-center text-foreground mb-8 sm:mb-12">
+              How Your Twin Grows With You
+            </h2>
 
-          {/* Universal Marquee - Works on all devices */}
-          <div className="relative overflow-hidden">
-            <div className="animate-marquee whitespace-nowrap">
-              {/* Duplicate content for seamless loop */}
-              {[1, 2, 3].map((iteration) => (
-                <div key={iteration} className="inline-flex gap-8 lg:gap-16 items-center px-4">
-                  {/* Step 1: Share */}
-                  <div className="inline-flex items-center gap-3 flex-shrink-0">
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-logo-teal/20 to-logo-teal/30 rounded-full flex items-center justify-center">
-                      <Users className="h-5 w-5 lg:h-6 lg:w-6 text-logo-teal" />
-                    </div>
-                    <div className="text-left">
-                      <div className="flex items-center gap-1 mb-1">
-                        <span className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-logo-teal text-white text-xs font-bold flex items-center justify-center">1</span>
-                        <h3 className="text-xs lg:text-sm font-semibold">Share</h3>
-                      </div>
-                      <p className="text-xs text-muted-foreground whitespace-normal w-24 lg:w-32">Daily tasks tell your story</p>
+            {/* Mobile/Tablet: Triangular layout with proper flow */}
+            <div className="block lg:hidden">
+              <div className="relative max-w-lg mx-auto">
+                {/* Step 1: You Share - Top of triangle */}
+                <div className="text-center mb-6">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-3 relative">
+                    <div className="w-full h-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center">
+                      <Users className="h-6 w-6 sm:h-8 sm:w-8 text-logo-teal" />
                     </div>
                   </div>
-
-                  <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5 text-logo-teal/60 flex-shrink-0" />
-
-                  {/* Step 2: Learn */}
-                  <div className="inline-flex items-center gap-3 flex-shrink-0">
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
-                        alt="AI Learning"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="text-left">
-                      <div className="flex items-center gap-1 mb-1">
-                        <span className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-logo-blue text-white text-xs font-bold flex items-center justify-center">2</span>
-                        <h3 className="text-xs lg:text-sm font-semibold">Learn</h3>
-                      </div>
-                      <p className="text-xs text-muted-foreground whitespace-normal w-24 lg:w-32">AI captures your style</p>
-                    </div>
-                  </div>
-
-                  <ArrowRight className="h-4 w-4 lg:h-5 lg:w-5 text-logo-blue/60 flex-shrink-0" />
-
-                  {/* Step 3: Deliver */}
-                  <div className="inline-flex items-center gap-3 flex-shrink-0">
-                    <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-full overflow-hidden relative">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
-                        alt="AI Output"
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2">
-                        <span className="text-xs font-bold text-white bg-gradient-to-r from-logo-teal to-cyber-blue px-2 py-0.5 rounded-full border border-white/20">twin</span>
-                      </div>
-                    </div>
-                    <div className="text-left">
-                      <div className="flex items-center gap-1 mb-1">
-                        <span className="w-4 h-4 lg:w-5 lg:h-5 rounded-full bg-cyber-blue text-white text-xs font-bold flex items-center justify-center">3</span>
-                        <h3 className="text-xs lg:text-sm font-semibold">Deliver</h3>
-                      </div>
-                      <p className="text-xs text-muted-foreground whitespace-normal w-24 lg:w-32">1M× faster output</p>
-                    </div>
+                  <h3 className="font-semibold mb-1 flex items-center justify-center gap-2 text-sm">
+                    <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-logo-teal to-logo-teal/80 text-white text-xs font-bold">
+                      1
+                    </span>
+                    You Share
+                  </h3>
+                  <div className="text-xs text-muted-foreground mb-4 sm:mb-6">
+                    Tell <span className="relative">your<div className="absolute top-6 sm:top-8 left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 rotate-[135deg]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="hsl(174, 100%, 42%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div></span> story through <span className="relative">daily<div className="absolute top-6 sm:top-8 left-1/2 transform -translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 rotate-[225deg]"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="hsl(207, 90%, 54%)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg></div></span> tasks
                   </div>
                 </div>
-              ))}
+
+                {/* Bottom row with aligned images and horizontal arrow */}
+                <div className="flex items-center justify-center gap-3">
+                  {/* Step 2: Twin Learns */}
+                  <div className="text-center flex-1">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-2">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
+                        alt="Twin synchronization"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <h3 className="font-semibold mb-1 flex items-center justify-center gap-1 text-xs">
+                      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-br from-logo-blue to-logo-blue/80 text-white text-xs font-bold">
+                        2
+                      </span>
+                      Twin Learns
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      AI captures your style
+                    </p>
+                  </div>
+
+                  {/* Horizontal arrow between steps 2 and 3 */}
+                  <div className="flex items-center justify-center px-2">
+                    <div className="w-5 h-5 flex items-center justify-center">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="hsl(174, 100%, 42%)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+
+                  {/* Step 3: You Deliver */}
+                  <div className="text-center flex-1">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-2 relative">
+                      <img
+                        src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
+                        alt="Your twin delivers output"
+                        className="w-full h-full object-contain"
+                      />
+                      <div className="absolute -bottom-1 left-0 right-0 flex justify-center">
+                        <p className="text-xs font-bold text-white bg-gradient-to-r from-logo-teal to-cyber-blue px-1.5 py-0.5 rounded-full shadow-lg border border-white/20 backdrop-blur-sm">
+                          your twin
+                        </p>
+                      </div>
+                    </div>
+                    <h3 className="font-semibold mb-1 flex items-center justify-center gap-1 text-xs">
+                      <span className="inline-flex items-center justify-center w-4 h-4 rounded-full bg-gradient-to-br from-cyber-blue to-cyber-blue/80 text-white text-xs font-bold">
+                        3
+                      </span>
+                      You Deliver
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      1,000,000x faster
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop: Horizontal marquee animation */}
+            <div className="hidden lg:block">
+              <div className="relative overflow-hidden">
+                <div className="animate-marquee whitespace-nowrap inline-block">
+                  <div className="inline-flex gap-16 items-center">
+                    {/* Create duplicate content for seamless loop */}
+                    {[1, 2].map((iteration) => (
+                      <div
+                        key={iteration}
+                        className="inline-flex gap-12 items-center"
+                      >
+                        {/* Step 1: You Start */}
+                        <div className="text-center flex-shrink-0 w-64">
+                          <div className="w-24 h-24 mx-auto mb-4 relative">
+                            <div className="w-full h-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center">
+                              <Users className="h-10 w-10 text-logo-teal" />
+                            </div>
+                          </div>
+                          <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-teal/80 text-white text-sm font-bold">
+                              1
+                            </span>
+                            You Share
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            Tell your story through daily tasks
+                          </p>
+                        </div>
+
+                        {/* Arrow */}
+                        <div className="flex justify-center flex-shrink-0">
+                          <ArrowRight className="h-6 w-6 text-logo-teal" />
+                        </div>
+
+                        {/* Step 2: Twin Learns */}
+                        <div className="text-center flex-shrink-0 w-64">
+                          <div className="w-24 h-24 mx-auto mb-4">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2Fe4efd42219fb4deabaee31adbd5f6fe2?format=webp&width=800"
+                              alt="Twin synchronization"
+                              className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-logo-blue to-logo-blue/80 text-white text-sm font-bold">
+                              2
+                            </span>
+                            Twin Learns
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            AI captures your unique style
+                          </p>
+                        </div>
+
+                        {/* Arrow */}
+                        <div className="flex justify-center flex-shrink-0">
+                          <ArrowRight className="h-6 w-6 text-logo-blue" />
+                        </div>
+
+                        {/* Step 3: You Deliver */}
+                        <div className="text-center flex-shrink-0 w-64">
+                          <div className="w-24 h-24 mx-auto mb-4 relative">
+                            <img
+                              src="https://cdn.builder.io/api/v1/image/assets%2Fec8aaf6f713d4001ba68182e7cd7ce77%2F0b8dcc308c0849bfb5cec098500ba084?format=webp&width=800"
+                              alt="Your twin delivers output"
+                              className="w-full h-full object-contain"
+                            />
+                            <div className="absolute bottom-1 left-0 right-0 flex justify-center">
+                              <p className="text-xs font-bold text-white bg-gradient-to-r from-logo-teal to-cyber-blue px-2 py-1 rounded-full shadow-lg border border-white/20 backdrop-blur-sm">
+                                your twin
+                              </p>
+                            </div>
+                          </div>
+                          <h3 className="font-semibold mb-2 flex items-center justify-center gap-2">
+                            <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gradient-to-br from-cyber-blue to-cyber-blue/80 text-white text-sm font-bold">
+                              3
+                            </span>
+                            You Deliver
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            1,000,000x faster, in your voice
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

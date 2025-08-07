@@ -44,7 +44,7 @@ const LandingPage = () => {
 
             {/* Right side - Auth forms */}
             <div className="flex justify-center lg:justify-end">
-              <SmartAuth />
+              <SimpleAuth />
             </div>
           </div>
         </div>

@@ -268,8 +268,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Twin Device Capabilities */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 relative">
+      {/* Your Twin, Everywhere - Lean Marquee */}
+      <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/3 to-logo-blue/3 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">

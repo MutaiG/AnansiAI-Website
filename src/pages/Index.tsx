@@ -281,44 +281,6 @@ const Index = () => {
 
             {/* Clean 3-column layout */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {/* Email Assistant */}
-              <div className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                  <div className="w-16 h-16 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <Mail className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Email Assistant</h3>
-                  <p className="text-gray-600 mb-4">
-                    Manages your inbox using your writing style and tone
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-green-600 font-medium">Active</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* WhatsApp/Messaging Popup */}
-              <div className="absolute top-16 right-4 sm:right-8 animate-in slide-in-from-right-10 fade-in-0 duration-700 delay-500">
-                <div className="bg-gradient-to-br from-logo-blue/90 to-logo-blue text-white rounded-xl p-4 max-w-xs shadow-2xl border border-logo-blue/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                      <MessageCircle className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-sm text-white">Smart Messaging</h3>
-                      <p className="text-xs text-white/80">WhatsApp, Telegram</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-white/80 mb-3">
-                    Responding to 12 conversations across platforms
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span className="text-xs text-white font-medium">Processing</span>
-                  </div>
-                </div>
-              </div>
 
 
               {/* Device Compatibility Icons */}

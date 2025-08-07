@@ -320,27 +320,6 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Social Media Popup */}
-              <div className="absolute top-32 left-1/2 transform -translate-x-1/2 animate-in slide-in-from-bottom-10 fade-in-0 duration-700 delay-700">
-                <div className="bg-gradient-to-br from-cyber-blue/90 to-cyber-blue text-white rounded-xl p-4 max-w-xs shadow-2xl border border-cyber-blue/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                      <Share2 className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-sm text-white">Social Media Manager</h3>
-                      <p className="text-xs text-white/80">All platforms</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-white/80 mb-3">
-                    Posted to 5 accounts, engaging with 47 interactions
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span className="text-xs text-white font-medium">Engaging</span>
-                  </div>
-                </div>
-              </div>
 
               {/* Device Compatibility Icons */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-in fade-in-0 duration-700 delay-1000">

@@ -98,7 +98,11 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 to="/"
                 className="flex items-center hover:opacity-80 transition-opacity"
               >
-                <Brain className="h-8 w-8 text-logo-teal" />
+                <img
+                  src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
+                  alt="AnansiAI"
+                  className="h-8 w-8"
+                />
               </Link>
 
               {/* Desktop Navigation */}

@@ -59,6 +59,7 @@ const AppRoutes = () => {
 
       {/* Dashboard redirect for compatibility */}
       <Route path="/dashboard" element={<Navigate to="/train-your-twin-app" replace />} />
+      <Route path="/dashboard/*" element={<Navigate to="/train-your-twin-app" replace />} />
 
       {/* Train Your Twin app - conditional access based on authentication */}
       {user ? (

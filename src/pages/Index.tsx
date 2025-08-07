@@ -268,6 +268,121 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Twin Capabilities Showcase */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-logo-teal/8 via-logo-blue/5 to-cyber-blue/6">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+                Download, Deploy, Dominate
+              </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+                Your AI Twin works seamlessly across all platforms, handling your digital presence while you focus on what matters most.
+              </p>
+            </div>
+
+            {/* Three-column showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+              {/* Download & Setup */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-logo-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Download Ready
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3">Easy Installation</h3>
+                <p className="text-sm text-muted-foreground">
+                  Download your Twin to any device in minutes. One-click setup gets you running instantly on mobile, desktop, or web.
+                </p>
+              </div>
+
+              {/* Social Media Management */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-logo-blue/20 to-cyber-blue/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20"></div>
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-logo-blue relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Auto-Posting
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3">Social Media Mastery</h3>
+                <p className="text-sm text-muted-foreground">
+                  Your Twin crafts engaging posts, responds to comments, and grows your following across Instagram, Twitter, LinkedIn, and TikTok.
+                </p>
+              </div>
+
+              {/* Email Management */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-cyber-blue/20 to-logo-teal/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center">
+                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-cyber-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Smart Replies
+                    </div>
+                  </div>
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold mb-3">Email Excellence</h3>
+                <p className="text-sm text-muted-foreground">
+                  Handle your inbox like a pro. Your Twin writes personalized responses, schedules follow-ups, and never misses important messages.
+                </p>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-12 sm:mt-16">
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-white/50 max-w-2xl mx-auto">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Transform Your Digital Life?</h3>
+                <p className="text-muted-foreground mb-6">
+                  Join thousands who are already leveraging AI to multiply their productivity and amplify their presence.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  >
+                    <Link to="/login">
+                      Start Your Twin Journey
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-logo-teal text-logo-teal hover:bg-logo-teal hover:text-white px-8 py-3 font-semibold transition-all duration-300"
+                  >
+                    Watch Demo
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Competitive Advantage Proof */}
       <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
         <div className="container mx-auto px-4 sm:px-6">

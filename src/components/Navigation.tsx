@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Cpu, ChevronDown, ArrowLeft, ArrowRight } from "lucide-react";
+import { Menu, X, Cpu, ChevronDown, ArrowLeft, ArrowRight, Brain } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);

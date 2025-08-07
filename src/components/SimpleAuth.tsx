@@ -45,7 +45,7 @@ const SimpleAuth = () => {
 
     const success = await login(formData.email, formData.password);
     if (success) {
-      navigate("/dashboard");
+      navigate("/train-your-twin-app");
     }
   };
 

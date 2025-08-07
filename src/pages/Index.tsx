@@ -272,11 +272,11 @@ const Index = () => {
       <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/3 to-logo-blue/3 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
-              Your Twin, Everywhere You Need It
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+              Your Twin, Everywhere
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16">
-              Seamlessly integrated across all your devices and platforms
+            <p className="text-sm text-muted-foreground mb-6">
+              Seamlessly integrated across all platforms
             </p>
 
             {/* Clean 3-column layout */}

@@ -99,8 +99,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 className="flex items-center hover:opacity-80 transition-opacity"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
-                  alt="AnansiAI"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fb31c4d1aa668429485279390892378f0?format=webp&width=800"
+                  alt="Anansi AI"
                   className="h-8 w-8"
                 />
               </Link>

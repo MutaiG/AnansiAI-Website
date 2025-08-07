@@ -1,4 +1,4 @@
-import SmartAuth from "@/components/SmartAuth";
+import SimpleAuth from "@/components/SimpleAuth";
 
 const LandingPage = () => {
 

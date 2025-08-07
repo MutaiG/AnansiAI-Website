@@ -90,8 +90,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     <div className="min-h-screen bg-background">
       {/* Top Header */}
       <header className="bg-background border-b border-border sticky top-0 z-40">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+        <div className="mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex h-14 sm:h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-8">
               <Link
@@ -288,7 +288,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden border-t bg-background/95 backdrop-blur-sm">
-            <div className="px-4 py-3 space-y-2">
+            <div className="px-3 py-2 space-y-1">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -296,7 +296,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                     key={item.name}
                     to={item.href}
                     className={`
-                      flex items-center space-x-4 px-4 py-4 rounded-xl text-base font-medium transition-all duration-200 touch-manipulation
+                      flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation min-h-[48px]
                       ${
                         item.current
                           ? "bg-gradient-to-r from-logo-teal to-logo-blue text-white shadow-lg"
@@ -361,20 +361,20 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               })}
 
               {/* Mobile user actions */}
-              <div className="pt-4 border-t border-border/50 mt-4">
+              <div className="pt-3 border-t border-border/50 mt-3">
                 <Link
                   to="/"
-                  className="flex items-center space-x-4 px-4 py-4 rounded-xl text-base font-medium text-foreground/70 hover:text-foreground hover:bg-muted/60 active:bg-muted/80 transition-all duration-200 touch-manipulation"
+                  className="flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-muted/60 active:bg-muted/80 transition-all duration-200 touch-manipulation min-h-[48px]"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <div className="p-2 rounded-lg bg-muted/30">
-                    <BookOpen className="h-5 w-5" />
+                    <BookOpen className="h-4 w-4" />
                   </div>
                   <div className="flex-1">
                     <span className="font-semibold">Back to AnansiAI</span>
                     <p className="text-xs opacity-70 mt-0.5">Marketing site</p>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                  <ArrowRight className="h-3 w-3 text-muted-foreground" />
                 </Link>
               </div>
             </div>

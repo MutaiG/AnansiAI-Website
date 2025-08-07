@@ -48,120 +48,38 @@ const AppRoutes = () => {
     );
   }
 
-  // If user is not logged in, show marketing content first
-  if (!user) {
-    return (
-      <Routes>
-        {/* Marketing homepage at root */}
-        <Route path="/" element={<Index />} />
-
-        {/* Login/signup page */}
-        <Route path="/login" element={<LandingPage />} />
-
-        {/* Train Your Twin app - redirect to login for non-authenticated users */}
-        <Route path="/train-your-twin-app" element={<LandingPage />} />
-
-        {/* All original marketing routes - accessible to non-authenticated users */}
-        <Route path="/marketing" element={<Index />} />
-        <Route path="/products/student-twin" element={<StudentTwin />} />
-        <Route path="/products/adult-twin" element={<AdultTwin />} />
-        <Route path="/products/enterprise-twin" element={<EnterpriseTwin />} />
-        <Route path="/products/twin-workbench" element={<TwinWorkbench />} />
-        <Route path="/education" element={<EducationSystem />} />
-        <Route path="/education/student-program" element={<StudentProgram />} />
-        <Route path="/education/adult-program" element={<AdultFastTrack />} />
-        <Route path="/company/about" element={<AboutUs />} />
-        <Route path="/company/vision" element={<VisionMission />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/train-your-twin" element={<TrainYourTwin />} />
-        <Route path="/twin-showcase" element={<TwinShowcase />} />
-        <Route path="/verification" element={<Verification />} />
-
-        {/* Blog Pages */}
-        <Route
-          path="/blog/future-of-personal-ai"
-          element={
-            <PlaceholderPage
-              title="The Future of Personal AI"
-              description="Why owning your AI Twin matters more than renting AI tools from big tech companies."
-            />
-          }
-        />
-        <Route
-          path="/blog/education-revolution"
-          element={
-            <PlaceholderPage
-              title="Education Revolution"
-              description="How AI Twins are transforming classrooms and making learning truly personalized."
-            />
-          }
-        />
-        <Route
-          path="/blog/enterprise-intelligence"
-          element={
-            <PlaceholderPage
-              title="Enterprise Intelligence"
-              description="How organizations can embody their vision and culture through AI Twins."
-            />
-          }
-        />
-
-        {/* Legal Pages */}
-        <Route
-          path="/terms"
-          element={
-            <PlaceholderPage
-              title="Terms of Service"
-              description="Legal terms for using AnansiAI Twin training services."
-            />
-          }
-        />
-        <Route
-          path="/privacy"
-          element={
-            <PlaceholderPage
-              title="Privacy Policy"
-              description="How we protect and handle your personal and Twin training data."
-            />
-          }
-        />
-
-        {/* Admin Pages */}
-        <Route path="/admin/blog" element={<BlogAdmin />} />
-
-        {/* Catch-all */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    );
-  }
-
-  // If user is logged in, show Train Your Twin app + access to marketing content
+  // Consolidated routes for both authenticated and non-authenticated users
   return (
     <Routes>
-      {/* Marketing homepage at root for authenticated users too */}
+      {/* Marketing homepage at root */}
       <Route path="/" element={<Index />} />
 
-      {/* Login/signup page - also accessible to authenticated users */}
+      {/* Login/signup page */}
       <Route path="/login" element={<LandingPage />} />
 
-      <Route
-        path="/train-your-twin-app/*"
-        element={
-          <DashboardLayout>
-            <Routes>
-              <Route path="/" element={<MyTwin />} />
-              <Route path="/volumes" element={<Volumes />} />
-              <Route path="/courses" element={<TwinCourses />} />
-              <Route path="/tasks" element={<DailyTasks />} />
-              <Route path="/milestones" element={<Milestones />} />
-              <Route path="/analytics" element={<Analytics />} />
-              <Route path="/settings" element={<Settings />} />
-            </Routes>
-          </DashboardLayout>
-        }
-      />
+      {/* Train Your Twin app - conditional access based on authentication */}
+      {user ? (
+        <Route
+          path="/train-your-twin-app/*"
+          element={
+            <DashboardLayout>
+              <Routes>
+                <Route path="/" element={<MyTwin />} />
+                <Route path="/volumes" element={<Volumes />} />
+                <Route path="/courses" element={<TwinCourses />} />
+                <Route path="/tasks" element={<DailyTasks />} />
+                <Route path="/milestones" element={<Milestones />} />
+                <Route path="/analytics" element={<Analytics />} />
+                <Route path="/settings" element={<Settings />} />
+              </Routes>
+            </DashboardLayout>
+          }
+        />
+      ) : (
+        <Route path="/train-your-twin-app" element={<LandingPage />} />
+      )}
 
-      {/* All original marketing routes - also accessible to authenticated users */}
+      {/* Marketing routes - accessible to all users */}
       <Route path="/marketing" element={<Index />} />
       <Route path="/products/student-twin" element={<StudentTwin />} />
       <Route path="/products/adult-twin" element={<AdultTwin />} />

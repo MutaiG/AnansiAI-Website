@@ -9,25 +9,25 @@
    */
   :root {
     --background: 0 0% 100%;
-    --foreground: 210 20% 8%;
+    --foreground: 220 39% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 8%;
+    --card-foreground: 220 39% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 8%;
+    --popover-foreground: 220 39% 11%;
 
     --primary: 174 100% 42%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 96%;
-    --secondary-foreground: 210 20% 8%;
+    --secondary-foreground: 220 39% 11%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 210 15% 45%;
+    --muted-foreground: 220 14% 41%;
 
     --accent: 200 100% 85%;
-    --accent-foreground: 210 20% 8%;
+    --accent-foreground: 220 39% 11%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -60,22 +60,22 @@
 
   .dark {
     --background: 210 20% 8%;
-    --foreground: 0 0% 98%;
+    --foreground: 0 0% 95%;
 
     --card: 210 20% 8%;
-    --card-foreground: 0 0% 98%;
+    --card-foreground: 0 0% 95%;
 
     --popover: 210 20% 8%;
-    --popover-foreground: 0 0% 98%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 174 100% 50%;
     --primary-foreground: 210 20% 8%;
 
     --secondary: 210 15% 15%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 95%;
 
     --muted: 210 15% 15%;
-    --muted-foreground: 210 10% 65%;
+    --muted-foreground: 210 10% 55%;
 
     --accent: 210 15% 15%;
     --accent-foreground: 0 0% 98%;
@@ -115,10 +115,45 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
   }
+
+  /* Global font size adjustments for smaller text */
+  .text-xs { font-size: 11px; }
+  .text-sm { font-size: 13px; }
+  .text-base { font-size: 14px; }
+  .text-lg { font-size: 16px; }
+  .text-xl { font-size: 18px; }
+  .text-2xl { font-size: 22px; }
+  .text-3xl { font-size: 26px; }
+  .text-4xl { font-size: 32px; }
+  .text-5xl { font-size: 40px; }
+  .text-6xl { font-size: 48px; }
+  .text-7xl { font-size: 56px; }
+
+  /* Specific overrides for common elements */
+  h1 { font-size: 26px; font-weight: 600; color: hsl(var(--foreground)); }
+  h2 { font-size: 22px; font-weight: 600; color: hsl(var(--foreground)); }
+  h3 { font-size: 18px; font-weight: 600; color: hsl(var(--foreground)); }
+  h4 { font-size: 16px; font-weight: 600; color: hsl(var(--foreground)); }
+  h5 { font-size: 14px; font-weight: 600; color: hsl(var(--foreground)); }
+  h6 { font-size: 13px; font-weight: 600; color: hsl(var(--foreground)); }
+
+  p { font-size: 14px; color: hsl(var(--muted-foreground)); line-height: 1.5; }
+
+  /* Button text sizing */
+  button { font-size: 13px; }
+
+  /* Navigation and UI text */
+  nav { font-size: 13px; }
+
+  /* Make muted text even more readable */
+  .text-muted-foreground { color: hsl(var(--muted-foreground)); }
 
   /* Smooth scrolling */
   html {
@@ -171,7 +206,21 @@
   }
 
   .animate-marquee {
-    animation: marquee 20s linear infinite;
+    animation: marquee 25s linear infinite;
+  }
+
+  /* Pause marquee animation on mobile for better performance */
+  @media (max-width: 1024px) {
+    .animate-marquee {
+      animation-play-state: paused;
+    }
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation-play-state: paused;
+    }
   }
 
   @keyframes fadeIn {

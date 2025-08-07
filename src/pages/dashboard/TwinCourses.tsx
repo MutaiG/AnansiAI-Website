@@ -26,6 +26,7 @@ import {
   Sparkles,
   BarChart3,
   X,
+  Share2,
 } from "lucide-react";
 
 const TwinCourses = () => {
@@ -36,6 +37,7 @@ const TwinCourses = () => {
   const [selectedDiscipline, setSelectedDiscipline] = useState<string | null>(
     null,
   );
+  const [selectedFaculty, setSelectedFaculty] = useState<string>("Faculty of Technology & Engineering");
 
   // Pricing data for each discipline
   const disciplinePricing: Record<string, string> = {
@@ -418,6 +420,219 @@ const TwinCourses = () => {
     },
   ];
 
+  // Faculty definitions
+  const faculties = [
+    "Faculty of Technology & Engineering",
+    "Faculty of Business & Management",
+    "Faculty of Arts & Humanities",
+    "Faculty of Health & Medicine",
+    "Faculty of Natural Sciences",
+    "Faculty of Social Sciences",
+    "Faculty of Education & Psychology",
+    "Faculty of Environmental Studies",
+    "Faculty of Media & Communications",
+    "Faculty of Law & Governance"
+  ];
+
+  // Additional faculty courses
+  const businessCourses = [
+    {
+      id: 11,
+      title: "Business Strategy & Planning",
+      provider: "Faculty of Business & Management",
+      description: "Strategic thinking and business planning",
+      icon: BarChart3,
+      bgColor: "bg-gradient-to-br from-emerald-500 to-emerald-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Strategic Planning", "Market Analysis", "Business Models", "SWOT Analysis", "Financial Planning"],
+    },
+    {
+      id: 12,
+      title: "Digital Marketing",
+      provider: "Faculty of Business & Management",
+      description: "Modern marketing strategies and tools",
+      icon: Share2,
+      bgColor: "bg-gradient-to-br from-violet-500 to-violet-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Social Media Marketing", "SEO/SEM", "Content Marketing", "Analytics", "Email Marketing"],
+    },
+    {
+      id: 13,
+      title: "Entrepreneurship",
+      provider: "Faculty of Business & Management",
+      description: "Starting and scaling businesses",
+      icon: Sparkles,
+      bgColor: "bg-gradient-to-br from-amber-500 to-amber-600",
+      locked: true,
+      status: "locked",
+      disciplines: ["Business Formation", "Venture Capital", "Product Development", "Market Entry", "Growth Strategies"],
+    },
+  ];
+
+  const artsCourses = [
+    {
+      id: 14,
+      title: "Creative Writing",
+      provider: "Faculty of Arts & Humanities",
+      description: "Fiction, poetry, and creative expression",
+      icon: Music,
+      bgColor: "bg-gradient-to-br from-rose-500 to-rose-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Fiction Writing", "Poetry", "Screenwriting", "Creative Non-fiction", "Literary Analysis"],
+    },
+    {
+      id: 15,
+      title: "Digital Art & Design",
+      provider: "Faculty of Arts & Humanities",
+      description: "Modern digital creative tools",
+      icon: Palette,
+      bgColor: "bg-gradient-to-br from-fuchsia-500 to-fuchsia-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Photoshop", "Illustrator", "UI/UX Design", "Digital Painting", "3D Modeling"],
+    },
+  ];
+
+  const healthCourses = [
+    {
+      id: 16,
+      title: "Public Health Fundamentals",
+      provider: "Faculty of Health & Medicine",
+      description: "Community health and wellness",
+      icon: Headphones,
+      bgColor: "bg-gradient-to-br from-green-500 to-green-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Epidemiology", "Health Policy", "Community Health", "Disease Prevention", "Health Education"],
+    },
+    {
+      id: 17,
+      title: "Mental Health Awareness",
+      provider: "Faculty of Health & Medicine",
+      description: "Psychology and mental wellness",
+      icon: Brain,
+      bgColor: "bg-gradient-to-br from-sky-500 to-sky-600",
+      locked: true,
+      status: "locked",
+      disciplines: ["Psychology Basics", "Stress Management", "Mental Health Support", "Therapy Techniques", "Wellness Programs"],
+    },
+  ];
+
+  const scienceCourses = [
+    {
+      id: 18,
+      title: "Environmental Science",
+      provider: "Faculty of Natural Sciences",
+      description: "Climate and sustainability studies",
+      icon: Settings,
+      bgColor: "bg-gradient-to-br from-lime-500 to-lime-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Climate Science", "Conservation", "Renewable Energy", "Ecosystem Analysis", "Environmental Policy"],
+    },
+    {
+      id: 19,
+      title: "Applied Mathematics",
+      provider: "Faculty of Natural Sciences",
+      description: "Mathematical modeling and analysis",
+      icon: BarChart3,
+      bgColor: "bg-gradient-to-br from-slate-500 to-slate-600",
+      locked: true,
+      status: "locked",
+      disciplines: ["Calculus", "Statistics", "Linear Algebra", "Differential Equations", "Mathematical Modeling"],
+    },
+  ];
+
+  const socialCourses = [
+    {
+      id: 20,
+      title: "Psychology & Human Behavior",
+      provider: "Faculty of Social Sciences",
+      description: "Understanding human psychology",
+      icon: Brain,
+      bgColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Cognitive Psychology", "Social Psychology", "Behavioral Analysis", "Research Methods", "Human Development"],
+    },
+  ];
+
+  const educationCourses = [
+    {
+      id: 21,
+      title: "Educational Technology",
+      provider: "Faculty of Education & Psychology",
+      description: "Technology in learning environments",
+      icon: Monitor,
+      bgColor: "bg-gradient-to-br from-orange-500 to-orange-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Learning Management Systems", "Educational Apps", "Online Teaching", "Assessment Tools", "Digital Literacy"],
+    },
+  ];
+
+  const environmentalCourses = [
+    {
+      id: 22,
+      title: "Sustainable Development",
+      provider: "Faculty of Environmental Studies",
+      description: "Sustainability and environmental policy",
+      icon: Settings,
+      bgColor: "bg-gradient-to-br from-teal-500 to-teal-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Sustainability Planning", "Environmental Impact", "Green Technology", "Policy Development", "Resource Management"],
+    },
+  ];
+
+  const mediaCourses = [
+    {
+      id: 23,
+      title: "Digital Media Production",
+      provider: "Faculty of Media & Communications",
+      description: "Video, audio, and multimedia content",
+      icon: Camera,
+      bgColor: "bg-gradient-to-br from-red-500 to-red-600",
+      locked: false,
+      status: "available",
+      disciplines: ["Video Production", "Audio Engineering", "Photography", "Journalism", "Broadcasting"],
+    },
+  ];
+
+  const lawCourses = [
+    {
+      id: 24,
+      title: "Legal Studies Foundation",
+      provider: "Faculty of Law & Governance",
+      description: "Legal principles and systems",
+      icon: Shield,
+      bgColor: "bg-gradient-to-br from-gray-500 to-gray-600",
+      locked: true,
+      status: "locked",
+      disciplines: ["Constitutional Law", "Contract Law", "Legal Research", "Ethics", "Civic Responsibility"],
+    },
+  ];
+
+  // Combine all courses by faculty
+  const allFacultyCourses: Record<string, typeof technologyCourses> = {
+    "Faculty of Technology & Engineering": technologyCourses,
+    "Faculty of Business & Management": businessCourses,
+    "Faculty of Arts & Humanities": artsCourses,
+    "Faculty of Health & Medicine": healthCourses,
+    "Faculty of Natural Sciences": scienceCourses,
+    "Faculty of Social Sciences": socialCourses,
+    "Faculty of Education & Psychology": educationCourses,
+    "Faculty of Environmental Studies": environmentalCourses,
+    "Faculty of Media & Communications": mediaCourses,
+    "Faculty of Law & Governance": lawCourses,
+  };
+
+  // Get current faculty's courses
+  const currentCourses = allFacultyCourses[selectedFaculty] || technologyCourses;
+
   if (viewMode === "coming-soon") {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-800 to-slate-900 p-6 relative overflow-hidden">
@@ -440,7 +655,7 @@ const TwinCourses = () => {
         </div>
 
         {/* Course Grid */}
-        <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
+        <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 max-w-6xl mx-auto mb-8 sm:mb-12 px-4">
           {comingSoonCourses.map((course) => {
             const Icon = course.icon;
             return (
@@ -448,22 +663,22 @@ const TwinCourses = () => {
                 key={course.id}
                 className={`${course.bgColor} border-0 overflow-hidden hover:scale-105 transition-transform duration-200`}
               >
-                <CardContent className="p-6 h-full flex flex-col">
+                <CardContent className="p-4 sm:p-6 h-full flex flex-col min-h-[160px] sm:min-h-[200px]">
                   {/* Course Icon */}
-                  <div className="mb-6">
+                  <div className="mb-4 sm:mb-6">
                     <div
-                      className={`${course.iconColor} w-12 h-12 flex items-center justify-center`}
+                      className={`${course.iconColor} w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center`}
                     >
-                      <Icon className="h-8 w-8" />
+                      <Icon className="h-6 w-6 sm:h-8 sm:w-8" />
                     </div>
                   </div>
 
                   {/* Course Info */}
-                  <div className="flex-1 mb-4">
-                    <h3 className="font-semibold text-gray-900 mb-2 text-lg">
+                  <div className="flex-1 mb-3 sm:mb-4">
+                    <h3 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-base sm:text-lg leading-tight">
                       {course.title}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                       {course.description}
                     </p>
                   </div>
@@ -518,10 +733,10 @@ const TwinCourses = () => {
         </div>
 
         {/* Floating Twin Avatar */}
-        <div className="fixed bottom-8 right-8 z-20">
-          <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
-            <Avatar className="w-16 h-16">
-              <AvatarFallback className="bg-white/20 text-white text-2xl">
+        <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
+          <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
+            <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
+              <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
                 😊
               </AvatarFallback>
             </Avatar>
@@ -534,27 +749,55 @@ const TwinCourses = () => {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       {/* Header */}
-      <div className="flex items-center gap-4 mb-2">
-        <Button variant="ghost" size="sm">
-          <ChevronLeft className="h-5 w-5" />
+      <div className="flex items-center gap-2 sm:gap-4 mb-4 px-2 sm:px-0">
+        <Button variant="ghost" size="sm" className="shrink-0">
+          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
-        <h1 className="text-2xl font-bold text-gray-900 flex-1 text-center">
+        <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-1 text-center px-2">
           Explore Twin-Ready Courses
         </h1>
       </div>
 
-      <div className="text-center mb-8">
-        <h2 className="text-xl font-bold mb-2">
-          Faculty of Technology & Engineering
-        </h2>
-        <p className="text-muted-foreground">
-          Comprehensive technology education for the digital age
-        </p>
+      {/* Faculty Filter */}
+      <div className="text-center mb-6 sm:mb-8 px-2 sm:px-4">
+        <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Choose Your Faculty</h2>
+        <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-4 sm:mb-6 max-w-6xl mx-auto">
+          {faculties.map((faculty) => (
+            <Button
+              key={faculty}
+              variant={selectedFaculty === faculty ? "default" : "outline"}
+              size="sm"
+              onClick={() => setSelectedFaculty(faculty)}
+              className={`${
+                selectedFaculty === faculty
+                  ? "bg-gradient-to-r from-logo-teal to-logo-blue text-white"
+                  : "border-logo-teal/30 text-logo-teal hover:bg-logo-teal/10"
+              } transition-all duration-200 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2`}
+            >
+              {faculty.replace("Faculty of ", "")}
+            </Button>
+          ))}
+        </div>
+        <div className="text-center px-2">
+          <h3 className="text-base sm:text-lg font-semibold mb-2">{selectedFaculty}</h3>
+          <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+            {selectedFaculty === "Faculty of Technology & Engineering" && "Comprehensive technology education for the digital age"}
+            {selectedFaculty === "Faculty of Business & Management" && "Strategic business skills for modern entrepreneurs"}
+            {selectedFaculty === "Faculty of Arts & Humanities" && "Creative expression and cultural understanding"}
+            {selectedFaculty === "Faculty of Health & Medicine" && "Health sciences and medical knowledge"}
+            {selectedFaculty === "Faculty of Natural Sciences" && "Scientific inquiry and research methods"}
+            {selectedFaculty === "Faculty of Social Sciences" && "Understanding society and human behavior"}
+            {selectedFaculty === "Faculty of Education & Psychology" && "Teaching methods and learning psychology"}
+            {selectedFaculty === "Faculty of Environmental Studies" && "Sustainability and environmental stewardship"}
+            {selectedFaculty === "Faculty of Media & Communications" && "Digital media and effective communication"}
+            {selectedFaculty === "Faculty of Law & Governance" && "Legal principles and governance systems"}
+          </p>
+        </div>
       </div>
 
       {/* Course Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-7xl mx-auto mb-8">
-        {technologyCourses.map((course) => {
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 max-w-7xl mx-auto mb-6 sm:mb-8 px-2 sm:px-4">
+        {currentCourses.map((course) => {
           const Icon = course.icon;
           return (
             <Card
@@ -562,65 +805,68 @@ const TwinCourses = () => {
               className={`${course.bgColor} border-0 text-white relative overflow-hidden hover:scale-105 transition-transform duration-200 cursor-pointer group`}
               title={`Disciplines: ${course.disciplines.join(", ")}`}
             >
-              <CardContent className="p-4 h-full flex flex-col">
+              <CardContent className="p-3 sm:p-4 h-full flex flex-col min-h-[180px] sm:min-h-[200px]">
                 {/* Course Icon */}
-                <div className="mb-4">
-                  <Icon className="h-8 w-8 text-white" />
+                <div className="mb-3 sm:mb-4">
+                  <Icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                 </div>
 
                 {/* Course Info */}
-                <div className="flex-1 mb-3">
-                  <h3 className="font-semibold text-white mb-2 text-sm leading-tight">
+                <div className="flex-1 mb-2 sm:mb-3">
+                  <h3 className="font-semibold text-white mb-1.5 sm:mb-2 text-xs sm:text-sm leading-tight">
                     {course.title}
                   </h3>
-                  <p className="text-white/60 text-xs">{course.description}</p>
+                  <p className="text-white/60 text-xs leading-relaxed">{course.description}</p>
                 </div>
 
                 {/* Status */}
                 <div className="mt-auto">
                   {course.status === "locked" && (
-                    <Badge className="bg-black/30 text-white border-0 text-xs">
-                      <Lock className="h-3 w-3 mr-1" />
+                    <Badge className="bg-black/30 text-white border-0 text-xs px-2 py-1">
+                      <Lock className="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" />
                       Locked
                     </Badge>
                   )}
                   {course.status === "available" && (
-                    <Badge className="bg-emerald-500 text-white border-0 text-xs">
-                      <Sparkles className="h-3 w-3 mr-1" />
+                    <Badge className="bg-emerald-500 text-white border-0 text-xs px-2 py-1">
+                      <Sparkles className="h-2.5 w-2.5 sm:h-3 sm:w-3 mr-1" />
                       Available
                     </Badge>
                   )}
                 </div>
 
-                {/* Hover Tooltip */}
-                <div className="absolute inset-0 bg-gradient-to-br from-logo-teal/95 to-logo-blue/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-4 flex flex-col justify-center backdrop-blur-sm">
-                  <h4 className="font-semibold text-white mb-2 text-sm">
+                {/* Hover Tooltip - Optimized for mobile */}
+                <div className="absolute inset-0 bg-gradient-to-br from-logo-teal/95 to-logo-blue/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 p-2 sm:p-4 flex flex-col justify-center backdrop-blur-sm">
+                  <h4 className="font-semibold text-white mb-1.5 sm:mb-2 text-xs sm:text-sm">
                     Disciplines:
                   </h4>
-                  <ul className="text-xs text-white/95 space-y-2 max-h-32 overflow-y-auto">
-                    {course.disciplines.map((discipline, index) => (
+                  <ul className="text-xs text-white/95 space-y-1 sm:space-y-2 max-h-24 sm:max-h-32 overflow-y-auto scrollbar-thin scrollbar-thumb-white/20">
+                    {course.disciplines.slice(0, 4).map((discipline, index) => (
                       <li
                         key={index}
                         className="flex items-center group/discipline"
                       >
-                        <div className="w-2 h-2 bg-gradient-to-br from-white to-white/60 rounded-full mr-3 flex-shrink-0 group-hover/discipline:scale-125 transition-transform"></div>
+                        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gradient-to-br from-white to-white/60 rounded-full mr-2 sm:mr-3 flex-shrink-0 group-hover/discipline:scale-125 transition-transform"></div>
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             setSelectedDiscipline(discipline);
                           }}
-                          className="text-left hover:underline transition-all duration-200 hover:text-white hover:translate-x-1 text-white/90 font-medium"
+                          className="text-left hover:underline transition-all duration-200 hover:text-white hover:translate-x-1 text-white/90 font-medium text-xs leading-tight"
                         >
                           {discipline}
                         </button>
                       </li>
                     ))}
+                    {course.disciplines.length > 4 && (
+                      <li className="text-white/70 text-xs">+{course.disciplines.length - 4} more...</li>
+                    )}
                   </ul>
-                  <div className="mt-3">
+                  <div className="mt-2 sm:mt-3">
                     {course.status === "available" ? (
                       <Button
                         size="sm"
-                        className="w-full bg-white text-logo-teal hover:bg-white/90 font-semibold"
+                        className="w-full bg-white text-logo-teal hover:bg-white/90 font-semibold text-xs sm:text-sm py-1.5 sm:py-2"
                       >
                         Enroll Now
                       </Button>
@@ -629,7 +875,7 @@ const TwinCourses = () => {
                         size="sm"
                         variant="outline"
                         disabled
-                        className="w-full border-white/50 text-white/80 bg-white/10"
+                        className="w-full border-white/50 text-white/80 bg-white/10 text-xs sm:text-sm py-1.5 sm:py-2"
                       >
                         Coming Soon
                       </Button>
@@ -642,11 +888,11 @@ const TwinCourses = () => {
         })}
       </div>
 
-      {/* Floating Twin Avatar */}
-      <div className="fixed bottom-8 right-8 z-20">
-        <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
-          <Avatar className="w-16 h-16">
-            <AvatarFallback className="bg-white/20 text-white text-2xl">
+      {/* Floating Twin Avatar - Mobile Responsive */}
+      <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
+        <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
+          <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
+            <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
               🤖
             </AvatarFallback>
           </Avatar>
@@ -654,50 +900,54 @@ const TwinCourses = () => {
       </div>
 
       {/* Additional Options */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-6 sm:mb-8 px-4">
         <Button
           onClick={() => setViewMode("coming-soon")}
           variant="link"
-          className="text-indigo-600 hover:text-indigo-800"
+          className="text-indigo-600 hover:text-indigo-800 text-sm sm:text-base"
         >
           Options: GPT
         </Button>
       </div>
 
       {/* Bottom Navigation */}
-      <div className="max-w-md mx-auto">
-        <div className="flex items-center justify-between text-sm text-gray-600 bg-white rounded-full px-6 py-3 shadow-lg">
-          <div className="flex items-center gap-2">
-            <Brain className="h-5 w-5 text-indigo-500" />
-            <span className="text-indigo-600 font-medium">Home</span>
+      <div className="max-w-lg mx-auto px-2 sm:px-4">
+        <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 bg-white rounded-full px-3 sm:px-6 py-2.5 sm:py-3 shadow-lg">
+          <div className="flex items-center gap-1 sm:gap-2">
+            <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
+            <span className="text-indigo-600 font-medium hidden sm:inline">Home</span>
+            <span className="text-indigo-600 font-medium sm:hidden">🏠</span>
           </div>
-          <span className="hover:text-gray-800 cursor-pointer">Biography</span>
-          <span className="font-medium text-gray-900">Twin Courses</span>
-          <span className="hover:text-gray-800 cursor-pointer">Tasks</span>
+          <span className="hover:text-gray-800 cursor-pointer hidden sm:inline">Biography</span>
+          <span className="hover:text-gray-800 cursor-pointer sm:hidden">📝</span>
+          <span className="font-medium text-gray-900 hidden sm:inline">Twin Courses</span>
+          <span className="font-medium text-gray-900 sm:hidden">📚</span>
+          <span className="hover:text-gray-800 cursor-pointer hidden sm:inline">Tasks</span>
+          <span className="hover:text-gray-800 cursor-pointer sm:hidden">✅</span>
         </div>
       </div>
 
-      {/* Discipline Definition Modal */}
+      {/* Discipline Definition Modal - Mobile Responsive */}
       <Dialog
         open={!!selectedDiscipline}
         onOpenChange={() => setSelectedDiscipline(null)}
       >
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md max-w-[95vw] mx-auto">
           <DialogHeader>
-            <DialogTitle className="flex items-center justify-between">
-              {selectedDiscipline}
+            <DialogTitle className="flex items-center justify-between text-sm sm:text-base pr-8">
+              <span className="truncate">{selectedDiscipline}</span>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => setSelectedDiscipline(null)}
-                className="h-8 w-8 p-0"
+                className="h-6 w-6 sm:h-8 sm:w-8 p-0 absolute right-2 top-2"
               >
-                <X className="h-4 w-4" />
+                <X className="h-3 w-3 sm:h-4 sm:w-4" />
               </Button>
             </DialogTitle>
           </DialogHeader>
-          <div className="mt-4 space-y-4">
-            <p className="text-sm text-muted-foreground leading-relaxed">
+          <div className="mt-3 sm:mt-4 space-y-3 sm:space-y-4">
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
               {selectedDiscipline
                 ? disciplineDefinitions[selectedDiscipline] ||
                   "Definition not available."
@@ -706,27 +956,27 @@ const TwinCourses = () => {
 
             {/* Pricing Section */}
             {selectedDiscipline && (
-              <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-3">
-                  <h4 className="font-semibold text-logo-teal">Course Pricing</h4>
-                  <span className="text-2xl font-bold text-logo-blue">
+              <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-3 sm:p-4">
+                <div className="flex items-center justify-between mb-2 sm:mb-3">
+                  <h4 className="font-semibold text-logo-teal text-sm sm:text-base">Course Pricing</h4>
+                  <span className="text-xl sm:text-2xl font-bold text-logo-blue">
                     {disciplinePricing[selectedDiscipline] || "$99"}
                   </span>
                 </div>
-                <p className="text-xs text-muted-foreground mb-3">
+                <p className="text-xs text-muted-foreground mb-2 sm:mb-3">
                   One-time payment • Lifetime access • Twin integration included
                 </p>
                 <div className="flex gap-2">
                   <Button
                     size="sm"
-                    className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue text-white"
+                    className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue text-white text-xs sm:text-sm"
                   >
                     Enroll Now
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
-                    className="border-logo-teal text-logo-teal hover:bg-logo-teal/10"
+                    className="border-logo-teal text-logo-teal hover:bg-logo-teal/10 text-xs sm:text-sm"
                   >
                     Preview
                   </Button>

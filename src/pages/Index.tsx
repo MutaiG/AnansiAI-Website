@@ -268,7 +268,6 @@ const Index = () => {
         </div>
       </section>
 
-
       {/* Competitive Advantage Proof */}
       <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
         <div className="container mx-auto px-4 sm:px-6">

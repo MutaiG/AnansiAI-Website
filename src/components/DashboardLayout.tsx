@@ -96,13 +96,12 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             <div className="flex items-center space-x-8">
               <Link
                 to="/"
-                className="flex items-center hover:opacity-80 transition-opacity"
+                className="flex items-center hover:opacity-80 transition-opacity gap-2"
               >
-                <img
-                  src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
-                  alt="AnansiAI"
-                  className="h-8 w-8"
-                />
+                <Brain className="h-8 w-8 text-logo-teal" />
+                <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+                  Anansi AI
+                </span>
               </Link>
 
               {/* Desktop Navigation */}

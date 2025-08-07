@@ -268,47 +268,6 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/3 to-logo-blue/3 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
-              Your Twin, Everywhere You Need It
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16">
-              Seamlessly integrated across all your devices and platforms
-            </p>
-
-            {/* Clean 3-column layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-
-
-              {/* Device Compatibility Icons */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-in fade-in-0 duration-700 delay-1000">
-                <div className="flex items-center gap-6 bg-gradient-to-r from-logo-teal/10 to-cyber-blue/10 backdrop-blur-sm rounded-full px-6 py-3 border border-logo-teal/30">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">����</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Mobile</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">💻</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Desktop</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">🌐</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Web</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Competitive Advantage Proof */}
       <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">

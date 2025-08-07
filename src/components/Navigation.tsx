@@ -47,12 +47,11 @@ const Navigation = () => {
             </div>
 
             {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <img
-                src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
-                alt="AnansiAI"
-                className="h-12 w-12 sm:h-16 sm:w-16 hover:scale-105 transition-transform duration-300"
-              />
+            <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Brain className="h-8 w-8 sm:h-10 sm:w-10 text-logo-teal" />
+              <span className="hidden sm:block text-xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+                Anansi AI
+              </span>
             </Link>
           </div>
 

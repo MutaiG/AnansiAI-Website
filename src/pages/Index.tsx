@@ -268,7 +268,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Your Twin, Everywhere - Lean Marquee */}
       <section className="py-8 sm:py-12 bg-gradient-to-br from-logo-teal/3 to-logo-blue/3 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">

@@ -23,29 +23,7 @@ const Navigation = () => {
       <div className="container mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex h-16 sm:h-20 items-center justify-between">
           {/* Back/Forward buttons + Logo */}
-          <div className="flex items-center gap-2">
-            {/* Back/Forward buttons */}
-            <div className="hidden md:flex items-center gap-1 mr-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={goBack}
-                className="p-2 hover:bg-gray-100"
-                title="Go back"
-              >
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={goForward}
-                className="p-2 hover:bg-gray-100"
-                title="Go forward"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-
+          <div className="flex items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img

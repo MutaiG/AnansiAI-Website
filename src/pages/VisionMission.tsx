@@ -92,7 +92,7 @@ const VisionMission = () => {
 
               <Card className="border-2 border-logo-teal shadow-2xl">
                 <CardContent className="p-10">
-                  <h3 className="text-2xl font-bold mb-6">Mission Pillars</h3>
+                  <h3 className="text-lg font-bold mb-6">Mission Pillars</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
@@ -136,7 +136,7 @@ const VisionMission = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <Card className="border-2 border-logo-blue shadow-2xl order-2 lg:order-1">
                 <CardContent className="p-10">
-                  <h3 className="text-2xl font-bold mb-6">Vision in Action</h3>
+                  <h3 className="text-lg font-bold mb-6">Vision in Action</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <GraduationCap className="h-6 w-6 text-logo-blue mr-3 mt-1" />
@@ -204,7 +204,7 @@ const VisionMission = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-4">
               What Drives Us
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -276,14 +276,14 @@ const VisionMission = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-8">
               The Future We're Building Together
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
-                  <span className="text-2xl font-bold">2025</span>
+                  <span className="text-lg font-bold">2025</span>
                 </div>
                 <h3 className="text-xl font-bold mb-4">Foundation</h3>
                 <p className="text-muted-foreground">
@@ -294,7 +294,7 @@ const VisionMission = () => {
 
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
-                  <span className="text-2xl font-bold">2027</span>
+                  <span className="text-lg font-bold">2027</span>
                 </div>
                 <h3 className="text-xl font-bold mb-4">Expansion</h3>
                 <p className="text-muted-foreground">
@@ -305,7 +305,7 @@ const VisionMission = () => {
 
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
-                  <span className="text-2xl font-bold">2030</span>
+                  <span className="text-lg font-bold">2030</span>
                 </div>
                 <h3 className="text-xl font-bold mb-4">Transformation</h3>
                 <p className="text-muted-foreground">
@@ -316,7 +316,7 @@ const VisionMission = () => {
             </div>
 
             <div className="p-8 rounded-xl bg-gradient-to-br from-logo-teal/10 to-logo-blue/10 border-2 border-logo-teal/20">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-lg font-bold mb-4">
                 Join Us in Shaping This Future
               </h3>
               <p className="text-sm text-muted-foreground mb-6">

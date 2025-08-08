@@ -389,7 +389,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-logo-blue text-white mb-8">
                   <Building2 className="h-10 w-10" />
                 </div>
-                <h3 className="text-3xl font-bold mb-6">
+                <h3 className="text-lg font-bold mb-6">
                   Custom Enterprise Solution
                 </h3>
                 <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">

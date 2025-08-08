@@ -32,7 +32,7 @@ const NotFound = () => {
               </span>
             </h1>
 
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+            <h2 className="text-lg font-bold mb-4">
               Page Not Found
             </h2>
 

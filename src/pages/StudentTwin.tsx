@@ -357,7 +357,7 @@ const StudentTwin = () => {
               <Button
                 onClick={() => setShowEnrollmentForm(true)}
                 size="lg"
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-12 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-8 py-4 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
                 Enroll Student
                 <ArrowRight className="ml-4 h-7 w-7" />

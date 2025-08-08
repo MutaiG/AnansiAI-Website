@@ -48,7 +48,7 @@ const TrainYourTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-4">
               Choose Your Twin
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -63,7 +63,7 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Student Twin</h3>
+                <h3 className="text-lg font-bold mb-4">Student Twin</h3>
                 <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   For learners of all ages. Grow your Twin as you learn,
                   creating a personal AI that understands your study methods.
@@ -91,7 +91,7 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Briefcase className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Adult Twin</h3>
+                <h3 className="text-lg font-bold mb-4">Adult Twin</h3>
                 <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Fast-track training for professionals. Build a Twin that
                   amplifies your work and keeps you competitive.
@@ -116,7 +116,7 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Building2 className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Enterprise Twin</h3>
+                <h3 className="text-lg font-bold mb-4">Enterprise Twin</h3>
                 <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Scalable AI solutions for teams. Create a Twin that embodies
                   your organization's knowledge and culture.
@@ -145,7 +145,7 @@ const TrainYourTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-6">
               Ready to Train Your Twin?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

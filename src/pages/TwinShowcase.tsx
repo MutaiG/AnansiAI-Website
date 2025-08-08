@@ -314,7 +314,7 @@ const TwinShowcase = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-lg font-bold mb-4">
               Ready to Showcase Your Expertise?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

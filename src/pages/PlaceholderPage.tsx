@@ -21,8 +21,8 @@ const PlaceholderPage = ({ title, description }: PlaceholderPageProps) => {
               <Construction className="h-10 w-10 text-logo-teal" />
             </div>
 
-            <h1 className="text-4xl font-bold mb-4">{title}</h1>
-            <p className="text-xl text-muted-foreground mb-8">{description}</p>
+            <h1 className="text-lg font-bold mb-4">{title}</h1>
+            <p className="text-sm text-muted-foreground mb-8">{description}</p>
 
             <div className="space-y-4">
               <p className="text-muted-foreground">

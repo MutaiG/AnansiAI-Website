@@ -109,7 +109,7 @@ const BlogAdmin = () => {
             {/* Header */}
             <div className="mb-8">
               <div className="flex items-center justify-between mb-4">
-                <h1 className="text-3xl font-bold">Blog Admin</h1>
+                <h1 className="text-lg font-bold">Blog Admin</h1>
                 <Button asChild variant="outline">
                   <Link to="/" className="flex items-center">
                     <ArrowLeft className="mr-2 h-4 w-4" />

@@ -324,7 +324,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Social Media Mastery</h3>
                 <p className="text-sm text-muted-foreground">
-                  Your Twin crafts engaging posts, responds to comments, and grows your following across Instagram, Twitter, LinkedIn, and TikTok.
+                  Auto-posts and engages across all platforms.
                 </p>
               </div>
 

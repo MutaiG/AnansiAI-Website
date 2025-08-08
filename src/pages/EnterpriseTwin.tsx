@@ -392,7 +392,7 @@ const EnterpriseTwin = () => {
                 <h3 className="text-3xl font-bold mb-6">
                   Custom Enterprise Solution
                 </h3>
-                <div className="text-5xl font-bold text-logo-teal mb-4">
+                <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">
                   Contact Us
                 </div>
                 <p className="text-muted-foreground mb-6">

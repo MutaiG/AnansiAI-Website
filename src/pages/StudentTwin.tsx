@@ -252,7 +252,7 @@ const StudentTwin = () => {
                   <DollarSign className="h-10 w-10" />
                 </div>
                 <h3 className="text-3xl font-bold mb-6">Lifetime Training</h3>
-                <div className="text-5xl font-bold text-logo-teal mb-4">
+                <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">
                   $500
                 </div>
                 <p className="text-muted-foreground mb-6">
@@ -342,7 +342,7 @@ const StudentTwin = () => {
               Start Your Journey Today
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Ready to Train Your Twin?
               </span>

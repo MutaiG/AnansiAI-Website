@@ -64,7 +64,7 @@ const TwinWorkbench = () => {
             <ComingSoonDialog feature="Twin Workbench">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
                 Access Your Workbench
                 <ArrowRight className="ml-3 h-6 w-6" />
@@ -440,7 +440,7 @@ const TwinWorkbench = () => {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-ai-accent to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-ai-accent to-cyber-blue text-white px-10 py-7 text-sm font-bold hover:scale-105 transition-all duration-300"
             >
               <Link to="/train-your-twin">Start Training Your Twin</Link>
             </Button>

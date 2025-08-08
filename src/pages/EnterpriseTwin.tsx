@@ -65,7 +65,7 @@ const EnterpriseTwin = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-to-r from-cyber-blue to-logo-blue hover:from-cyber-blue/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-cyber-blue to-logo-blue hover:from-cyber-blue/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
                 <Link to="/login">
                   Enterprise Portal

@@ -331,9 +331,9 @@ const Index = () => {
               {/* Email Management */}
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-cyber-blue/20 to-logo-teal/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-cyber-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-cyber-blue/20 to-logo-teal/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-cyber-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>

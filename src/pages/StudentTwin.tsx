@@ -59,7 +59,7 @@ const StudentTwin = () => {
               Student Twin
             </div>
 
-            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-poppins mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight font-poppins mb-8">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Learn humanly.
               </span>

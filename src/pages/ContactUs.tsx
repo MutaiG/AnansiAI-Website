@@ -209,7 +209,7 @@ const ContactUs = () => {
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
                         <CheckCircle className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">
+                      <h3 className="text-sm font-bold mb-2">
                         Message Sent Successfully!
                       </h3>
                       <p className="text-muted-foreground mb-6">
@@ -333,7 +333,7 @@ const ContactUs = () => {
             <div className="max-w-2xl mx-auto">
               <Card className="border-0 bg-background shadow-lg">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4">
+                  <h3 className="text-sm font-bold mb-4">
                     Subscribe to Our Newsletter
                   </h3>
                   <p className="text-muted-foreground mb-6">

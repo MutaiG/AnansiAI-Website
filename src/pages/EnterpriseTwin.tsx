@@ -98,7 +98,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Brain className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Organizational Intelligence
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -113,7 +113,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Network className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Collaborative Learning
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -128,7 +128,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Shield className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Enterprise Security</h3>
+                <h3 className="text-sm font-bold mb-4">Enterprise Security</h3>
                 <p className="text-muted-foreground text-sm">
                   Your data stays within your infrastructure. Complete ownership
                   and control over your AI asset.
@@ -249,7 +249,7 @@ const EnterpriseTwin = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-logo-blue text-white mb-6">
-                <span className="text-xl font-bold">1</span>
+                <span className="text-sm font-bold">1</span>
               </div>
               <h3 className="text-sm font-bold mb-3">Discovery & Assessment</h3>
               <p className="text-muted-foreground">
@@ -260,7 +260,7 @@ const EnterpriseTwin = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-logo-teal text-white mb-6">
-                <span className="text-xl font-bold">2</span>
+                <span className="text-sm font-bold">2</span>
               </div>
               <h3 className="text-sm font-bold mb-3">Data Integration</h3>
               <p className="text-muted-foreground">
@@ -271,7 +271,7 @@ const EnterpriseTwin = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-ai-accent text-white mb-6">
-                <span className="text-xl font-bold">3</span>
+                <span className="text-sm font-bold">3</span>
               </div>
               <h3 className="text-sm font-bold mb-3">Training & Refinement</h3>
               <p className="text-muted-foreground">
@@ -282,7 +282,7 @@ const EnterpriseTwin = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-cyber-blue text-white mb-6">
-                <span className="text-xl font-bold">4</span>
+                <span className="text-sm font-bold">4</span>
               </div>
               <h3 className="text-sm font-bold mb-3">Deployment & Support</h3>
               <p className="text-muted-foreground">

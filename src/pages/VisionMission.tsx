@@ -285,7 +285,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
                   <span className="text-lg font-bold">2025</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Foundation</h3>
+                <h3 className="text-sm font-bold mb-4">Foundation</h3>
                 <p className="text-muted-foreground">
                   Launch pilot programs in schools. Establish human-centered
                   training methodologies.
@@ -296,7 +296,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
                   <span className="text-lg font-bold">2027</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Expansion</h3>
+                <h3 className="text-sm font-bold mb-4">Expansion</h3>
                 <p className="text-muted-foreground">
                   Scale to universities and professional training. Launch Adult
                   Twin programs.
@@ -307,7 +307,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
                   <span className="text-lg font-bold">2030</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Transformation</h3>
+                <h3 className="text-sm font-bold mb-4">Transformation</h3>
                 <p className="text-muted-foreground">
                   AI Twins become standard. Enterprise adoption. Global impact
                   on education and work.

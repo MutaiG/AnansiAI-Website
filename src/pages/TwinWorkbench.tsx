@@ -93,7 +93,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <MessageSquare className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Intelligent Conversation Hub
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -108,7 +108,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <FileText className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Document Collaboration
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -123,7 +123,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Settings className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Twin Management</h3>
+                <h3 className="text-sm font-bold mb-4">Twin Management</h3>
                 <p className="text-muted-foreground text-sm">
                   Monitor your Twin's learning progress, adjust behaviors, and
                   fine-tune its responses to match your evolving needs.

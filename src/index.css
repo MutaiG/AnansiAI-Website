@@ -9,25 +9,25 @@
    */
   :root {
     --background: 0 0% 100%;
-    --foreground: 220 39% 11%;
+    --foreground: 220 39% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 39% 11%;
+    --card-foreground: 220 39% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 39% 11%;
+    --popover-foreground: 220 39% 8%;
 
     --primary: 174 100% 42%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 96%;
-    --secondary-foreground: 220 39% 11%;
+    --secondary-foreground: 220 39% 8%;
 
     --muted: 210 40% 96%;
-    --muted-foreground: 220 14% 41%;
+    --muted-foreground: 220 20% 30%;
 
     --accent: 200 100% 85%;
-    --accent-foreground: 220 39% 11%;
+    --accent-foreground: 220 39% 8%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;

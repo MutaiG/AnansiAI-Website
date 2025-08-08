@@ -451,20 +451,10 @@ const Index = () => {
             </div>
 
             <div className="mt-8 sm:mt-12 text-center">
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0 mb-6">
+              <p className="text-base sm:text-lg lg:text-xl text-foreground/80 max-w-2xl mx-auto px-4 sm:px-0 mb-6">
                 Ready to Train Your Twin at early age? Start building a personal
                 AI that truly understands you.
               </p>
-
-              <Button
-                onClick={() => {
-                  setCurrentPopup(1);
-                  setPopupSequence(1);
-                }}
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                See Your Twin's Device Capabilities
-              </Button>
             </div>
           </div>
         </div>

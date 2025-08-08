@@ -46,7 +46,7 @@ const EnterpriseTwin = () => {
               Enterprise Twin
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-poppins mb-8">
               <span className="bg-gradient-to-br from-cyber-blue to-logo-blue bg-clip-text text-transparent">
                 Your Organization.
               </span>
@@ -92,7 +92,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Beyond Generic Corporate AI
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -153,7 +153,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Core Capabilities
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -247,7 +247,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Implementation Process
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -308,7 +308,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Organizational Benefits
             </h2>
           </div>
@@ -374,7 +374,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Enterprise Pricing
             </h2>
             <p className="text-xl text-muted-foreground">

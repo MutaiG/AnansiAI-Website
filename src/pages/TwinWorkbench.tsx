@@ -54,7 +54,7 @@ const TwinWorkbench = () => {
               <span className="text-foreground">Personal Desk.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               The central command center where your AI Twin gets work done.
               Manage, monitor, and maximize your Twin's capabilities through an
               intuitive interface designed for both technical users and everyday
@@ -81,7 +81,7 @@ const TwinWorkbench = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Where Productivity Meets Intelligence
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               The Twin Workbench provides everything you need to collaborate
               effectively with your AI Twin and manage its capabilities.
             </p>
@@ -141,7 +141,7 @@ const TwinWorkbench = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Intuitive Interface Design
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Built for both power users and casual users, the Workbench adapts
               to your level of technical expertise.
             </p>
@@ -250,7 +250,7 @@ const TwinWorkbench = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Comprehensive Tool Suite
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Everything you need to maximize your Twin's potential across
               different domains and use cases.
             </p>
@@ -353,7 +353,7 @@ const TwinWorkbench = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Security & Privacy First
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Your Workbench is designed with enterprise-grade security while
               maintaining the simplicity of personal use.
             </p>
@@ -403,7 +403,7 @@ const TwinWorkbench = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Ready to Work with Your Twin?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               The Twin Workbench becomes available once your AI Twin reaches
               sufficient maturity through the training process.
             </p>

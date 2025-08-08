@@ -72,7 +72,7 @@ const ContactUs = () => {
                   AI Twin Solutions
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
                 Ready to implement Enterprise Twin, Student Twin, or Adult Twin
                 solutions? Contact us to discuss your specific needs and get
                 started with personalized AI that understands your organization.
@@ -323,7 +323,7 @@ const ContactUs = () => {
               <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
                 Insights & Updates
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Stay informed about the latest in personal AI development and
                 training methodologies.
               </p>

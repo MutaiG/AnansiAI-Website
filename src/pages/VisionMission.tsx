@@ -49,7 +49,7 @@ const VisionMission = () => {
               <span className="text-foreground">of Human-AI Partnership</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-12 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-12 leading-relaxed">
               Our vision and mission guide everything we do at AnansiAI. We're
               not just building technology — we're shaping a future where humans
               and AI work together in perfect harmony.
@@ -207,7 +207,7 @@ const VisionMission = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What Drives Us
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Four core principles guide everything we build and every decision
               we make.
             </p>

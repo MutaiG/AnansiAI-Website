@@ -49,7 +49,7 @@ const StudentProgram = () => {
               <span className="text-foreground">as You Learn.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               Future-proof your education with the Student Program. Build your
               personal AI Twin through natural learning processes, creating a
               lifelong intelligent companion that grows with your knowledge and
@@ -77,7 +77,7 @@ const StudentProgram = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Learn Naturally, Build Intelligently
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Our program integrates seamlessly with traditional education,
               requiring no extra work while creating extraordinary value.
             </p>
@@ -133,7 +133,7 @@ const StudentProgram = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               The Student Journey
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               From elementary school through university, your Twin evolves
               alongside your educational development.
             </p>
@@ -194,7 +194,7 @@ const StudentProgram = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Twin Development by Educational Stage
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Each stage builds upon the previous, creating increasingly
               sophisticated AI capabilities aligned with your growth.
             </p>
@@ -328,7 +328,7 @@ const StudentProgram = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Start as a Student?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               The earlier you begin, the more sophisticated and personally
               aligned your Twin becomes.
             </p>
@@ -482,7 +482,7 @@ const StudentProgram = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Start Building Your Future Today
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               Join the pioneers who are creating the first generation of truly
               personal AI companions through natural learning processes.
             </p>

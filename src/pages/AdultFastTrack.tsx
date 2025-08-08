@@ -50,7 +50,7 @@ const AdultFastTrack = () => {
               </span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               The Adult Fast-Track Program compresses years of traditional AI
               Twin development into an intensive, accelerated journey. Designed
               for professionals ready to compete in an AI-driven world without
@@ -77,7 +77,7 @@ const AdultFastTrack = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Choose the Fast-Track Approach?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Traditional AI Twin development takes years through educational
               progression. Our fast-track program delivers the same results in
               months.
@@ -134,7 +134,7 @@ const AdultFastTrack = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Fast-Track Program Structure
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               A carefully designed progression that builds your AI Twin's
               capabilities rapidly while maintaining quality and authenticity.
             </p>
@@ -359,7 +359,7 @@ const AdultFastTrack = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Investment
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               Professional-grade AI Twin development in a fraction of the time
             </p>
           </div>
@@ -435,7 +435,7 @@ const AdultFastTrack = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Don't Wait Another Decade for AI Advantage
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               While others spend years building AI capabilities through
               traditional education, you can have a sophisticated AI Twin in
               just 12 weeks.

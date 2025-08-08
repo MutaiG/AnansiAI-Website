@@ -81,7 +81,7 @@ const AboutUs = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-4">
               What Makes Us Different?
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
+              <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-6">
                 Why "Anansi"?
               </h2>
             </div>
@@ -185,7 +185,7 @@ const AboutUs = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">Our Promise</h2>
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-8">Our Promise</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Card className="border-0 bg-background shadow-lg">
@@ -245,7 +245,7 @@ const AboutUs = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
                     <Shield className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-logo-teal">
+                  <h3 className="text-lg font-bold mb-4 text-logo-teal">
                     Our Mission
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground mb-6">
@@ -267,7 +267,7 @@ const AboutUs = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
                     <Cpu className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-logo-blue">
+                  <h3 className="text-lg font-bold mb-4 text-logo-blue">
                     Our Vision
                   </h3>
                   <p className="text-sm leading-relaxed text-muted-foreground mb-6">
@@ -308,7 +308,7 @@ const AboutUs = () => {
       <section className="py-20 bg-gradient-to-br from-logo-teal/10 to-logo-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
+            <h2 className="text-sm sm:text-xl lg:text-lg font-bold mb-6">
               Ready to Build Your AI Twin?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

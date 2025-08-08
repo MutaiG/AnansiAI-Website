@@ -38,8 +38,8 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-6">
             {/* Products Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-teal/30 hover:border-logo-teal/70 hover:bg-logo-teal/5">
-                <span>Products</span>
+              <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-teal/30 hover:border-logo-teal/70 hover:bg-logo-teal/5 font-poppins text-sm">
+                <span className="font-medium">Products</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -87,7 +87,7 @@ const Navigation = () => {
             {/* Education Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-blue/30 hover:border-logo-blue/70 hover:bg-logo-blue/5">
-                <span>Education</span>
+                <span className="font-medium">Education</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-56 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -117,7 +117,7 @@ const Navigation = () => {
             {/* Company Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-cyber-blue/30 hover:border-cyber-blue/70 hover:bg-cyber-blue/5">
-                <span>Company</span>
+                <span className="font-medium">Company</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">

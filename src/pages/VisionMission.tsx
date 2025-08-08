@@ -41,7 +41,7 @@ const VisionMission = () => {
               Our Vision & Mission
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building the Future
               </span>

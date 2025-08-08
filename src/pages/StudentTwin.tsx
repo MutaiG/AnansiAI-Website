@@ -238,62 +238,6 @@ const StudentTwin = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">Pricing</h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <Card className="border-2 border-logo-teal shadow-2xl">
-              <CardContent className="p-10 text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-8">
-                  <DollarSign className="h-10 w-10" />
-                </div>
-                <h3 className="text-lg font-bold mb-6">Lifetime Training</h3>
-                <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">
-                  $500
-                </div>
-                <p className="text-muted-foreground mb-6">
-                  Complete lifetime training from Grade 1 to University
-                  graduation. One-time payment covers all education levels.
-                  <span className="block mt-2 font-semibold text-logo-teal">
-                    Private students only.
-                  </span>
-                </p>
-
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Personal AI Twin for life</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Grows with your education</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>100% human-supervised training</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Teacher-powered development</span>
-                  </div>
-                </div>
-
-                <Button
-                  onClick={() => setShowEnrollmentForm(true)}
-                  size="lg"
-                  className="bg-gradient-to-r from-ai-accent to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
-                >
-                  Enroll Student
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Why Start Early */}
       <section className="py-20 bg-muted/30">

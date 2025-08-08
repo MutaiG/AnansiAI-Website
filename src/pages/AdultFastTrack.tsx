@@ -40,7 +40,7 @@ const AdultFastTrack = () => {
               Adult Fast-Track Program
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-blue to-cyber-blue bg-clip-text text-transparent">
                 It's Never Too Late
               </span>

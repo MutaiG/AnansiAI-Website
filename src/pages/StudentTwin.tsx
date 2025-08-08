@@ -104,7 +104,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Human-Taught, Not Internet-Trained
                 </h3>
-                <p className="text-muted-foreground text-base">
+                <p className="text-muted-foreground text-sm">
                   Your Twin learns directly from your work, not random internet
                   data.
                 </p>
@@ -119,7 +119,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Built Through Real Schoolwork
                 </h3>
-                <p className="text-muted-foreground text-base">
+                <p className="text-muted-foreground text-sm">
                   Paper, pen, teacher feedback, and your own thoughts shape your
                   Twin, not just typing on a keyboard.
                 </p>
@@ -134,7 +134,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Own Your AI, Own Your Future
                 </h3>
-                <p className="text-muted-foreground text-base">
+                <p className="text-muted-foreground text-sm">
                   Your Twin becomes a private tool you can use forever for
                   study, exams, projects, and future work.
                 </p>
@@ -159,7 +159,7 @@ const StudentTwin = () => {
                 <UserCheck className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-4">You Learn Naturally</h3>
-              <p className="text-muted-foreground text-base">
+              <p className="text-muted-foreground text-sm">
                 Just attend class, do homework, reflect.
               </p>
             </div>
@@ -171,7 +171,7 @@ const StudentTwin = () => {
               <h3 className="text-xl font-bold mb-4">
                 Your Twin Grows Silently
               </h3>
-              <p className="text-muted-foreground text-base">
+              <p className="text-muted-foreground text-sm">
                 Your assignments, quizzes, and notes feed your Twin
                 automatically (through teacher uploads and system updates).
               </p>
@@ -182,7 +182,7 @@ const StudentTwin = () => {
                 <Zap className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-4">You Use It for Results</h3>
-              <p className="text-muted-foreground text-base">
+              <p className="text-muted-foreground text-sm">
                 When mature, your Twin can help write reports, plan projects, or
                 suggest improvements in your own style.
               </p>

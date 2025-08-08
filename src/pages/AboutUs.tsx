@@ -47,7 +47,7 @@ const AboutUs = () => {
               <span className="text-foreground">One Human at a Time.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               At AnansiAI, we believe the future of AI is personal — not
               general. Instead of depending on mass-trained models scraping the
               internet, we build AI Twins: digital versions of real people,

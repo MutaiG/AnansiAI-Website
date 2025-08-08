@@ -52,7 +52,7 @@ const EducationSystem = () => {
               <span className="text-foreground">the Human Way.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               Our revolutionary education approach creates AI Twins through
               natural human learning processes. Structured, scalable, and
               affordable, transforming how students and educators approach

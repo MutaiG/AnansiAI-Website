@@ -36,7 +36,7 @@ const TrainYourTwin = () => {
               <span className="text-foreground">Your Personal AI Awaits</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-12 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-12 leading-relaxed">
               Choose your path to creating a personal AI Twin that learns from
               you, thinks like you, and grows with you.
             </p>

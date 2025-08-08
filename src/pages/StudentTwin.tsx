@@ -254,19 +254,19 @@ const StudentTwin = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-lg bg-background border">
                 <Calendar className="h-8 w-8 text-neural-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Pilot schools in September
                 </h3>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Users className="h-8 w-8 text-electric-purple mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Teacher-powered training program
                 </h3>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Target className="h-8 w-8 text-cyber-teal mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   100% human-supervised development
                 </h3>
               </div>

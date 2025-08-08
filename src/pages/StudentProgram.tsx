@@ -444,7 +444,7 @@ const StudentProgram = () => {
                   <div>
                     <h3 className="text-xl font-bold mb-4">Investment</h3>
                     <div className="text-center">
-                      <div className="text-4xl font-bold text-logo-teal mb-2">
+                      <div className="text-xl font-bold text-logo-teal mb-2">
                         $500
                       </div>
                       <p className="text-muted-foreground mb-4">

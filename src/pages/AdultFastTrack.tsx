@@ -373,7 +373,7 @@ const AdultFastTrack = () => {
                 <h3 className="text-lg font-bold mb-6">
                   Adult Fast-Track Program
                 </h3>
-                <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">
+                <div className="text-xl font-bold text-logo-teal mb-4">
                   $2,500
                 </div>
                 <p className="text-muted-foreground mb-6">

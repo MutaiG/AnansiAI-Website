@@ -351,34 +351,6 @@ const Index = () => {
               </div>
             </div>
 
-            {/* Call to Action */}
-            <div className="text-center mt-12 sm:mt-16">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl border border-white/50 max-w-2xl mx-auto">
-                <h3 className="text-xl sm:text-2xl font-bold mb-4">Ready to Transform Your Digital Life?</h3>
-                <p className="text-muted-foreground mb-6">
-                  Join thousands who are already leveraging AI to multiply their productivity and amplify their presence.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    asChild
-                    size="lg"
-                    className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-8 py-3 font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                  >
-                    <Link to="/login">
-                      Start Your Twin Journey
-                      <ArrowRight className="ml-2 h-5 w-5" />
-                    </Link>
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-2 border-logo-teal text-logo-teal hover:bg-logo-teal hover:text-white px-8 py-3 font-semibold transition-all duration-300"
-                  >
-                    Watch Demo
-                  </Button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

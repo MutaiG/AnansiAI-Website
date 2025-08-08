@@ -101,7 +101,7 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Brain className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Human-Taught, Not Internet-Trained
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -116,7 +116,7 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <BookOpen className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Built Through Real Schoolwork
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -131,7 +131,7 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Award className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-sm font-bold mb-4">
                   Own Your AI, Own Your Future
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -158,7 +158,7 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-8">
                 <UserCheck className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">You Learn Naturally</h3>
+              <h3 className="text-sm font-bold mb-4">You Learn Naturally</h3>
               <p className="text-muted-foreground text-sm">
                 Just attend class, do homework, reflect.
               </p>
@@ -181,7 +181,7 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-8">
                 <Zap className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">You Use It for Results</h3>
+              <h3 className="text-sm font-bold mb-4">You Use It for Results</h3>
               <p className="text-muted-foreground text-sm">
                 When mature, your Twin can help write reports, plan projects, or
                 suggest improvements in your own style.
@@ -208,7 +208,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <School className="h-12 w-12 text-neural-blue mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Primary School</h3>
+                <h3 className="text-sm font-bold mb-2">Primary School</h3>
                 <p className="text-muted-foreground">
                   Build foundational learning habits and personality traits.
                 </p>
@@ -218,7 +218,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <GraduationCap className="h-12 w-12 text-electric-purple mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">High School</h3>
+                <h3 className="text-sm font-bold mb-2">High School</h3>
                 <p className="text-muted-foreground">
                   Develop advanced study techniques and subject expertise.
                 </p>
@@ -228,7 +228,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <University className="h-12 w-12 text-cyber-teal mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">University</h3>
+                <h3 className="text-sm font-bold mb-2">University</h3>
                 <p className="text-muted-foreground">
                   Master research, critical thinking, and professional skills.
                 </p>
@@ -286,7 +286,7 @@ const StudentTwin = () => {
               Start Your Journey Today
             </div>
 
-            <h2 className="text-xl sm:text-2xl lg:text-lg font-bold mb-6">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Ready to Train Your Twin?
               </span>

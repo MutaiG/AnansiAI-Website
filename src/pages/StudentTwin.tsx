@@ -67,7 +67,7 @@ const StudentTwin = () => {
               <span className="text-foreground">Deliver super humanly.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground mb-8">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8">
               The Student Twin is your personal AI that grows with you, trained
               from your own lessons, reflections, and assignments in school.
               Unlike generic AI tools, your Twin understands your unique

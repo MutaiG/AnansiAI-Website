@@ -54,7 +54,7 @@ const TwinWorkbench = () => {
               <span className="text-foreground">Personal Desk.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               The central command center where your AI Twin gets work done.
               Manage, monitor, and maximize your Twin's capabilities through an
               intuitive interface designed for both technical users and everyday

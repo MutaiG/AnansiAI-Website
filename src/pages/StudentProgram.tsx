@@ -49,7 +49,7 @@ const StudentProgram = () => {
               <span className="text-foreground">as You Learn.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               Future-proof your education with the Student Program. Build your
               personal AI Twin through natural learning processes, creating a
               lifelong intelligent companion that grows with your knowledge and

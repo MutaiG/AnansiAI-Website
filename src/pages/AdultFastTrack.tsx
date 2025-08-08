@@ -50,7 +50,7 @@ const AdultFastTrack = () => {
               </span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               The Adult Fast-Track Program compresses years of traditional AI
               Twin development into an intensive, accelerated journey. Designed
               for professionals ready to compete in an AI-driven world without

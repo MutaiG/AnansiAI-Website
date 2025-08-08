@@ -54,7 +54,7 @@ const EnterpriseTwin = () => {
               <span className="text-foreground">Personified.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               Complete AI representation of your business. The Enterprise Twin
               embodies your company's knowledge, culture, decision-making
               patterns, and communication style, creating a scalable AI that

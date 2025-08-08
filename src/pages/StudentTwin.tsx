@@ -59,7 +59,7 @@ const StudentTwin = () => {
               Student Twin
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl font-poppins mb-8">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Learn humanly.
               </span>
@@ -90,7 +90,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               What Makes It Special?
             </h2>
           </div>
@@ -104,7 +104,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Human-Taught, Not Internet-Trained
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base">
                   Your Twin learns directly from your work, not random internet
                   data.
                 </p>
@@ -119,7 +119,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Built Through Real Schoolwork
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base">
                   Paper, pen, teacher feedback, and your own thoughts shape your
                   Twin, not just typing on a keyboard.
                 </p>
@@ -134,7 +134,7 @@ const StudentTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Own Your AI, Own Your Future
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-base">
                   Your Twin becomes a private tool you can use forever for
                   study, exams, projects, and future work.
                 </p>
@@ -148,7 +148,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -159,7 +159,7 @@ const StudentTwin = () => {
                 <UserCheck className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-4">You Learn Naturally</h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-base">
                 Just attend class, do homework, reflect.
               </p>
             </div>
@@ -171,7 +171,7 @@ const StudentTwin = () => {
               <h3 className="text-xl font-bold mb-4">
                 Your Twin Grows Silently
               </h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-base">
                 Your assignments, quizzes, and notes feed your Twin
                 automatically (through teacher uploads and system updates).
               </p>
@@ -182,7 +182,7 @@ const StudentTwin = () => {
                 <Zap className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-4">You Use It for Results</h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-base">
                 When mature, your Twin can help write reports, plan projects, or
                 suggest improvements in your own style.
               </p>
@@ -195,7 +195,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Who It's For
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -242,7 +242,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pricing</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">Pricing</h2>
           </div>
 
           <div className="max-w-2xl mx-auto">
@@ -299,7 +299,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

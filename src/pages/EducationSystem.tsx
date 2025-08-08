@@ -52,7 +52,7 @@ const EducationSystem = () => {
               <span className="text-foreground">the Human Way.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               Our revolutionary education approach creates AI Twins through
               natural human learning processes. Structured, scalable, and
               affordable, transforming how students and educators approach
@@ -83,7 +83,7 @@ const EducationSystem = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Human-Centric AI Training Matters
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Unlike generic AI trained on scraped internet data, our system
               creates AI Twins through authentic human learning experiences.
             </p>
@@ -146,7 +146,7 @@ const EducationSystem = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Integration with Traditional Education
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Our system seamlessly integrates with existing educational
               frameworks without disrupting proven teaching methods.
             </p>
@@ -253,7 +253,7 @@ const EducationSystem = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Structured Learning Progression
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Each educational level builds upon the previous, creating
               increasingly sophisticated AI capabilities.
             </p>
@@ -389,7 +389,7 @@ const EducationSystem = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Getting Started with Your Institution
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Simple implementation process designed to integrate seamlessly
               with your existing educational framework.
             </p>

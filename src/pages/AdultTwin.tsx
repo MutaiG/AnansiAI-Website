@@ -55,7 +55,7 @@ const AdultTwin = () => {
               <span className="text-foreground">Train your own AI.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               The Adult Twin helps you compete in an AI-driven job market by
               becoming your private, personalized AI clone. It understands your
               tone, reasoning, and skill set because it learns directly from

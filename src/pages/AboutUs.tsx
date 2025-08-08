@@ -47,7 +47,7 @@ const AboutUs = () => {
               <span className="text-foreground">One Human at a Time.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               At AnansiAI, we believe the future of AI is personal — not
               general. Instead of depending on mass-trained models scraping the
               internet, we build AI Twins: digital versions of real people,
@@ -84,7 +84,7 @@ const AboutUs = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What Makes Us Different?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               We're creating an alternative to generic AI — where individuals,
               students, and organizations can train, own, and deploy their own
               AI.
@@ -311,7 +311,7 @@ const AboutUs = () => {
             <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               Ready to Build Your AI Twin?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               Join us in creating the future of human-first AI. Start your
               journey today.
             </p>

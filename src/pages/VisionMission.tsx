@@ -41,7 +41,7 @@ const VisionMission = () => {
               Our Vision & Mission
             </div>
 
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-sm sm:text-base lg:text-lg font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building the Future
               </span>
@@ -67,10 +67,10 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Target className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-logo-teal">
+                <h2 className="text-sm sm:text-base lg:text-lg font-bold mb-6 text-logo-teal">
                   Our Mission
                 </h2>
-                <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
                   To make AI personal, sustainable, and empowering — by enabling
                   every individual, student, and organization to train and own
                   their own AI Twin that reflects their skills, values, and
@@ -179,10 +179,10 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Eye className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-logo-blue">
+                <h2 className="text-sm sm:text-base lg:text-lg font-bold mb-6 text-logo-blue">
                   Our Vision
                 </h2>
-                <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
                   A world where humans remain central in the AI era — working
                   faster, thinking sharper, and creating fearlessly — powered by
                   AI Twins they've shaped themselves.

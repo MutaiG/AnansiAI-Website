@@ -26,7 +26,7 @@ const NotFound = () => {
               <Brain className="h-12 w-12 text-logo-teal" />
             </div>
 
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-lg lg:text-xl font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 404
               </span>

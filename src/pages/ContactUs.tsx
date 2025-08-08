@@ -66,7 +66,7 @@ const ContactUs = () => {
                 Partner with Us
               </div>
 
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold mb-4">
                 Transform Your Organization with{" "}
                 <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                   AI Twin Solutions
@@ -83,7 +83,7 @@ const ContactUs = () => {
               {/* Contact Form */}
               <Card className="shadow-xl border-0">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
+                  <CardTitle className="flex items-center text-sm">
                     <MessageSquare className="mr-3 h-6 w-6 text-logo-teal" />
                     Get in Touch
                   </CardTitle>

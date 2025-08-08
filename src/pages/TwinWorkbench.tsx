@@ -78,7 +78,7 @@ const TwinWorkbench = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               Where Productivity Meets Intelligence
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -96,7 +96,7 @@ const TwinWorkbench = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Intelligent Conversation Hub
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Engage with your Twin through natural conversation,
                   project-specific chats, and context-aware dialogues.
                 </p>
@@ -111,7 +111,7 @@ const TwinWorkbench = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Document Collaboration
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Co-create documents, reports, and presentations with your Twin
                   understanding your style and preferences.
                 </p>
@@ -124,7 +124,7 @@ const TwinWorkbench = () => {
                   <Settings className="h-10 w-10 text-logo-blue" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Twin Management</h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Monitor your Twin's learning progress, adjust behaviors, and
                   fine-tune its responses to match your evolving needs.
                 </p>
@@ -138,7 +138,7 @@ const TwinWorkbench = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               Intuitive Interface Design
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -247,7 +247,7 @@ const TwinWorkbench = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               Comprehensive Tool Suite
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -350,7 +350,7 @@ const TwinWorkbench = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               Security & Privacy First
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -364,7 +364,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-cyber-blue text-white mb-6">
                 <Zap className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold mb-3">Private by Design</h3>
+              <h3 className="text-sm font-bold mb-3">Private by Design</h3>
               <p className="text-muted-foreground">
                 Your data never leaves your control. All processing happens
                 within your secure environment.
@@ -375,7 +375,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-logo-blue text-white mb-6">
                 <Target className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold mb-3">Encrypted Everything</h3>
+              <h3 className="text-sm font-bold mb-3">Encrypted Everything</h3>
               <p className="text-muted-foreground">
                 End-to-end encryption ensures your conversations and documents
                 remain completely private.
@@ -386,7 +386,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-logo-teal text-white mb-6">
                 <Settings className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-bold mb-3">Full Control</h3>
+              <h3 className="text-sm font-bold mb-3">Full Control</h3>
               <p className="text-muted-foreground">
                 You decide what your Twin learns, remembers, and how it evolves
                 over time.
@@ -400,7 +400,7 @@ const TwinWorkbench = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">
               Ready to Work with Your Twin?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

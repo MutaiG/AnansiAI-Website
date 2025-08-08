@@ -198,7 +198,7 @@ const ContactUs = () => {
 
                       <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white h-12 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                        className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white h-12 text-sm font-semibold hover:scale-105 transition-all duration-300"
                       >
                         <Send className="mr-2 h-5 w-5" />
                         Send Message
@@ -236,7 +236,7 @@ const ContactUs = () => {
                         <Users className="h-6 w-6 text-logo-teal" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-sm font-bold mb-2">
                           Educational Institutions
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -255,7 +255,7 @@ const ContactUs = () => {
                         <Target className="h-6 w-6 text-logo-blue" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-sm font-bold mb-2">
                           Technology Partners
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -275,7 +275,7 @@ const ContactUs = () => {
                         <Mail className="h-6 w-6 text-cyber-blue" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-sm font-bold mb-2">
                           Research Collaborators
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -320,7 +320,7 @@ const ContactUs = () => {
         <section className="py-20 bg-muted/30 mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+              <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
                 Insights & Updates
               </h2>
               <p className="text-sm text-muted-foreground max-w-2xl mx-auto">

@@ -97,7 +97,7 @@ const AdultTwin = () => {
                   <Award className="h-10 w-10 text-logo-blue" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Own Your AI Future</h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Build lasting value with AI that's truly yours. Your Twin
                   preserves your voice, your thinking, and your method, creating
                   a permanent asset that grows with you.
@@ -111,7 +111,7 @@ const AdultTwin = () => {
                   <TrendingUp className="h-10 w-10 text-cyber-blue" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Stay Competitive</h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   While others use generic AI tools, your Twin learns to work
                   exactly like you, giving you a unique advantage in the modern
                   workplace.
@@ -125,7 +125,7 @@ const AdultTwin = () => {
                   <UserCheck className="h-10 w-10 text-ai-accent" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Your Unique Voice</h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Your Twin understands your tone, reasoning, and skill set
                   because it learns directly from you, not scraped data.
                 </p>
@@ -152,7 +152,7 @@ const AdultTwin = () => {
               <h3 className="text-xl font-bold mb-4">
                 1. Montage Learning Program
               </h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-sm">
                 Adults skip years of school-level training through an intensive,
                 tailored curriculum focusing on communication, decision-making,
                 and task handling.
@@ -164,7 +164,7 @@ const AdultTwin = () => {
                 <Cpu className="h-10 w-10" />
               </div>
               <h3 className="text-xl font-bold mb-4">2. Your Work Feeds It</h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-sm">
                 Emails, reports, chats, voice notes. The Twin trains on the real
                 tasks you do daily.
               </p>
@@ -177,7 +177,7 @@ const AdultTwin = () => {
               <h3 className="text-xl font-bold mb-4">
                 3. Human-Guided Finishing Touch
               </h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-sm">
                 Pro plans include expert data labeling for extra accuracy so
                 your Twin reflects your tone, personality, and approach.
               </p>
@@ -358,7 +358,7 @@ const AdultTwin = () => {
 
             <div id="signup" className="mt-8">
               <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-center mb-2">Your twin, your future</h3>
+                <h3 className="text-sm font-semibold text-center mb-2">Your twin, your future</h3>
                 <p className="text-sm text-muted-foreground text-center mb-4">
                   Start your AI Twin training journey today
                 </p>

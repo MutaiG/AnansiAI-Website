@@ -273,10 +273,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Download, Deploy, Dominate
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
                 Your AI Twin works seamlessly across all platforms, handling your digital presence while you focus on what matters most.
               </p>
             </div>

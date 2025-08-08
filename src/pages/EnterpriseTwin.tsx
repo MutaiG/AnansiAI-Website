@@ -46,7 +46,7 @@ const EnterpriseTwin = () => {
               Enterprise Twin
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight font-poppins mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight font-poppins mb-8">
               <span className="bg-gradient-to-br from-cyber-blue to-logo-blue bg-clip-text text-transparent">
                 Your Organization.
               </span>
@@ -82,7 +82,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Beyond Generic Corporate AI
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -143,7 +143,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Core Capabilities
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -237,7 +237,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Implementation Process
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -298,7 +298,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Organizational Benefits
             </h2>
           </div>

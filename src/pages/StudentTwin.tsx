@@ -90,7 +90,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               What Makes It Special?
             </h2>
           </div>
@@ -148,7 +148,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -195,7 +195,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Who It's For
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">

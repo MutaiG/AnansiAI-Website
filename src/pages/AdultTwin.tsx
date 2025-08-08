@@ -47,7 +47,7 @@ const AdultTwin = () => {
               Adult Twin
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight font-poppins mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight font-poppins mb-8">
               <span className="bg-gradient-to-br from-logo-blue to-cyber-blue bg-clip-text text-transparent">
                 Stay relevant.
               </span>
@@ -85,7 +85,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Why Adults Need Their Own Twin
             </h2>
           </div>
@@ -139,7 +139,7 @@ const AdultTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -190,7 +190,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Who It's For
             </h2>
           </div>
@@ -244,7 +244,7 @@ const AdultTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
               Course Disciplines Available
             </h2>
             <p className="text-xl text-muted-foreground">

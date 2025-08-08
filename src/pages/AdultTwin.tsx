@@ -63,7 +63,7 @@ const AdultTwin = () => {
             </p>
 
             <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-8 mb-8">
-              <h3 className="text-lg font-bold text-center mb-4">Your twin, your future</h3>
+              <h3 className="text-sm font-bold text-center mb-4">Your twin, your future</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   asChild
@@ -259,7 +259,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Cpu className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">Programming & Development</h3>
+                <h3 className="text-sm font-bold mb-4">Programming & Development</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-logo-blue mr-2" />
@@ -283,7 +283,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Brain className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">AI & Machine Learning</h3>
+                <h3 className="text-sm font-bold mb-4">AI & Machine Learning</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
@@ -307,7 +307,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <Zap className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">Security & Cloud</h3>
+                <h3 className="text-sm font-bold mb-4">Security & Cloud</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-ai-accent mr-2" />

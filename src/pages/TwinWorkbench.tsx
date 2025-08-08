@@ -149,7 +149,7 @@ const TwinWorkbench = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
-              <h3 className="text-lg font-bold mb-6">
+              <h3 className="text-sm font-bold mb-6">
                 For Everyday Professionals
               </h3>
               <div className="space-y-4">
@@ -197,7 +197,7 @@ const TwinWorkbench = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-bold mb-6">For Technical Users</h3>
+              <h3 className="text-sm font-bold mb-6">For Technical Users</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
                   <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-ai-accent/20 flex-shrink-0">
@@ -410,7 +410,7 @@ const TwinWorkbench = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-lg bg-background border">
-                <span className="text-lg font-bold text-logo-teal">1</span>
+                <span className="text-sm font-bold text-logo-teal">1</span>
                 <h3 className="font-semibold mb-2 mt-2">Begin Twin Training</h3>
                 <p className="text-sm text-muted-foreground">
                   Start the training process through our Student or Adult
@@ -418,7 +418,7 @@ const TwinWorkbench = () => {
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
-                <span className="text-lg font-bold text-logo-teal">2</span>
+                <span className="text-sm font-bold text-logo-teal">2</span>
                 <h3 className="font-semibold mb-2 mt-2">
                   Reach Maturity Milestone
                 </h3>
@@ -428,7 +428,7 @@ const TwinWorkbench = () => {
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
-                <span className="text-lg font-bold text-logo-teal">3</span>
+                <span className="text-sm font-bold text-logo-teal">3</span>
                 <h3 className="font-semibold mb-2 mt-2">Access Your Desk</h3>
                 <p className="text-sm text-muted-foreground">
                   Begin collaborating with your Twin through the full Workbench

@@ -136,7 +136,7 @@ const TwinShowcase = () => {
                 Twin Showcase
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
               Discover verified AI Twins from professionals across different
               fields. Interact with their capabilities and see how AI Twins can
               enhance expertise.
@@ -317,7 +317,7 @@ const TwinShowcase = () => {
             <h2 className="text-3xl font-bold mb-4">
               Ready to Showcase Your Expertise?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               Join our community of verified professionals and share your AI
               Twin's capabilities with the world.
             </p>

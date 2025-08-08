@@ -54,7 +54,7 @@ const EnterpriseTwin = () => {
               <span className="text-foreground">Personified.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-sm text-muted-foreground mb-8 leading-relaxed">
               Complete AI representation of your business. The Enterprise Twin
               embodies your company's knowledge, culture, decision-making
               patterns, and communication style, creating a scalable AI that
@@ -95,7 +95,7 @@ const EnterpriseTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Beyond Generic Corporate AI
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               While others offer one-size-fits-all solutions, Enterprise Twin
               learns your specific business culture, processes, and
               decision-making patterns.
@@ -156,7 +156,7 @@ const EnterpriseTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Core Capabilities
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Transform how your organization operates with AI that understands
               your unique business context.
             </p>
@@ -250,7 +250,7 @@ const EnterpriseTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Implementation Process
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               A structured approach to building your Enterprise Twin that
               minimizes disruption while maximizing learning.
             </p>
@@ -377,7 +377,7 @@ const EnterpriseTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Enterprise Pricing
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               Customized solutions based on your organization's size and
               requirements
             </p>

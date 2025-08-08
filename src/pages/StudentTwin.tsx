@@ -198,7 +198,7 @@ const StudentTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
               Who It's For
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Each level unlocks new skills: from simple writing aids to
               personal research assistants.
             </p>
@@ -302,7 +302,7 @@ const StudentTwin = () => {
             <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               The younger you start, the more personal and skilled your Twin
               becomes, giving you a huge edge in exams, work, and life.
             </p>
@@ -348,7 +348,7 @@ const StudentTwin = () => {
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Don't wait! Start building your personal AI Twin today and give
               yourself the competitive advantage for tomorrow's world.
             </p>

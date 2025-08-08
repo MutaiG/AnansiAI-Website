@@ -36,7 +36,7 @@ const NotFound = () => {
               Page Not Found
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               This page doesn't exist yet, but your AI Twin could help you find
               what you're looking for.
             </p>

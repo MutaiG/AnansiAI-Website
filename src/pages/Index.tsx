@@ -346,7 +346,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Email Excellence</h3>
                 <p className="text-sm text-muted-foreground">
-                  Handle your inbox like a pro. Your Twin writes personalized responses, schedules follow-ups, and never misses important messages.
+                  Smart replies and inbox management.
                 </p>
               </div>
             </div>

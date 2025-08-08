@@ -131,7 +131,7 @@ const TwinShowcase = () => {
       <section className="py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">
               <span className="bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Twin Showcase
               </span>

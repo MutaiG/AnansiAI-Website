@@ -301,7 +301,7 @@ const Index = () => {
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold mb-3">Easy Installation</h3>
                 <p className="text-sm text-muted-foreground">
-                  Download your Twin to any device in minutes. One-click setup gets you running instantly on mobile, desktop, or web.
+                  Quick setup on any device.
                 </p>
               </div>
 

@@ -111,7 +111,7 @@ const EnterpriseTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Organizational Intelligence
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Captures your company's institutional knowledge, from project
                   methodologies to client communication patterns.
                 </p>
@@ -126,7 +126,7 @@ const EnterpriseTwin = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Collaborative Learning
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Learns from your team's interactions, documents, and decisions
                   to understand your collaborative culture.
                 </p>
@@ -139,7 +139,7 @@ const EnterpriseTwin = () => {
                   <Shield className="h-10 w-10 text-logo-teal" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Enterprise Security</h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Your data stays within your infrastructure. Complete ownership
                   and control over your AI asset.
                 </p>
@@ -170,7 +170,7 @@ const EnterpriseTwin = () => {
                     <UserCheck className="h-6 w-6 text-cyber-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-sm font-bold mb-2">
                       Intelligent Document Processing
                     </h3>
                     <p className="text-muted-foreground">
@@ -190,7 +190,7 @@ const EnterpriseTwin = () => {
                     <Target className="h-6 w-6 text-logo-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-sm font-bold mb-2">
                       Strategic Decision Support
                     </h3>
                     <p className="text-muted-foreground">
@@ -209,7 +209,7 @@ const EnterpriseTwin = () => {
                     <Users className="h-6 w-6 text-logo-teal" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-sm font-bold mb-2">
                       Team Onboarding & Training
                     </h3>
                     <p className="text-muted-foreground">
@@ -228,7 +228,7 @@ const EnterpriseTwin = () => {
                     <TrendingUp className="h-6 w-6 text-ai-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-sm font-bold mb-2">
                       Performance Analytics
                     </h3>
                     <p className="text-muted-foreground">
@@ -261,7 +261,7 @@ const EnterpriseTwin = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-logo-blue text-white mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Discovery & Assessment</h3>
+              <h3 className="text-sm font-bold mb-3">Discovery & Assessment</h3>
               <p className="text-muted-foreground">
                 Comprehensive analysis of your organizational structure,
                 processes, and communication patterns.
@@ -272,7 +272,7 @@ const EnterpriseTwin = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-logo-teal text-white mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Data Integration</h3>
+              <h3 className="text-sm font-bold mb-3">Data Integration</h3>
               <p className="text-muted-foreground">
                 Secure integration with your existing systems, documents, and
                 communication platforms.
@@ -283,7 +283,7 @@ const EnterpriseTwin = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-ai-accent text-white mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Training & Refinement</h3>
+              <h3 className="text-sm font-bold mb-3">Training & Refinement</h3>
               <p className="text-muted-foreground">
                 Iterative training process with your team's feedback to ensure
                 accurate representation.
@@ -294,7 +294,7 @@ const EnterpriseTwin = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-cyber-blue text-white mb-6">
                 <span className="text-xl font-bold">4</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Deployment & Support</h3>
+              <h3 className="text-sm font-bold mb-3">Deployment & Support</h3>
               <p className="text-muted-foreground">
                 Full deployment with ongoing support and continuous learning
                 capabilities.
@@ -428,7 +428,7 @@ const EnterpriseTwin = () => {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-cyber-blue to-logo-blue text-white px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                    className="bg-gradient-to-r from-cyber-blue to-logo-blue text-white px-8 py-4 text-sm font-semibold hover:scale-105 transition-all duration-300"
                   >
                     <Link to="/contact">
                       Complete Enterprise Inquiry Form

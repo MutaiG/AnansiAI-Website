@@ -300,7 +300,7 @@ const TwinShowcase = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="h-8 w-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">No Twins Found</h3>
+                <h3 className="text-sm font-semibold mb-2">No Twins Found</h3>
                 <p className="text-muted-foreground">
                   Try adjusting your search terms or filters.
                 </p>

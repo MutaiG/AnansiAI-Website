@@ -286,9 +286,9 @@ const Index = () => {
               {/* Download & Setup */}
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center">
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-logo-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-logo-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                       </svg>
                     </div>

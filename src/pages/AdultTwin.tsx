@@ -63,7 +63,7 @@ const AdultTwin = () => {
             </p>
 
             <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-8 mb-8">
-              <h3 className="text-2xl font-bold text-center mb-4">Your twin, your future</h3>
+              <h3 className="text-lg font-bold text-center mb-4">Your twin, your future</h3>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   asChild

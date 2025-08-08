@@ -90,7 +90,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
               What Makes It Special?
             </h2>
           </div>
@@ -148,7 +148,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -195,7 +195,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">
+            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">
               Who It's For
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -242,7 +242,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-4">Pricing</h2>
+            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-4">Pricing</h2>
           </div>
 
           <div className="max-w-2xl mx-auto">
@@ -251,7 +251,7 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-8">
                   <DollarSign className="h-10 w-10" />
                 </div>
-                <h3 className="text-3xl font-bold mb-6">Lifetime Training</h3>
+                <h3 className="text-lg font-bold mb-6">Lifetime Training</h3>
                 <div className="text-3xl sm:text-4xl font-bold text-logo-teal mb-4">
                   $500
                 </div>
@@ -299,7 +299,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-6">
+            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">
@@ -342,7 +342,7 @@ const StudentTwin = () => {
               Start Your Journey Today
             </div>
 
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">
+            <h2 className="text-xl sm:text-2xl lg:text-lg font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Ready to Train Your Twin?
               </span>

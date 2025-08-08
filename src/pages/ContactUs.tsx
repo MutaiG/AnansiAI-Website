@@ -66,7 +66,7 @@ const ContactUs = () => {
                 Partner with Us
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">
                 Transform Your Organization with{" "}
                 <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                   AI Twin Solutions

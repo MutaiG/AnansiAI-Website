@@ -28,7 +28,7 @@ const TrainYourTwin = () => {
               Start Your AI Twin Journey
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal via-cyber-blue to-logo-blue bg-clip-text text-transparent">
                 Train Your Twin
               </span>
@@ -155,7 +155,7 @@ const TrainYourTwin = () => {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
             >
               <Link to="/products/student-twin" className="flex items-center">
                 Start with Student Twin

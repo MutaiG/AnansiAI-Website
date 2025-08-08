@@ -59,7 +59,7 @@ const StudentTwin = () => {
               Student Twin
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight font-poppins mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight font-poppins mb-8">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Learn humanly.
               </span>
@@ -168,7 +168,7 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-8">
                 <Cpu className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">
+              <h3 className="text-sm font-bold mb-4">
                 Your Twin Grows Silently
               </h3>
               <p className="text-muted-foreground text-sm">
@@ -243,7 +243,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-lg font-bold font-poppins mb-6">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

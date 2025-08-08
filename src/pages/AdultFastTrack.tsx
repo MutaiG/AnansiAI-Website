@@ -74,7 +74,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Choose the Fast-Track Approach?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -131,7 +131,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Fast-Track Program Structure
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -196,7 +196,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What You'll Achieve in 12 Weeks
             </h2>
           </div>
@@ -289,7 +289,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Components
             </h2>
           </div>
@@ -356,7 +356,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Investment
             </h2>
             <p className="text-xl text-muted-foreground">
@@ -432,7 +432,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Don't Wait Another Decade for AI Advantage
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

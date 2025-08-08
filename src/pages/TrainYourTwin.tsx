@@ -48,7 +48,7 @@ const TrainYourTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               Choose Your Twin
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ const TrainYourTwin = () => {
                   <GraduationCap className="h-10 w-10 text-logo-teal" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Student Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   For learners of all ages. Grow your Twin as you learn,
                   creating a personal AI that understands your study methods.
                 </p>
@@ -92,7 +92,7 @@ const TrainYourTwin = () => {
                   <Briefcase className="h-10 w-10 text-logo-blue" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Adult Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Fast-track training for professionals. Build a Twin that
                   amplifies your work and keeps you competitive.
                 </p>
@@ -117,7 +117,7 @@ const TrainYourTwin = () => {
                   <Building2 className="h-10 w-10 text-cyber-blue" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Enterprise Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Scalable AI solutions for teams. Create a Twin that embodies
                   your organization's knowledge and culture.
                 </p>
@@ -145,7 +145,7 @@ const TrainYourTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
               Ready to Train Your Twin?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

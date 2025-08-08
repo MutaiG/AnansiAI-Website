@@ -55,10 +55,10 @@ const AboutUs = () => {
             </p>
 
             <div className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-muted/50 border mb-8">
-              <span className="text-lg font-medium">
+              <span className="text-sm font-medium">
                 Our mission is simple:
               </span>
-              <span className="ml-2 text-lg font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+              <span className="ml-2 text-sm font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Learn humanly. Deliver super humanly.
               </span>
             </div>
@@ -81,7 +81,7 @@ const AboutUs = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
               What Makes Us Different?
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
@@ -156,7 +156,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
+              <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
                 Why "Anansi"?
               </h2>
             </div>
@@ -185,7 +185,7 @@ const AboutUs = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">Our Promise</h2>
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">Our Promise</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Card className="border-0 bg-background shadow-lg">
@@ -248,7 +248,7 @@ const AboutUs = () => {
                   <h3 className="text-2xl font-bold mb-4 text-logo-teal">
                     Our Mission
                   </h3>
-                  <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-6">
                     To make AI personal, sustainable, and empowering — by
                     enabling every individual, student, and organization to
                     train and own their own AI Twin that reflects their skills,
@@ -270,7 +270,7 @@ const AboutUs = () => {
                   <h3 className="text-2xl font-bold mb-4 text-logo-blue">
                     Our Vision
                   </h3>
-                  <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-6">
                     A world where humans remain central in the AI era — working
                     faster, thinking sharper, and creating fearlessly — powered
                     by AI Twins they've shaped themselves.
@@ -308,7 +308,7 @@ const AboutUs = () => {
       <section className="py-20 bg-gradient-to-br from-logo-teal/10 to-logo-blue/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
+            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-6">
               Ready to Build Your AI Twin?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

@@ -289,16 +289,6 @@ const SimpleAuth = () => {
             </TabsContent>
           </Tabs>
 
-          {/* Security Features */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 rounded-lg border border-logo-teal/20">
-            <div className="flex items-center gap-2 mb-2">
-              <Shield className="h-4 w-4 text-logo-teal" />
-              <span className="text-sm font-medium text-logo-teal">Secure & Private</span>
-            </div>
-            <p className="text-xs text-muted-foreground">
-              Your data is protected with enterprise-grade security and never shared with third parties.
-            </p>
-          </div>
         </CardContent>
       </Card>
     </div>

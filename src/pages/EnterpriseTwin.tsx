@@ -73,16 +73,6 @@ const EnterpriseTwin = () => {
                 </Link>
               </Button>
 
-              <div className="bg-gradient-to-r from-cyber-blue/10 to-logo-blue/10 border border-cyber-blue/20 rounded-lg p-4">
-                <p className="text-sm text-muted-foreground text-center mb-2">
-                  Military-grade security for enterprise deployment
-                </p>
-                <div className="flex items-center justify-center gap-3 text-xs text-muted-foreground">
-                  <span>🛡️ SOC 2 Compliant</span>
-                  <span>👆 Multi-Factor Auth</span>
-                  <span>🔒 Zero Trust</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

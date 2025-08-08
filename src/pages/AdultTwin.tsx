@@ -332,7 +332,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl lg:text-3xl font-bold font-poppins mb-8">
+            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-8">
               Why It's Different
             </h2>
 

@@ -114,7 +114,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                       key={item.name}
                       to={item.href}
                       className={`
-                        flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group
+                        flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group font-poppins
                         ${
                           item.current
                             ? "bg-logo-teal text-white shadow-sm"
@@ -160,7 +160,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                         key={item.name}
                         to={item.href}
                         className={`
-                          flex flex-col items-center px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 min-w-[4rem]
+                          flex flex-col items-center px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 min-w-[4rem] font-poppins
                           ${
                             item.current
                               ? "bg-logo-teal text-white shadow-sm"
@@ -220,7 +220,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center space-x-2 p-2 hover:bg-muted/50 rounded-lg">
-                    <div className="hidden sm:block text-sm text-foreground font-medium">
+                    <div className="hidden sm:block text-sm text-foreground font-medium font-poppins">
                       {user?.name}
                     </div>
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center text-white font-semibold text-sm">
@@ -296,7 +296,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                     key={item.name}
                     to={item.href}
                     className={`
-                      flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation min-h-[48px]
+                      flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation min-h-[48px] font-poppins
                       ${
                         item.current
                           ? "bg-gradient-to-r from-logo-teal to-logo-blue text-white shadow-lg"

@@ -308,10 +308,10 @@ const Index = () => {
               {/* Social Media Management */}
               <div className="text-center group">
                 <div className="relative mb-6">
-                  <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto bg-gradient-to-br from-logo-blue/20 to-cyber-blue/20 rounded-3xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center relative overflow-hidden">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-logo-blue/20 to-cyber-blue/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20"></div>
-                      <svg className="w-10 h-10 sm:w-12 sm:h-12 text-logo-blue relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-logo-blue relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                       </svg>
                     </div>

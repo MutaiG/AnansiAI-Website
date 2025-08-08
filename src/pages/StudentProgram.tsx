@@ -74,7 +74,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Learn Naturally, Build Intelligently
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -130,7 +130,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               The Student Journey
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -191,7 +191,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Twin Development by Educational Stage
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -325,7 +325,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Start as a Student?
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -396,7 +396,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Structure
             </h2>
           </div>
@@ -479,7 +479,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Start Building Your Future Today
             </h2>
             <p className="text-xl text-muted-foreground mb-8">

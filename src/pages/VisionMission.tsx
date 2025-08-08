@@ -41,7 +41,7 @@ const VisionMission = () => {
               Our Vision & Mission
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building the Future
               </span>
@@ -67,7 +67,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Target className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-logo-teal">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-logo-teal">
                   Our Mission
                 </h2>
                 <p className="text-xl leading-relaxed text-muted-foreground mb-8">
@@ -179,7 +179,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Eye className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-logo-blue">
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-logo-blue">
                   Our Vision
                 </h2>
                 <p className="text-xl leading-relaxed text-muted-foreground mb-8">
@@ -204,7 +204,7 @@ const VisionMission = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What Drives Us
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -276,7 +276,7 @@ const VisionMission = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               The Future We're Building Together
             </h2>
 

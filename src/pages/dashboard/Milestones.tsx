@@ -58,7 +58,7 @@ const Milestones = () => {
       method: "Simulated challenges, scenario-based tasks.",
       outcome:
         "Twin begins to develop predictive reasoning and judgment modeling.",
-      icon: Brain,
+      icon: Zap,
       color: "from-purple-500 to-pink-500",
       completed: false,
     },
@@ -201,7 +201,7 @@ const Milestones = () => {
       <Card className="mb-6">
         <CardContent className="p-6">
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <Brain className="h-5 w-5 text-logo-teal" />
+            <Zap className="h-5 w-5 text-logo-teal" />
             This Week's Learning Focus
           </h3>
           <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-4">
@@ -236,7 +236,7 @@ const Milestones = () => {
         <Card>
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
-              <Brain className="h-4 w-4 text-purple-500" />
+              <Zap className="h-4 w-4 text-purple-500" />
               <div className="text-2xl font-bold text-purple-600">
                 {analytics.twinAccuracy}%
               </div>

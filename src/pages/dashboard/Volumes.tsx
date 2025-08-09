@@ -150,7 +150,7 @@ const Volumes = () => {
       <div className="grid grid-cols-4 gap-4 mb-6">
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-teal">
+            <div className="text-base font-bold text-logo-teal">
               {entries.length}
             </div>
             <div className="text-xs text-muted-foreground">Total Entries</div>
@@ -158,7 +158,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-blue">
+            <div className="text-base font-bold text-logo-blue">
               {entries.filter((e) => e.type === "text").length}
             </div>
             <div className="text-xs text-muted-foreground">Text</div>
@@ -166,7 +166,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-base font-bold text-green-600">
               {entries.filter((e) => e.type === "image").length}
             </div>
             <div className="text-xs text-muted-foreground">Images</div>
@@ -174,7 +174,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-purple-600">
+            <div className="text-base font-bold text-purple-600">
               {entries.filter((e) => e.type === "audio").length}
             </div>
             <div className="text-xs text-muted-foreground">Audio</div>

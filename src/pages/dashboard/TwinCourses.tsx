@@ -645,7 +645,7 @@ const TwinCourses = () => {
         <div className="relative z-10 mb-8">
           <div className="flex items-center justify-center mb-6">
             <div className="text-center">
-              <h1 className="text-white text-2xl font-bold flex items-center justify-center gap-2 mb-2">
+              <h1 className="text-white text-lg font-bold flex items-center justify-center gap-2 mb-2">
                 <Settings className="h-6 w-6" />
                 Twin-Ready Courses
               </h1>
@@ -736,7 +736,7 @@ const TwinCourses = () => {
         <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
           <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
             <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
-              <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
+              <AvatarFallback className="bg-white/20 text-white text-sm sm:text-base">
                 😊
               </AvatarFallback>
             </Avatar>
@@ -753,7 +753,7 @@ const TwinCourses = () => {
         <Button variant="ghost" size="sm" className="shrink-0">
           <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
-        <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-1 text-center px-2">
+        <h1 className="text-base sm:text-lg font-bold text-gray-900 flex-1 text-center px-2">
           Explore Twin-Ready Courses
         </h1>
       </div>
@@ -892,7 +892,7 @@ const TwinCourses = () => {
       <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
         <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
           <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
-            <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
+            <AvatarFallback className="bg-white/20 text-white text-sm sm:text-base">
               🤖
             </AvatarFallback>
           </Avatar>
@@ -959,7 +959,7 @@ const TwinCourses = () => {
               <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-3 sm:p-4">
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
                   <h4 className="font-semibold text-logo-teal text-sm sm:text-base">Course Pricing</h4>
-                  <span className="text-xl sm:text-2xl font-bold text-logo-blue">
+                  <span className="text-base sm:text-lg font-bold text-logo-blue">
                     {disciplinePricing[selectedDiscipline] || "$99"}
                   </span>
                 </div>

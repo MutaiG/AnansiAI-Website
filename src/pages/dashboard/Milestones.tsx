@@ -186,7 +186,7 @@ const Milestones = () => {
     <div className="p-6 max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2 flex items-center gap-3">
+        <h1 className="text-lg font-bold mb-2 flex items-center gap-3">
           <Trophy className="h-8 w-8 text-yellow-500" />
           Week {currentWeek} Milestone
         </h1>
@@ -222,7 +222,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <Target className="h-4 w-4 text-blue-500" />
-              <div className="text-2xl font-bold text-blue-600">
+              <div className="text-base font-bold text-blue-600">
                 {analytics.tasksCompleted}
               </div>
             </div>
@@ -237,7 +237,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <Zap className="h-4 w-4 text-purple-500" />
-              <div className="text-2xl font-bold text-purple-600">
+              <div className="text-base font-bold text-purple-600">
                 {analytics.twinAccuracy}%
               </div>
             </div>
@@ -249,7 +249,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <TrendingUp className="h-4 w-4 text-green-500" />
-              <div className="text-2xl font-bold text-green-600">
+              <div className="text-base font-bold text-green-600">
                 {analytics.weeklyProgress}%
               </div>
             </div>
@@ -261,7 +261,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <Clock className="h-4 w-4 text-orange-500" />
-              <div className="text-2xl font-bold text-orange-600">
+              <div className="text-base font-bold text-orange-600">
                 {analytics.timeSpent}
               </div>
             </div>

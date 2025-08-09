@@ -133,7 +133,7 @@ const Analytics = () => {
             <Progress value={stats.twinProgress} className="h-3" />
             <div className="grid grid-cols-3 gap-4 pt-4">
               <div className="text-center">
-                <div className="text-lg font-semibold text-green-600">
+                <div className="text-base font-semibold text-green-600">
                   {stats.completionRate}%
                 </div>
                 <div className="text-xs text-muted-foreground">
@@ -141,7 +141,7 @@ const Analytics = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-lg font-semibold text-blue-600">
+                <div className="text-base font-semibold text-blue-600">
                   Active
                 </div>
                 <div className="text-xs text-muted-foreground">Twin Status</div>

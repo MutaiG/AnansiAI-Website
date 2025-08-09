@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   User,
-  Brain,
+  Settings2,
   Bell,
   Shield,
   Download,

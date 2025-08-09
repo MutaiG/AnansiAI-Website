@@ -117,12 +117,49 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
+    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans', system-ui, -apple-system, sans-serif;
     font-size: 14px;
     line-height: 1.4;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+  }
+
+  /* Responsive header optimizations for Full HD (1920x1080) and down */
+  @media (min-width: 1920px) {
+    .header-logo {
+      height: 6rem !important; /* 96px */
+      width: auto !important;
+      max-width: 15rem !important; /* 240px - close to the 250px requirement */
+    }
+
+    .header-text {
+      font-size: 2.25rem !important; /* 36px */
+    }
+  }
+
+  @media (min-width: 1024px) and (max-width: 1919px) {
+    .header-logo {
+      height: 4rem !important; /* 64px */
+      width: auto !important;
+      max-width: 12rem !important; /* 192px */
+    }
+
+    .header-text {
+      font-size: 1.875rem !important; /* 30px */
+    }
+  }
+
+  /* Ensure header container scales properly */
+  .header-container {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  /* Logo responsive behavior */
+  .responsive-logo {
+    transition: all 0.3s ease;
+    object-fit: contain;
   }
 
   /* Global font size adjustments for smaller text */

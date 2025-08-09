@@ -89,8 +89,8 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     <div className="min-h-screen bg-background">
       {/* Top Header */}
       <header className="bg-background border-b border-border sticky top-0 z-40">
-        <div className="mx-auto px-3 sm:px-4 lg:px-8 max-w-screen-2xl">
-          <div className="flex h-16 sm:h-18 lg:h-20 items-center justify-between">
+        <div className="header-container mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex h-16 sm:h-18 lg:h-20 xl:h-24 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
               <Link
@@ -100,9 +100,9 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                 <img
                   src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
                   alt="Anansi AI"
-                  className="h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20 object-contain"
+                  className="responsive-logo header-logo h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20 2xl:h-24 2xl:w-24"
                 />
-                <span className="ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent whitespace-nowrap hidden sm:block">
+                <span className="header-text ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent whitespace-nowrap hidden sm:block">
                   Anansi AI
                 </span>
               </Link>

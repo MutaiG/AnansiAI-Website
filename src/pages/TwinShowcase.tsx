@@ -11,7 +11,6 @@ import {
   Star,
   Eye,
   MessageSquare,
-  Brain,
   Award,
   Calendar,
   User,
@@ -282,7 +281,7 @@ const TwinShowcase = () => {
                         className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue text-white"
                       >
                         <Link to={twin.profileUrl}>
-                          <Brain className="h-4 w-4 mr-1" />
+                          <MessageSquare className="h-4 w-4 mr-1" />
                           Interact
                         </Link>
                       </Button>

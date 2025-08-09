@@ -243,7 +243,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
             <p className="text-sm text-muted-foreground mb-8">
@@ -286,7 +286,7 @@ const StudentTwin = () => {
               Start Your Journey Today
             </div>
 
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Ready to Train Your Twin?
               </span>

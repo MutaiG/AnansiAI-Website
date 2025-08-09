@@ -93,7 +93,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <MessageSquare className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Intelligent Conversation Hub
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -108,7 +108,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <FileText className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Document Collaboration
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -123,7 +123,7 @@ const TwinWorkbench = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Settings className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Twin Management</h3>
+                <h3 className="text-base font-bold mb-4">Twin Management</h3>
                 <p className="text-muted-foreground text-sm">
                   Monitor your Twin's learning progress, adjust behaviors, and
                   fine-tune its responses to match your evolving needs.
@@ -364,7 +364,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-cyber-blue text-white mb-6">
                 <Zap className="h-8 w-8" />
               </div>
-              <h3 className="text-sm font-bold mb-3">Private by Design</h3>
+              <h3 className="text-base font-bold mb-3">Private by Design</h3>
               <p className="text-muted-foreground">
                 Your data never leaves your control. All processing happens
                 within your secure environment.
@@ -375,7 +375,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-logo-blue text-white mb-6">
                 <Target className="h-8 w-8" />
               </div>
-              <h3 className="text-sm font-bold mb-3">Encrypted Everything</h3>
+              <h3 className="text-base font-bold mb-3">Encrypted Everything</h3>
               <p className="text-muted-foreground">
                 End-to-end encryption ensures your conversations and documents
                 remain completely private.
@@ -386,7 +386,7 @@ const TwinWorkbench = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-logo-teal text-white mb-6">
                 <Settings className="h-8 w-8" />
               </div>
-              <h3 className="text-sm font-bold mb-3">Full Control</h3>
+              <h3 className="text-base font-bold mb-3">Full Control</h3>
               <p className="text-muted-foreground">
                 You decide what your Twin learns, remembers, and how it evolves
                 over time.

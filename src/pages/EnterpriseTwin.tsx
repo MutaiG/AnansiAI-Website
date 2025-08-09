@@ -7,7 +7,6 @@ import BackButton from "@/components/BackButton";
 import {
   Building2,
   Users,
-  Brain,
   Shield,
   Target,
   CheckCircle,
@@ -96,7 +95,7 @@ const EnterpriseTwin = () => {
             <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-10 text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
-                  <Brain className="h-10 w-10 text-cyber-blue" />
+                  <Building2 className="h-10 w-10 text-cyber-blue" />
                 </div>
                 <h3 className="text-base font-bold mb-4">
                   Organizational Intelligence

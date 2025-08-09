@@ -12,7 +12,6 @@ import {
   ArrowRight,
   DollarSign,
   Cpu,
-  Brain,
   Zap,
   UserCheck,
   Award,
@@ -146,7 +145,7 @@ const AdultTwin = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-8">
-                <Brain className="h-10 w-10" />
+                <Cpu className="h-10 w-10" />
               </div>
               <h3 className="text-base font-bold mb-4">
                 1. Montage Learning Program
@@ -218,7 +217,7 @@ const AdultTwin = () => {
 
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
-                <Brain className="h-8 w-8 text-logo-teal mx-auto mb-3" />
+                <Target className="h-8 w-8 text-logo-teal mx-auto mb-3" />
                 <h3 className="font-bold text-sm">Creatives</h3>
                 <p className="text-xs text-muted-foreground mt-1">
                   Designers, Writers, Marketers
@@ -280,7 +279,7 @@ const AdultTwin = () => {
             <Card className="border-2 border-cyber-blue shadow-2xl">
               <CardContent className="p-8 text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
-                  <Brain className="h-10 w-10 text-cyber-blue" />
+                  <Zap className="h-10 w-10 text-cyber-blue" />
                 </div>
                 <h3 className="text-base font-bold mb-4">AI & Machine Learning</h3>
                 <div className="space-y-3 mb-8">

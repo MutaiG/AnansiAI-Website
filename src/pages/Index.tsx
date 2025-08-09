@@ -58,7 +58,7 @@ const Index = () => {
       <section className="py-12 sm:py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold text-center text-foreground mb-8 sm:mb-12">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-center text-foreground mb-8 sm:mb-12">
               How Your Twin Grows With You
             </h2>
 
@@ -239,7 +239,7 @@ const Index = () => {
       <section className="py-8 sm:py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-sm sm:text-base lg:text-lg font-bold text-foreground mb-4 sm:mb-6">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-4 sm:mb-6">
               Own Your AI. Stay Competitive.
             </h3>
 
@@ -299,7 +299,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-3">Easy Installation</h3>
+                <h3 className="text-base sm:text-base font-bold mb-3">Easy Installation</h3>
                 <p className="text-sm text-muted-foreground">
                   Quick setup on any device.
                 </p>
@@ -322,7 +322,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-3">Social Media Mastery</h3>
+                <h3 className="text-base sm:text-base font-bold mb-3">Social Media Mastery</h3>
                 <p className="text-sm text-muted-foreground">
                   Auto-posts and engages across all platforms.
                 </p>
@@ -344,7 +344,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-3">Email Excellence</h3>
+                <h3 className="text-base sm:text-base font-bold mb-3">Email Excellence</h3>
                 <p className="text-sm text-muted-foreground">
                   Smart replies and inbox management.
                 </p>
@@ -417,7 +417,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4 sm:mb-6">
                   <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-logo-teal" />
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-2 sm:mb-3">Student Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Student Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   For learners of all ages.
                 </p>
@@ -430,7 +430,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4 sm:mb-6">
                   <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-logo-blue" />
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-2 sm:mb-3">Adult Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Adult Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Fast-track training for professionals.
                 </p>
@@ -443,7 +443,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-4 sm:mb-6">
                   <Building2 className="h-6 w-6 sm:h-8 sm:w-8 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm sm:text-sm font-bold mb-2 sm:mb-3">Enterprise Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Enterprise Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Scalable AI solutions for teams.
                 </p>

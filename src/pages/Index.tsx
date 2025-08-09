@@ -14,7 +14,6 @@ import {
   BookOpen,
   Users,
   Lightbulb,
-  Brain,
   X,
   Mail,
   MessageCircle,

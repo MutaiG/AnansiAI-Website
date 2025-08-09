@@ -7,7 +7,6 @@ import {
   Clock,
   Target,
   Users,
-  Brain,
   TrendingUp,
   CheckCircle,
   ArrowRight,
@@ -206,7 +205,7 @@ const AdultFastTrack = () => {
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 flex-shrink-0">
-                    <Brain className="h-6 w-6 text-logo-blue" />
+                    <TrendingUp className="h-6 w-6 text-logo-blue" />
                   </div>
                   <div>
                     <h3 className="text-base font-bold mb-2">

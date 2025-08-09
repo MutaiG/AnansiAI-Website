@@ -83,7 +83,7 @@ const Settings = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Brain className="h-5 w-5 text-logo-teal" />
+              <Settings2 className="h-5 w-5 text-logo-teal" />
               Twin Behavior
             </CardTitle>
           </CardHeader>

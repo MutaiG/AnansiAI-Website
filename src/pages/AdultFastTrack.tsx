@@ -57,15 +57,16 @@ const AdultFastTrack = () => {
               waiting decades.
             </p>
 
-            <WaitlistCTA productType="adult">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-logo-blue to-cyber-blue hover:from-logo-blue/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-logo-blue to-cyber-blue hover:from-logo-blue/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/login">
                 Start Fast-Track Program
                 <ArrowRight className="ml-3 h-6 w-6" />
-              </Button>
-            </WaitlistCTA>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -414,14 +415,15 @@ const AdultFastTrack = () => {
                   </div>
                 </div>
 
-                <WaitlistCTA productType="adult">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white w-full py-4 text-sm font-bold hover:scale-105 transition-all duration-300"
-                  >
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white w-full py-4 text-sm font-bold hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/login">
                     Enroll in Fast-Track Program
-                  </Button>
-                </WaitlistCTA>
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           </div>

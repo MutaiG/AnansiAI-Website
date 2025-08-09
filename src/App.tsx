@@ -31,6 +31,7 @@ import TwinShowcase from "./pages/TwinShowcase";
 import Verification from "./pages/Verification";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
+import EnterpriseWaitingList from "@/components/EnterpriseWaitingList";
 
 const queryClient = new QueryClient();
 
@@ -98,6 +99,7 @@ const AppRoutes = () => {
       <Route path="/train-your-twin" element={<TrainYourTwin />} />
       <Route path="/twin-showcase" element={<TwinShowcase />} />
       <Route path="/verification" element={<Verification />} />
+      <Route path="/enterprise-waiting-list" element={<EnterpriseWaitingList />} />
 
       {/* Blog Pages */}
       <Route

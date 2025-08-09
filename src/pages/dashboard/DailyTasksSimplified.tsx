@@ -184,8 +184,8 @@ const DailyTasks = () => {
               ? "bg-green-50/50 border-green-200/50" 
               : "hover:shadow-md"
           }`}>
-            <CardContent className="p-6">
-              <div className="flex items-start gap-4">
+            <CardContent className="p-3 sm:p-4 lg:p-6">
+              <div className="flex items-start gap-2 sm:gap-4">
                 <Button
                   variant="ghost"
                   size="sm"
@@ -203,7 +203,7 @@ const DailyTasks = () => {
                 </Button>
 
                 <div className="flex-1 space-y-3">
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-4">
                     <div>
                       <h3 className={`text-sm font-normal ${
                         task.completed ? "text-green-700 line-through" : ""
@@ -214,11 +214,11 @@ const DailyTasks = () => {
                         {task.description}
                       </p>
                     </div>
-                    <Badge 
+                    <Badge
                       variant="secondary"
                       className={`bg-gradient-to-r ${
                         categoryColors[task.category as keyof typeof categoryColors]
-                      } text-white`}
+                      } text-white text-xs sm:text-sm whitespace-nowrap self-start sm:self-auto`}
                     >
                       {categoryIcons[task.category as keyof typeof categoryIcons]} {task.category}
                     </Badge>

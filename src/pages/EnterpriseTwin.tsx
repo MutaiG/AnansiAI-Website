@@ -305,7 +305,7 @@ const EnterpriseTwin = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Clock className="h-8 w-8 text-cyber-blue mb-4" />
-              <h3 className="font-bold mb-2">Faster Decision Making</h3>
+              <h3 className="text-sm font-bold mb-2">Faster Decision Making</h3>
               <p className="text-sm text-muted-foreground">
                 Instant access to organizational knowledge reduces decision
                 latency.
@@ -314,7 +314,7 @@ const EnterpriseTwin = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <BookOpen className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Knowledge Preservation</h3>
+              <h3 className="text-sm font-bold mb-2">Knowledge Preservation</h3>
               <p className="text-sm text-muted-foreground">
                 Captures and preserves institutional knowledge that typically
                 leaves with employees.
@@ -323,7 +323,7 @@ const EnterpriseTwin = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Zap className="h-8 w-8 text-logo-teal mb-4" />
-              <h3 className="font-bold mb-2">Operational Efficiency</h3>
+              <h3 className="text-sm font-bold mb-2">Operational Efficiency</h3>
               <p className="text-sm text-muted-foreground">
                 Automates routine tasks while maintaining organizational
                 standards.

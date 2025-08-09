@@ -675,7 +675,7 @@ const TwinCourses = () => {
 
                   {/* Course Info */}
                   <div className="flex-1 mb-3 sm:mb-4">
-                    <h3 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-base sm:text-lg leading-tight">
+                    <h3 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-sm leading-tight">
                       {course.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -779,7 +779,7 @@ const TwinCourses = () => {
           ))}
         </div>
         <div className="text-center px-2">
-          <h3 className="text-base sm:text-lg font-semibold mb-2">{selectedFaculty}</h3>
+          <h3 className="text-sm font-semibold mb-2">{selectedFaculty}</h3>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             {selectedFaculty === "Faculty of Technology & Engineering" && "Comprehensive technology education for the digital age"}
             {selectedFaculty === "Faculty of Business & Management" && "Strategic business skills for modern entrepreneurs"}

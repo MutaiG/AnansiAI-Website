@@ -200,7 +200,7 @@ const Milestones = () => {
       {/* Learning Focus - Dynamic based on current milestone */}
       <Card className="mb-6">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+          <h3 className="text-sm font-semibold mb-4 flex items-center gap-2">
             <Zap className="h-5 w-5 text-logo-teal" />
             This Week's Learning Focus
           </h3>
@@ -274,7 +274,7 @@ const Milestones = () => {
       <Card className="mb-8">
         <CardContent className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Overall Journey</h3>
+            <h3 className="text-sm font-semibold">Overall Journey</h3>
             <Badge variant="secondary">
               Week {currentWeek} of {totalWeeks}
             </Badge>
@@ -346,7 +346,7 @@ const Milestones = () => {
       {/* Week Progress */}
       <Card className="mt-6">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4">This Week's Activity</h3>
+          <h3 className="text-sm font-semibold mb-4">This Week's Activity</h3>
           <div className="grid grid-cols-7 gap-2">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(
               (day, index) => {

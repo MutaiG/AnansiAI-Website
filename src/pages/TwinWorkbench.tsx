@@ -259,7 +259,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <PenTool className="h-8 w-8 text-ai-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Content Creation</h3>
+                <h3 className="text-sm font-bold mb-2">Content Creation</h3>
                 <p className="text-sm text-muted-foreground">
                   Generate articles, reports, and creative content in your
                   unique voice.
@@ -270,7 +270,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <BarChart3 className="h-8 w-8 text-cyber-blue mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Data Analysis</h3>
+                <h3 className="text-sm font-bold mb-2">Data Analysis</h3>
                 <p className="text-sm text-muted-foreground">
                   Analyze datasets and generate insights using your analytical
                   approach.
@@ -281,7 +281,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <Code className="h-8 w-8 text-logo-blue mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Code Assistance</h3>
+                <h3 className="text-sm font-bold mb-2">Code Assistance</h3>
                 <p className="text-sm text-muted-foreground">
                   Get coding help that understands your programming style and
                   preferences.
@@ -292,7 +292,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <Calendar className="h-8 w-8 text-logo-teal mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Project Planning</h3>
+                <h3 className="text-sm font-bold mb-2">Project Planning</h3>
                 <p className="text-sm text-muted-foreground">
                   Plan and organize projects using your proven methodologies.
                 </p>
@@ -302,7 +302,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <Database className="h-8 w-8 text-ai-accent mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Knowledge Management</h3>
+                <h3 className="text-sm font-bold mb-2">Knowledge Management</h3>
                 <p className="text-sm text-muted-foreground">
                   Organize and retrieve information using your personal
                   knowledge system.
@@ -313,7 +313,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <TrendingUp className="h-8 w-8 text-cyber-blue mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Decision Support</h3>
+                <h3 className="text-sm font-bold mb-2">Decision Support</h3>
                 <p className="text-sm text-muted-foreground">
                   Get recommendations that align with your decision-making
                   patterns.
@@ -324,7 +324,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <Users className="h-8 w-8 text-logo-blue mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Communication</h3>
+                <h3 className="text-sm font-bold mb-2">Communication</h3>
                 <p className="text-sm text-muted-foreground">
                   Draft emails and messages that reflect your communication
                   style.
@@ -335,7 +335,7 @@ const TwinWorkbench = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
                 <Lightbulb className="h-8 w-8 text-logo-teal mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Creative Thinking</h3>
+                <h3 className="text-sm font-bold mb-2">Creative Thinking</h3>
                 <p className="text-sm text-muted-foreground">
                   Brainstorm ideas and solutions using your creative process.
                 </p>

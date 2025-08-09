@@ -115,7 +115,7 @@ const StudentProgram = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Award className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Lifetime Asset</h3>
+                <h3 className="text-sm font-bold mb-4">Lifetime Asset</h3>
                 <p className="text-muted-foreground text-sm">
                   Graduate with both a degree and a sophisticated AI companion
                   that understands your unique way of thinking.
@@ -208,7 +208,7 @@ const StudentProgram = () => {
                     <School className="h-8 w-8 text-logo-teal" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3">
+                    <h3 className="text-sm font-bold mb-3">
                       Elementary School (Ages 6-11)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -247,7 +247,7 @@ const StudentProgram = () => {
                     <GraduationCap className="h-8 w-8 text-logo-blue" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3">
+                    <h3 className="text-sm font-bold mb-3">
                       Middle & High School (Ages 12-18)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -286,7 +286,7 @@ const StudentProgram = () => {
                     <University className="h-8 w-8 text-cyber-blue" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3">
+                    <h3 className="text-sm font-bold mb-3">
                       University & Beyond (Ages 18+)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -406,7 +406,7 @@ const StudentProgram = () => {
               <CardContent className="p-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold mb-4">What's Included</h3>
+                    <h3 className="text-sm font-bold mb-4">What's Included</h3>
                     <div className="space-y-3">
                       <div className="flex items-center">
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
@@ -442,7 +442,7 @@ const StudentProgram = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold mb-4">Investment</h3>
+                    <h3 className="text-sm font-bold mb-4">Investment</h3>
                     <div className="text-center">
                       <div className="text-xl font-bold text-logo-teal mb-2">
                         $500

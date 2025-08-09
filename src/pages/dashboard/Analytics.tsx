@@ -67,7 +67,7 @@ const Analytics = () => {
   ];
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="space-y-4 sm:space-y-6 max-w-full">
       <div className="mb-6">
         <h1 className="text-lg font-bold mb-2">Analytics</h1>
         <p className="text-muted-foreground">
@@ -76,9 +76,9 @@ const Analytics = () => {
       </div>
 
       {/* Key Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-3 sm:p-4 text-center">
             <div className="text-base font-bold text-logo-teal">
               {stats.totalEntries}
             </div>
@@ -87,7 +87,7 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-3 sm:p-4 text-center">
             <div className="text-base font-bold text-logo-blue">
               {stats.weeklyStreak}
             </div>
@@ -96,7 +96,7 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-3 sm:p-4 text-center">
             <div className="text-base font-bold text-green-600">
               {stats.totalPoints}
             </div>
@@ -105,7 +105,7 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
+          <CardContent className="p-3 sm:p-4 text-center">
             <div className="text-base font-bold text-purple-600">
               {stats.averageDaily}
             </div>
@@ -158,7 +158,7 @@ const Analytics = () => {
       </Card>
 
       {/* Weekly Activity */}
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">

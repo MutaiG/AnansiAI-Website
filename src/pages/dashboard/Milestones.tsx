@@ -183,7 +183,7 @@ const Milestones = () => {
   const analytics = getWeeklyAnalytics(currentWeek, currentMilestone);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8 max-w-full">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-lg font-bold mb-2 flex items-center gap-3">

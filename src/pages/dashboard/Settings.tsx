@@ -51,7 +51,7 @@ const Settings = () => {
         </p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid gap-4 sm:gap-6">
         {/* Profile Settings */}
         <Card>
           <CardHeader>

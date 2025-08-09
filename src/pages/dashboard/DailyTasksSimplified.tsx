@@ -204,7 +204,7 @@ const DailyTasks = () => {
                 <div className="flex-1 space-y-3">
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className={`font-normal ${
+                      <h3 className={`text-sm font-normal ${
                         task.completed ? "text-green-700 line-through" : ""
                       }`}>
                         {task.title}

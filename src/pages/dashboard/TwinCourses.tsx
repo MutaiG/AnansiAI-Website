@@ -20,7 +20,7 @@ import {
   Smile,
   Music,
   Camera,
-  Brain,
+  Lightbulb,
   Settings,
   Bell,
   Sparkles,
@@ -255,7 +255,7 @@ const TwinCourses = () => {
       title: "AI Prompting & Responsible Use",
       provider: "Faculty of Technology & Engineering",
       description: "AI tools and ethical implementation",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-teal-500 to-teal-600",
       locked: false,
       status: "available",
@@ -513,7 +513,7 @@ const TwinCourses = () => {
       title: "Mental Health Awareness",
       provider: "Faculty of Health & Medicine",
       description: "Psychology and mental wellness",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-sky-500 to-sky-600",
       locked: true,
       status: "locked",
@@ -552,7 +552,7 @@ const TwinCourses = () => {
       title: "Psychology & Human Behavior",
       provider: "Faculty of Social Sciences",
       description: "Understanding human psychology",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
       locked: false,
       status: "available",
@@ -914,7 +914,7 @@ const TwinCourses = () => {
       <div className="max-w-lg mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 bg-white rounded-full px-3 sm:px-6 py-2.5 sm:py-3 shadow-lg">
           <div className="flex items-center gap-1 sm:gap-2">
-            <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
+            <Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
             <span className="text-indigo-600 font-medium hidden sm:inline">Home</span>
             <span className="text-indigo-600 font-medium sm:hidden">🏠</span>
           </div>

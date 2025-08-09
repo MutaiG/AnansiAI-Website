@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Brain, Home } from "lucide-react";
+import { Home } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
@@ -23,7 +23,7 @@ const NotFound = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-blue/40 mb-8">
-              <Brain className="h-12 w-12 text-logo-teal" />
+              <Home className="h-12 w-12 text-logo-teal" />
             </div>
 
             <h1 className="text-lg lg:text-xl font-bold mb-6">

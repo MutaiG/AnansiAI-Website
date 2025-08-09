@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import BackButton from "@/components/BackButton";
 import ComingSoonDialog from "@/components/ComingSoonDialog";
 import {
-  Brain,
   Target,
   Zap,
   Settings,
@@ -335,7 +334,7 @@ const TwinWorkbench = () => {
 
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-6 text-center">
-                <Brain className="h-8 w-8 text-logo-teal mx-auto mb-4" />
+                <Lightbulb className="h-8 w-8 text-logo-teal mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Creative Thinking</h3>
                 <p className="text-sm text-muted-foreground">
                   Brainstorm ideas and solutions using your creative process.

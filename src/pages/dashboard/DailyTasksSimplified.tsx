@@ -97,7 +97,7 @@ const DailyTasks = () => {
       {/* Progress Overview */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-base">
             <TrendingUp className="h-5 w-5 text-logo-teal" />
             Today's Progress
           </CardTitle>
@@ -274,7 +274,7 @@ const DailyTasks = () => {
       {/* Weekly Progress */}
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-base">
             <Calendar className="h-5 w-5 text-logo-teal" />
             This Week's Progress
           </CardTitle>

@@ -74,7 +74,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Choose the Fast-Track Approach?
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -131,7 +131,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Fast-Track Program Structure
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ const AdultFastTrack = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Intensive Foundation</h3>
+              <h3 className="text-base font-bold mb-3">Intensive Foundation</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 1-2:</strong> Personality mapping, communication
                 style analysis, and core trait establishment through focused
@@ -157,7 +157,7 @@ const AdultFastTrack = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">
+              <h3 className="text-base font-bold mb-3">
                 Professional Integration
               </h3>
               <p className="text-muted-foreground text-sm">
@@ -171,7 +171,7 @@ const AdultFastTrack = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-logo-teal text-white mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Specialized Skills</h3>
+              <h3 className="text-base font-bold mb-3">Specialized Skills</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 7-10:</strong> Domain-specific training tailored
                 to your field, from creative work to technical analysis.
@@ -182,7 +182,7 @@ const AdultFastTrack = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
                 <span className="text-xl font-bold">4</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Advanced Deployment</h3>
+              <h3 className="text-base font-bold mb-3">Advanced Deployment</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 11-12:</strong> Fine-tuning, optimization, and
                 full Twin Workbench integration for maximum productivity.
@@ -196,7 +196,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What You'll Achieve in 12 Weeks
             </h2>
           </div>
@@ -209,7 +209,7 @@ const AdultFastTrack = () => {
                     <Brain className="h-6 w-6 text-logo-blue" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Sophisticated AI Thinking
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -229,7 +229,7 @@ const AdultFastTrack = () => {
                     <Briefcase className="h-6 w-6 text-cyber-blue" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Professional Productivity
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -249,7 +249,7 @@ const AdultFastTrack = () => {
                     <UserCheck className="h-6 w-6 text-ai-accent" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Authentic Representation
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -269,7 +269,7 @@ const AdultFastTrack = () => {
                     <Award className="h-6 w-6 text-logo-teal" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Competitive Advantage
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -289,7 +289,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Components
             </h2>
           </div>
@@ -356,7 +356,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Investment
             </h2>
             <p className="text-sm text-muted-foreground">
@@ -432,7 +432,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Don't Wait Another Decade for AI Advantage
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

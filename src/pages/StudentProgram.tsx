@@ -74,7 +74,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Learn Naturally, Build Intelligently
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -130,7 +130,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               The Student Journey
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -144,7 +144,7 @@ const StudentProgram = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Natural Learning</h3>
+              <h3 className="text-base font-bold mb-3">Natural Learning</h3>
               <p className="text-muted-foreground">
                 Attend classes, complete assignments, and engage in school
                 activities as you normally would.
@@ -155,7 +155,7 @@ const StudentProgram = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Silent Development</h3>
+              <h3 className="text-base font-bold mb-3">Silent Development</h3>
               <p className="text-muted-foreground">
                 Your Twin learns from your work patterns, writing style, and
                 problem-solving approaches automatically.
@@ -166,7 +166,7 @@ const StudentProgram = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Gradual Capability</h3>
+              <h3 className="text-base font-bold mb-3">Gradual Capability</h3>
               <p className="text-muted-foreground">
                 As you advance through grades, your Twin becomes more
                 sophisticated and capable.
@@ -177,7 +177,7 @@ const StudentProgram = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-logo-teal text-white mb-6">
                 <span className="text-xl font-bold">4</span>
               </div>
-              <h3 className="text-sm font-bold mb-3">Active Partnership</h3>
+              <h3 className="text-base font-bold mb-3">Active Partnership</h3>
               <p className="text-muted-foreground">
                 Begin collaborating with your mature Twin for projects,
                 research, and professional work.
@@ -191,7 +191,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Twin Development by Educational Stage
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -325,7 +325,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Start as a Student?
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -396,7 +396,7 @@ const StudentProgram = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Structure
             </h2>
           </div>
@@ -479,7 +479,7 @@ const StudentProgram = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-xl lg:text-2xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Start Building Your Future Today
             </h2>
             <p className="text-sm text-muted-foreground mb-8">

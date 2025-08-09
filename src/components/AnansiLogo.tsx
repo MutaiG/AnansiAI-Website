@@ -17,15 +17,15 @@ const AnansiLogo: React.FC<AnansiLogoProps> = ({
   };
 
   const sizeClasses = {
-    sm: "h-6 w-6",
-    md: "h-8 w-8", 
-    lg: "h-10 w-10"
+    sm: "h-8 w-8 sm:h-10 sm:w-10",
+    md: "h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16",
+    lg: "h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
   };
 
   const textSizeClasses = {
-    sm: "text-lg",
-    md: "text-xl",
-    lg: "text-2xl"
+    sm: "text-lg sm:text-xl",
+    md: "text-xl sm:text-2xl lg:text-3xl",
+    lg: "text-2xl sm:text-3xl lg:text-4xl xl:text-5xl"
   };
 
   return (
@@ -38,7 +38,7 @@ const AnansiLogo: React.FC<AnansiLogoProps> = ({
         alt="Anansi AI Twin Process"
         className={`${sizeClasses[size]} object-contain`}
       />
-      <span className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent`}>
+      <span className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent whitespace-nowrap`}>
         Anansi AI
       </span>
     </div>

@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import {
-  Brain,
+  User,
   BookOpen,
   Calendar,
   BarChart3,
@@ -44,7 +44,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     {
       name: "My Twin",
       href: "/train-your-twin-app",
-      icon: Brain,
+      icon: User,
       current: location.pathname === "/train-your-twin-app",
     },
     {

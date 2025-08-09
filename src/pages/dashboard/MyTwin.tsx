@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import {
-  Brain,
+  User,
   MessageCircle,
   Send,
   Sparkles,
@@ -66,7 +66,7 @@ const MyTwin = () => {
   const handleSendMessage = () => {
     if (inputText.trim() || selectedFiles.length > 0) {
       // Handle message sending logic here
-      console.log("Sending:", { text: inputText, files: selectedFiles });
+      // Send to backend API here
       setInputText("");
       setSelectedFiles([]);
     }
@@ -306,7 +306,7 @@ const MyTwin = () => {
           <div className="flex items-center gap-4">
             <div className="relative">
               <Avatar className="w-16 h-16 border-4 border-logo-teal/20">
-                <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-2xl font-bold">
+                <AvatarFallback className="bg-gradient-to-br from-logo-teal to-logo-blue text-white text-lg font-bold">
                   🤖
                 </AvatarFallback>
               </Avatar>
@@ -315,7 +315,7 @@ const MyTwin = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-foreground">
+              <h1 className="text-lg font-bold text-foreground">
                 {user?.twinName || `${user?.name}'s Twin`}
               </h1>
               <div className="flex items-center gap-2 mt-1">
@@ -346,7 +346,7 @@ const MyTwin = () => {
             {/* Unified Share Interface with Quick Actions */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-xl mb-4 flex items-center gap-2">
+                <h3 className="font-semibold text-sm mb-4 flex items-center gap-2">
                   <Share2 className="h-5 w-5 text-logo-teal" />
                   Share with Your Twin
                 </h3>
@@ -508,8 +508,8 @@ const MyTwin = () => {
             {/* Twin Status */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
-                  <Brain className="h-4 w-4 text-logo-teal" />
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
+                  <User className="h-4 w-4 text-logo-teal" />
                   Twin Status
                 </h3>
                 <div className="space-y-3">
@@ -540,7 +540,7 @@ const MyTwin = () => {
             {/* Conversation Topics */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-logo-blue" />
                   Topics We Explore
                 </h3>
@@ -561,7 +561,7 @@ const MyTwin = () => {
             {/* Twin Insights */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
                   <Star className="h-4 w-4 text-cyber-blue" />
                   What I Know About You
                 </h3>

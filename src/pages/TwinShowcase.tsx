@@ -11,7 +11,6 @@ import {
   Star,
   Eye,
   MessageSquare,
-  Brain,
   Award,
   Calendar,
   User,
@@ -131,12 +130,12 @@ const TwinShowcase = () => {
       <section className="py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               <span className="bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Twin Showcase
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
               Discover verified AI Twins from professionals across different
               fields. Interact with their capabilities and see how AI Twins can
               enhance expertise.
@@ -206,7 +205,7 @@ const TwinShowcase = () => {
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center text-lg">
                           {twin.avatar}
                         </div>
                         <div>
@@ -282,7 +281,7 @@ const TwinShowcase = () => {
                         className="flex-1 bg-gradient-to-r from-logo-teal to-logo-blue text-white"
                       >
                         <Link to={twin.profileUrl}>
-                          <Brain className="h-4 w-4 mr-1" />
+                          <MessageSquare className="h-4 w-4 mr-1" />
                           Interact
                         </Link>
                       </Button>
@@ -300,7 +299,7 @@ const TwinShowcase = () => {
                 <div className="w-16 h-16 bg-muted rounded-full flex items-center justify-center mx-auto mb-4">
                   <Search className="h-8 w-8 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">No Twins Found</h3>
+                <h3 className="text-sm font-semibold mb-2">No Twins Found</h3>
                 <p className="text-muted-foreground">
                   Try adjusting your search terms or filters.
                 </p>
@@ -314,10 +313,10 @@ const TwinShowcase = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-lg font-bold mb-4">
               Ready to Showcase Your Expertise?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               Join our community of verified professionals and share your AI
               Twin's capabilities with the world.
             </p>

@@ -6,7 +6,7 @@ import {
   Calendar,
   Target,
   Award,
-  Brain,
+  Settings,
   BarChart3,
   Clock,
   CheckCircle,
@@ -67,19 +67,19 @@ const Analytics = () => {
   ];
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="space-y-4 sm:space-y-6 max-w-full">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Analytics</h1>
+        <h1 className="text-lg font-bold mb-2">Analytics</h1>
         <p className="text-muted-foreground">
           Track your Twin training progress and insights
         </p>
       </div>
 
       {/* Key Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
         <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-teal">
+          <CardContent className="p-3 sm:p-4 text-center">
+            <div className="text-base font-bold text-logo-teal">
               {stats.totalEntries}
             </div>
             <div className="text-xs text-muted-foreground">Total Entries</div>
@@ -87,8 +87,8 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-blue">
+          <CardContent className="p-3 sm:p-4 text-center">
+            <div className="text-base font-bold text-logo-blue">
               {stats.weeklyStreak}
             </div>
             <div className="text-xs text-muted-foreground">Day Streak</div>
@@ -96,8 +96,8 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">
+          <CardContent className="p-3 sm:p-4 text-center">
+            <div className="text-base font-bold text-green-600">
               {stats.totalPoints}
             </div>
             <div className="text-xs text-muted-foreground">Total Points</div>
@@ -105,8 +105,8 @@ const Analytics = () => {
         </Card>
 
         <Card>
-          <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-purple-600">
+          <CardContent className="p-3 sm:p-4 text-center">
+            <div className="text-base font-bold text-purple-600">
               {stats.averageDaily}
             </div>
             <div className="text-xs text-muted-foreground">Daily Average</div>
@@ -118,7 +118,7 @@ const Analytics = () => {
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Brain className="h-5 w-5 text-logo-teal" />
+            <Settings className="h-5 w-5 text-logo-teal" />
             Twin Training Progress
           </CardTitle>
         </CardHeader>
@@ -133,7 +133,7 @@ const Analytics = () => {
             <Progress value={stats.twinProgress} className="h-3" />
             <div className="grid grid-cols-3 gap-4 pt-4">
               <div className="text-center">
-                <div className="text-lg font-semibold text-green-600">
+                <div className="text-base font-semibold text-green-600">
                   {stats.completionRate}%
                 </div>
                 <div className="text-xs text-muted-foreground">
@@ -141,13 +141,13 @@ const Analytics = () => {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-lg font-semibold text-blue-600">
+                <div className="text-base font-semibold text-blue-600">
                   Active
                 </div>
                 <div className="text-xs text-muted-foreground">Twin Status</div>
               </div>
               <div className="text-center">
-                <div className="text-lg font-semibold text-purple-600">
+                <div className="text-base font-semibold text-purple-600">
                   Learning
                 </div>
                 <div className="text-xs text-muted-foreground">Phase</div>
@@ -158,7 +158,7 @@ const Analytics = () => {
       </Card>
 
       {/* Weekly Activity */}
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -243,7 +243,7 @@ const Analytics = () => {
               >
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
-                    <h4 className="font-medium">{achievement.title}</h4>
+                    <h4 className="font-medium text-sm">{achievement.title}</h4>
                     <p className="text-sm text-muted-foreground">
                       {achievement.description}
                     </p>

@@ -97,7 +97,7 @@ const Volumes = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Your Volumes</h1>
+        <h1 className="text-lg font-bold mb-2">Your Volumes</h1>
         <p className="text-muted-foreground">
           Your personal library of shared memories and experiences
         </p>
@@ -114,7 +114,7 @@ const Volumes = () => {
             className="pl-10"
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           <Button
             variant={filterType === "all" ? "default" : "outline"}
             size="sm"
@@ -147,10 +147,10 @@ const Volumes = () => {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-teal">
+            <div className="text-base font-bold text-logo-teal">
               {entries.length}
             </div>
             <div className="text-xs text-muted-foreground">Total Entries</div>
@@ -158,7 +158,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-blue">
+            <div className="text-base font-bold text-logo-blue">
               {entries.filter((e) => e.type === "text").length}
             </div>
             <div className="text-xs text-muted-foreground">Text</div>
@@ -166,7 +166,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-base font-bold text-green-600">
               {entries.filter((e) => e.type === "image").length}
             </div>
             <div className="text-xs text-muted-foreground">Images</div>
@@ -174,7 +174,7 @@ const Volumes = () => {
         </Card>
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-purple-600">
+            <div className="text-base font-bold text-purple-600">
               {entries.filter((e) => e.type === "audio").length}
             </div>
             <div className="text-xs text-muted-foreground">Audio</div>
@@ -194,7 +194,7 @@ const Volumes = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-medium">{entry.title}</h3>
+                      <h3 className="font-medium text-sm">{entry.title}</h3>
                       <Badge variant="outline" className="text-xs">
                         {entry.type}
                       </Badge>

@@ -28,7 +28,7 @@ const TrainYourTwin = () => {
               Start Your AI Twin Journey
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal via-cyber-blue to-logo-blue bg-clip-text text-transparent">
                 Train Your Twin
               </span>
@@ -36,7 +36,7 @@ const TrainYourTwin = () => {
               <span className="text-foreground">Your Personal AI Awaits</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-12 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-12 leading-relaxed">
               Choose your path to creating a personal AI Twin that learns from
               you, thinks like you, and grows with you.
             </p>
@@ -48,10 +48,10 @@ const TrainYourTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Choose Your Twin
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Start where you are. Build a Twin that evolves with you.
             </p>
           </div>
@@ -63,8 +63,8 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <GraduationCap className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Student Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <h3 className="text-lg font-bold mb-4">Student Twin</h3>
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   For learners of all ages. Grow your Twin as you learn,
                   creating a personal AI that understands your study methods.
                 </p>
@@ -91,8 +91,8 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Briefcase className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Adult Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <h3 className="text-lg font-bold mb-4">Adult Twin</h3>
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Fast-track training for professionals. Build a Twin that
                   amplifies your work and keeps you competitive.
                 </p>
@@ -116,8 +116,8 @@ const TrainYourTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8 group-hover:scale-110 transition-transform duration-300">
                   <Building2 className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Enterprise Twin</h3>
-                <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                <h3 className="text-lg font-bold mb-4">Enterprise Twin</h3>
+                <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
                   Scalable AI solutions for teams. Create a Twin that embodies
                   your organization's knowledge and culture.
                 </p>
@@ -145,17 +145,17 @@ const TrainYourTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               Ready to Train Your Twin?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               Start building a personal AI that truly understands you.
             </p>
 
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
             >
               <Link to="/products/student-twin" className="flex items-center">
                 Start with Student Twin

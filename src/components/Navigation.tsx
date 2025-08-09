@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Cpu, ChevronDown, ArrowLeft, ArrowRight } from "lucide-react";
+import { Menu, X, Cpu, ChevronDown, ArrowLeft, ArrowRight, Brain } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,34 +23,12 @@ const Navigation = () => {
       <div className="container mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex h-16 sm:h-20 items-center justify-between">
           {/* Back/Forward buttons + Logo */}
-          <div className="flex items-center gap-2">
-            {/* Back/Forward buttons */}
-            <div className="hidden md:flex items-center gap-1 mr-4">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={goBack}
-                className="p-2 hover:bg-gray-100"
-                title="Go back"
-              >
-                <ArrowLeft className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={goForward}
-                className="p-2 hover:bg-gray-100"
-                title="Go forward"
-              >
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </div>
-
+          <div className="flex items-center">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img
-                src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
-                alt="AnansiAI"
+                src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
+                alt="Anansi AI"
                 className="h-12 w-12 sm:h-16 sm:w-16 hover:scale-105 transition-transform duration-300"
               />
             </Link>
@@ -60,8 +38,8 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-6">
             {/* Products Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-teal/30 hover:border-logo-teal/70 hover:bg-logo-teal/5">
-                <span>Products</span>
+              <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-teal/30 hover:border-logo-teal/70 hover:bg-logo-teal/5 font-poppins text-sm">
+                <span className="font-medium">Products</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -109,7 +87,7 @@ const Navigation = () => {
             {/* Education Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-logo-blue/30 hover:border-logo-blue/70 hover:bg-logo-blue/5">
-                <span>Education</span>
+                <span className="font-medium">Education</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-56 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -139,7 +117,7 @@ const Navigation = () => {
             {/* Company Dropdown */}
             <div className="relative group">
               <button className="flex items-center space-x-1 text-foreground/80 hover:text-foreground transition-all duration-300 py-2 px-4 rounded-lg border-2 border-cyber-blue/30 hover:border-cyber-blue/70 hover:bg-cyber-blue/5">
-                <span>Company</span>
+                <span className="font-medium">Company</span>
                 <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute top-full left-0 mt-1 w-48 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">

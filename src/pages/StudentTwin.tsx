@@ -16,7 +16,6 @@ import StudentEnrollmentForm from "@/components/StudentEnrollmentForm";
 import {
   GraduationCap,
   BookOpen,
-  Brain,
   Users,
   CheckCircle,
   ArrowRight,
@@ -59,7 +58,7 @@ const StudentTwin = () => {
               Student Twin
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight font-poppins mb-8">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Learn humanly.
               </span>
@@ -67,7 +66,7 @@ const StudentTwin = () => {
               <span className="text-foreground">Deliver super humanly.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground mb-8">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8">
               The Student Twin is your personal AI that grows with you, trained
               from your own lessons, reflections, and assignments in school.
               Unlike generic AI tools, your Twin understands your unique
@@ -77,7 +76,7 @@ const StudentTwin = () => {
             <Button
               onClick={() => setShowEnrollmentForm(true)}
               size="lg"
-              className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-ai-accent to-cyber-blue hover:from-ai-accent/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
             >
               Enroll Student
               <ArrowRight className="ml-3 h-6 w-6" />
@@ -90,7 +89,7 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               What Makes It Special?
             </h2>
           </div>
@@ -99,12 +98,12 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-10 text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
-                  <Brain className="h-10 w-10 text-logo-teal" />
+                  <BookOpen className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Human-Taught, Not Internet-Trained
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Your Twin learns directly from your work, not random internet
                   data.
                 </p>
@@ -116,10 +115,10 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <BookOpen className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Built Through Real Schoolwork
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Paper, pen, teacher feedback, and your own thoughts shape your
                   Twin, not just typing on a keyboard.
                 </p>
@@ -131,10 +130,10 @@ const StudentTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Award className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Own Your AI, Own Your Future
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Your Twin becomes a private tool you can use forever for
                   study, exams, projects, and future work.
                 </p>
@@ -148,7 +147,7 @@ const StudentTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -158,8 +157,8 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-8">
                 <UserCheck className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">You Learn Naturally</h3>
-              <p className="text-muted-foreground text-lg">
+              <h3 className="text-base font-bold mb-4">You Learn Naturally</h3>
+              <p className="text-muted-foreground text-sm">
                 Just attend class, do homework, reflect.
               </p>
             </div>
@@ -168,10 +167,10 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-8">
                 <Cpu className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 Your Twin Grows Silently
               </h3>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-muted-foreground text-sm">
                 Your assignments, quizzes, and notes feed your Twin
                 automatically (through teacher uploads and system updates).
               </p>
@@ -181,8 +180,8 @@ const StudentTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-8">
                 <Zap className="h-10 w-10" />
               </div>
-              <h3 className="text-xl font-bold mb-4">You Use It for Results</h3>
-              <p className="text-muted-foreground text-lg">
+              <h3 className="text-base font-bold mb-4">You Use It for Results</h3>
+              <p className="text-muted-foreground text-sm">
                 When mature, your Twin can help write reports, plan projects, or
                 suggest improvements in your own style.
               </p>
@@ -195,10 +194,10 @@ const StudentTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Who It's For
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Each level unlocks new skills: from simple writing aids to
               personal research assistants.
             </p>
@@ -208,7 +207,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <School className="h-12 w-12 text-neural-blue mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Primary School</h3>
+                <h3 className="text-base font-bold mb-2">Primary School</h3>
                 <p className="text-muted-foreground">
                   Build foundational learning habits and personality traits.
                 </p>
@@ -218,7 +217,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <GraduationCap className="h-12 w-12 text-electric-purple mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">High School</h3>
+                <h3 className="text-base font-bold mb-2">High School</h3>
                 <p className="text-muted-foreground">
                   Develop advanced study techniques and subject expertise.
                 </p>
@@ -228,7 +227,7 @@ const StudentTwin = () => {
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8 text-center">
                 <University className="h-12 w-12 text-cyber-teal mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">University</h3>
+                <h3 className="text-base font-bold mb-2">University</h3>
                 <p className="text-muted-foreground">
                   Master research, critical thinking, and professional skills.
                 </p>
@@ -238,71 +237,15 @@ const StudentTwin = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Pricing</h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto">
-            <Card className="border-2 border-logo-teal shadow-2xl">
-              <CardContent className="p-10 text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-8">
-                  <DollarSign className="h-10 w-10" />
-                </div>
-                <h3 className="text-3xl font-bold mb-6">Lifetime Training</h3>
-                <div className="text-5xl font-bold text-logo-teal mb-4">
-                  $500
-                </div>
-                <p className="text-muted-foreground mb-6">
-                  Complete lifetime training from Grade 1 to University
-                  graduation. One-time payment covers all education levels.
-                  <span className="block mt-2 font-semibold text-logo-teal">
-                    Private students only.
-                  </span>
-                </p>
-
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Personal AI Twin for life</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Grows with your education</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>100% human-supervised training</span>
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                    <span>Teacher-powered development</span>
-                  </div>
-                </div>
-
-                <Button
-                  onClick={() => setShowEnrollmentForm(true)}
-                  size="lg"
-                  className="bg-gradient-to-r from-ai-accent to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
-                >
-                  Enroll Student
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Why Start Early */}
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-6">
               Why Start Early?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               The younger you start, the more personal and skilled your Twin
               becomes, giving you a huge edge in exams, work, and life.
             </p>
@@ -310,19 +253,19 @@ const StudentTwin = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-lg bg-background border">
                 <Calendar className="h-8 w-8 text-neural-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Pilot schools in September
                 </h3>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Users className="h-8 w-8 text-electric-purple mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Teacher-powered training program
                 </h3>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Target className="h-8 w-8 text-cyber-teal mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   100% human-supervised development
                 </h3>
               </div>
@@ -342,13 +285,13 @@ const StudentTwin = () => {
               Start Your Journey Today
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Ready to Train Your Twin?
               </span>
             </h2>
 
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               Don't wait! Start building your personal AI Twin today and give
               yourself the competitive advantage for tomorrow's world.
             </p>
@@ -357,7 +300,7 @@ const StudentTwin = () => {
               <Button
                 onClick={() => setShowEnrollmentForm(true)}
                 size="lg"
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-12 py-8 text-2xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white border-none px-8 py-4 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
               >
                 Enroll Student
                 <ArrowRight className="ml-4 h-7 w-7" />

@@ -723,22 +723,6 @@ const UnifiedAuth = () => {
         </Tabs>
 
         {/* Security Indicators */}
-        <div className="pt-4 border-t border-border mt-6">
-          <div className="flex items-center justify-center gap-4 text-xs text-muted-foreground">
-            <div className="flex items-center gap-1">
-              <Lock className="h-3 w-3 text-green-500" />
-              <span>256-bit Encryption</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Shield className="h-3 w-3 text-blue-500" />
-              <span>FIDO2 Compliant</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Fingerprint className="h-3 w-3 text-logo-teal" />
-              <span>Zero Trust</span>
-            </div>
-          </div>
-        </div>
 
         {!fingerprintSupported && (
           <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mt-4">

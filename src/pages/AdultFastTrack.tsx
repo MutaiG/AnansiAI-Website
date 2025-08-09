@@ -3,12 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import WaitlistCTA from "@/components/WaitlistCTA";
 import {
   Clock,
   Target,
   Users,
-  Brain,
   TrendingUp,
   CheckCircle,
   ArrowRight,
@@ -40,7 +38,7 @@ const AdultFastTrack = () => {
               Adult Fast-Track Program
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-blue to-cyber-blue bg-clip-text text-transparent">
                 It's Never Too Late
               </span>
@@ -50,22 +48,23 @@ const AdultFastTrack = () => {
               </span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               The Adult Fast-Track Program compresses years of traditional AI
               Twin development into an intensive, accelerated journey. Designed
               for professionals ready to compete in an AI-driven world without
               waiting decades.
             </p>
 
-            <WaitlistCTA productType="adult">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-logo-blue to-cyber-blue hover:from-logo-blue/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-xl font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-logo-blue to-cyber-blue hover:from-logo-blue/90 hover:to-cyber-blue/90 text-white border-none px-10 py-7 text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/login">
                 Start Fast-Track Program
                 <ArrowRight className="ml-3 h-6 w-6" />
-              </Button>
-            </WaitlistCTA>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -74,10 +73,10 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Choose the Fast-Track Approach?
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Traditional AI Twin development takes years through educational
               progression. Our fast-track program delivers the same results in
               months.
@@ -90,8 +89,8 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Zap className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Accelerated Learning</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-base font-bold mb-4">Accelerated Learning</h3>
+                <p className="text-muted-foreground text-sm">
                   Skip years of gradual development with our intensive
                   curriculum designed specifically for adult learners.
                 </p>
@@ -103,8 +102,8 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <TrendingUp className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Career-Focused</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-base font-bold mb-4">Career-Focused</h3>
+                <p className="text-muted-foreground text-sm">
                   Training directly aligned with professional needs and current
                   workplace challenges.
                 </p>
@@ -116,8 +115,8 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <Target className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Immediate Results</h3>
-                <p className="text-muted-foreground text-lg">
+                <h3 className="text-base font-bold mb-4">Immediate Results</h3>
+                <p className="text-muted-foreground text-sm">
                   Begin seeing productive AI Twin capabilities within weeks, not
                   years.
                 </p>
@@ -131,10 +130,10 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Fast-Track Program Structure
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               A carefully designed progression that builds your AI Twin's
               capabilities rapidly while maintaining quality and authenticity.
             </p>
@@ -143,9 +142,9 @@ const AdultFastTrack = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
-                <span className="text-xl font-bold">1</span>
+                <span className="text-sm font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Intensive Foundation</h3>
+              <h3 className="text-base font-bold mb-3">Intensive Foundation</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 1-2:</strong> Personality mapping, communication
                 style analysis, and core trait establishment through focused
@@ -155,9 +154,9 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
-                <span className="text-xl font-bold">2</span>
+                <span className="text-sm font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">
+              <h3 className="text-base font-bold mb-3">
                 Professional Integration
               </h3>
               <p className="text-muted-foreground text-sm">
@@ -169,9 +168,9 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-logo-teal text-white mb-6">
-                <span className="text-xl font-bold">3</span>
+                <span className="text-sm font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Specialized Skills</h3>
+              <h3 className="text-base font-bold mb-3">Specialized Skills</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 7-10:</strong> Domain-specific training tailored
                 to your field, from creative work to technical analysis.
@@ -180,9 +179,9 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
-                <span className="text-xl font-bold">4</span>
+                <span className="text-sm font-bold">4</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Advanced Deployment</h3>
+              <h3 className="text-base font-bold mb-3">Advanced Deployment</h3>
               <p className="text-muted-foreground text-sm">
                 <strong>Weeks 11-12:</strong> Fine-tuning, optimization, and
                 full Twin Workbench integration for maximum productivity.
@@ -196,7 +195,7 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What You'll Achieve in 12 Weeks
             </h2>
           </div>
@@ -206,10 +205,10 @@ const AdultFastTrack = () => {
               <CardContent className="p-8">
                 <div className="flex items-start space-x-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 flex-shrink-0">
-                    <Brain className="h-6 w-6 text-logo-blue" />
+                    <TrendingUp className="h-6 w-6 text-logo-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Sophisticated AI Thinking
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -229,7 +228,7 @@ const AdultFastTrack = () => {
                     <Briefcase className="h-6 w-6 text-cyber-blue" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Professional Productivity
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -249,7 +248,7 @@ const AdultFastTrack = () => {
                     <UserCheck className="h-6 w-6 text-ai-accent" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Authentic Representation
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -269,7 +268,7 @@ const AdultFastTrack = () => {
                     <Award className="h-6 w-6 text-logo-teal" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-base font-bold mb-2">
                       Competitive Advantage
                     </h3>
                     <p className="text-muted-foreground text-sm">
@@ -289,7 +288,7 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Components
             </h2>
           </div>
@@ -356,10 +355,10 @@ const AdultFastTrack = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Program Investment
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               Professional-grade AI Twin development in a fraction of the time
             </p>
           </div>
@@ -370,10 +369,10 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-8">
                   <Clock className="h-10 w-10" />
                 </div>
-                <h3 className="text-3xl font-bold mb-6">
+                <h3 className="text-lg font-bold mb-6">
                   Adult Fast-Track Program
                 </h3>
-                <div className="text-5xl font-bold text-logo-teal mb-4">
+                <div className="text-base font-bold text-logo-teal mb-4">
                   $2,500
                 </div>
                 <p className="text-muted-foreground mb-6">
@@ -414,14 +413,15 @@ const AdultFastTrack = () => {
                   </div>
                 </div>
 
-                <WaitlistCTA productType="adult">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white w-full py-4 text-lg font-bold hover:scale-105 transition-all duration-300"
-                  >
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white w-full py-4 text-sm font-bold hover:scale-105 transition-all duration-300"
+                >
+                  <Link to="/login">
                     Enroll in Fast-Track Program
-                  </Button>
-                </WaitlistCTA>
+                  </Link>
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -432,10 +432,10 @@ const AdultFastTrack = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               Don't Wait Another Decade for AI Advantage
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-sm text-muted-foreground mb-8">
               While others spend years building AI capabilities through
               traditional education, you can have a sophisticated AI Twin in
               just 12 weeks.
@@ -468,14 +468,15 @@ const AdultFastTrack = () => {
               </div>
             </div>
 
-            <WaitlistCTA productType="adult">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white px-10 py-7 text-sm font-bold hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/login">
                 Start Your Fast-Track Journey
-              </Button>
-            </WaitlistCTA>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

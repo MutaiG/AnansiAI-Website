@@ -14,7 +14,6 @@ import {
   BookOpen,
   Users,
   Lightbulb,
-  Brain,
   X,
   Mail,
   MessageCircle,
@@ -239,19 +238,19 @@ const Index = () => {
       <section className="py-8 sm:py-12 bg-background">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-4 sm:mb-6">
+            <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground mb-4 sm:mb-6">
               Own Your AI. Stay Competitive.
             </h3>
 
             <div className="flex flex-col items-center gap-4 sm:gap-6">
               <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-foreground text-center">
+                <h3 className="text-sm sm:text-base lg:text-sm font-bold text-foreground text-center">
                   Your twin, your future
                 </h3>
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-6 sm:px-8 py-3 text-base sm:text-lg font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                  className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-6 sm:px-8 py-3 text-sm sm:text-sm font-bold shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Link to="/login" className="flex items-center justify-center">
                     Sign Up / Sign In
@@ -268,104 +267,89 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Twin Device Capabilities */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 relative">
+      {/* Twin Capabilities Showcase */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-logo-teal/8 via-logo-blue/5 to-cyber-blue/6">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
-              Your Twin, Everywhere You Need It
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-16">
-              Seamlessly integrated across all your devices and platforms
-            </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-xl sm:text-2xl font-semibold mb-3 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+                Download, Deploy, Dominate
+              </h2>
+              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+                Your AI Twin works seamlessly across all platforms, handling your digital presence while you focus on what matters most.
+              </p>
+            </div>
 
-            {/* Clean 3-column layout */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              {/* Email Assistant */}
-              <div className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                  <div className="w-16 h-16 bg-gradient-to-br from-logo-teal to-logo-teal/80 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                    <Mail className="h-8 w-8 text-white" />
+            {/* Three-column showcase */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+              {/* Download & Setup */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-logo-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Email Assistant</h3>
-                  <p className="text-gray-600 mb-4">
-                    Manages your inbox using your writing style and tone
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm text-green-600 font-medium">Active</span>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Download Ready
+                    </div>
                   </div>
                 </div>
+                <h3 className="text-base sm:text-base font-bold mb-3">Easy Installation</h3>
+                <p className="text-sm text-muted-foreground">
+                  Quick setup on any device.
+                </p>
               </div>
 
-              {/* WhatsApp/Messaging Popup */}
-              <div className="absolute top-16 right-4 sm:right-8 animate-in slide-in-from-right-10 fade-in-0 duration-700 delay-500">
-                <div className="bg-gradient-to-br from-logo-blue/90 to-logo-blue text-white rounded-xl p-4 max-w-xs shadow-2xl border border-logo-blue/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                      <MessageCircle className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-sm text-white">Smart Messaging</h3>
-                      <p className="text-xs text-white/80">WhatsApp, Telegram</p>
+              {/* Social Media Management */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-logo-blue/20 to-cyber-blue/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-500/20 to-purple-500/20"></div>
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-logo-blue relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                      </svg>
                     </div>
                   </div>
-                  <p className="text-xs text-white/80 mb-3">
-                    Responding to 12 conversations across platforms
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span className="text-xs text-white font-medium">Processing</span>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Auto-Posting
+                    </div>
                   </div>
                 </div>
+                <h3 className="text-base sm:text-base font-bold mb-3">Social Media Mastery</h3>
+                <p className="text-sm text-muted-foreground">
+                  Auto-posts and engages across all platforms.
+                </p>
               </div>
 
-              {/* Social Media Popup */}
-              <div className="absolute top-32 left-1/2 transform -translate-x-1/2 animate-in slide-in-from-bottom-10 fade-in-0 duration-700 delay-700">
-                <div className="bg-gradient-to-br from-cyber-blue/90 to-cyber-blue text-white rounded-xl p-4 max-w-xs shadow-2xl border border-cyber-blue/30 backdrop-blur-sm">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center backdrop-blur-sm">
-                      <Share2 className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-sm text-white">Social Media Manager</h3>
-                      <p className="text-xs text-white/80">All platforms</p>
+              {/* Email Management */}
+              <div className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-br from-cyber-blue/20 to-logo-teal/20 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-xl shadow-lg flex items-center justify-center">
+                      <svg className="w-6 h-6 sm:w-7 sm:h-7 text-cyber-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
                     </div>
                   </div>
-                  <p className="text-xs text-white/80 mb-3">
-                    Posted to 5 accounts, engaging with 47 interactions
-                  </p>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    <span className="text-xs text-white font-medium">Engaging</span>
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      Smart Replies
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Device Compatibility Icons */}
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-in fade-in-0 duration-700 delay-1000">
-                <div className="flex items-center gap-6 bg-gradient-to-r from-logo-teal/10 to-cyber-blue/10 backdrop-blur-sm rounded-full px-6 py-3 border border-logo-teal/30">
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">����</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Mobile</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">💻</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Desktop</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 bg-gray-700 rounded flex items-center justify-center">
-                      <span className="text-xs text-white">🌐</span>
-                    </div>
-                    <span className="text-xs text-gray-600">Web</span>
-                  </div>
-                </div>
+                <h3 className="text-base sm:text-base font-bold mb-3">Email Excellence</h3>
+                <p className="text-sm text-muted-foreground">
+                  Smart replies and inbox management.
+                </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -432,7 +416,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4 sm:mb-6">
                   <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-logo-teal" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Student Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Student Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   For learners of all ages.
                 </p>
@@ -445,7 +429,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4 sm:mb-6">
                   <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-logo-blue" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Adult Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Adult Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Fast-track training for professionals.
                 </p>
@@ -458,7 +442,7 @@ const Index = () => {
                 <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-4 sm:mb-6">
                   <Building2 className="h-6 w-6 sm:h-8 sm:w-8 text-cyber-blue" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Enterprise Twin</h3>
+                <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Enterprise Twin</h3>
                 <p className="text-sm sm:text-base text-muted-foreground">
                   Scalable AI solutions for teams.
                 </p>
@@ -466,20 +450,10 @@ const Index = () => {
             </div>
 
             <div className="mt-8 sm:mt-12 text-center">
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto px-4 sm:px-0 mb-6">
+              <p className="text-xs sm:text-sm lg:text-sm text-foreground/80 max-w-2xl mx-auto px-4 sm:px-0 mb-6">
                 Ready to Train Your Twin at early age? Start building a personal
                 AI that truly understands you.
               </p>
-
-              <Button
-                onClick={() => {
-                  setCurrentPopup(1);
-                  setPopupSequence(1);
-                }}
-                className="bg-gradient-to-r from-logo-teal to-logo-blue hover:from-logo-teal/90 hover:to-logo-blue/90 text-white px-6 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                See Your Twin's Device Capabilities
-              </Button>
             </div>
           </div>
         </div>

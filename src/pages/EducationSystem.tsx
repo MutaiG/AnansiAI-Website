@@ -44,7 +44,7 @@ const EducationSystem = () => {
               Education System
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building AI Twins
               </span>
@@ -52,7 +52,7 @@ const EducationSystem = () => {
               <span className="text-foreground">the Human Way.</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed">
               Our revolutionary education approach creates AI Twins through
               natural human learning processes. Structured, scalable, and
               affordable, transforming how students and educators approach
@@ -80,10 +80,10 @@ const EducationSystem = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Why Human-Centric AI Training Matters
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Unlike generic AI trained on scraped internet data, our system
               creates AI Twins through authentic human learning experiences.
             </p>
@@ -98,7 +98,7 @@ const EducationSystem = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Human-Supervised Learning
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Every AI Twin is trained under direct human supervision,
                   ensuring authentic personality development and ethical
                   reasoning patterns.
@@ -114,7 +114,7 @@ const EducationSystem = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Natural Learning Flow
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Students learn naturally while their AI Twin develops in
                   parallel with no additional burden on classroom activities.
                 </p>
@@ -129,7 +129,7 @@ const EducationSystem = () => {
                 <h3 className="text-xl font-bold mb-4">
                   Lifetime Value Creation
                 </h3>
-                <p className="text-muted-foreground text-lg">
+                <p className="text-muted-foreground text-sm">
                   Each Twin becomes a permanent personal asset, growing more
                   valuable with every year of education.
                 </p>
@@ -143,10 +143,10 @@ const EducationSystem = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Integration with Traditional Education
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Our system seamlessly integrates with existing educational
               frameworks without disrupting proven teaching methods.
             </p>
@@ -250,10 +250,10 @@ const EducationSystem = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Structured Learning Progression
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Each educational level builds upon the previous, creating
               increasingly sophisticated AI capabilities.
             </p>
@@ -339,7 +339,7 @@ const EducationSystem = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Institutional Benefits
             </h2>
           </div>
@@ -386,10 +386,10 @@ const EducationSystem = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               Getting Started with Your Institution
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
               Simple implementation process designed to integrate seamlessly
               with your existing educational framework.
             </p>
@@ -400,7 +400,7 @@ const EducationSystem = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Pilot Program</h3>
+              <h3 className="text-base font-bold mb-3">Pilot Program</h3>
               <p className="text-muted-foreground">
                 Start with a small cohort to demonstrate value and refine
                 integration processes.
@@ -411,7 +411,7 @@ const EducationSystem = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Teacher Training</h3>
+              <h3 className="text-base font-bold mb-3">Teacher Training</h3>
               <p className="text-muted-foreground">
                 Comprehensive support for educators to understand and optimize
                 the AI Twin development process.
@@ -422,7 +422,7 @@ const EducationSystem = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
-              <h3 className="text-lg font-bold mb-3">Full Implementation</h3>
+              <h3 className="text-base font-bold mb-3">Full Implementation</h3>
               <p className="text-muted-foreground">
                 Scale across grades and subjects with ongoing support and
                 continuous improvement.
@@ -434,7 +434,7 @@ const EducationSystem = () => {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-logo-teal to-logo-blue text-white px-10 py-6 text-lg font-bold hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-logo-teal to-logo-blue text-white px-10 py-6 text-sm font-bold hover:scale-105 transition-all duration-300"
             >
               <Link to="/contact">Partner with Us</Link>
             </Button>

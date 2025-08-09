@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   Trophy,
-  Brain,
   Users,
   BookOpen,
   MessageSquare,
@@ -59,7 +58,7 @@ const Milestones = () => {
       method: "Simulated challenges, scenario-based tasks.",
       outcome:
         "Twin begins to develop predictive reasoning and judgment modeling.",
-      icon: Brain,
+      icon: Zap,
       color: "from-purple-500 to-pink-500",
       completed: false,
     },
@@ -184,10 +183,10 @@ const Milestones = () => {
   const analytics = getWeeklyAnalytics(currentWeek, currentMilestone);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="space-y-4 sm:space-y-6 lg:space-y-8 max-w-full">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2 flex items-center gap-3">
+        <h1 className="text-lg font-bold mb-2 flex items-center gap-3">
           <Trophy className="h-8 w-8 text-yellow-500" />
           Week {currentWeek} Milestone
         </h1>
@@ -201,15 +200,15 @@ const Milestones = () => {
       {/* Learning Focus - Dynamic based on current milestone */}
       <Card className="mb-6">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-            <Brain className="h-5 w-5 text-logo-teal" />
+          <h3 className="text-sm font-semibold mb-4 flex items-center gap-2">
+            <Zap className="h-5 w-5 text-logo-teal" />
             This Week's Learning Focus
           </h3>
           <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-4">
             <div className="flex items-center gap-3 mb-2">
               <currentMilestone.icon className="h-6 w-6 text-logo-teal" />
               <div>
-                <h4 className="font-semibold text-logo-teal">{analytics.focusArea}</h4>
+                <h4 className="font-semibold text-sm text-logo-teal">{analytics.focusArea}</h4>
                 <p className="text-sm text-muted-foreground">{analytics.insights}</p>
               </div>
             </div>
@@ -223,7 +222,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <Target className="h-4 w-4 text-blue-500" />
-              <div className="text-2xl font-bold text-blue-600">
+              <div className="text-base font-bold text-blue-600">
                 {analytics.tasksCompleted}
               </div>
             </div>
@@ -237,8 +236,8 @@ const Milestones = () => {
         <Card>
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
-              <Brain className="h-4 w-4 text-purple-500" />
-              <div className="text-2xl font-bold text-purple-600">
+              <Zap className="h-4 w-4 text-purple-500" />
+              <div className="text-base font-bold text-purple-600">
                 {analytics.twinAccuracy}%
               </div>
             </div>
@@ -250,7 +249,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <TrendingUp className="h-4 w-4 text-green-500" />
-              <div className="text-2xl font-bold text-green-600">
+              <div className="text-base font-bold text-green-600">
                 {analytics.weeklyProgress}%
               </div>
             </div>
@@ -262,7 +261,7 @@ const Milestones = () => {
           <CardContent className="p-4 text-center">
             <div className="flex items-center justify-center gap-2 mb-1">
               <Clock className="h-4 w-4 text-orange-500" />
-              <div className="text-2xl font-bold text-orange-600">
+              <div className="text-base font-bold text-orange-600">
                 {analytics.timeSpent}
               </div>
             </div>
@@ -275,7 +274,7 @@ const Milestones = () => {
       <Card className="mb-8">
         <CardContent className="p-6">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Overall Journey</h3>
+            <h3 className="text-sm font-semibold">Overall Journey</h3>
             <Badge variant="secondary">
               Week {currentWeek} of {totalWeeks}
             </Badge>
@@ -300,7 +299,7 @@ const Milestones = () => {
               <currentMilestone.icon className="h-8 w-8 text-white" />
             </div>
             <div>
-              <CardTitle className="text-xl">
+              <CardTitle className="text-lg">
                 {currentMilestone.title}
               </CardTitle>
               <div className="flex items-center gap-2 mt-1">
@@ -322,21 +321,21 @@ const Milestones = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h4 className="font-semibold mb-2">🎯 Objective</h4>
+            <h4 className="font-semibold text-sm mb-2">🎯 Objective</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.objective}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">⚙️ Method</h4>
+            <h4 className="font-semibold text-sm mb-2">⚙️ Method</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.method}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">✨ Outcome</h4>
+            <h4 className="font-semibold text-sm mb-2">✨ Outcome</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.outcome}
             </p>
@@ -347,7 +346,7 @@ const Milestones = () => {
       {/* Week Progress */}
       <Card className="mt-6">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold mb-4">This Week's Activity</h3>
+          <h3 className="text-sm font-semibold mb-4">This Week's Activity</h3>
           <div className="grid grid-cols-7 gap-2">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].map(
               (day, index) => {

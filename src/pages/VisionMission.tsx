@@ -41,7 +41,7 @@ const VisionMission = () => {
               Our Vision & Mission
             </div>
 
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-8xl mb-8">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building the Future
               </span>
@@ -49,7 +49,7 @@ const VisionMission = () => {
               <span className="text-foreground">of Human-AI Partnership</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xl text-muted-foreground mb-12 leading-relaxed">
+            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-12 leading-relaxed">
               Our vision and mission guide everything we do at AnansiAI. We're
               not just building technology — we're shaping a future where humans
               and AI work together in perfect harmony.
@@ -67,17 +67,17 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Target className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-logo-teal">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 text-logo-teal">
                   Our Mission
                 </h2>
-                <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
                   To make AI personal, sustainable, and empowering — by enabling
                   every individual, student, and organization to train and own
                   their own AI Twin that reflects their skills, values, and
                   creativity.
                 </p>
                 <div className="p-6 rounded-lg bg-background border-l-4 border-logo-teal">
-                  <p className="text-lg font-medium">
+                  <p className="text-sm font-medium">
                     We aim to shift the AI world from{" "}
                     <span className="text-red-500 line-through">
                       "one model fits all"
@@ -92,7 +92,7 @@ const VisionMission = () => {
 
               <Card className="border-2 border-logo-teal shadow-2xl">
                 <CardContent className="p-10">
-                  <h3 className="text-2xl font-bold mb-6">Mission Pillars</h3>
+                  <h3 className="text-base font-bold mb-6">Mission Pillars</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
@@ -136,7 +136,7 @@ const VisionMission = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <Card className="border-2 border-logo-blue shadow-2xl order-2 lg:order-1">
                 <CardContent className="p-10">
-                  <h3 className="text-2xl font-bold mb-6">Vision in Action</h3>
+                  <h3 className="text-base font-bold mb-6">Vision in Action</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <GraduationCap className="h-6 w-6 text-logo-blue mr-3 mt-1" />
@@ -179,16 +179,16 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Eye className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-logo-blue">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 text-logo-blue">
                   Our Vision
                 </h2>
-                <p className="text-xl leading-relaxed text-muted-foreground mb-8">
+                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
                   A world where humans remain central in the AI era — working
                   faster, thinking sharper, and creating fearlessly — powered by
                   AI Twins they've shaped themselves.
                 </p>
                 <div className="p-6 rounded-lg bg-background border-l-4 border-logo-blue">
-                  <p className="text-lg font-medium">
+                  <p className="text-sm font-medium">
                     We see a future where AI enhances human potential rather
                     than replacing it, where everyone has access to personal AI
                     that truly understands them.
@@ -204,10 +204,10 @@ const VisionMission = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
               What Drives Us
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Four core principles guide everything we build and every decision
               we make.
             </p>
@@ -219,7 +219,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-6">
                   <Users className="h-8 w-8 text-logo-teal" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">Human-first AI</h3>
+                <h3 className="text-base font-bold mb-4">Human-first AI</h3>
                 <p className="text-muted-foreground text-sm">
                   Not general AI. Every Twin is built for and by its human
                   owner.
@@ -232,7 +232,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-6">
                   <Shield className="h-8 w-8 text-logo-blue" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Sustainability over scale
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -246,7 +246,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-6">
                   <GraduationCap className="h-8 w-8 text-cyber-blue" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Education before automation
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -260,7 +260,7 @@ const VisionMission = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-6">
                   <Heart className="h-8 w-8 text-ai-accent" />
                 </div>
-                <h3 className="text-lg font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Ownership before access
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -276,16 +276,16 @@ const VisionMission = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
               The Future We're Building Together
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
-                  <span className="text-2xl font-bold">2025</span>
+                  <span className="text-lg font-bold">2025</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Foundation</h3>
+                <h3 className="text-base font-bold mb-4">Foundation</h3>
                 <p className="text-muted-foreground">
                   Launch pilot programs in schools. Establish human-centered
                   training methodologies.
@@ -294,9 +294,9 @@ const VisionMission = () => {
 
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
-                  <span className="text-2xl font-bold">2027</span>
+                  <span className="text-lg font-bold">2027</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Expansion</h3>
+                <h3 className="text-base font-bold mb-4">Expansion</h3>
                 <p className="text-muted-foreground">
                   Scale to universities and professional training. Launch Adult
                   Twin programs.
@@ -305,9 +305,9 @@ const VisionMission = () => {
 
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
-                  <span className="text-2xl font-bold">2030</span>
+                  <span className="text-lg font-bold">2030</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4">Transformation</h3>
+                <h3 className="text-base font-bold mb-4">Transformation</h3>
                 <p className="text-muted-foreground">
                   AI Twins become standard. Enterprise adoption. Global impact
                   on education and work.
@@ -316,10 +316,10 @@ const VisionMission = () => {
             </div>
 
             <div className="p-8 rounded-xl bg-gradient-to-br from-logo-teal/10 to-logo-blue/10 border-2 border-logo-teal/20">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 Join Us in Shaping This Future
               </h3>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-sm text-muted-foreground mb-6">
                 Every Twin trained brings us closer to a world where AI truly
                 serves humanity. Your journey matters.
               </p>

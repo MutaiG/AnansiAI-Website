@@ -16,7 +16,7 @@ const PageNavigation = ({
   className = "",
   nextPath,
   nextLabel = "Next",
-  showHome = true,
+  showHome = false,
   showNext = false,
 }: PageNavigationProps) => {
   const navigate = useNavigate();

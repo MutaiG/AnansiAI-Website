@@ -33,7 +33,7 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
+    // Send to backend API here
     setIsSubmitted(true);
   };
 
@@ -66,13 +66,13 @@ const ContactUs = () => {
                 Partner with Us
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
                 Transform Your Organization with{" "}
                 <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                   AI Twin Solutions
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
                 Ready to implement Enterprise Twin, Student Twin, or Adult Twin
                 solutions? Contact us to discuss your specific needs and get
                 started with personalized AI that understands your organization.
@@ -83,7 +83,7 @@ const ContactUs = () => {
               {/* Contact Form */}
               <Card className="shadow-xl border-0">
                 <CardHeader>
-                  <CardTitle className="flex items-center text-2xl">
+                  <CardTitle className="flex items-center text-sm">
                     <MessageSquare className="mr-3 h-6 w-6 text-logo-teal" />
                     Get in Touch
                   </CardTitle>
@@ -198,7 +198,7 @@ const ContactUs = () => {
 
                       <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white h-12 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                        className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white h-12 text-sm font-semibold hover:scale-105 transition-all duration-300"
                       >
                         <Send className="mr-2 h-5 w-5" />
                         Send Message
@@ -209,7 +209,7 @@ const ContactUs = () => {
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
                         <CheckCircle className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-xl font-bold mb-2">
+                      <h3 className="text-base font-bold mb-2">
                         Message Sent Successfully!
                       </h3>
                       <p className="text-muted-foreground mb-6">
@@ -236,7 +236,7 @@ const ContactUs = () => {
                         <Users className="h-6 w-6 text-logo-teal" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Educational Institutions
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -255,7 +255,7 @@ const ContactUs = () => {
                         <Target className="h-6 w-6 text-logo-blue" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Technology Partners
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -275,7 +275,7 @@ const ContactUs = () => {
                         <Mail className="h-6 w-6 text-cyber-blue" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Research Collaborators
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -320,10 +320,10 @@ const ContactUs = () => {
         <section className="py-20 bg-muted/30 mt-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
                 Insights & Updates
               </h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
                 Stay informed about the latest in personal AI development and
                 training methodologies.
               </p>
@@ -333,7 +333,7 @@ const ContactUs = () => {
             <div className="max-w-2xl mx-auto">
               <Card className="border-0 bg-background shadow-lg">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-xl font-bold mb-4">
+                  <h3 className="text-base font-bold mb-4">
                     Subscribe to Our Newsletter
                   </h3>
                   <p className="text-muted-foreground mb-6">

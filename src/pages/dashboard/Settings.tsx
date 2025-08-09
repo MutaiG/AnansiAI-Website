@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { useAuth } from "@/contexts/AuthContext";
 import {
   User,
-  Brain,
+  Settings2,
   Bell,
   Shield,
   Download,
@@ -45,13 +45,13 @@ const Settings = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Settings</h1>
+        <h1 className="text-lg font-bold mb-2">Settings</h1>
         <p className="text-muted-foreground">
           Manage your account, Twin behavior, and preferences
         </p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid gap-4 sm:gap-6">
         {/* Profile Settings */}
         <Card>
           <CardHeader>
@@ -61,7 +61,7 @@ const Settings = () => {
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Full Name</Label>
                 <Input id="name" defaultValue={user?.name} />
@@ -83,7 +83,7 @@ const Settings = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Brain className="h-5 w-5 text-logo-teal" />
+              <Settings2 className="h-5 w-5 text-logo-teal" />
               Twin Behavior
             </CardTitle>
           </CardHeader>

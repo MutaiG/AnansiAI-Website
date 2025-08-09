@@ -20,7 +20,7 @@ import {
   Smile,
   Music,
   Camera,
-  Brain,
+  Lightbulb,
   Settings,
   Bell,
   Sparkles,
@@ -255,7 +255,7 @@ const TwinCourses = () => {
       title: "AI Prompting & Responsible Use",
       provider: "Faculty of Technology & Engineering",
       description: "AI tools and ethical implementation",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-teal-500 to-teal-600",
       locked: false,
       status: "available",
@@ -513,7 +513,7 @@ const TwinCourses = () => {
       title: "Mental Health Awareness",
       provider: "Faculty of Health & Medicine",
       description: "Psychology and mental wellness",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-sky-500 to-sky-600",
       locked: true,
       status: "locked",
@@ -552,7 +552,7 @@ const TwinCourses = () => {
       title: "Psychology & Human Behavior",
       provider: "Faculty of Social Sciences",
       description: "Understanding human psychology",
-      icon: Brain,
+      icon: Lightbulb,
       bgColor: "bg-gradient-to-br from-indigo-500 to-indigo-600",
       locked: false,
       status: "available",
@@ -645,7 +645,7 @@ const TwinCourses = () => {
         <div className="relative z-10 mb-8">
           <div className="flex items-center justify-center mb-6">
             <div className="text-center">
-              <h1 className="text-white text-2xl font-bold flex items-center justify-center gap-2 mb-2">
+              <h1 className="text-white text-lg font-bold flex items-center justify-center gap-2 mb-2">
                 <Settings className="h-6 w-6" />
                 Twin-Ready Courses
               </h1>
@@ -675,7 +675,7 @@ const TwinCourses = () => {
 
                   {/* Course Info */}
                   <div className="flex-1 mb-3 sm:mb-4">
-                    <h3 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-base sm:text-lg leading-tight">
+                    <h3 className="font-semibold text-gray-900 mb-1.5 sm:mb-2 text-sm leading-tight">
                       {course.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -736,7 +736,7 @@ const TwinCourses = () => {
         <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
           <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
             <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
-              <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
+              <AvatarFallback className="bg-white/20 text-white text-sm sm:text-base">
                 😊
               </AvatarFallback>
             </Avatar>
@@ -753,14 +753,14 @@ const TwinCourses = () => {
         <Button variant="ghost" size="sm" className="shrink-0">
           <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
         </Button>
-        <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-1 text-center px-2">
+        <h1 className="text-base sm:text-lg font-bold text-gray-900 flex-1 text-center px-2">
           Explore Twin-Ready Courses
         </h1>
       </div>
 
       {/* Faculty Filter */}
       <div className="text-center mb-6 sm:mb-8 px-2 sm:px-4">
-        <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Choose Your Faculty</h2>
+        <h2 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Choose Your Faculty</h2>
         <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-4 sm:mb-6 max-w-6xl mx-auto">
           {faculties.map((faculty) => (
             <Button
@@ -779,7 +779,7 @@ const TwinCourses = () => {
           ))}
         </div>
         <div className="text-center px-2">
-          <h3 className="text-base sm:text-lg font-semibold mb-2">{selectedFaculty}</h3>
+          <h3 className="text-sm font-semibold mb-2">{selectedFaculty}</h3>
           <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
             {selectedFaculty === "Faculty of Technology & Engineering" && "Comprehensive technology education for the digital age"}
             {selectedFaculty === "Faculty of Business & Management" && "Strategic business skills for modern entrepreneurs"}
@@ -892,7 +892,7 @@ const TwinCourses = () => {
       <div className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-20">
         <div className="w-14 h-14 sm:w-20 sm:h-20 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer">
           <Avatar className="w-10 h-10 sm:w-16 sm:h-16">
-            <AvatarFallback className="bg-white/20 text-white text-lg sm:text-2xl">
+            <AvatarFallback className="bg-white/20 text-white text-sm sm:text-base">
               🤖
             </AvatarFallback>
           </Avatar>
@@ -914,7 +914,7 @@ const TwinCourses = () => {
       <div className="max-w-lg mx-auto px-2 sm:px-4">
         <div className="flex items-center justify-between text-xs sm:text-sm text-gray-600 bg-white rounded-full px-3 sm:px-6 py-2.5 sm:py-3 shadow-lg">
           <div className="flex items-center gap-1 sm:gap-2">
-            <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
+            <Lightbulb className="h-4 w-4 sm:h-5 sm:w-5 text-indigo-500" />
             <span className="text-indigo-600 font-medium hidden sm:inline">Home</span>
             <span className="text-indigo-600 font-medium sm:hidden">🏠</span>
           </div>
@@ -959,7 +959,7 @@ const TwinCourses = () => {
               <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 border border-logo-teal/20 rounded-lg p-3 sm:p-4">
                 <div className="flex items-center justify-between mb-2 sm:mb-3">
                   <h4 className="font-semibold text-logo-teal text-sm sm:text-base">Course Pricing</h4>
-                  <span className="text-xl sm:text-2xl font-bold text-logo-blue">
+                  <span className="text-base sm:text-lg font-bold text-logo-blue">
                     {disciplinePricing[selectedDiscipline] || "$99"}
                   </span>
                 </div>

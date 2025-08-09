@@ -1,14 +1,14 @@
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/contexts/AuthContext";
 import LandingPage from "./pages/LandingPage";
 import DashboardLayout from "@/components/DashboardLayout";
 import MyTwin from "./pages/dashboard/MyTwin";
 import Volumes from "./pages/dashboard/Volumes";
 import TwinCourses from "./pages/dashboard/TwinCourses";
-import DailyTasks from "./pages/dashboard/DailyTasks";
+import DailyTasks from "./pages/dashboard/DailyTasksSimplified";
 import Milestones from "./pages/dashboard/Milestones";
 import Analytics from "./pages/dashboard/Analytics";
 import Settings from "./pages/dashboard/Settings";
@@ -31,6 +31,7 @@ import TwinShowcase from "./pages/TwinShowcase";
 import Verification from "./pages/Verification";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
+import EnterpriseWaitingList from "@/components/EnterpriseWaitingList";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,10 @@ const AppRoutes = () => {
 
       {/* Login/signup page */}
       <Route path="/login" element={<LandingPage />} />
+
+      {/* Dashboard redirect for compatibility */}
+      <Route path="/dashboard" element={<Navigate to="/train-your-twin-app" replace />} />
+      <Route path="/dashboard/*" element={<Navigate to="/train-your-twin-app" replace />} />
 
       {/* Train Your Twin app - conditional access based on authentication */}
       {user ? (
@@ -94,6 +99,7 @@ const AppRoutes = () => {
       <Route path="/train-your-twin" element={<TrainYourTwin />} />
       <Route path="/twin-showcase" element={<TwinShowcase />} />
       <Route path="/verification" element={<Verification />} />
+      <Route path="/enterprise-waiting-list" element={<EnterpriseWaitingList />} />
 
       {/* Blog Pages */}
       <Route

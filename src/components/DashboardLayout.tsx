@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/contexts/AuthContext";
 import {
-  Brain,
+  User,
   BookOpen,
   Calendar,
   BarChart3,
@@ -14,7 +14,6 @@ import {
   GraduationCap,
   Archive,
   MoreHorizontal,
-  User,
   ArrowRight,
   Trophy,
   ChevronDown,
@@ -44,7 +43,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     {
       name: "My Twin",
       href: "/train-your-twin-app",
-      icon: Brain,
+      icon: User,
       current: location.pathname === "/train-your-twin-app",
     },
     {
@@ -90,19 +89,22 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
     <div className="min-h-screen bg-background">
       {/* Top Header */}
       <header className="bg-background border-b border-border sticky top-0 z-40">
-        <div className="mx-auto px-3 sm:px-4 lg:px-8">
-          <div className="flex h-14 sm:h-16 items-center justify-between">
+        <div className="header-container mx-auto px-3 sm:px-4 lg:px-8">
+          <div className="flex h-16 sm:h-18 lg:h-20 xl:h-24 items-center justify-between">
             {/* Logo */}
-            <div className="flex items-center space-x-8">
+            <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-8">
               <Link
                 to="/"
                 className="flex items-center hover:opacity-80 transition-opacity"
               >
                 <img
-                  src="https://cdn.builder.io/api/v1/assets/28f4ebcd9c724a92b92fccb7c4a1791f/twinternet-logo-5bbd50?format=webp&width=800"
-                  alt="AnansiAI"
-                  className="h-8 w-8"
+                  src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
+                  alt="Anansi AI"
+                  className="responsive-logo header-logo h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 xl:h-20 xl:w-20 2xl:h-24 2xl:w-24"
                 />
+                <span className="header-text ml-2 sm:ml-3 text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent whitespace-nowrap hidden sm:block">
+                  Anansi AI
+                </span>
               </Link>
 
               {/* Desktop Navigation */}
@@ -114,7 +116,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                       key={item.name}
                       to={item.href}
                       className={`
-                        flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group
+                        flex items-center space-x-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group font-poppins
                         ${
                           item.current
                             ? "bg-logo-teal text-white shadow-sm"
@@ -160,7 +162,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                         key={item.name}
                         to={item.href}
                         className={`
-                          flex flex-col items-center px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 min-w-[4rem]
+                          flex flex-col items-center px-3 py-2 rounded-lg text-xs font-medium transition-all duration-200 min-w-[4rem] font-poppins
                           ${
                             item.current
                               ? "bg-logo-teal text-white shadow-sm"
@@ -200,11 +202,11 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             </div>
 
             {/* Right side */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               {/* Twin Status */}
               <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-logo-teal/5 to-logo-blue/5 px-3 py-2 rounded-lg border border-logo-teal/20">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center">
-                  <Brain className="h-3 w-3 text-white" />
+                  <User className="h-3 w-3 text-white" />
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">
@@ -220,7 +222,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="flex items-center space-x-2 p-2 hover:bg-muted/50 rounded-lg">
-                    <div className="hidden sm:block text-sm text-foreground font-medium">
+                    <div className="hidden sm:block text-sm text-foreground font-medium font-poppins">
                       {user?.name}
                     </div>
                     <div className="w-8 h-8 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center text-white font-semibold text-sm">
@@ -296,7 +298,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
                     key={item.name}
                     to={item.href}
                     className={`
-                      flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation min-h-[48px]
+                      flex items-center space-x-3 px-3 py-3 rounded-lg text-sm font-medium transition-all duration-200 touch-manipulation min-h-[48px] font-poppins
                       ${
                         item.current
                           ? "bg-gradient-to-r from-logo-teal to-logo-blue text-white shadow-lg"
@@ -383,7 +385,13 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       </header>
 
       {/* Main content */}
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 min-h-0">
+        <div className="h-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8">
+          <div className="h-full overflow-auto">
+            {children}
+          </div>
+        </div>
+      </main>
     </div>
   );
 };

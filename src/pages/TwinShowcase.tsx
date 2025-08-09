@@ -131,7 +131,7 @@ const TwinShowcase = () => {
       <section className="py-16 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6">
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
               <span className="bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Twin Showcase
               </span>
@@ -206,7 +206,7 @@ const TwinShowcase = () => {
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between">
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center text-2xl">
+                        <div className="w-12 h-12 bg-gradient-to-br from-logo-teal/20 to-logo-blue/20 rounded-full flex items-center justify-center text-lg">
                           {twin.avatar}
                         </div>
                         <div>

@@ -39,7 +39,7 @@ const AdultFastTrack = () => {
               Adult Fast-Track Program
             </div>
 
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold tracking-tight mb-4 sm:mb-6">
               <span className="bg-gradient-to-br from-logo-blue to-cyber-blue bg-clip-text text-transparent">
                 It's Never Too Late
               </span>
@@ -90,7 +90,7 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Zap className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Accelerated Learning</h3>
+                <h3 className="text-base font-bold mb-4">Accelerated Learning</h3>
                 <p className="text-muted-foreground text-sm">
                   Skip years of gradual development with our intensive
                   curriculum designed specifically for adult learners.
@@ -103,7 +103,7 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <TrendingUp className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Career-Focused</h3>
+                <h3 className="text-base font-bold mb-4">Career-Focused</h3>
                 <p className="text-muted-foreground text-sm">
                   Training directly aligned with professional needs and current
                   workplace challenges.
@@ -116,7 +116,7 @@ const AdultFastTrack = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <Target className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Immediate Results</h3>
+                <h3 className="text-base font-bold mb-4">Immediate Results</h3>
                 <p className="text-muted-foreground text-sm">
                   Begin seeing productive AI Twin capabilities within weeks, not
                   years.
@@ -143,7 +143,7 @@ const AdultFastTrack = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
-                <span className="text-xl font-bold">1</span>
+                <span className="text-sm font-bold">1</span>
               </div>
               <h3 className="text-base font-bold mb-3">Intensive Foundation</h3>
               <p className="text-muted-foreground text-sm">
@@ -155,7 +155,7 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
-                <span className="text-xl font-bold">2</span>
+                <span className="text-sm font-bold">2</span>
               </div>
               <h3 className="text-base font-bold mb-3">
                 Professional Integration
@@ -169,7 +169,7 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent to-logo-teal text-white mb-6">
-                <span className="text-xl font-bold">3</span>
+                <span className="text-sm font-bold">3</span>
               </div>
               <h3 className="text-base font-bold mb-3">Specialized Skills</h3>
               <p className="text-muted-foreground text-sm">
@@ -180,7 +180,7 @@ const AdultFastTrack = () => {
 
             <div className="text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
-                <span className="text-xl font-bold">4</span>
+                <span className="text-sm font-bold">4</span>
               </div>
               <h3 className="text-base font-bold mb-3">Advanced Deployment</h3>
               <p className="text-muted-foreground text-sm">
@@ -373,7 +373,7 @@ const AdultFastTrack = () => {
                 <h3 className="text-lg font-bold mb-6">
                   Adult Fast-Track Program
                 </h3>
-                <div className="text-xl font-bold text-logo-teal mb-4">
+                <div className="text-base font-bold text-logo-teal mb-4">
                   $2,500
                 </div>
                 <p className="text-muted-foreground mb-6">

@@ -66,7 +66,7 @@ const ContactUs = () => {
                 Partner with Us
               </div>
 
-              <h1 className="text-sm sm:text-base lg:text-lg font-bold mb-4">
+              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
                 Transform Your Organization with{" "}
                 <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                   AI Twin Solutions
@@ -209,7 +209,7 @@ const ContactUs = () => {
                       <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
                         <CheckCircle className="h-8 w-8 text-green-600" />
                       </div>
-                      <h3 className="text-sm font-bold mb-2">
+                      <h3 className="text-base font-bold mb-2">
                         Message Sent Successfully!
                       </h3>
                       <p className="text-muted-foreground mb-6">
@@ -236,7 +236,7 @@ const ContactUs = () => {
                         <Users className="h-6 w-6 text-logo-teal" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Educational Institutions
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -255,7 +255,7 @@ const ContactUs = () => {
                         <Target className="h-6 w-6 text-logo-blue" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Technology Partners
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -275,7 +275,7 @@ const ContactUs = () => {
                         <Mail className="h-6 w-6 text-cyber-blue" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-bold mb-2">
+                        <h3 className="text-base font-bold mb-2">
                           Research Collaborators
                         </h3>
                         <p className="text-muted-foreground text-sm">
@@ -333,7 +333,7 @@ const ContactUs = () => {
             <div className="max-w-2xl mx-auto">
               <Card className="border-0 bg-background shadow-lg">
                 <CardContent className="p-8 text-center">
-                  <h3 className="text-sm font-bold mb-4">
+                  <h3 className="text-base font-bold mb-4">
                     Subscribe to Our Newsletter
                   </h3>
                   <p className="text-muted-foreground mb-6">

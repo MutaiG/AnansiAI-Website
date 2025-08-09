@@ -332,7 +332,7 @@ const EnterpriseTwin = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Users className="h-8 w-8 text-ai-accent mb-4" />
-              <h3 className="font-bold mb-2">Scalable Training</h3>
+              <h3 className="text-sm font-bold mb-2">Scalable Training</h3>
               <p className="text-sm text-muted-foreground">
                 Provides consistent onboarding and training experiences for all
                 team members.
@@ -341,7 +341,7 @@ const EnterpriseTwin = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Lock className="h-8 w-8 text-cyber-blue mb-4" />
-              <h3 className="font-bold mb-2">Data Sovereignty</h3>
+              <h3 className="text-sm font-bold mb-2">Data Sovereignty</h3>
               <p className="text-sm text-muted-foreground">
                 Complete control over your data and AI model with no external
                 dependencies.
@@ -350,7 +350,7 @@ const EnterpriseTwin = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <TrendingUp className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Competitive Advantage</h3>
+              <h3 className="text-sm font-bold mb-2">Competitive Advantage</h3>
               <p className="text-sm text-muted-foreground">
                 Unique AI that competitors cannot replicate or access.
               </p>

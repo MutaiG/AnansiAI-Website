@@ -385,7 +385,13 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
       </header>
 
       {/* Main content */}
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 min-h-0">
+        <div className="h-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8">
+          <div className="h-full overflow-auto">
+            {children}
+          </div>
+        </div>
+      </main>
     </div>
   );
 };

@@ -243,7 +243,7 @@ const Analytics = () => {
               >
                 <div className="flex items-start justify-between mb-2">
                   <div className="flex-1">
-                    <h4 className="font-medium">{achievement.title}</h4>
+                    <h4 className="font-medium text-sm">{achievement.title}</h4>
                     <p className="text-sm text-muted-foreground">
                       {achievement.description}
                     </p>

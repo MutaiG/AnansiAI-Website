@@ -208,7 +208,7 @@ const Milestones = () => {
             <div className="flex items-center gap-3 mb-2">
               <currentMilestone.icon className="h-6 w-6 text-logo-teal" />
               <div>
-                <h4 className="font-semibold text-logo-teal">{analytics.focusArea}</h4>
+                <h4 className="font-semibold text-sm text-logo-teal">{analytics.focusArea}</h4>
                 <p className="text-sm text-muted-foreground">{analytics.insights}</p>
               </div>
             </div>
@@ -321,21 +321,21 @@ const Milestones = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <h4 className="font-semibold mb-2">🎯 Objective</h4>
+            <h4 className="font-semibold text-sm mb-2">🎯 Objective</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.objective}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">⚙️ Method</h4>
+            <h4 className="font-semibold text-sm mb-2">⚙️ Method</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.method}
             </p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-2">✨ Outcome</h4>
+            <h4 className="font-semibold text-sm mb-2">✨ Outcome</h4>
             <p className="text-sm text-muted-foreground">
               {currentMilestone.outcome}
             </p>

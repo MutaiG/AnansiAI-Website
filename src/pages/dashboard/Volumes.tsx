@@ -194,7 +194,7 @@ const Volumes = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="font-medium">{entry.title}</h3>
+                      <h3 className="font-medium text-sm">{entry.title}</h3>
                       <Badge variant="outline" className="text-xs">
                         {entry.type}
                       </Badge>

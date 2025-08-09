@@ -346,7 +346,7 @@ const MyTwin = () => {
             {/* Unified Share Interface with Quick Actions */}
             <Card>
               <CardContent className="p-6">
-                <h3 className="font-semibold text-base mb-4 flex items-center gap-2">
+                <h3 className="font-semibold text-sm mb-4 flex items-center gap-2">
                   <Share2 className="h-5 w-5 text-logo-teal" />
                   Share with Your Twin
                 </h3>
@@ -508,7 +508,7 @@ const MyTwin = () => {
             {/* Twin Status */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
                   <User className="h-4 w-4 text-logo-teal" />
                   Twin Status
                 </h3>
@@ -540,7 +540,7 @@ const MyTwin = () => {
             {/* Conversation Topics */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-logo-blue" />
                   Topics We Explore
                 </h3>
@@ -561,7 +561,7 @@ const MyTwin = () => {
             {/* Twin Insights */}
             <Card>
               <CardContent className="p-4">
-                <h3 className="font-medium mb-3 flex items-center gap-2">
+                <h3 className="font-medium text-sm mb-3 flex items-center gap-2">
                   <Star className="h-4 w-4 text-cyber-blue" />
                   What I Know About You
                 </h3>

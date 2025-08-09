@@ -8,7 +8,7 @@ import DashboardLayout from "@/components/DashboardLayout";
 import MyTwin from "./pages/dashboard/MyTwin";
 import Volumes from "./pages/dashboard/Volumes";
 import TwinCourses from "./pages/dashboard/TwinCourses";
-import DailyTasks from "./pages/dashboard/DailyTasks";
+import DailyTasks from "./pages/dashboard/DailyTasksSimplified";
 import Milestones from "./pages/dashboard/Milestones";
 import Analytics from "./pages/dashboard/Analytics";
 import Settings from "./pages/dashboard/Settings";

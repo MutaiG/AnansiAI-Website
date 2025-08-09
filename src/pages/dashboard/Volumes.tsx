@@ -147,7 +147,7 @@ const Volumes = () => {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
         <Card>
           <CardContent className="p-4 text-center">
             <div className="text-base font-bold text-logo-teal">

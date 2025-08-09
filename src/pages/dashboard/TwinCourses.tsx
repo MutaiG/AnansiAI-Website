@@ -760,7 +760,7 @@ const TwinCourses = () => {
 
       {/* Faculty Filter */}
       <div className="text-center mb-6 sm:mb-8 px-2 sm:px-4">
-        <h2 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Choose Your Faculty</h2>
+        <h2 className="text-base sm:text-lg font-bold mb-3 sm:mb-4">Choose Your Faculty</h2>
         <div className="flex flex-wrap justify-center gap-1.5 sm:gap-2 mb-4 sm:mb-6 max-w-6xl mx-auto">
           {faculties.map((faculty) => (
             <Button

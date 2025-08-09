@@ -299,7 +299,7 @@ const Milestones = () => {
               <currentMilestone.icon className="h-8 w-8 text-white" />
             </div>
             <div>
-              <CardTitle className="text-xl">
+              <CardTitle className="text-lg">
                 {currentMilestone.title}
               </CardTitle>
               <div className="flex items-center gap-2 mt-1">

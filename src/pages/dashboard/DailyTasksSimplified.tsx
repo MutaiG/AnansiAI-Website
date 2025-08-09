@@ -147,7 +147,7 @@ const DailyTasks = () => {
       )}
 
       {/* Filters */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-1.5 sm:gap-2 overflow-x-auto mobile-scroll pb-2">
         <Button
           variant={activeFilter === "all" ? "default" : "outline"}
           size="sm"

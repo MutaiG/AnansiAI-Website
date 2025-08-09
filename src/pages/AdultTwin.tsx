@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import PageNavigation from "@/components/PageNavigation";
-import WaitlistCTA from "@/components/WaitlistCTA";
 import {
   Briefcase,
   Target,

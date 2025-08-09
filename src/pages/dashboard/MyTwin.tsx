@@ -66,7 +66,7 @@ const MyTwin = () => {
   const handleSendMessage = () => {
     if (inputText.trim() || selectedFiles.length > 0) {
       // Handle message sending logic here
-      console.log("Sending:", { text: inputText, files: selectedFiles });
+      // Send to backend API here
       setInputText("");
       setSelectedFiles([]);
     }

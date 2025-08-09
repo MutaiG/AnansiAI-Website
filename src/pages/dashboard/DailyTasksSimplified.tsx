@@ -177,7 +177,7 @@ const DailyTasks = () => {
       </div>
 
       {/* Tasks */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         {filteredTasks.map((task) => (
           <Card key={task.id} className={`transition-all duration-200 ${
             task.completed 

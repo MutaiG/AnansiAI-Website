@@ -97,7 +97,7 @@ const Volumes = () => {
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Your Volumes</h1>
+        <h1 className="text-lg font-bold mb-2">Your Volumes</h1>
         <p className="text-muted-foreground">
           Your personal library of shared memories and experiences
         </p>

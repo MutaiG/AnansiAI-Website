@@ -121,7 +121,7 @@ const DailyTasks = () => {
       {showTaskCreation && (
         <Card className="border-logo-teal/20 bg-logo-teal/5">
           <CardHeader>
-            <CardTitle className="text-lg">Create New Task</CardTitle>
+            <CardTitle className="text-base">Create New Task</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">

@@ -124,14 +124,14 @@ const DailyTasks = () => {
           <CardHeader>
             <CardTitle className="text-base">Create New Task</CardTitle>
           </CardHeader>
-          <CardContent>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <CardContent className="px-3 sm:px-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
               {["memory", "planning", "growth", "reflection"].map((type) => (
                 <Button
                   key={type}
                   variant="outline"
                   onClick={() => createSpecificTask(type)}
-                  className="h-auto p-4 flex flex-col items-center gap-2"
+                  className="h-auto p-2 sm:p-4 flex flex-col items-center gap-2"
                 >
                   <span className="text-base">
                     {categoryIcons[type.charAt(0).toUpperCase() + type.slice(1) as keyof typeof categoryIcons]}

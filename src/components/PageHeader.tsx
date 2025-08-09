@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Brain, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 interface PageHeaderProps {
   showBackButton?: boolean;
@@ -49,7 +49,11 @@ const PageHeader: React.FC<PageHeaderProps> = ({
         onClick={handleLogoClick}
         className="cursor-pointer flex items-center gap-2 hover:opacity-80 transition-opacity"
       >
-        <Brain className="h-8 w-8 text-logo-teal" />
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fa8153a8a168448789baa0c2bfbb61625?format=webp&width=800"
+          alt="Anansi AI Twin Process"
+          className="h-8 w-8 object-contain"
+        />
         <span className="text-xl font-bold bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
           Anansi AI
         </span>

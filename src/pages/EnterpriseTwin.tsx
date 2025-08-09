@@ -82,7 +82,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Beyond Generic Corporate AI
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -98,7 +98,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Brain className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Organizational Intelligence
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -113,7 +113,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Network className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">
+                <h3 className="text-base font-bold mb-4">
                   Collaborative Learning
                 </h3>
                 <p className="text-muted-foreground text-sm">
@@ -128,7 +128,7 @@ const EnterpriseTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Shield className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Enterprise Security</h3>
+                <h3 className="text-base font-bold mb-4">Enterprise Security</h3>
                 <p className="text-muted-foreground text-sm">
                   Your data stays within your infrastructure. Complete ownership
                   and control over your AI asset.
@@ -143,7 +143,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Core Capabilities
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -237,7 +237,7 @@ const EnterpriseTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Implementation Process
             </h2>
             <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
@@ -298,7 +298,7 @@ const EnterpriseTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Organizational Benefits
             </h2>
           </div>

@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import {
-  Brain,
+  User,
   MessageCircle,
   Send,
   Sparkles,
@@ -509,7 +509,7 @@ const MyTwin = () => {
             <Card>
               <CardContent className="p-4">
                 <h3 className="font-medium mb-3 flex items-center gap-2">
-                  <Brain className="h-4 w-4 text-logo-teal" />
+                  <User className="h-4 w-4 text-logo-teal" />
                   Twin Status
                 </h3>
                 <div className="space-y-3">

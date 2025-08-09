@@ -6,7 +6,7 @@ import {
   Calendar,
   Target,
   Award,
-  Brain,
+  Settings,
   BarChart3,
   Clock,
   CheckCircle,
@@ -118,7 +118,7 @@ const Analytics = () => {
       <Card className="mb-6">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Brain className="h-5 w-5 text-logo-teal" />
+            <Settings className="h-5 w-5 text-logo-teal" />
             Twin Training Progress
           </CardTitle>
         </CardHeader>

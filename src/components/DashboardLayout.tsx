@@ -204,7 +204,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
               {/* Twin Status */}
               <div className="hidden lg:flex items-center space-x-3 bg-gradient-to-r from-logo-teal/5 to-logo-blue/5 px-3 py-2 rounded-lg border border-logo-teal/20">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center">
-                  <Brain className="h-3 w-3 text-white" />
+                  <User className="h-3 w-3 text-white" />
                 </div>
                 <div>
                   <p className="text-xs font-medium text-foreground">

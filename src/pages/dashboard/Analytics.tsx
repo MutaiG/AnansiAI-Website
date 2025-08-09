@@ -147,7 +147,7 @@ const Analytics = () => {
                 <div className="text-xs text-muted-foreground">Twin Status</div>
               </div>
               <div className="text-center">
-                <div className="text-lg font-semibold text-purple-600">
+                <div className="text-base font-semibold text-purple-600">
                   Learning
                 </div>
                 <div className="text-xs text-muted-foreground">Phase</div>

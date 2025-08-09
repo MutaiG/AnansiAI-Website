@@ -92,7 +92,7 @@ const VisionMission = () => {
 
               <Card className="border-2 border-logo-teal shadow-2xl">
                 <CardContent className="p-10">
-                  <h3 className="text-lg font-bold mb-6">Mission Pillars</h3>
+                  <h3 className="text-base font-bold mb-6">Mission Pillars</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
@@ -136,7 +136,7 @@ const VisionMission = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <Card className="border-2 border-logo-blue shadow-2xl order-2 lg:order-1">
                 <CardContent className="p-10">
-                  <h3 className="text-lg font-bold mb-6">Vision in Action</h3>
+                  <h3 className="text-base font-bold mb-6">Vision in Action</h3>
                   <div className="space-y-4">
                     <div className="flex items-start">
                       <GraduationCap className="h-6 w-6 text-logo-blue mr-3 mt-1" />
@@ -316,7 +316,7 @@ const VisionMission = () => {
             </div>
 
             <div className="p-8 rounded-xl bg-gradient-to-br from-logo-teal/10 to-logo-blue/10 border-2 border-logo-teal/20">
-              <h3 className="text-lg font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 Join Us in Shaping This Future
               </h3>
               <p className="text-sm text-muted-foreground mb-6">

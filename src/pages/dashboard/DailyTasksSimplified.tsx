@@ -132,7 +132,7 @@ const DailyTasks = () => {
                   onClick={() => createSpecificTask(type)}
                   className="h-auto p-4 flex flex-col items-center gap-2"
                 >
-                  <span className="text-2xl">
+                  <span className="text-base">
                     {categoryIcons[type.charAt(0).toUpperCase() + type.slice(1) as keyof typeof categoryIcons]}
                   </span>
                   <span className="text-sm font-medium">

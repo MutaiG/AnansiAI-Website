@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import {
   Trophy,
-  Brain,
   Users,
   BookOpen,
   MessageSquare,

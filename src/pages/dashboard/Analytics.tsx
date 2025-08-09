@@ -69,7 +69,7 @@ const Analytics = () => {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold mb-2">Analytics</h1>
+        <h1 className="text-lg font-bold mb-2">Analytics</h1>
         <p className="text-muted-foreground">
           Track your Twin training progress and insights
         </p>
@@ -79,7 +79,7 @@ const Analytics = () => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-teal">
+            <div className="text-base font-bold text-logo-teal">
               {stats.totalEntries}
             </div>
             <div className="text-xs text-muted-foreground">Total Entries</div>
@@ -88,7 +88,7 @@ const Analytics = () => {
 
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-logo-blue">
+            <div className="text-base font-bold text-logo-blue">
               {stats.weeklyStreak}
             </div>
             <div className="text-xs text-muted-foreground">Day Streak</div>
@@ -97,7 +97,7 @@ const Analytics = () => {
 
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-green-600">
+            <div className="text-base font-bold text-green-600">
               {stats.totalPoints}
             </div>
             <div className="text-xs text-muted-foreground">Total Points</div>
@@ -106,7 +106,7 @@ const Analytics = () => {
 
         <Card>
           <CardContent className="p-4 text-center">
-            <div className="text-2xl font-bold text-purple-600">
+            <div className="text-base font-bold text-purple-600">
               {stats.averageDaily}
             </div>
             <div className="text-xs text-muted-foreground">Daily Average</div>

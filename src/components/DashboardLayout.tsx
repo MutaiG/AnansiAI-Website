@@ -14,7 +14,6 @@ import {
   GraduationCap,
   Archive,
   MoreHorizontal,
-  User,
   ArrowRight,
   Trophy,
   ChevronDown,

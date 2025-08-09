@@ -470,14 +470,15 @@ const AdultFastTrack = () => {
               </div>
             </div>
 
-            <WaitlistCTA productType="adult">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white px-10 py-7 text-xl font-bold hover:scale-105 transition-all duration-300"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-logo-blue to-cyber-blue text-white px-10 py-7 text-sm font-bold hover:scale-105 transition-all duration-300"
+            >
+              <Link to="/login">
                 Start Your Fast-Track Journey
-              </Button>
-            </WaitlistCTA>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>

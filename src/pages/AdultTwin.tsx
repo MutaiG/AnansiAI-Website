@@ -85,7 +85,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Why Adults Need Their Own Twin
             </h2>
           </div>
@@ -96,7 +96,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Award className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Own Your AI Future</h3>
+                <h3 className="text-base font-bold mb-4">Own Your AI Future</h3>
                 <p className="text-muted-foreground text-sm">
                   Build lasting value with AI that's truly yours. Your Twin
                   preserves your voice, your thinking, and your method, creating
@@ -110,7 +110,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <TrendingUp className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Stay Competitive</h3>
+                <h3 className="text-base font-bold mb-4">Stay Competitive</h3>
                 <p className="text-muted-foreground text-sm">
                   While others use generic AI tools, your Twin learns to work
                   exactly like you, giving you a unique advantage in the modern
@@ -124,7 +124,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <UserCheck className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Your Unique Voice</h3>
+                <h3 className="text-base font-bold mb-4">Your Unique Voice</h3>
                 <p className="text-muted-foreground text-sm">
                   Your Twin understands your tone, reasoning, and skill set
                   because it learns directly from you, not scraped data.
@@ -139,7 +139,7 @@ const AdultTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               How It Works
             </h2>
           </div>
@@ -149,7 +149,7 @@ const AdultTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-8">
                 <Brain className="h-10 w-10" />
               </div>
-              <h3 className="text-sm font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 1. Montage Learning Program
               </h3>
               <p className="text-muted-foreground text-sm">
@@ -163,7 +163,7 @@ const AdultTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-8">
                 <Cpu className="h-10 w-10" />
               </div>
-              <h3 className="text-sm font-bold mb-4">2. Your Work Feeds It</h3>
+              <h3 className="text-base font-bold mb-4">2. Your Work Feeds It</h3>
               <p className="text-muted-foreground text-sm">
                 Emails, reports, chats, voice notes. The Twin trains on the real
                 tasks you do daily.
@@ -174,7 +174,7 @@ const AdultTwin = () => {
               <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent to-logo-teal text-white mb-8">
                 <Target className="h-10 w-10" />
               </div>
-              <h3 className="text-sm font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 3. Human-Guided Finishing Touch
               </h3>
               <p className="text-muted-foreground text-sm">
@@ -190,7 +190,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Who It's For
             </h2>
           </div>
@@ -244,7 +244,7 @@ const AdultTwin = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-4">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-4">
               Course Disciplines Available
             </h2>
             <p className="text-sm text-muted-foreground">
@@ -259,7 +259,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
                   <Cpu className="h-10 w-10 text-logo-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Programming & Development</h3>
+                <h3 className="text-base font-bold mb-4">Programming & Development</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-logo-blue mr-2" />
@@ -283,7 +283,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Brain className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">AI & Machine Learning</h3>
+                <h3 className="text-base font-bold mb-4">AI & Machine Learning</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-cyber-blue mr-2" />
@@ -307,7 +307,7 @@ const AdultTwin = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-8">
                   <Zap className="h-10 w-10 text-ai-accent" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Security & Cloud</h3>
+                <h3 className="text-base font-bold mb-4">Security & Cloud</h3>
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-ai-accent mr-2" />
@@ -332,7 +332,7 @@ const AdultTwin = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-sm sm:text-base lg:text-lg font-bold font-poppins mb-8">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold font-poppins mb-8">
               Why It's Different
             </h2>
 

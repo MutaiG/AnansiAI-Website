@@ -162,6 +162,32 @@
     object-fit: contain;
   }
 
+  /* Mobile-first responsive dashboard improvements */
+  @media (max-width: 640px) {
+    /* Improve touch targets on mobile */
+    .mobile-touch-target {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Better scrolling on mobile */
+    .mobile-scroll {
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .mobile-scroll::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  /* Ensure content doesn't overflow horizontally */
+  .dashboard-container {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   /* Global font size adjustments for smaller text */
   .text-xs { font-size: 11px; }
   .text-sm { font-size: 13px; }

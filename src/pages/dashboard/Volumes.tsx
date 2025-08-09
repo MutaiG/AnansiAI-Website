@@ -114,7 +114,7 @@ const Volumes = () => {
             className="pl-10"
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           <Button
             variant={filterType === "all" ? "default" : "outline"}
             size="sm"

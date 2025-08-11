@@ -48,7 +48,7 @@ const EducationRevolution = () => {
       <section className="pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto prose prose-lg">
-            <h2 className="text-2xl font-bold mb-6 flex items-center">
+            <h2 className="text-lg font-bold mb-6 flex items-center">
               <GraduationCap className="h-6 w-6 text-logo-blue mr-3" />
               The Problem with One-Size-Fits-All AI
             </h2>
@@ -68,7 +68,7 @@ const EducationRevolution = () => {
               methods.
             </p>
 
-            <h2 className="text-2xl font-bold mb-6 flex items-center">
+            <h2 className="text-lg font-bold mb-6 flex items-center">
               <Users className="h-6 w-6 text-logo-teal mr-3" />
               Enter AI Twins: Personalized Learning Companions
             </h2>
@@ -108,7 +108,7 @@ const EducationRevolution = () => {
               </ul>
             </div>
 
-            <h2 className="text-2xl font-bold mb-6">
+            <h2 className="text-lg font-bold mb-6">
               The Impact on Classrooms
             </h2>
 
@@ -136,7 +136,7 @@ const EducationRevolution = () => {
               </li>
             </ul>
 
-            <h2 className="text-2xl font-bold mb-6">Starting Early Matters</h2>
+            <h2 className="text-lg font-bold mb-6">Starting Early Matters</h2>
 
             <p className="text-muted-foreground mb-6 leading-relaxed">
               The earlier students begin training their AI Twin, the more
@@ -153,7 +153,7 @@ const EducationRevolution = () => {
             </p>
 
             <div className="bg-gradient-to-r from-logo-teal/10 to-logo-blue/10 rounded-lg p-8 text-center mb-12">
-              <h3 className="text-xl font-bold mb-4">
+              <h3 className="text-base font-bold mb-4">
                 Ready to Join the Education Revolution?
               </h3>
               <p className="text-muted-foreground mb-6">

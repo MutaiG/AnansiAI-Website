@@ -40,7 +40,7 @@ const ComingSoonDialog = ({ children, feature }: ComingSoonDialogProps) => {
                 <Clock className="h-8 w-8 text-logo-teal" />
               </div>
 
-              <h3 className="text-xl font-bold mb-3">
+              <h3 className="text-base font-bold mb-3">
                 {feature} is Coming Soon!
               </h3>
 

@@ -4,20 +4,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import BackButton from "@/components/BackButton";
-import { Link } from "react-router-dom";
 import {
   Mail,
-  MessageSquare,
-  ArrowLeft,
   Send,
   CheckCircle,
   Users,
-  Handshake,
-  Target,
   Building2,
+  MessageSquare,
 } from "lucide-react";
 
 const ContactUs = () => {
@@ -29,12 +26,17 @@ const ContactUs = () => {
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    // Send to backend API here
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    
     setIsSubmitted(true);
+    setIsSubmitting(false);
   };
 
   const handleChange = (
@@ -48,7 +50,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-serif">
       <Navigation />
 
       {/* Back Button */}
@@ -56,305 +58,199 @@ const ContactUs = () => {
         <BackButton fallbackPath="/" />
       </div>
 
-      <section className="py-24 lg:py-32">
+      {/* Hero Section */}
+      <section className="py-16 sm:py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80 backdrop-blur-sm mb-8">
-                <Handshake className="mr-2 h-5 w-5 text-logo-teal" />
-                Partner with Us
-              </div>
-
-              <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
-                Transform Your Organization with{" "}
-                <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
-                  AI Twin Solutions
-                </span>
-              </h1>
-              <p className="text-sm text-muted-foreground max-w-3xl mx-auto">
-                Ready to implement Enterprise Twin, Student Twin, or Adult Twin
-                solutions? Contact us to discuss your specific needs and get
-                started with personalized AI that understands your organization.
-              </p>
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80 backdrop-blur-sm mb-6">
+              <MessageSquare className="mr-2 h-4 w-4 text-logo-teal" />
+              Contact Us
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <Card className="shadow-xl border-0">
-                <CardHeader>
-                  <CardTitle className="flex items-center text-sm">
-                    <MessageSquare className="mr-3 h-6 w-6 text-logo-teal" />
-                    Get in Touch
-                  </CardTitle>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 font-serif">
+              <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
+                Get in Touch
+              </span>
+            </h1>
+
+            <p className="mx-auto max-w-xl text-sm sm:text-base text-muted-foreground mb-8 leading-relaxed font-sans">
+              Have questions about AI Twins? Want to partner with us? We'd love to hear from you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form - Centered */}
+      <section className="py-8 pb-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-md mx-auto">
+            {!isSubmitted ? (
+              <Card className="border border-logo-teal/20 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 shadow-xl">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-base font-bold font-serif">Send us a message</CardTitle>
+                  <p className="text-xs text-muted-foreground font-sans">We'll get back to you within 24 hours</p>
                 </CardHeader>
-                <CardContent>
-                  {!isSubmitted ? (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="name" className="text-sm font-medium">
-                          Full Name *
-                        </Label>
+                <CardContent className="p-4">
+                  <form onSubmit={handleSubmit} className="space-y-3">
+                    <div className="space-y-3">
+                      <div className="space-y-1">
+                        <Label htmlFor="name" className="text-xs font-sans">Name *</Label>
                         <Input
                           id="name"
                           name="name"
-                          type="text"
-                          placeholder="John Doe"
                           value={formData.name}
                           onChange={handleChange}
+                          placeholder="Your name"
+                          className="h-8 border-logo-teal/30 focus:border-logo-teal"
                           required
-                          className="h-12"
                         />
                       </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="email" className="text-sm font-medium">
-                          Email Address *
-                        </Label>
+                      <div className="space-y-1">
+                        <Label htmlFor="email" className="text-xs font-sans">Email *</Label>
                         <Input
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="your.email@organization.com"
                           value={formData.email}
                           onChange={handleChange}
+                          placeholder="your@email.com"
+                          className="h-8 border-logo-teal/30 focus:border-logo-teal"
                           required
-                          className="h-12"
                         />
                       </div>
-
-                      <div className="space-y-2">
-                        <Label
-                          htmlFor="company"
-                          className="text-sm font-medium"
-                        >
-                          Company/Organization *
-                        </Label>
-                        <Input
-                          id="company"
-                          name="company"
-                          type="text"
-                          placeholder="Your Company Name"
-                          value={formData.company}
-                          onChange={handleChange}
-                          required
-                          className="h-12"
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label
-                          htmlFor="inquiryType"
-                          className="text-sm font-medium"
-                        >
-                          Inquiry Type *
-                        </Label>
-                        <select
-                          id="inquiryType"
-                          name="inquiryType"
-                          value={formData.inquiryType}
-                          onChange={handleChange}
-                          required
-                          className="w-full h-12 px-3 rounded-md border border-input bg-background text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        >
-                          <option value="">Select inquiry type</option>
-                          <option value="enterprise-twin">
-                            Enterprise Twin Solution
-                          </option>
-                          <option value="student-twin">
-                            Student Twin Program
-                          </option>
-                          <option value="adult-twin">
-                            Adult Twin Training
-                          </option>
-                          <option value="partnership">
-                            General Partnership
-                          </option>
-                          <option value="research">
-                            Research Collaboration
-                          </option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label
-                          htmlFor="message"
-                          className="text-sm font-medium"
-                        >
-                          Message *
-                        </Label>
-                        <Textarea
-                          id="message"
-                          name="message"
-                          placeholder="Please provide details about your requirements, organization size, and specific needs..."
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          rows={6}
-                          className="resize-none"
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white h-12 text-sm font-semibold hover:scale-105 transition-all duration-300"
-                      >
-                        <Send className="mr-2 h-5 w-5" />
-                        Send Message
-                      </Button>
-                    </form>
-                  ) : (
-                    <div className="text-center py-8">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-4">
-                        <CheckCircle className="h-8 w-8 text-green-600" />
-                      </div>
-                      <h3 className="text-base font-bold mb-2">
-                        Message Sent Successfully!
-                      </h3>
-                      <p className="text-muted-foreground mb-6">
-                        Thank you for your interest in partnering with us. We'll
-                        get back to you within 24 hours.
-                      </p>
-                      <Button
-                        onClick={() => setIsSubmitted(false)}
-                        variant="outline"
-                      >
-                        Send Another Message
-                      </Button>
                     </div>
-                  )}
+
+                    <div className="space-y-1">
+                      <Label htmlFor="inquiryType" className="text-xs font-sans">Inquiry Type</Label>
+                      <Select
+                        value={formData.inquiryType}
+                        onValueChange={(value) => setFormData(prev => ({ ...prev, inquiryType: value }))}
+                      >
+                        <SelectTrigger className="h-8 border-logo-teal/30 focus:border-logo-teal">
+                          <SelectValue placeholder="Select type" />
+                        </SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="general">General Questions</SelectItem>
+                          <SelectItem value="student">Student Program</SelectItem>
+                          <SelectItem value="enterprise">Enterprise Solutions</SelectItem>
+                          <SelectItem value="partnership">Partnership</SelectItem>
+                        </SelectContent>
+                      </Select>
+                    </div>
+
+                    <div className="space-y-1">
+                      <Label htmlFor="message" className="text-xs font-sans">Message *</Label>
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        placeholder="How can we help?"
+                        rows={3}
+                        className="resize-none border-logo-teal/30 focus:border-logo-teal"
+                        required
+                      />
+                    </div>
+
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-logo-teal to-logo-blue text-white py-2 text-xs font-bold hover:scale-105 transition-all duration-300"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send className="mr-2 h-4 w-4" />
+                          Send Message
+                        </>
+                      )}
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            ) : (
+              <Card className="border-0 bg-background shadow-xl">
+                <CardContent className="p-8 text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mb-6">
+                    <CheckCircle className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 font-serif">Message Sent!</h3>
+                  <p className="text-sm text-muted-foreground mb-6 font-sans">
+                    Thank you for reaching out. We'll get back to you within 24 hours.
+                  </p>
+                  <Button
+                    onClick={() => setIsSubmitted(false)}
+                    variant="outline"
+                    className="text-sm"
+                  >
+                    Send Another Message
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Options */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-lg sm:text-xl font-bold mb-4 font-serif">
+                Other Ways to Connect
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="border-0 bg-background shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4">
+                    <Users className="h-6 w-6 text-logo-teal" />
+                  </div>
+                  <h3 className="text-base font-bold mb-2 font-serif">
+                    For Schools
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-sans">
+                    Educational partnerships and institutional programs
+                  </p>
                 </CardContent>
               </Card>
 
-              {/* Partnership Information */}
-              <div className="space-y-8">
-                <Card className="border-0 bg-muted/30">
-                  <CardContent className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-logo-teal/20 flex-shrink-0">
-                        <Users className="h-6 w-6 text-logo-teal" />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold mb-2">
-                          Educational Institutions
-                        </h3>
-                        <p className="text-muted-foreground text-sm">
-                          Schools, universities, and educational organizations
-                          interested in pioneering AI Twin development programs.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 bg-muted/30">
-                  <CardContent className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-logo-blue/20 flex-shrink-0">
-                        <Target className="h-6 w-6 text-logo-blue" />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold mb-2">
-                          Technology Partners
-                        </h3>
-                        <p className="text-muted-foreground text-sm">
-                          Organizations with complementary technologies or
-                          expertise in AI, education, or human-computer
-                          interaction.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-0 bg-muted/30">
-                  <CardContent className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-cyber-blue/20 flex-shrink-0">
-                        <Mail className="h-6 w-6 text-cyber-blue" />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold mb-2">
-                          Research Collaborators
-                        </h3>
-                        <p className="text-muted-foreground text-sm">
-                          Academic researchers and institutions working on AI
-                          ethics, human-AI collaboration, or educational
-                          innovation.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Direct Contact Info */}
-                <div className="p-6 rounded-lg bg-background border">
-                  <h4 className="font-semibold mb-3">Alternative Contact</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Prefer direct communication? You can also reach us at:
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex items-center">
-                      <Mail className="h-4 w-4 mr-2 text-logo-teal" />
-                      <span>partnerships@anansi.ai</span>
-                    </div>
+              <Card className="border-0 bg-background shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4">
+                    <Building2 className="h-6 w-6 text-logo-blue" />
                   </div>
-                </div>
-              </div>
-            </div>
+                  <h3 className="text-base font-bold mb-2 font-serif">
+                    For Organizations
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-sans">
+                    Enterprise solutions and custom implementations
+                  </p>
+                </CardContent>
+              </Card>
 
-            {/* Back to Homepage */}
-            <div className="text-center mt-12">
-              <Button asChild variant="outline">
-                <Link to="/" className="flex items-center">
-                  <ArrowLeft className="mr-2 h-4 w-4" />
-                  Back to Homepage
-                </Link>
-              </Button>
+              <Card className="border-0 bg-background shadow-lg text-center">
+                <CardContent className="p-6">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-4">
+                    <Mail className="h-6 w-6 text-cyber-blue" />
+                  </div>
+                  <h3 className="text-base font-bold mb-2 font-serif">
+                    For Media
+                  </h3>
+                  <p className="text-xs text-muted-foreground font-sans">
+                    Press inquiries and partnership opportunities
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
-
-        {/* Insights & Updates Section */}
-        <section className="py-20 bg-muted/30 mt-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
-                Insights & Updates
-              </h2>
-              <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-                Stay informed about the latest in personal AI development and
-                training methodologies.
-              </p>
-            </div>
-
-            {/* Newsletter Signup */}
-            <div className="max-w-2xl mx-auto">
-              <Card className="border-0 bg-background shadow-lg">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-base font-bold mb-4">
-                    Subscribe to Our Newsletter
-                  </h3>
-                  <p className="text-muted-foreground mb-6">
-                    Get exclusive insights, research updates, and early access
-                    to new developments in AI Twin technology.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <Input
-                      type="email"
-                      placeholder="Enter your email"
-                      className="flex-1"
-                    />
-                    <Button className="bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:scale-105 transition-all duration-300">
-                      Subscribe
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
       </section>
 
       <Footer />

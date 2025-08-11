@@ -115,7 +115,7 @@ const AdultSignupForm = () => {
           <div className="w-16 h-16 bg-gradient-to-r from-logo-teal to-logo-blue rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="h-8 w-8 text-white" />
           </div>
-          <h3 className="text-2xl font-bold mb-4">Welcome to AnansiAI!</h3>
+          <h3 className="text-lg font-bold mb-4">Welcome to AnansiAI!</h3>
           <p className="text-muted-foreground mb-6">
             Your account has been created successfully. Check your email for
             verification instructions and next steps to start training your AI

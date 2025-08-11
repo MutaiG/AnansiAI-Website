@@ -10,18 +10,16 @@ import {
   CheckCircle,
   ArrowRight,
   Users,
-  Briefcase,
-  Building2,
-  GraduationCap,
   Shield,
-  Cpu,
   Heart,
   Lightbulb,
+  Award,
+  Compass,
 } from "lucide-react";
 
 const VisionMission = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-serif">
       <Navigation />
 
       {/* Back Button */}
@@ -30,18 +28,15 @@ const VisionMission = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-24 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-logo-teal/8 via-logo-blue/5 to-cyber-blue/6" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,theme(colors.border)_1px,transparent_1px),linear-gradient(to_bottom,theme(colors.border)_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-20" />
-
-        <div className="container relative mx-auto px-4">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80 backdrop-blur-sm mb-8">
-              <Lightbulb className="mr-2 h-5 w-5 text-logo-teal" />
-              Our Vision & Mission
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center rounded-full border bg-background/60 px-4 py-2 text-sm font-medium text-foreground/80 backdrop-blur-sm mb-6">
+              <Lightbulb className="mr-2 h-4 w-4 text-logo-teal" />
+              Vision & Mission
             </div>
 
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mb-4 sm:mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-4 font-serif">
               <span className="bg-gradient-to-br from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Building the Future
               </span>
@@ -49,303 +44,228 @@ const VisionMission = () => {
               <span className="text-foreground">of Human-AI Partnership</span>
             </h1>
 
-            <p className="mx-auto max-w-3xl text-xs sm:text-sm text-muted-foreground mb-12 leading-relaxed">
-              Our vision and mission guide everything we do at AnansiAI. We're
-              not just building technology — we're shaping a future where humans
-              and AI work together in perfect harmony.
+            <p className="mx-auto max-w-2xl text-xs sm:text-sm text-muted-foreground mb-8 leading-relaxed font-sans">
+              At AnansiAI, we envision a world where AI enhances human potential rather than replacing it. Our mission is to create personal AI companions that truly understand and grow with each individual.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-muted/30">
+      {/* Mission & Vision Cards */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
-                  <Target className="h-10 w-10 text-logo-teal" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            {/* Mission */}
+            <Card className="border-0 bg-background shadow-xl">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4">
+                    <Target className="h-8 w-8 text-logo-teal" />
+                  </div>
+                  <h2 className="text-xl font-bold mb-4 text-logo-teal font-serif">
+                    Our Mission
+                  </h2>
                 </div>
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 text-logo-teal">
-                  Our Mission
-                </h2>
-                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
-                  To make AI personal, sustainable, and empowering — by enabling
-                  every individual, student, and organization to train and own
-                  their own AI Twin that reflects their skills, values, and
-                  creativity.
-                </p>
-                <div className="p-6 rounded-lg bg-background border-l-4 border-logo-teal">
-                  <p className="text-sm font-medium">
-                    We aim to shift the AI world from{" "}
-                    <span className="text-red-500 line-through">
-                      "one model fits all"
-                    </span>{" "}
-                    to{" "}
-                    <span className="text-logo-teal font-bold">
-                      "one model fits you."
-                    </span>
+                
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed font-sans">
+                    To democratize AI by making it personal, private, and accessible to every human being. We create AI Twins that learn exclusively from individual experiences, ensuring each person has a truly personalized AI companion.
                   </p>
-                </div>
-              </div>
 
-              <Card className="border-2 border-logo-teal shadow-2xl">
-                <CardContent className="p-10">
-                  <h3 className="text-base font-bold mb-6">Mission Pillars</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">Personal</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Every AI Twin is unique to its owner
-                        </p>
+                  <div className="space-y-3">
+                    <h3 className="text-base font-bold mb-3 font-serif">Mission Pillars</h3>
+                    <div className="space-y-2 max-w-md mx-auto">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Personal AI that reflects individual thinking patterns</span>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">Sustainable</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Low-energy, human-data approach
-                        </p>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Privacy-first architecture with complete user ownership</span>
                       </div>
-                    </div>
-                    <div className="flex items-start">
-                      <CheckCircle className="h-6 w-6 text-logo-teal mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">Empowering</h4>
-                        <p className="text-sm text-muted-foreground">
-                          Amplifies human capability and creativity
-                        </p>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Education-based training through natural learning</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-teal mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Sustainable and ethical AI development practices</span>
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Vision */}
+            <Card className="border-0 bg-background shadow-xl">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4">
+                    <Eye className="h-8 w-8 text-logo-blue" />
+                  </div>
+                  <h2 className="text-xl font-bold mb-4 text-logo-blue font-serif">
+                    Our Vision
+                  </h2>
+                </div>
+                
+                <div className="text-center">
+                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed font-sans">
+                    A future where every person has a personal AI Twin that enhances their capabilities, preserves their unique perspective, and grows alongside them throughout their life journey.
+                  </p>
+
+                  <div className="space-y-3">
+                    <h3 className="text-base font-bold mb-3 font-serif">Vision in Action</h3>
+                    <div className="space-y-2 max-w-md mx-auto">
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-blue mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Students graduate with AI Twins trained in their learning style</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-blue mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Professionals amplify their expertise through AI partners</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-blue mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">Organizations embody their culture through institutional Twins</span>
+                      </div>
+                      <div className="flex items-start space-x-3">
+                        <CheckCircle className="h-4 w-4 text-logo-blue mt-0.5 flex-shrink-0" />
+                        <span className="text-xs font-sans text-left">AI becomes a tool for human enhancement, not replacement</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Vision Section */}
-      <section className="py-20">
+      {/* Core Values */}
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <Card className="border-2 border-logo-blue shadow-2xl order-2 lg:order-1">
-                <CardContent className="p-10">
-                  <h3 className="text-base font-bold mb-6">Vision in Action</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <GraduationCap className="h-6 w-6 text-logo-blue mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">
-                          Students graduate with AI Twins
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          As part of their core skillset for life
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Briefcase className="h-6 w-6 text-logo-blue mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">
-                          Adults build amplifying Twins
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          That enhance their work, not replace it
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-start">
-                      <Building2 className="h-6 w-6 text-logo-blue mr-3 mt-1" />
-                      <div>
-                        <h4 className="font-semibold mb-1">
-                          Organizations deploy value-aligned Twins
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          Reflecting their mission, not generic automation
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <div className="order-1 lg:order-2">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-8">
-                  <Eye className="h-10 w-10 text-logo-blue" />
-                </div>
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-6 text-logo-blue">
-                  Our Vision
-                </h2>
-                <p className="text-sm leading-relaxed text-muted-foreground mb-8">
-                  A world where humans remain central in the AI era — working
-                  faster, thinking sharper, and creating fearlessly — powered by
-                  AI Twins they've shaped themselves.
-                </p>
-                <div className="p-6 rounded-lg bg-background border-l-4 border-logo-blue">
-                  <p className="text-sm font-medium">
-                    We see a future where AI enhances human potential rather
-                    than replacing it, where everyone has access to personal AI
-                    that truly understands them.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What Drives Us */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4">
+          <div className="text-center mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-serif">
               What Drives Us
             </h2>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Four core principles guide everything we build and every decision
-              we make.
+            <p className="text-sm text-muted-foreground max-w-2xl mx-auto font-sans">
+              Our core values guide every decision we make in building the future of personal AI.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-6">
-                  <Users className="h-8 w-8 text-logo-teal" />
-                </div>
-                <h3 className="text-base font-bold mb-4">Human-first AI</h3>
-                <p className="text-muted-foreground text-sm">
-                  Not general AI. Every Twin is built for and by its human
-                  owner.
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <div className="text-center p-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-4">
+                <Heart className="h-6 w-6 text-logo-teal" />
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">Human-first AI</h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Technology that adapts to humans, not the other way around.
+              </p>
+            </div>
 
-            <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-6">
-                  <Shield className="h-8 w-8 text-logo-blue" />
-                </div>
-                <h3 className="text-base font-bold mb-4">
-                  Sustainability over scale
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Efficient, low-energy approaches that scale responsibly.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-blue/20 to-logo-blue/40 mb-4">
+                <Shield className="h-6 w-6 text-logo-blue" />
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">
+                Privacy by design
+              </h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Your data stays yours. No mining, no sharing, complete ownership.
+              </p>
+            </div>
 
-            <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-6">
-                  <GraduationCap className="h-8 w-8 text-cyber-blue" />
-                </div>
-                <h3 className="text-base font-bold mb-4">
-                  Education before automation
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Learning and growth first, then intelligent assistance.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-4">
+                <Award className="h-6 w-6 text-cyber-blue" />
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">
+                Excellence through education
+              </h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Building AI through structured learning, not data scraping.
+              </p>
+            </div>
 
-            <Card className="border-0 bg-background shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <CardContent className="p-8 text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-6">
-                  <Heart className="h-8 w-8 text-ai-accent" />
-                </div>
-                <h3 className="text-base font-bold mb-4">
-                  Ownership before access
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  You own your Twin, not rent access to someone else's model.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="text-center p-6">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-ai-accent/20 to-ai-accent/40 mb-4">
+                <Users className="h-6 w-6 text-ai-accent" />
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">
+                Community empowerment
+              </h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Democratizing AI access for individuals and communities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* The Future We're Building */}
-      <section className="py-20">
+      {/* Roadmap */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-bold mb-8">
-              The Future We're Building Together
+          <div className="text-center mb-12">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-serif">
+              Our Journey Forward
             </h2>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-6">
-                  <span className="text-lg font-bold">2025</span>
-                </div>
-                <h3 className="text-base font-bold mb-4">Foundation</h3>
-                <p className="text-muted-foreground">
-                  Launch pilot programs in schools. Establish human-centered
-                  training methodologies.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue text-white mb-4">
+                <span className="text-sm font-bold">1</span>
               </div>
-
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-6">
-                  <span className="text-lg font-bold">2027</span>
-                </div>
-                <h3 className="text-base font-bold mb-4">Expansion</h3>
-                <p className="text-muted-foreground">
-                  Scale to universities and professional training. Launch Adult
-                  Twin programs.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-6">
-                  <span className="text-lg font-bold">2030</span>
-                </div>
-                <h3 className="text-base font-bold mb-4">Transformation</h3>
-                <p className="text-muted-foreground">
-                  AI Twins become standard. Enterprise adoption. Global impact
-                  on education and work.
-                </p>
-              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">Foundation</h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Launch student programs and establish core AI Twin training methodologies.
+              </p>
             </div>
 
-            <div className="p-8 rounded-xl bg-gradient-to-br from-logo-teal/10 to-logo-blue/10 border-2 border-logo-teal/20">
-              <h3 className="text-base font-bold mb-4">
-                Join Us in Shaping This Future
-              </h3>
-              <p className="text-sm text-muted-foreground mb-6">
-                Every Twin trained brings us closer to a world where AI truly
-                serves humanity. Your journey matters.
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-logo-blue to-cyber-blue text-white mb-4">
+                <span className="text-sm font-bold">2</span>
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">Expansion</h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Scale to universities, professionals, and organizations worldwide.
               </p>
+            </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-center">
+              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyber-blue to-ai-accent text-white mb-4">
+                <span className="text-sm font-bold">3</span>
+              </div>
+              <h3 className="text-base font-bold mb-3 font-serif">Transformation</h3>
+              <p className="text-xs text-muted-foreground font-sans">
+                Reshape how humanity interacts with AI through personal companionship.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Card className="max-w-2xl mx-auto border-2 border-logo-teal/20 bg-gradient-to-br from-logo-teal/5 to-logo-blue/5">
+              <CardContent className="p-6">
+                <h3 className="text-base font-bold mb-3 font-serif">
+                  Join Us in Shaping This Future
+                </h3>
+                <p className="text-sm text-muted-foreground mb-6 font-sans">
+                  Be part of the movement toward personal, private, and powerful AI that truly serves humanity.
+                </p>
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-logo-teal to-logo-blue text-white hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-logo-teal to-logo-blue text-white px-8 py-3 text-sm font-bold hover:scale-105 transition-all duration-300"
                 >
                   <Link to="/train-your-twin" className="flex items-center">
-                    Start Your Twin
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    Start Your Journey
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-2 border-logo-blue text-logo-blue hover:bg-logo-blue/10"
-                >
-                  <Link to="/company/about">Learn More About Us</Link>
-                </Button>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

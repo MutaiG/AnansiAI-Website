@@ -90,7 +90,7 @@ const AdultFastTrack = () => {
                   <Zap className="h-10 w-10 text-logo-blue" />
                 </div>
                 <h3 className="text-base font-bold mb-4">Accelerated Learning</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Skip years of gradual development with our intensive
                   curriculum designed specifically for adult learners.
                 </p>
@@ -103,7 +103,7 @@ const AdultFastTrack = () => {
                   <TrendingUp className="h-10 w-10 text-cyber-blue" />
                 </div>
                 <h3 className="text-base font-bold mb-4">Career-Focused</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Training directly aligned with professional needs and current
                   workplace challenges.
                 </p>
@@ -116,7 +116,7 @@ const AdultFastTrack = () => {
                   <Target className="h-10 w-10 text-ai-accent" />
                 </div>
                 <h3 className="text-base font-bold mb-4">Immediate Results</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Begin seeing productive AI Twin capabilities within weeks, not
                   years.
                 </p>
@@ -296,7 +296,7 @@ const AdultFastTrack = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Lightbulb className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Intensive Workshops</h3>
+              <h3 className="font-bold mb-2 text-sm">Intensive Workshops</h3>
               <p className="text-sm text-muted-foreground">
                 Weekly guided sessions focused on specific skill development and
                 personality refinement.
@@ -305,7 +305,7 @@ const AdultFastTrack = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <BookOpen className="h-8 w-8 text-cyber-blue mb-4" />
-              <h3 className="font-bold mb-2">Project-Based Learning</h3>
+              <h3 className="font-bold mb-2 text-sm">Project-Based Learning</h3>
               <p className="text-sm text-muted-foreground">
                 Real-world projects that simultaneously serve your professional
                 needs and train your Twin.
@@ -314,7 +314,7 @@ const AdultFastTrack = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Users className="h-8 w-8 text-ai-accent mb-4" />
-              <h3 className="font-bold mb-2">Expert Guidance</h3>
+              <h3 className="font-bold mb-2 text-sm">Expert Guidance</h3>
               <p className="text-sm text-muted-foreground">
                 Direct access to AI training specialists and personalized
                 coaching throughout the program.
@@ -323,7 +323,7 @@ const AdultFastTrack = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Cpu className="h-8 w-8 text-logo-teal mb-4" />
-              <h3 className="font-bold mb-2">Advanced Tools</h3>
+              <h3 className="font-bold mb-2 text-sm">Advanced Tools</h3>
               <p className="text-sm text-muted-foreground">
                 Access to professional-grade training tools and accelerated
                 development platforms.
@@ -332,7 +332,7 @@ const AdultFastTrack = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Star className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Quality Assurance</h3>
+              <h3 className="font-bold mb-2 text-sm">Quality Assurance</h3>
               <p className="text-sm text-muted-foreground">
                 Rigorous testing and validation to ensure your Twin meets
                 professional standards.
@@ -341,7 +341,7 @@ const AdultFastTrack = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <TrendingUp className="h-8 w-8 text-cyber-blue mb-4" />
-              <h3 className="font-bold mb-2">Ongoing Evolution</h3>
+              <h3 className="font-bold mb-2 text-sm">Ongoing Evolution</h3>
               <p className="text-sm text-muted-foreground">
                 Continued learning framework to keep your Twin current and
                 improving post-graduation.
@@ -372,15 +372,12 @@ const AdultFastTrack = () => {
                 <h3 className="text-lg font-bold mb-6">
                   Adult Fast-Track Program
                 </h3>
-                <div className="text-base font-bold text-logo-teal mb-4">
-                  $2,500
-                </div>
                 <p className="text-muted-foreground mb-6">
                   Complete 12-week intensive program with expert guidance and
                   accelerated AI Twin development.
                 </p>
 
-                <div className="space-y-3 mb-8 text-left">
+                <div className="space-y-3 mb-8 text-center">
                   <div className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                     <span className="text-sm">
@@ -444,24 +441,24 @@ const AdultFastTrack = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-lg bg-background border">
                 <Calendar className="h-8 w-8 text-logo-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Next Cohort Starts</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold mb-2 text-xs">Next Cohort Starts</h3>
+                <p className="text-xs text-muted-foreground">
                   Limited enrollment ensures personalized attention and optimal
                   results.
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Users className="h-8 w-8 text-cyber-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Small Cohorts</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold mb-2 text-xs">Small Cohorts</h3>
+                <p className="text-xs text-muted-foreground">
                   Maximum 20 participants per cohort for individualized
                   guidance.
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Award className="h-8 w-8 text-ai-accent mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Proven Results</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold mb-2 text-xs">Proven Results</h3>
+                <p className="text-xs text-muted-foreground">
                   Join professionals who've already transformed their careers
                   with AI Twins.
                 </p>

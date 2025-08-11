@@ -118,7 +118,7 @@ const TrainingDemo = () => {
               <CheckCircle className="h-10 w-10 text-white" />
             </div>
 
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+            <h3 className="text-xl font-bold text-foreground mb-4">
               Your Twin Profile Created! 🎉
             </h3>
 
@@ -132,7 +132,11 @@ const TrainingDemo = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="bg-gradient-to-br from-logo-teal/5 to-logo-blue/5 p-6 rounded-lg border border-logo-teal/20">
               <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                <Brain className="h-5 w-5 mr-2 text-logo-teal" />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
+                  alt="Anansi AI"
+                  className="h-5 w-5 mr-2"
+                />
                 Communication Style
               </h4>
               <p className="text-muted-foreground">
@@ -212,7 +216,7 @@ const TrainingDemo = () => {
       </div>
       <CardContent className="relative p-8 z-10">
         <div className="text-center mb-8">
-          <h3 className="text-3xl font-bold text-foreground mb-3">
+          <h3 className="text-xl font-bold text-foreground mb-3">
             Start Training Your Twin
           </h3>
           <p className="text-muted-foreground text-lg">
@@ -237,7 +241,11 @@ const TrainingDemo = () => {
         <div className="mb-6">
           <div className="flex items-center mb-4">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-logo-teal to-logo-blue flex items-center justify-center mr-4">
-              <Brain className="h-5 w-5 text-white" />
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
+                alt="Anansi AI"
+                className="h-5 w-5 rounded-full"
+              />
             </div>
             <h4 className="text-lg font-semibold text-foreground">
               {questions[currentQuestion]}

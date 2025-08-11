@@ -89,8 +89,8 @@ const StudentProgram = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-logo-teal/20 to-logo-teal/40 mb-8">
                   <Heart className="h-10 w-10 text-logo-teal" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Human-Centered AI</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="text-base font-bold mb-4">Human-Centered AI</h3>
+                <p className="text-muted-foreground text-xs">
                   Your Twin learns from your actual work, thoughts, and
                   experiences, not from internet data or generic examples.
                 </p>
@@ -103,7 +103,7 @@ const StudentProgram = () => {
                   <BookOpen className="h-10 w-10 text-logo-blue" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">Zero Academic Burden</h3>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-muted-foreground text-xs">
                   Continue your regular studies while your Twin develops
                   automatically from your assignments and classroom activities.
                 </p>
@@ -115,8 +115,8 @@ const StudentProgram = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-cyber-blue/20 to-cyber-blue/40 mb-8">
                   <Award className="h-10 w-10 text-cyber-blue" />
                 </div>
-                <h3 className="text-sm font-bold mb-4">Lifetime Asset</h3>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="text-base font-bold mb-4">Lifetime Asset</h3>
+                <p className="text-muted-foreground text-xs">
                   Graduate with both a degree and a sophisticated AI companion
                   that understands your unique way of thinking.
                 </p>
@@ -145,7 +145,7 @@ const StudentProgram = () => {
                 <span className="text-xl font-bold">1</span>
               </div>
               <h3 className="text-base font-bold mb-3">Natural Learning</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-xs">
                 Attend classes, complete assignments, and engage in school
                 activities as you normally would.
               </p>
@@ -156,7 +156,7 @@ const StudentProgram = () => {
                 <span className="text-xl font-bold">2</span>
               </div>
               <h3 className="text-base font-bold mb-3">Silent Development</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-xs">
                 Your Twin learns from your work patterns, writing style, and
                 problem-solving approaches automatically.
               </p>
@@ -167,7 +167,7 @@ const StudentProgram = () => {
                 <span className="text-xl font-bold">3</span>
               </div>
               <h3 className="text-base font-bold mb-3">Gradual Capability</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-xs">
                 As you advance through grades, your Twin becomes more
                 sophisticated and capable.
               </p>
@@ -178,7 +178,7 @@ const StudentProgram = () => {
                 <span className="text-xl font-bold">4</span>
               </div>
               <h3 className="text-base font-bold mb-3">Active Partnership</h3>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-xs">
                 Begin collaborating with your mature Twin for projects,
                 research, and professional work.
               </p>
@@ -200,7 +200,7 @@ const StudentProgram = () => {
             </p>
           </div>
 
-          <div className="space-y-8 max-w-6xl mx-auto">
+          <div className="space-y-8 max-w-5xl mx-auto">
             <Card className="border-0 bg-background shadow-lg">
               <CardContent className="p-8">
                 <div className="flex items-start space-x-6">
@@ -208,7 +208,7 @@ const StudentProgram = () => {
                     <School className="h-8 w-8 text-logo-teal" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-bold mb-3">
+                    <h3 className="text-base font-bold mb-3">
                       Elementary School (Ages 6-11)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -216,7 +216,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-teal">
                           Twin Capabilities
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Basic personality trait recognition</li>
                           <li>• Simple communication patterns</li>
                           <li>• Learning preference identification</li>
@@ -227,7 +227,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-blue">
                           Learning Sources
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Creative writing assignments</li>
                           <li>• Show-and-tell presentations</li>
                           <li>• Art projects and explanations</li>
@@ -247,7 +247,7 @@ const StudentProgram = () => {
                     <GraduationCap className="h-8 w-8 text-logo-blue" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-bold mb-3">
+                    <h3 className="text-base font-bold mb-3">
                       Middle & High School (Ages 12-18)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -255,7 +255,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-teal">
                           Twin Capabilities
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Advanced reasoning patterns</li>
                           <li>• Subject-specific expertise</li>
                           <li>• Critical thinking approaches</li>
@@ -266,7 +266,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-blue">
                           Learning Sources
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Research papers and reports</li>
                           <li>• Lab reports and analyses</li>
                           <li>• Creative projects and portfolios</li>
@@ -286,7 +286,7 @@ const StudentProgram = () => {
                     <University className="h-8 w-8 text-cyber-blue" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-sm font-bold mb-3">
+                    <h3 className="text-base font-bold mb-3">
                       University & Beyond (Ages 18+)
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -294,7 +294,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-teal">
                           Twin Capabilities
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Professional competency modeling</li>
                           <li>• Independent research capability</li>
                           <li>• Leadership style development</li>
@@ -305,7 +305,7 @@ const StudentProgram = () => {
                         <h4 className="font-semibold mb-2 text-logo-blue">
                           Learning Sources
                         </h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
+                        <ul className="space-y-1 text-xs text-muted-foreground">
                           <li>• Thesis and dissertation work</li>
                           <li>• Internship and work experiences</li>
                           <li>• Professional communications</li>
@@ -337,7 +337,7 @@ const StudentProgram = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <TrendingUp className="h-8 w-8 text-logo-teal mb-4" />
-              <h3 className="font-bold mb-2">Competitive Advantage</h3>
+              <h3 className="font-bold mb-2 text-sm">Competitive Advantage</h3>
               <p className="text-sm text-muted-foreground">
                 Graduate with a unique AI asset that gives you an edge in
                 college applications and job markets.
@@ -346,7 +346,7 @@ const StudentProgram = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Lightbulb className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Enhanced Learning</h3>
+              <h3 className="font-bold mb-2 text-sm">Enhanced Learning</h3>
               <p className="text-sm text-muted-foreground">
                 Your Twin can help explain concepts, generate study materials,
                 and support your learning journey.
@@ -355,7 +355,7 @@ const StudentProgram = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Star className="h-8 w-8 text-cyber-blue mb-4" />
-              <h3 className="font-bold mb-2">Personal Growth</h3>
+              <h3 className="font-bold mb-2 text-sm">Personal Growth</h3>
               <p className="text-sm text-muted-foreground">
                 Develop self-awareness and metacognitive skills through the Twin
                 development process.
@@ -364,7 +364,7 @@ const StudentProgram = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <UserCheck className="h-8 w-8 text-ai-accent mb-4" />
-              <h3 className="font-bold mb-2">Authentic Representation</h3>
+              <h3 className="font-bold mb-2 text-sm">Authentic Representation</h3>
               <p className="text-sm text-muted-foreground">
                 Your Twin truly represents your thinking, not generic AI
                 patterns or internet content.
@@ -373,7 +373,7 @@ const StudentProgram = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Clock className="h-8 w-8 text-logo-teal mb-4" />
-              <h3 className="font-bold mb-2">Time Efficiency</h3>
+              <h3 className="font-bold mb-2 text-sm">Time Efficiency</h3>
               <p className="text-sm text-muted-foreground">
                 Automate routine tasks while maintaining your personal standards
                 and style.
@@ -382,7 +382,7 @@ const StudentProgram = () => {
 
             <div className="p-6 rounded-lg bg-background border shadow-lg">
               <Target className="h-8 w-8 text-logo-blue mb-4" />
-              <h3 className="font-bold mb-2">Career Preparation</h3>
+              <h3 className="font-bold mb-2 text-sm">Career Preparation</h3>
               <p className="text-sm text-muted-foreground">
                 Enter the workforce with advanced AI collaboration skills and
                 your own intelligent assistant.
@@ -401,71 +401,43 @@ const StudentProgram = () => {
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <Card className="border-0 bg-background shadow-xl">
-              <CardContent className="p-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-sm font-bold mb-4">What's Included</h3>
-                    <div className="space-y-3">
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">
+              <CardContent className="p-8 sm:p-10">
+                <div className="text-center">
+                  <h3 className="text-base font-bold mb-6">What's Included</h3>
+                  <div className="max-w-md mx-auto">
+                    <div className="space-y-3 pl-12">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm ml-3 text-left">
                           Lifetime Twin development and ownership
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm ml-3 text-left">
                           Teacher-supervised training process
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm ml-3 text-left">
                           Gradual capability development
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm ml-3 text-left">
                           Access to Twin Workbench upon maturity
                         </span>
                       </div>
-                      <div className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-sm">
+                      <div className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span className="text-sm ml-3 text-left">
                           Complete data privacy and ownership
                         </span>
                       </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-sm font-bold mb-4">Investment</h3>
-                    <div className="text-center">
-                      <div className="text-xl font-bold text-logo-teal mb-2">
-                        $500
-                      </div>
-                      <p className="text-muted-foreground mb-4">
-                        One-time payment for complete lifetime training
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-6">
-                        Covers all education levels from Grade 1 to University
-                        graduation.{" "}
-                        <span className="font-semibold text-logo-teal">
-                          Private students only.
-                        </span>
-                      </p>
-                      <Button
-                        asChild
-                        size="lg"
-                        className="bg-gradient-to-r from-logo-teal to-logo-blue text-white w-full py-4 text-sm font-bold hover:scale-105 transition-all duration-300"
-                      >
-                        <Link to="/train-your-twin">
-                          Enroll in Student Program
-                        </Link>
-                      </Button>
                     </div>
                   </div>
                 </div>
@@ -490,26 +462,26 @@ const StudentProgram = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <div className="p-6 rounded-lg bg-background border">
                 <Calendar className="h-8 w-8 text-logo-teal mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Pilot Programs Start Soon
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                   Be among the first students to begin Twin development.
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Users className="h-8 w-8 text-logo-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">
+                <h3 className="font-semibold mb-2 text-sm">
                   Limited Initial Enrollment
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                   Ensuring quality through manageable cohort sizes.
                 </p>
               </div>
               <div className="p-6 rounded-lg bg-background border">
                 <Award className="h-8 w-8 text-cyber-blue mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Pioneer Benefits</h3>
-                <p className="text-sm text-muted-foreground">
+                <h3 className="font-semibold mb-2 text-sm">Pioneer Benefits</h3>
+                <p className="text-xs text-muted-foreground">
                   Early participants receive enhanced support and features.
                 </p>
               </div>

@@ -285,7 +285,7 @@ const TwinAnalyticsDashboard = ({
               <Brain className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h2 className="text-2xl font-bold">AI Twin Analytics</h2>
+              <h2 className="text-lg font-bold">AI Twin Analytics</h2>
               <p className="text-muted-foreground">
                 Training progress and insights
               </p>
@@ -311,7 +311,7 @@ const TwinAnalyticsDashboard = ({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-3xl font-bold text-logo-teal">
+                <div className="text-xl font-bold text-logo-teal">
                   {data.trainingScore}%
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -321,7 +321,7 @@ const TwinAnalyticsDashboard = ({
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-3xl font-bold text-logo-blue">
+                <div className="text-xl font-bold text-logo-blue">
                   {totalFiles}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -331,7 +331,7 @@ const TwinAnalyticsDashboard = ({
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-3xl font-bold text-cyber-blue">
+                <div className="text-xl font-bold text-cyber-blue">
                   {wordCount}
                 </div>
                 <div className="text-sm text-muted-foreground">
@@ -341,7 +341,7 @@ const TwinAnalyticsDashboard = ({
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-3xl font-bold text-ai-accent">
+                <div className="text-xl font-bold text-ai-accent">
                   {(totalSize / (1024 * 1024)).toFixed(1)}MB
                 </div>
                 <div className="text-sm text-muted-foreground">Data Size</div>

@@ -197,7 +197,7 @@ const TwinTrainingDemo = () => {
                 <>
                   {/* Demo Header */}
                   <div className="text-center mb-8">
-                    <h3 className="text-3xl font-bold text-white mb-3">
+                    <h3 className="text-xl font-bold text-white mb-3">
                       What should we build?
                     </h3>
                     <p className="text-slate-300 text-lg">
@@ -373,7 +373,7 @@ const TwinTrainingDemo = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-logo-teal to-logo-blue text-white mb-6">
                     <CheckCircle className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">
+                  <h3 className="text-lg font-bold mb-4 text-white">
                     Twin Training Complete!
                   </h3>
                   <p className="text-slate-300 mb-8 text-lg">

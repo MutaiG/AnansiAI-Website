@@ -272,10 +272,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-xl sm:text-2xl font-semibold mb-3 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
+              <h2 className="text-lg sm:text-xl font-semibold mb-3 bg-gradient-to-r from-logo-teal to-logo-blue bg-clip-text text-transparent">
                 Download, Deploy, Dominate
               </h2>
-              <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl mx-auto">
                 Your AI Twin works seamlessly across all platforms, handling your digital presence while you focus on what matters most.
               </p>
             </div>
@@ -379,7 +379,7 @@ const Index = () => {
 
               {/* Testimonial */}
               <div className="bg-background rounded-xl p-4 sm:p-6 shadow-lg border border-logo-teal/20 order-1 lg:order-2">
-                <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4 italic leading-relaxed">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-4 italic leading-relaxed">
                   "While others struggle with generic AI tools, my Twin gives me
                   a massive edge. I'm landing better clients because I can
                   deliver faster without losing my unique voice. It's like
@@ -417,7 +417,7 @@ const Index = () => {
                   <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-logo-teal" />
                 </div>
                 <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Student Twin</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   For learners of all ages.
                 </p>
               </Link>
@@ -430,7 +430,7 @@ const Index = () => {
                   <Briefcase className="h-6 w-6 sm:h-8 sm:w-8 text-logo-blue" />
                 </div>
                 <h3 className="text-base sm:text-base font-bold mb-2 sm:mb-3">Adult Twin</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Fast-track training for professionals.
                 </p>
               </Link>

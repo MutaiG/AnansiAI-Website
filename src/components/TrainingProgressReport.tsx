@@ -174,7 +174,11 @@ const TrainingProgressReport = ({
       <DialogContent className="sm:max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center space-x-2">
-            <Brain className="h-6 w-6 text-logo-teal" />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F4a7a6514fd9745e39ed72bb4e2406e93%2Fc431444156984e9699826882fee07f4a?format=webp&width=800"
+              alt="Anansi AI"
+              className="h-6 w-6"
+            />
             <span>AI Twin Training Progress Report</span>
           </DialogTitle>
           <DialogDescription>
